@@ -1,82 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>Document</title>
+    <style>
+        .main-header {
+            display: inline;
+        }
+    </style>
 </head>
+
 <body>
     <header class="main-header">
-        <menu>
+        <div class="container">
+            <menu class="main-menu">
                 <li> <button class="logo-button"></button></li>
                 <li> <button class="favorite-button">Favorite coffee</button></li>
                 <li> <button class="about-button">About</button></li>
                 <li> <button class="app-button">Mobile app</button></li>
                 <li> <button class="contact-button">Contact us</button></li>
-                <li><button class="menu-button"></button></li>
-        </menu>
+                <li><button class="menu-button">Menu</button></li>
+            </menu>
+        </div>
     </header>
     <article class="main-page">
         <div class="container">
-        <section class="video">
-            <div class="container">
+            <section class="video">
+                <!-- <div class="container"> -->
                 <div class="content-container">
-                    <p class="video-title"></p>
-                    <p class="vodeo-description"></p>
-                    <button class="menu-button"></button>
+                    <p class="video-title"><span class="italic">Enjoy</span> premium coffee at our charming cafe</p>
+                    <p class="video-description">With its inviting atmosphere and delicious coffee options, the Coffee
+                        House Resource is a popular destination for coffee lovers and those seeking a warm and inviting
+                        space to enjoy their favorite beverage.</p>
+                    <button class="menu-button">Menu</button>
                 </div>
 
-            </div>
-        </section>
-        <section class="favorite">
-            <div class="container">
-                <p class="favorite-title">Choose your <span>favorite</span> coffee</p>
-                <div class="main-slider_container">
-                <button class="left-arrow"> </button>
-                <article class="slider-item">
-                    <img src="" alt="">
-                    <p class="slider-item_title">S’mores Frappuccino</p>
-                    <p class="slider-item_description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                    <p class="slider-item_price">$5.50</p>
-                </article>
+                <!-- </div> -->
+            </section>
+            <section class="favorite">
+                <!-- <div class=""> -->
+                <p class="favorite-title">Choose your <span class="italic">favorite</span> coffee</p>
+                <div class="main-slider__container">
+                    <button class="left-arrow"></button>
+                    <article class="slider-item">
+                        <img src="./assets/images/coffee-slider-1.jpg" alt="">
+                        <p class="slider-item__title">S’mores Frappuccino</p>
+                        <p class="slider-item__description">This new drink takes an espresso and mixes it with brown
+                            sugar and cinnamon before being topped with oat milk.</p>
+                        <p class="slider-item__price">$5.50</p>
+                    </article>
 
-                <button class="right-arrow"> </button>
-            </div>
+                    <button class="right-arrow"> </button>
+                </div>
 
-            <div class="slider-indication">
-                <span class="slider-indication__item"></span>
-                <span class="slider-indication__item"></span>
-                <span class="slider-indication__item"></span>
-            </div>
+                <div class="slider-indication">
+                    <span class="slider-indication__item active"></span>
+                    <span class="slider-indication__item"></span>
+                    <span class="slider-indication__item"></span>
+                </div>
 
 
-            </div>
-        </section>
-        <section class="gallery">
-            <p class="title">
-                Resource is <span>the perfect and cozy place</span>  where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.
-            </p>
-            <ul>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-            </ul>
-        </section>
-        <footer class="main-page__footer">
-            <div class="left-side">
-                <p class="footer-title"><span>Download</span> our apps to start ordering</p>
-                <p class="footer-description">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
-            <div class="buttons-block">
-                <button class="app-button"></button>
-                <button class="app-button"></button>
-            </div>
-            </div>
-            <div class="rigth-side"></div>
-        </footer>
-    </div>
+                <!-- </div> -->
+            </section>
+            <section class="gallery">
+                <p class="title">
+                    Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages,
+                    relax, catch up with friends, or get some work done.
+                </p>
+                <ul class="gallery-container">
+                    <li class="img1"><img src="./assets/images/about-1.jpg" alt=""></li>
+                    <li class="img2"><img src="./assets/images/about-2.jpg" alt=""></li>
+                    <li class="img3"><img src="./assets/images/about-3.jpg" alt=""></li>
+                    <li class="img4"><img src="./assets/images/about-4.jpg" alt=""></li>
+                </ul>
+            </section>
+            <footer class="main-page__footer">
+                <div class="left-side">
+                    <p class="footer-title"><span>Download</span> our apps to start ordering</p>
+                    <p class="footer-description">Download the Resource app today and<br> experience the comfort of
+                        ordering your favorite coffee from wherever you are</p>
+                    <div class="buttons-block">
+                        <button class="app-button">
+                            <span class="app-button__img"></span>
+                            <span class="app-button__text">
+                                <span class="app-button__top">Available on the</span>
+                                <span class="app-button__down">App Store</span>
+                            </span>
+                        </button>
+                        <button class="app-button">
+                            <span class="app-button__img"></span>
+                            <span class="app-button__text">
+                                <span class="app-button__top">Available on</span>
+                                <span class="app-button__down">Google Play</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="right-side"></div>
+            </footer>
+        </div>
     </article>
-    <article class="menu-page">
+    <article class="menu-page" hidden>
         <p class="menu-title">Behind each of our cups hides an <span>amazing surprise</span></p>
         <form>
             <input type="radio" id="selectCofee" name="select" value="coffee" />
@@ -110,12 +140,30 @@
             <div class="right-side">
                 <p class="right-side__title"></p>
                 <ul>
-                    <li><a href="">8558 Green Rd.,  LA</a></li>
+                    <li><a href="">8558 Green Rd., LA</a></li>
                     <li><a href="">+1 (603) 555-0123</a></li>
                     <li>Mon-Sat: 9:00 AM – 23:00 PM</li>
                 </ul>
             </div>
         </div>
     </footer>
+    <!-- <div class="test">
+        <div class="test2"></div>
+    </div> -->
+    <!-- <div class="test" hidden>
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+        <div class="test4">4</div>
+    </div> -->
 </body>
+
 </html>
+<div class="window">
+    <div class="items">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        ....
+        <div class="item100500"></div>
+    </div>
+</div>

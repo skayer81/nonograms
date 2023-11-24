@@ -1,0 +1,390 @@
+.favorite .main-slider__container, .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class],
+menu[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+menu[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class], menu[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+a {
+  text-decoration-color: transparent;
+  color: inherit;
+}
+
+body {
+  background-color: #E1D4C9;
+}
+
+.italic {
+  font-style: italic;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.favorite .main-slider__container, .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.main-menu {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 14px;
+  width: 100%;
+  color: #403F3D;
+}
+.main-menu .logo-button {
+  border: 1px solid red;
+  width: 60px;
+  height: 60px;
+  background-image: url("/coffee-house/assets/icons/logo.svg");
+}
+.main-menu .menu-button {
+  background-image: url("/coffee-house/assets/icons/coffee-cup.svg");
+  border: 1px solid red;
+  width: 80px;
+  text-align: left;
+  background-position: right;
+}
+.main-menu li:has(.logo-button) {
+  margin-right: auto;
+  border: 1px solid green;
+}
+.main-menu li:has(.menu-button) {
+  margin-left: auto;
+  border: 1px solid green;
+}
+
+.favorite .main-slider__container, .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.main-page .video {
+  height: 644px;
+  color: #E1D4C9;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  background-image: url("/coffee-house/assets/images/img-hero.jpg");
+  border-radius: 40px;
+}
+.main-page .video .content-container {
+  margin-right: auto;
+  padding: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.main-page .video .video-title {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 75.6px;
+}
+.main-page .video .menu-button {
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #E1D4C9;
+  color: #403F3D;
+}
+
+.favorite .main-slider__container, .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.favorite {
+  text-align: center;
+}
+.favorite .favorite-title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+  color: #403F3D;
+}
+.favorite .main-slider__container {
+  justify-content: space-between;
+}
+.favorite .right-arrow, .favorite .left-arrow {
+  background-image: url("/coffee-house/assets/icons/arrow-left.svg");
+  width: 60px;
+  height: 60px;
+  border: 1px solid #665F55;
+  border-radius: 50%;
+}
+.favorite .slider-item {
+  width: 480px;
+}
+.favorite .slider-item__title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.favorite .slider-item__description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.favorite .slider-item__price {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.favorite .slider-indication {
+  margin: 0 auto;
+  height: 4px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.favorite .slider-indication__item {
+  height: 4px;
+  width: 40px;
+  border-radius: 100px;
+  background-color: #C1B6AD;
+}
+.favorite .slider-indication__item.active {
+  background-color: #665F55;
+}
+
+.main-menu, .favorite .main-slider__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.gallery .title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+.gallery .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(106, 1fr);
+  height: 1060px;
+  width: 1360px;
+  margin: 0 auto;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 400px;
+}
+.gallery .img1 {
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+  grid-area: 1/1/59/1;
+}
+.gallery .img2 {
+  width: 660px;
+  height: 430px;
+  border-radius: 20px;
+  grid-area: 63/1/106/1;
+}
+.gallery .img3 {
+  width: 660px;
+  height: 430px;
+  border-radius: 20px;
+  grid-area: 1/2/43/2;
+}
+.gallery .img4 {
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+  grid-area: 47/2/106/2;
+}
+
+.test {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(106, 1fr);
+  height: 1060px;
+  width: 1360px;
+  margin: 0 auto;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.test .test1, .test .test2, .test .test3, .test .test4 {
+  border: 1px solid red;
+  width: 660px;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+.test .test1, .test .test4 {
+  height: 590px;
+}
+.test .test2, .test .test3 {
+  height: 430px;
+}
+.test .test1 {
+  grid-area: 1/1/59/1;
+}
+.test .test2 {
+  grid-area: 63/1/106/1;
+}
+.test .test3 {
+  grid-area: 1/2/43/2;
+}
+.test .test4 {
+  grid-area: 47/2/106/2;
+}
+
+.main-menu, .favorite .main-slider__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.main-page__footer {
+  height: 630px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.main-page__footer .left-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-page__footer .left-side .footer-title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+.main-page__footer .left-side .footer-description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main-page__footer .left-side button {
+  height: 64px;
+  width: 200px;
+  border: 1px solid #665F55;
+  border-radius: 100px;
+}
+.main-page__footer .right-side {
+  background-image: url("/coffee-house/assets/images/mobile-screens.jpg");
+  width: 50%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

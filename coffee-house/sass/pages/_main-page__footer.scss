@@ -1,0 +1,37 @@
+@import "../abstracts/_variables.scss";
+
+.main-page__footer{
+    height: 630px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    .left-side{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .footer-title{
+            @include textStyle(60px, 75px);
+        }
+        .footer-description{
+            @include textStyle(16px, 24px, 400);
+        }
+        button{
+            height: 64px;
+            width: 200px;
+            border: 1px solid $borderDark;
+            border-radius: 100px;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: flex-start;
+        }
+
+    }
+    .right-side{
+        background-image: url("/coffee-house/assets/images/mobile-screens.jpg");
+        width: 50%;
+        height: 100%;
+    }
+}

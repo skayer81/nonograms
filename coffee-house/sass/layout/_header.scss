@@ -1,0 +1,59 @@
+@import "../abstracts/_variables.scss";
+
+// .main-header{
+//     background-color: $backgroundBody;
+//     .logo-button{
+//         background-image: url("../../assets/icons/logo.svg");
+//     }
+//     .menu-button{
+//         background-image: url("../../assets/icons/coffee-cup.svg");
+//     }
+// }
+
+
+.main-menu{
+    @extend %flex-element-center;
+    @include textStyle(16px, 14px);
+    width: 100%;
+    .logo-button{
+        border: 1px solid red;
+        width: 60px;
+        height: 60px;
+        background-image: url("/coffee-house/assets/icons/logo.svg");
+        // li:has(&){
+        //     margin-right: auto;
+        //     border: 1px solid green;
+        // }
+    }
+    .menu-button{
+        background-image: url("/coffee-house/assets/icons/coffee-cup.svg");
+        border: 1px solid red;
+        width: 80px;
+        text-align: left;
+        background-position: right;
+        }
+    color: $textDark;
+    li:has(.logo-button){
+        margin-right: auto;
+        border: 1px solid green;
+    }
+    li:has(.menu-button){
+        margin-left: auto;
+        border: 1px solid green;
+    }
+}
+
+// .logo-button{
+//     border: 1px solid red;
+//     width: 60px;
+//     height: 100px;
+//     background-image: url("../../assets/icons/logo.svg");
+//     li:has(&){
+//         margin-right: auto;
+//         border: 1px solid green;
+//     }
+//     }
+
+//     li:has(.logo-button){
+//         border: 1px solid green;
+//     

@@ -1,0 +1,33 @@
+@import "./../abstracts/variables";
+
+.main-page{
+    .video{
+        height: 644px;
+        color: $textLight;
+        @include textStyle(16px, 24px);
+        background-image: url("/coffee-house/assets/images/img-hero.jpg");
+        border-radius: 40px;
+        .content-container{
+            margin-right: auto;
+            padding: 100px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items:start;
+            justify-content: center;
+        }
+        .video-title{
+            @include textStyle(72px, 75.6px);
+        }
+        // .video-description{
+        //     @include textStyle(16px, 24px);
+        // }
+        .menu-button{
+            width: 200px;
+            height: 64px;
+            border-radius: 100px;
+            background-color: $backgroundBody;
+            color: $textDark;
+        }
+    }
+}

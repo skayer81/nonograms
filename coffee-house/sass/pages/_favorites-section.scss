@@ -1,0 +1,51 @@
+@import "./../abstracts/variables";
+
+.favorite{
+    text-align: center;
+    .favorite-title{
+        
+        @include textStyle(60px, 75px);
+        color: $textDark;
+    }
+    .main-slider__container{
+        @extend %flex-element-center;
+        justify-content: space-between;
+    }
+    .right-arrow, .left-arrow{
+       background-image: url("/coffee-house/assets/icons/arrow-left.svg");
+       width: 60px;
+       height: 60px;
+       border: 1px solid $borderDark;
+       border-radius: 50%;
+    }
+    .slider-item{
+        width: 480px;
+    }
+    .slider-item__title{
+        @include textStyle(24px, 30px);
+
+    }
+    .slider-item__description{
+        @include textStyle(16px, 24px, 400);
+
+    }
+    .slider-item__price{
+        @include textStyle(24px, 30px);
+    }
+    .slider-indication{
+        margin: 0 auto;
+        height: 4px;
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .slider-indication__item{
+        height: 4px;
+        width: 40px;
+        border-radius: 100px;
+        background-color: $borderLight;
+        &.active{
+            background-color: $borderDark;
+        }
+    }
+}
