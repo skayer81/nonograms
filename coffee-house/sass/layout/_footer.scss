@@ -1,0 +1,49 @@
+@import "./../abstracts/variables";
+
+.footer{
+    .container{
+        display: flex;
+        background-color: $backgroundContainer;
+        border-radius: 40px;
+        height: 450px;
+    }
+    .left-side{
+        height: 100%;
+        width: 50%;
+        .footer-title{
+            @include textStyle(60px, 75px);
+        }
+        .soc {
+            display: flex;
+            span{
+                display: block;
+                width: 60px;
+                height: 60px;
+                border: 1px solid $borderLight;
+                border-radius: 50%;
+            }
+            .insta{
+                background-image: url("/coffee-house/assets/icons/instagram.svg");
+            }
+            .face{
+                background-image: url("/coffee-house/assets/icons/facebook.svg");
+            }
+            .twit{
+                background-image: url("/coffee-house/assets/icons/twitter.svg");
+            }
+        }
+        }
+
+        }
+    }
+    .right-side{
+        height: 100%;
+        width: 50%;
+        @include textStyle(16px, 24px);
+        color: $textLight;
+        .right-side__title{
+            @include textStyle(24px, 30px);
+        }
+    }
+
+}

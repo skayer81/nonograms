@@ -19,12 +19,14 @@
         height: 590px;
         border-radius: 20px;
         grid-area: 1/1/59/1;
+        overflow: hidden;
     }
     .img2{
         width: 660px;
         height: 430px;
         border-radius: 20px;
         grid-area: 63/1/106/1;
+        overflow: hidden;
         
     }
     .img3{
@@ -32,12 +34,14 @@
         height: 430px;
         border-radius: 20px;
         grid-area: 1/2/43/2;
+        overflow: hidden;
     }
     .img4{
         width: 660px;
         height: 590px;
         border-radius: 20px;
         grid-area: 47/2/106/2;
+        overflow: hidden;
     }
 }
 .test{

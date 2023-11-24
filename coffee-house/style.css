@@ -283,24 +283,28 @@ button {
   height: 590px;
   border-radius: 20px;
   grid-area: 1/1/59/1;
+  overflow: hidden;
 }
 .gallery .img2 {
   width: 660px;
   height: 430px;
   border-radius: 20px;
   grid-area: 63/1/106/1;
+  overflow: hidden;
 }
 .gallery .img3 {
   width: 660px;
   height: 430px;
   border-radius: 20px;
   grid-area: 1/2/43/2;
+  overflow: hidden;
 }
 .gallery .img4 {
   width: 660px;
   height: 590px;
   border-radius: 20px;
   grid-area: 47/2/106/2;
+  overflow: hidden;
 }
 
 .test {
@@ -387,4 +391,58 @@ button {
   background-image: url("/coffee-house/assets/images/mobile-screens.jpg");
   width: 50%;
   height: 100%;
+}
+
+.main-menu, .favorite .main-slider__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40;
+  margin: 0 auto;
+}
+
+.footer .container {
+  display: flex;
+  background-color: #665F55;
+  border-radius: 40px;
+  height: 450px;
+}
+.footer .left-side {
+  height: 100%;
+  width: 50%;
+}
+.footer .left-side .footer-title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+.footer .left-side .soc {
+  display: flex;
+}
+.footer .left-side .soc span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #C1B6AD;
+  border-radius: 50%;
+}
+.footer .right-side {
+  height: 100%;
+  width: 50%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #E1D4C9;
+}
+.footer .right-side .right-side__title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
 }/*# sourceMappingURL=style.css.map */
