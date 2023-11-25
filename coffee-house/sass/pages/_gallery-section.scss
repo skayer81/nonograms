@@ -3,6 +3,7 @@
 .gallery{
     .title{
         @include textStyle(60px, 75px);
+        margin-bottom: 40px;
     }
     .gallery-container{
         display: grid;
@@ -12,36 +13,56 @@
         width: 1360px;
         margin: 0 auto;
         column-gap: 40px;
-        margin-bottom: 400px;
+        // margin-bottom: 400px;
+    }
+    .img1, .img2, .img3, .img4{
+        width: 660px;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+            scale: 1.1;
+
+            object-fit: cover;
+        }
+
     }
     .img1{
-        width: 660px;
+
         height: 590px;
-        border-radius: 20px;
+
         grid-area: 1/1/59/1;
-        overflow: hidden;
+        img{
+            object-position: 0px -32px;
+        }
+
     }
     .img2{
-        width: 660px;
+
         height: 430px;
-        border-radius: 20px;
+
         grid-area: 63/1/106/1;
-        overflow: hidden;
-        
+        img{
+            object-position: 0px -107px;
+        }
     }
     .img3{
-        width: 660px;
+
         height: 430px;
-        border-radius: 20px;
+
         grid-area: 1/2/43/2;
-        overflow: hidden;
+        img{
+            object-position: 0px -105px;
+        }
+
     }
     .img4{
-        width: 660px;
+
         height: 590px;
-        border-radius: 20px;
+
         grid-area: 47/2/106/2;
-        overflow: hidden;
+        img{
+            object-position: 0px -32px;
+        }
     }
 }
 .test{

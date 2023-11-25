@@ -1,4 +1,4 @@
-.favorite .main-slider__container, .main-menu {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -92,7 +92,7 @@ button {
   background-position: center;
 }
 
-.favorite .main-slider__container, .main-menu {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,8 +100,12 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
+}
+
+.main-header .container {
+  height: 100px;
 }
 
 .main-menu {
@@ -109,32 +113,40 @@ button {
   font-size: 16px;
   font-weight: 600;
   line-height: 14px;
-  width: 100%;
   color: #403F3D;
+  width: 100%;
+  height: 100%;
 }
 .main-menu .logo-button {
-  border: 1px solid red;
-  width: 60px;
+  width: 100px;
   height: 60px;
   background-image: url("/coffee-house/assets/icons/logo.svg");
 }
 .main-menu .menu-button {
   background-image: url("/coffee-house/assets/icons/coffee-cup.svg");
-  border: 1px solid red;
   width: 80px;
   text-align: left;
-  background-position: right;
+  background-position: right top;
+  height: 20px;
+  padding-top: 7px;
+}
+.main-menu li {
+  margin: 0 14px;
+}
+.main-menu li:nth-child(2) {
+  margin-left: 24px;
 }
 .main-menu li:has(.logo-button) {
   margin-right: auto;
-  border: 1px solid green;
+  margin-left: 0;
 }
 .main-menu li:has(.menu-button) {
   margin-left: auto;
-  border: 1px solid green;
+  margin-right: 0;
+  margin-top: -8px;
 }
 
-.favorite .main-slider__container, .main-menu {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +154,7 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -151,25 +163,29 @@ button {
   color: #E1D4C9;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   background-image: url("/coffee-house/assets/images/img-hero.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 40px;
 }
 .main-page .video .content-container {
   margin-right: auto;
-  padding: 100px;
+  padding-top: 101px;
+  padding-left: 100px;
+  width: 620px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
 }
 .main-page .video .video-title {
   font-family: "Inter", sans-serif;
   font-size: 72px;
   font-weight: 600;
   line-height: 75.6px;
+  margin-bottom: 40px;
+}
+.main-page .video .video-description {
+  margin-bottom: 40px;
 }
 .main-page .video .menu-button {
   width: 200px;
@@ -179,7 +195,7 @@ button {
   color: #403F3D;
 }
 
-.favorite .main-slider__container, .main-menu {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,12 +203,14 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
 .favorite {
   text-align: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
 }
 .favorite .favorite-title {
   font-family: "Inter", sans-serif;
@@ -202,7 +220,12 @@ button {
   color: #403F3D;
 }
 .favorite .main-slider__container {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 39px;
 }
 .favorite .right-arrow, .favorite .left-arrow {
   background-image: url("/coffee-house/assets/icons/arrow-left.svg");
@@ -210,21 +233,31 @@ button {
   height: 60px;
   border: 1px solid #665F55;
   border-radius: 50%;
+  margin: 0 4px;
+  background-size: auto;
+}
+.favorite .right-arrow {
+  transform: rotate(180deg);
 }
 .favorite .slider-item {
   width: 480px;
+}
+.favorite .slider-item .slider-item__img {
+  margin-bottom: 20px;
 }
 .favorite .slider-item__title {
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
+  margin-bottom: 16px;
 }
 .favorite .slider-item__description {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 17px;
 }
 .favorite .slider-item__price {
   font-family: "Inter", sans-serif;
@@ -235,7 +268,7 @@ button {
 .favorite .slider-indication {
   margin: 0 auto;
   height: 4px;
-  width: 150px;
+  width: 144px;
   display: flex;
   justify-content: space-between;
 }
@@ -249,7 +282,7 @@ button {
   background-color: #665F55;
 }
 
-.main-menu, .favorite .main-slider__container {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,7 +290,7 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -266,6 +299,7 @@ button {
   font-size: 60px;
   font-weight: 600;
   line-height: 75px;
+  margin-bottom: 40px;
 }
 .gallery .gallery-container {
   display: grid;
@@ -276,35 +310,48 @@ button {
   margin: 0 auto;
   -moz-column-gap: 40px;
        column-gap: 40px;
-  margin-bottom: 400px;
+}
+.gallery .img1, .gallery .img2, .gallery .img3, .gallery .img4 {
+  width: 660px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
+  scale: 1.1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery .img1 {
-  width: 660px;
   height: 590px;
-  border-radius: 20px;
   grid-area: 1/1/59/1;
-  overflow: hidden;
+}
+.gallery .img1 img {
+  -o-object-position: 0px -32px;
+     object-position: 0px -32px;
 }
 .gallery .img2 {
-  width: 660px;
   height: 430px;
-  border-radius: 20px;
   grid-area: 63/1/106/1;
-  overflow: hidden;
+}
+.gallery .img2 img {
+  -o-object-position: 0px -107px;
+     object-position: 0px -107px;
 }
 .gallery .img3 {
-  width: 660px;
   height: 430px;
-  border-radius: 20px;
   grid-area: 1/2/43/2;
-  overflow: hidden;
+}
+.gallery .img3 img {
+  -o-object-position: 0px -105px;
+     object-position: 0px -105px;
 }
 .gallery .img4 {
-  width: 660px;
   height: 590px;
-  border-radius: 20px;
   grid-area: 47/2/106/2;
-  overflow: hidden;
+}
+.gallery .img4 img {
+  -o-object-position: 0px -32px;
+     object-position: 0px -32px;
 }
 
 .test {
@@ -344,7 +391,7 @@ button {
   grid-area: 47/2/106/2;
 }
 
-.main-menu, .favorite .main-slider__container {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,48 +399,85 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
 .main-page__footer {
-  height: 630px;
+  height: 830px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  padding-top: 105px;
 }
 .main-page__footer .left-side {
   width: 50%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 139px;
 }
 .main-page__footer .left-side .footer-title {
   font-family: "Inter", sans-serif;
   font-size: 60px;
   font-weight: 600;
   line-height: 75px;
+  margin-bottom: 40px;
+  padding-right: 60px;
 }
 .main-page__footer .left-side .footer-description {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 40px;
+  padding-right: 60px;
 }
 .main-page__footer .left-side button {
   height: 64px;
   width: 200px;
   border: 1px solid #665F55;
   border-radius: 100px;
+  margin-right: 16px;
+  background-size: inherit;
+  background-position-x: 20px;
+}
+.main-page__footer .left-side button .app-button__top {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  display: block;
+  text-align: left;
+  padding-left: 58px;
+}
+.main-page__footer .left-side button .app-button__down {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  display: block;
+  margin-top: 2px;
+}
+.main-page__footer .left-side button.app-button__apple {
+  background-image: url("/coffee-house/assets/icons/appstore.svg");
+}
+.main-page__footer .left-side button.app-button__apple .app-button__down {
+  padding-left: 5px;
+}
+.main-page__footer .left-side button.app-button__google {
+  background-image: url("/coffee-house/assets/icons/googleplay.svg");
+}
+.main-page__footer .left-side button.app-button__google .app-button__down {
+  padding-left: 20px;
 }
 .main-page__footer .right-side {
-  background-image: url("/coffee-house/assets/images/mobile-screens.jpg");
+  background-image: url("/coffee-house/assets/images/mobile-screens.png");
   width: 50%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-top: -5px;
 }
 
-.main-menu, .favorite .main-slider__container {
+.main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,28 +485,39 @@ button {
 
 .container {
   width: 1440px;
-  padding: 0 40;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
+.footer {
+  padding-bottom: 20px;
+}
 .footer .container {
   display: flex;
+  width: 1360px;
   background-color: #665F55;
   border-radius: 40px;
   height: 450px;
+  padding-top: 100px;
+  padding-left: 100px;
 }
 .footer .left-side {
   height: 100%;
   width: 50%;
+  padding-right: 30px;
 }
 .footer .left-side .footer-title {
   font-family: "Inter", sans-serif;
   font-size: 60px;
   font-weight: 600;
   line-height: 75px;
+  margin-bottom: 40px;
 }
 .footer .left-side .soc {
   display: flex;
+}
+.footer .left-side .soc li {
+  margin-right: 12px;
 }
 .footer .left-side .soc span {
   display: block;
@@ -431,9 +526,26 @@ button {
   border: 1px solid #C1B6AD;
   border-radius: 50%;
 }
+.footer .left-side .soc .insta {
+  background-image: url("/coffee-house/assets/icons/instagram.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer .left-side .soc .face {
+  background-image: url("/coffee-house/assets/icons/facebook.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer .left-side .soc .twit {
+  background-image: url("/coffee-house/assets/icons/twitter.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .footer .right-side {
   height: 100%;
   width: 50%;
+  padding-top: 32px;
+  padding-left: 20px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -445,4 +557,9 @@ button {
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
+  margin-bottom: 40px;
+}
+.footer .right-side .contacts li {
+  margin-bottom: 20px;
+  padding-left: 28px;
 }/*# sourceMappingURL=style.css.map */
