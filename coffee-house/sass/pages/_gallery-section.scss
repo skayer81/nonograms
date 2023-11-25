@@ -1,0 +1,107 @@
+@import "../abstracts/_variables.scss";
+
+.gallery{
+    .title{
+        @include textStyle(60px, 75px);
+        margin-bottom: 40px;
+    }
+    .gallery-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(106, 1fr);
+        height: 1060px;
+        width: 1360px;
+        margin: 0 auto;
+        column-gap: 40px;
+        // margin-bottom: 400px;
+    }
+    .img1, .img2, .img3, .img4{
+        width: 660px;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+            scale: 1.1;
+
+            object-fit: cover;
+        }
+
+    }
+    .img1{
+
+        height: 590px;
+
+        grid-area: 1/1/59/1;
+        img{
+            object-position: 0px -32px;
+        }
+
+    }
+    .img2{
+
+        height: 430px;
+
+        grid-area: 63/1/106/1;
+        img{
+            object-position: 0px -107px;
+        }
+    }
+    .img3{
+
+        height: 430px;
+
+        grid-area: 1/2/43/2;
+        img{
+            object-position: 0px -105px;
+        }
+
+    }
+    .img4{
+
+        height: 590px;
+
+        grid-area: 47/2/106/2;
+        img{
+            object-position: 0px -32px;
+        }
+    }
+}
+.test{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(106, 1fr);
+    height: 1060px;
+    width: 1360px;
+    margin: 0 auto;
+    column-gap: 40px;
+
+    .test1, .test2, .test3, .test4{
+        border: 1px solid red;
+        width: 660px;
+        @include textStyle(60px, 75px);
+    
+    }
+    .test1, .test4{
+        height: 590px;
+    }
+    .test2, .test3{
+        height: 430px;
+    }
+    .test1{
+        grid-area: 1/1/59/1;
+    }
+    .test2{
+        grid-area: 63/1/106/1;
+    }
+    .test3{
+        grid-area: 1/2/43/2;
+    }
+    .test4{
+        grid-area: 47/2/106/2;
+    }
+}
+
+// Свойство grid-area принимает четыре значения, которые разделяются косой чертой: grid-row-start, grid-column-start, grid-row-end и grid-column-end:
+
+// li {
+//   grid-area: 2 / 1 / 4 / 3;
+// }
