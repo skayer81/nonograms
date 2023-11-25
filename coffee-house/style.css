@@ -120,10 +120,10 @@ button {
 .main-menu .logo-button {
   width: 100px;
   height: 60px;
-  background-image: url("/coffee-house/assets/icons/logo.svg");
+  background-image: url("./assets/icons/logo.svg");
 }
 .main-menu .menu-button {
-  background-image: url("/coffee-house/assets/icons/coffee-cup.svg");
+  background-image: url("./assets/icons/coffee-cup.svg");
   width: 80px;
   text-align: left;
   background-position: right top;
@@ -165,7 +165,7 @@ button {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  background-image: url("/coffee-house/assets/images/img-hero.jpg");
+  background-image: url("./assets/images/img-hero.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 40px;
@@ -228,7 +228,7 @@ button {
   margin-bottom: 39px;
 }
 .favorite .right-arrow, .favorite .left-arrow {
-  background-image: url("/coffee-house/assets/icons/arrow-left.svg");
+  background-image: url("./assets/icons/arrow-left.svg");
   width: 60px;
   height: 60px;
   border: 1px solid #665F55;
@@ -457,19 +457,19 @@ button {
   margin-top: 2px;
 }
 .main-page__footer .left-side button.app-button__apple {
-  background-image: url("/coffee-house/assets/icons/appstore.svg");
+  background-image: url("./assets/icons/appstore.svg");
 }
 .main-page__footer .left-side button.app-button__apple .app-button__down {
   padding-left: 5px;
 }
 .main-page__footer .left-side button.app-button__google {
-  background-image: url("/coffee-house/assets/icons/googleplay.svg");
+  background-image: url("./assets/icons/googleplay.svg");
 }
 .main-page__footer .left-side button.app-button__google .app-button__down {
   padding-left: 20px;
 }
 .main-page__footer .right-side {
-  background-image: url("/coffee-house/assets/images/mobile-screens.png");
+  background-image: url("./assets/images/mobile-screens.png");
   width: 50%;
   height: 100%;
   background-repeat: no-repeat;
@@ -527,17 +527,17 @@ button {
   border-radius: 50%;
 }
 .footer .left-side .soc .insta {
-  background-image: url("/coffee-house/assets/icons/instagram.svg");
+  background-image: url("./assets/icons/instagram.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .footer .left-side .soc .face {
-  background-image: url("/coffee-house/assets/icons/facebook.svg");
+  background-image: url("./assets/icons/facebook.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .footer .left-side .soc .twit {
-  background-image: url("/coffee-house/assets/icons/twitter.svg");
+  background-image: url("./assets/icons/twitter.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }

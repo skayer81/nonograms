@@ -5,7 +5,7 @@
         height: 644px;
         color: $textLight;
         @include textStyle(16px, 24px, 400);
-        background-image: url("/coffee-house/assets/images/img-hero.jpg");
+        background-image: url("./assets/images/img-hero.jpg");
         background-position: center;
         background-size: cover;
         border-radius: 40px;
