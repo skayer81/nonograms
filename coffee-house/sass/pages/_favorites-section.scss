@@ -18,13 +18,28 @@
         margin-bottom: 39px;
     }
     .right-arrow, .left-arrow{
-       background-image: url("./assets/icons/arrow-left.svg");
+    //    background-image: url("./assets/icons/arrow-left.svg");
        width: 60px;
        height: 60px;
        border: 1px solid $borderDark;
        border-radius: 50%;
        margin: 0 4px;
        background-size: auto;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+       @extend %tr;
+       
+        path{
+            @extend %tr;
+        }
+       
+       &:hover{
+        background-color: $backgroundContainer;
+        path{
+            stroke: $textLight;
+        }
+       }
     }
     .right-arrow{
         transform: rotate(180deg);

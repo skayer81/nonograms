@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+  transition: 1s;
+}
+
 body {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -82,6 +86,7 @@ body {
 
 .italic {
   font-style: italic;
+  color: #B0907A;
 }
 
 button {
@@ -102,6 +107,10 @@ button {
   width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+  transition: 1s;
 }
 
 .main-header .container {
@@ -128,13 +137,31 @@ button {
   text-align: left;
   background-position: right top;
   height: 20px;
-  padding-top: 7px;
 }
 .main-menu li {
   margin: 0 14px;
 }
 .main-menu li:nth-child(2) {
   margin-left: 24px;
+}
+.main-menu li .active {
+  position: relative;
+}
+.main-menu li .active::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #403F3D;
+  bottom: -7px;
+  left: 50%;
+}
+.main-menu li .active:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
 }
 .main-menu li:has(.logo-button) {
   margin-right: auto;
@@ -143,7 +170,6 @@ button {
 .main-menu li:has(.menu-button) {
   margin-left: auto;
   margin-right: 0;
-  margin-top: -8px;
 }
 
 .main-menu {
@@ -156,6 +182,10 @@ button {
   width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+  transition: 1s;
 }
 
 .main-page .video {
@@ -188,11 +218,32 @@ button {
   margin-bottom: 40px;
 }
 .main-page .video .menu-button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
   width: 200px;
   height: 64px;
   border-radius: 100px;
   background-color: #E1D4C9;
   color: #403F3D;
+  position: relative;
+}
+.main-page .video .menu-button:hover {
+  padding-right: 34px;
+}
+.main-page .video .menu-button:hover::after {
+  opacity: 1;
+}
+.main-page .video .menu-button::after {
+  content: "";
+  top: 22px;
+  right: 64px;
+  background-image: url("./assets/icons/coffee-cup.svg");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
 }
 
 .main-menu {
@@ -205,6 +256,10 @@ button {
   width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after {
+  transition: 1s;
 }
 
 .favorite {
@@ -228,13 +283,21 @@ button {
   margin-bottom: 39px;
 }
 .favorite .right-arrow, .favorite .left-arrow {
-  background-image: url("./assets/icons/arrow-left.svg");
   width: 60px;
   height: 60px;
   border: 1px solid #665F55;
   border-radius: 50%;
   margin: 0 4px;
   background-size: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.favorite .right-arrow:hover, .favorite .left-arrow:hover {
+  background-color: #665F55;
+}
+.favorite .right-arrow:hover path, .favorite .left-arrow:hover path {
+  stroke: #E1D4C9;
 }
 .favorite .right-arrow {
   transform: rotate(180deg);
@@ -294,6 +357,10 @@ button {
   margin: 0 auto;
 }
 
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path {
+  transition: 1s;
+}
+
 .gallery .title {
   font-family: "Inter", sans-serif;
   font-size: 60px;
@@ -315,11 +382,15 @@ button {
   width: 660px;
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
   scale: 1.1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gallery .img1 img:hover, .gallery .img2 img:hover, .gallery .img3 img:hover, .gallery .img4 img:hover {
+  scale: 1;
 }
 .gallery .img1 {
   height: 590px;
@@ -332,10 +403,11 @@ button {
 .gallery .img2 {
   height: 430px;
   grid-area: 63/1/106/1;
+  margin-top: -3px;
 }
 .gallery .img2 img {
-  -o-object-position: 0px -107px;
-     object-position: 0px -107px;
+  -o-object-position: 0px -104px;
+     object-position: 0px -104px;
 }
 .gallery .img3 {
   height: 430px;
@@ -354,43 +426,6 @@ button {
      object-position: 0px -32px;
 }
 
-.test {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(106, 1fr);
-  height: 1060px;
-  width: 1360px;
-  margin: 0 auto;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-}
-.test .test1, .test .test2, .test .test3, .test .test4 {
-  border: 1px solid red;
-  width: 660px;
-  font-family: "Inter", sans-serif;
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 75px;
-}
-.test .test1, .test .test4 {
-  height: 590px;
-}
-.test .test2, .test .test3 {
-  height: 430px;
-}
-.test .test1 {
-  grid-area: 1/1/59/1;
-}
-.test .test2 {
-  grid-area: 63/1/106/1;
-}
-.test .test3 {
-  grid-area: 1/2/43/2;
-}
-.test .test4 {
-  grid-area: 47/2/106/2;
-}
-
 .main-menu {
   display: flex;
   justify-content: center;
@@ -401,6 +436,10 @@ button {
   width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
+  transition: 1s;
 }
 
 .main-page__footer {
@@ -438,6 +477,20 @@ button {
   margin-right: 16px;
   background-size: inherit;
   background-position-x: 20px;
+  display: inline-flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 20px;
+}
+.main-page__footer .left-side button svg {
+  margin-right: 8px;
+}
+.main-page__footer .left-side button:hover {
+  color: #E1D4C9;
+  background-color: #665F55;
+}
+.main-page__footer .left-side button:hover path {
+  fill: #E1D4C9;
 }
 .main-page__footer .left-side button .app-button__top {
   font-family: "Inter", sans-serif;
@@ -446,7 +499,6 @@ button {
   line-height: 14px;
   display: block;
   text-align: left;
-  padding-left: 58px;
 }
 .main-page__footer .left-side button .app-button__down {
   font-family: "Inter", sans-serif;
@@ -455,18 +507,6 @@ button {
   line-height: 24px;
   display: block;
   margin-top: 2px;
-}
-.main-page__footer .left-side button.app-button__apple {
-  background-image: url("./assets/icons/appstore.svg");
-}
-.main-page__footer .left-side button.app-button__apple .app-button__down {
-  padding-left: 5px;
-}
-.main-page__footer .left-side button.app-button__google {
-  background-image: url("./assets/icons/googleplay.svg");
-}
-.main-page__footer .left-side button.app-button__google .app-button__down {
-  padding-left: 20px;
 }
 .main-page__footer .right-side {
   background-image: url("./assets/images/mobile-screens.png");
@@ -489,6 +529,10 @@ button {
   margin: 0 auto;
 }
 
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+  transition: 1s;
+}
+
 .footer {
   padding-bottom: 20px;
 }
@@ -500,6 +544,7 @@ button {
   height: 450px;
   padding-top: 100px;
   padding-left: 100px;
+  color: #E1D4C9;
 }
 .footer .left-side {
   height: 100%;
@@ -518,28 +563,19 @@ button {
 }
 .footer .left-side .soc li {
   margin-right: 12px;
-}
-.footer .left-side .soc span {
-  display: block;
   width: 60px;
   height: 60px;
-  border: 1px solid #C1B6AD;
   border-radius: 50%;
+  border: 1px solid #E1D4C9;
+  padding-top: 17px;
+  padding-left: 17px;
 }
-.footer .left-side .soc .insta {
-  background-image: url("./assets/icons/instagram.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+.footer .left-side .soc li:hover {
+  cursor: pointer;
+  background-color: #E1D4C9;
 }
-.footer .left-side .soc .face {
-  background-image: url("./assets/icons/facebook.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.footer .left-side .soc .twit {
-  background-image: url("./assets/icons/twitter.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+.footer .left-side .soc li:hover path {
+  stroke: #403F3D;
 }
 .footer .right-side {
   height: 100%;
@@ -562,4 +598,36 @@ button {
 .footer .right-side .contacts li {
   margin-bottom: 20px;
   padding-left: 28px;
+  background-repeat: no-repeat;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer .right-side .contacts span {
+  margin-left: 4px;
+}
+.footer .right-side .contacts .adres {
+  background-image: url("./assets/icons/pin-alt.svg");
+}
+.footer .right-side .contacts .tel {
+  background-image: url("./assets/icons/phone.svg");
+}
+.footer .right-side .contacts .time {
+  background-image: url("./assets/icons/clock.svg");
+}
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #E1D4C9;
+  bottom: -7px;
+  left: 50%;
+}
+.footer .right-side .contacts .tel:hover::after, .footer .right-side .contacts .adres:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
