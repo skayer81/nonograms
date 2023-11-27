@@ -28,7 +28,7 @@ class MenuItem extends CreateBaseComponent{
         img.setAttribute('src', `./assets/images/coffee/${this.img}`);
         img.setAttribute('alt', this.title);
         const textContainer = this.createBaseComponent(article, 'div', ['text-content']);
-        this.createBaseComponent(textContainer, 'p', ['title'], this.title);
+        this.createBaseComponent(textContainer, 'h3', ['title'], this.title);
         this.createBaseComponent(textContainer, 'p', ['description'], this.description);
         this.createBaseComponent(textContainer, 'p', ['price'], `$${this.price}`);
         return li;

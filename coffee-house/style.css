@@ -105,6 +105,17 @@ input, label {
   cursor: pointer;
 }
 
+h1, h2 {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  z-index: -1000;
+  -webkit-user-select: none;
+}
+
 .main-menu {
   display: flex;
   justify-content: center;
@@ -401,7 +412,6 @@ input, label {
   width: 660px;
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;
 }
 .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
   scale: 1.1;
@@ -584,7 +594,7 @@ input, label {
 .coffee-item .img-container img {
   scale: 1.1;
 }
-.coffee-item .img-container:hover img {
+.coffee-item:hover img {
   scale: 1;
 }
 .coffee-item .text-content {
@@ -775,7 +785,8 @@ input, label {
   line-height: 30px;
   margin-bottom: 40px;
 }
-.footer .right-side .contacts li {
+.footer .right-side .contacts a, .footer .right-side .contacts .time {
+  display: block;
   margin-bottom: 20px;
   padding-left: 28px;
   background-repeat: no-repeat;

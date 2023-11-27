@@ -40,7 +40,15 @@ function buttonClick(){
         menuButton.classList.add('disable');
     }
     else menuButton.classList.remove('disable');
-  //  console.log(curentPage, this.dataset.page)
-
+//   //  console.log(curentPage, this.dataset.page)
+//   console.log(window.location);
+//   //console.log(`${window.location.href}?page=${pages[curentPage]}` );
+//   //window.location.href = `${window.location.href}?page=${pages[curentPage]}`;
+//   window.location.search = 'page=test';
+  
+//   console.log(window.location);
 }
+
+///////////////
+
 
