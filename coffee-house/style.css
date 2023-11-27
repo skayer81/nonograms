@@ -774,7 +774,8 @@ input, label {
   line-height: 30px;
   margin-bottom: 40px;
 }
-.footer .right-side .contacts li {
+.footer .right-side .contacts a, .footer .right-side .contacts .time {
+  display: block;
   margin-bottom: 20px;
   padding-left: 28px;
   background-repeat: no-repeat;
