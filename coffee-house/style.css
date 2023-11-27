@@ -86,6 +86,7 @@ a {
 
 body {
   background-color: #E1D4C9;
+  color: #403F3D;
 }
 
 .italic {
@@ -99,6 +100,7 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  color: #403F3D;
 }
 
 input, label {
@@ -296,13 +298,13 @@ h1, h2 {
   text-align: center;
   padding-top: 100px;
   margin-bottom: 100px;
+  color: #403F3D;
 }
 .favorite .favorite-title {
   font-family: "Inter", sans-serif;
   font-size: 60px;
   font-weight: 600;
   line-height: 75px;
-  color: #403F3D;
 }
 .favorite .main-slider__container {
   display: flex;

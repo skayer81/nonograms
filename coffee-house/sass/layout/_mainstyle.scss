@@ -4,6 +4,7 @@
 
 body{
     background-color: $backgroundBody;
+    color: $textDark;
 }
 
 .italic{
@@ -17,6 +18,7 @@ button{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    color: $textDark;
 }
 
 input, label{
