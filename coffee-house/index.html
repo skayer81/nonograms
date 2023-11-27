@@ -13,28 +13,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
-    <title>Document</title>
-    <style>
-        .main-header {
-            display: inline;
-        }
-    </style>
+    <title>Coffee House</title>
 </head>
 
 <body>
     <header class="main-header">
         <div class="container">
-            <menu class="main-menu">
-                <li> <button class="logo-button"></button></li>
-                <li> <button class="favorite-button active">Favorite coffee</button></li>
-                <li> <button class="about-button active">About</button></li>
-                <li> <button class="app-button active">Mobile app</button></li>
-                <li> <button class="contact-button active">Contact us</button></li>
-                <li><button class="menu-button active">Menu</button></li>
+            <menu class="main-menu" >
+                <li> <button class="logo-button" data-page="home"></button></li>
+                <li> <button class="favorite-button active" data-page="home" data-id="favorite">Favorite coffee</button></li>
+                <li> <button class="about-button active" data-page="home" data-id="about">About</button></li>
+                <li> <button class="app-button active" data-page="home" data-id="app">Mobile app</button></li>
+                <!-- <li><a href="#test">test</a></li> -->
+                <li> <button class="contact-button active" data-page data-id="contact">Contact us</button></li>
+                <li> <button class="menu-button active" data-page="menu" >Menu</button></li>
             </menu>
         </div>
     </header>
-    <main class="main-page" hidden id="main-page">
+    <main class="main-page" id="home-page">
         <div class="container">
             <section class="video">
                 <!-- <div class="container"> -->
@@ -43,12 +39,12 @@
                     <p class="video-description">With its inviting atmosphere and delicious coffee options, the Coffee
                         House Resource is a popular destination for coffee lovers and those seeking a warm and inviting
                         space to enjoy their favorite beverage.</p>
-                    <button class="menu-button">Menu</button>
+                    <button class="menu-button" data-page="menu">Menu</button>
                 </div>
 
                 <!-- </div> -->
             </section>
-            <section class="favorite">
+            <section class="favorite" id = "favorite">
                 <!-- <div class=""> -->
                 <p class="favorite-title">Choose your <span class="italic">favorite</span> coffee</p>
                 <div class="main-slider__container">
@@ -83,7 +79,7 @@
 
                 <!-- </div> -->
             </section>
-            <section class="gallery">
+            <section class="gallery" id="about">
                 <p class="title">
                     Resource is <span class="italic">the perfect and cozy place</span> where you can enjoy a variety of
                     hot beverages,
@@ -96,7 +92,7 @@
                     <li class="img4"><img src="./assets/images/about-4.jpg" alt=""></li>
                 </ul>
             </section>
-            <footer class="main-page__footer">
+            <footer class="main-page__footer" id="app">
                 <div class="left-side">
                     <p class="footer-title"><span class="italic">Download</span> our apps to start ordering</p>
                     <p class="footer-description">Download the Resource app today and experience the comfort of
@@ -147,7 +143,7 @@
             </footer>
         </div>
     </main>
-    <main class="menu-page" id="menu-page">
+    <main class="menu-page" id="menu-page" hidden>
         <div class="container">
             <p class="menu-title">Behind each of our cups hides an <span class="italic">amazing surprise</span></p>
             <form class="menu-select">
@@ -158,39 +154,22 @@
                 <input type="radio" id="selectdessert" name="select" value="dessert" />
                 <label class="select-dessert" for="selectdessert"><span class="icon"></span>Dessert</label>
             </form>
-            <!-- <ul class="menu-items">
-                <li>
-                    <article class="coffee-item">
-                        <div class="img-container"> <img src="./assets/images/coffee/coffee-1.jpg" alt="">
-                        </div>
-                        <div class="text-content">
-                            <p class="title">Irish coffee</p>
-                            <p class="description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                            <p class="price">$7.00</p>
-                        </div>
-                    </article>
-                </li>
-            </ul> -->
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="left-side">
                 <p class="footer-title">Sip, Savor, Smile. <span class="italic"> It’s coffee time!</span></p>
                 <ul class="soc">
                     <li><a href="">
-                            <!-- <span class="twit"> -->
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
                                     stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-
-                            <!-- </span> -->
                         </a></li>
                     <li class="insta"><a href="">
-                            <!-- <span class="insta"></span> -->
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path

@@ -19,6 +19,10 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
