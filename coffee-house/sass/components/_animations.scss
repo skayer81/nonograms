@@ -1,0 +1,30 @@
+// .imgComponent:hover {   
+//     animation: grow 30000ms ease;
+//     cursor: pointer;
+//     }
+//     @keyframes grow {
+//     0% {
+//     transform: scale(1);
+//     }
+//     100% {
+//     transform: scale(2);
+//     }
+
+    @keyframes hidden {
+        0% {
+        opacity: 1;
+        }
+        
+        100% {
+        opacity: 0;
+        }
+        }
+        @keyframes visible{
+            0% {
+                opacity: 0;
+                }
+                
+                100% {
+                opacity: 1;
+                }
+        }

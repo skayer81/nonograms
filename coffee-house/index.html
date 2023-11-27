@@ -20,18 +20,18 @@
     <header class="main-header">
         <div class="container">
             <menu class="main-menu" >
-                <li> <button class="logo-button" data-page="home"></button></li>
-                <li> <button class="favorite-button active" data-page="home" data-id="favorite">Favorite coffee</button></li>
-                <li> <button class="about-button active" data-page="home" data-id="about">About</button></li>
-                <li> <button class="app-button active" data-page="home" data-id="app">Mobile app</button></li>
+                <li> <button class="logo-button" data-page="0"></button></li>
+                <li> <button class="favorite-button active" data-page="0" data-id="favorite">Favorite coffee</button></li>
+                <li> <button class="about-button active" data-page="0" data-id="about">About</button></li>
+                <li> <button class="app-button active" data-page="0" data-id="app">Mobile app</button></li>
                 <!-- <li><a href="#test">test</a></li> -->
                 <li> <button class="contact-button active" data-page data-id="contact">Contact us</button></li>
-                <li> <button class="menu-button active" data-page="menu" id="menuButton">Menu</button></li>
+                <li> <button class="menu-button active" data-page="1" id="menuButton" data-blockable="1">Menu</button></li>
             </menu>
         </div>
     </header>
     <h1>the best Coffee Hoese of the world</h1>
-    <main class="main-page" id="home-page">
+    <main class="main-page" id="home-page" data-id="index">
         <div class="container">
             <section class="video">
                 <h2>our virtues</h2>
@@ -41,7 +41,7 @@
                     <p class="video-description">With its inviting atmosphere and delicious coffee options, the Coffee
                         House Resource is a popular destination for coffee lovers and those seeking a warm and inviting
                         space to enjoy their favorite beverage.</p>
-                    <button class="menu-button" data-page="menu">Menu</button>
+                    <button class="menu-button" data-page="1" >Menu</button>
                 </div>
 
                 <!-- </div> -->
@@ -147,7 +147,7 @@
             </footer>
         </div>
     </main>
-    <main class="menu-page" id="menu-page" hidden>
+    <main class="menu-page" id="menu-page" hidden data-id="menu">
         <div class="container">
             <p class="menu-title">Behind each of our cups hides an <span class="italic">amazing surprise</span></p>
             <form class="menu-select">
