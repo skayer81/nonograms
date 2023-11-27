@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
     <title>Document</title>
     <style>
@@ -34,7 +34,7 @@
             </menu>
         </div>
     </header>
-    <article class="main-page">
+    <main class="main-page" hidden>
         <div class="container">
             <section class="video">
                 <!-- <div class="container"> -->
@@ -129,28 +129,33 @@
                 <div class="right-side"></div>
             </footer>
         </div>
-    </article>
-    <article class="menu-page" hidden>
-        <p class="menu-title">Behind each of our cups hides an <span>amazing surprise</span></p>
-        <form>
+    </main>
+    <main class="menu-page" id="menu-page">
+        <div class="container">
+        <p class="menu-title">Behind each of our cups hides an <span class="italic">amazing surprise</span></p>
+        <form class="menu-select">
             <input type="radio" id="selectCofee" name="select" value="coffee" />
-            <label for="selectCofee">Coffee </label>
+            <label class="select-coffee" for="selectCoffee"><span class="icon"></span>  Coffee </label>
             <input type="radio" id="selectTea" name="select" value="tea" />
-            <label for="selectTea">Tea</label>
+            <label class="select-tea" for="selectTea"><span class="icon"></span>Tea</label>
             <input type="radio" id="selectdessert" name="select" value="dessert" />
-            <label for="selectdessert">dessert</label>
+            <label class="select-dessert" for="selectdessert"><span class="icon"></span>Dessert</label>
         </form>
-        <ul>
+        <ul class="menu-items">
             <li>
-                <article>
-                    <img src="" alt="">
-                    <p>Honey raf</p>
-                    <p>Espresso with frothed milk, cream and aromatic honey</p>
-                    <p>$5.50</p>
+                <article class="coffee-item">
+                    <div class="img-container"> <img src="./assets/images/coffee/coffee-1.jpg" alt="">
+                    </div>
+                    <div class="text-content">
+                    <p class="title">Irish coffee</p>
+                    <p class="description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                    <p class="price">$7.00</p>
+                </div>
                 </article>
             </li>
         </ul>
-    </article>
+    </div>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="left-side">
@@ -192,6 +197,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="./scripts/script.js"></script>
 </body>
 
 </html>

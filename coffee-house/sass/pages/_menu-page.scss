@@ -1,0 +1,86 @@
+@import "../abstracts/_variables.scss";
+@import "../components/menu-item";
+
+.menu-page{
+    .menu-title{
+        @include textStyle(60px, 75px);
+        text-align: center;
+        padding: 0 260px;
+        margin-bottom: 40px;
+    }
+    .menu-select{
+        margin: 0 auto 40px;
+        text-align: center;
+       // margin-bottom: 10px;
+        input{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            top: -1px;
+
+        }
+    }
+    .select-coffee, .select-tea, .select-dessert{
+        display: inline-flex;
+        align-items: center;
+        // justify-content: space-around;
+        // width: 115px;
+        height: 46px;
+        padding-left: 7px;
+        padding-right: 15px;
+        border: 1px solid $borderLight;
+        border-radius: 100px;
+        color: $textDark;
+
+        @include textStyle(16px, 24px);
+        @extend %tr;
+        .icon{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background-color: $borderLight;
+            background-repeat: no-repeat;
+            background-position: center;
+            @extend %tr;
+        }
+        &:hover{
+            background-color: $borderDark;
+            background-color: $borderDark;
+            color: $textLight;
+            .icon{
+                background-color: $backgroundBody;
+            }
+        }
+    }
+    .select-coffee{
+        .icon{
+            background-image: url("./assets/icons/menu-cofee.png");
+        }
+    }
+    .select-tea{
+        margin: 0 12px;
+        .icon{
+            background-image: url("./assets/icons/menu-tea.png");
+        }
+
+    }
+    .select-dessert{
+        .icon{
+            background-image: url("./assets/icons/menu-dessert.png");
+        }
+    }
+    input:checked + label{
+        background-color: $borderDark;
+        background-color: $borderDark;
+        color: $textLight;
+        .icon{
+            background-color: $backgroundBody;
+        }
+        cursor: default;
+    }
+    .menu-items{
+        margin-bottom: 100px;
+    }
+}

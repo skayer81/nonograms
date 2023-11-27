@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -97,6 +97,10 @@ button {
   background-position: center;
 }
 
+input, label {
+  cursor: pointer;
+}
+
 .main-menu {
   display: flex;
   justify-content: center;
@@ -109,7 +113,7 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -184,7 +188,7 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -258,7 +262,7 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after {
   transition: 1s;
 }
 
@@ -357,7 +361,7 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path {
   transition: 1s;
 }
 
@@ -438,7 +442,7 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-page__footer .left-side button path, .main-page__footer .left-side button, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
   transition: 1s;
 }
 
@@ -529,7 +533,162 @@ button {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+  transition: 1s;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+  transition: 1s;
+}
+
+.coffee-item {
+  height: 506px;
+  width: 310px;
+  border: 1px solid #C1B6AD;
+  border-radius: 40px;
+  color: #403F3D;
+}
+.coffee-item .img-container {
+  height: 310px;
+  width: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.coffee-item .img-container img {
+  scale: 1.1;
+}
+.coffee-item .img-container:hover img {
+  scale: 1;
+}
+.coffee-item .text-content {
+  padding: 20px;
+  height: 196px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.coffee-item .title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+.coffee-item .description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: auto;
+}
+.coffee-item .price {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.menu-page .menu-title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+  text-align: center;
+  padding: 0 260px;
+  margin-bottom: 40px;
+}
+.menu-page .menu-select {
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.menu-page .menu-select input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1px;
+}
+.menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert {
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  padding-left: 7px;
+  padding-right: 15px;
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #C1B6AD;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-page .select-coffee:hover, .menu-page .select-tea:hover, .menu-page .select-dessert:hover {
+  background-color: #665F55;
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+.menu-page .select-coffee:hover .icon, .menu-page .select-tea:hover .icon, .menu-page .select-dessert:hover .icon {
+  background-color: #E1D4C9;
+}
+.menu-page .select-coffee .icon {
+  background-image: url("./assets/icons/menu-cofee.png");
+}
+.menu-page .select-tea {
+  margin: 0 12px;
+}
+.menu-page .select-tea .icon {
+  background-image: url("./assets/icons/menu-tea.png");
+}
+.menu-page .select-dessert .icon {
+  background-image: url("./assets/icons/menu-dessert.png");
+}
+.menu-page input:checked + label {
+  background-color: #665F55;
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: default;
+}
+.menu-page input:checked + label .icon {
+  background-color: #E1D4C9;
+}
+.menu-page .menu-items {
+  margin-bottom: 100px;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path, .coffee-item .img-container img, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon {
   transition: 1s;
 }
 
