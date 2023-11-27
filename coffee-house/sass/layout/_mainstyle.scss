@@ -8,6 +8,7 @@ body{
 
 .italic{
     font-style: italic;
+    color: $textAccent;
 }
 
 button{
@@ -16,4 +17,8 @@ button{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+input, label{
+    cursor: pointer;
 }

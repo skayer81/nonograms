@@ -5,7 +5,7 @@
         height: 644px;
         color: $textLight;
         @include textStyle(16px, 24px, 400);
-        background-image: url("/coffee-house/assets/images/img-hero.jpg");
+        background-image: url("./assets/images/img-hero.jpg");
         background-position: center;
         background-size: cover;
         border-radius: 40px;
@@ -24,6 +24,9 @@
         .video-title{
             @include textStyle(72px, 75.6px);
             margin-bottom: 40px;
+            // span{
+                // color: $textAccent;
+            // }
         }
         // .video-description{
         //     @include textStyle(16px, 24px);
@@ -32,11 +35,32 @@
             margin-bottom: 40px;
         }
         .menu-button{
+            @include textStyle(16px, 24px);
             width: 200px;
             height: 64px;
             border-radius: 100px;
             background-color: $backgroundBody;
             color: $textDark;
+            @extend %tr;
+            position: relative;
+            &:hover{
+                padding-right: 34px;
+                &::after{
+                    opacity: 1;
+                }
+            }
+            &::after{
+                content: '';
+                top: 22px;
+                right: 64px;
+                background-image: url("./assets/icons/coffee-cup.svg");
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                // border: 1px solid red;
+                opacity: 0;
+                @extend %tr;
+            }
         }
     }
 }

@@ -21,32 +21,71 @@
     color: $textDark;
     width: 100%;
     height: 100%;
+    // button{
+        // border: 1px solid red;
+    // }
 
     .logo-button{
         // border: 1px solid red;
         width: 100px;
         height: 60px;
-        background-image: url("/coffee-house/assets/icons/logo.svg");
+        background-image: url("./assets/icons/logo.svg");
         // li:has(&){
         //     margin-right: auto;
         //     border: 1px solid green;
         // }
     }
     .menu-button{
-        background-image: url("/coffee-house/assets/icons/coffee-cup.svg");
+        background-image: url("./assets/icons/coffee-cup.svg");
         // border: 1px solid red;
         width: 80px;
         text-align: left;
         background-position: right top;
         height: 20px;
-        padding-top: 7px;
+        // padding-top: 7px;
 
         }
     li{
         margin: 0 14px;
+        // padding: 10px 0;
         &:nth-child(2){
             margin-left: 24px;
         }
+        .active{
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background-color: $textDark;
+                bottom: -7px;
+                left: 50%;
+                @extend %tr;
+            }
+            
+            &:hover{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    // background-color: aqua;
+                    // bottom: 0;
+                    left: 0;
+                }
+                // border-bottom: 1px solid red;
+            }
+        }
+        // &:nth-child(n+1){
+            // button{
+                // padding: 10px 0;
+                // &:hover{
+                // border-bottom: 1px solid red;
+                // }
+            // }
+        // }
     }
     li:has(.logo-button){
         margin-right: auto;
@@ -56,9 +95,12 @@
     li:has(.menu-button){
         margin-left: auto;
         margin-right: 0;
-        margin-top: -8px;
+        // margin-top: -8px;
         // border: 1px solid green;
     }
+    // button.active{
+
+    // }
 }
 
 // .logo-button{
