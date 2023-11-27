@@ -40,9 +40,10 @@ export class ButtonsList{
                     this.pages.curentPage.classList.add('visible');
                     this.blockButtons();
                     this.updateURL(this.pages.idCurentPage);
+                    if (button.dataset.id) document.location =`#${button.dataset.id}`;
                 },800)
         }
-        if (button.dataset.id) document.location =`#${button.dataset.id}`;
+        else if (button.dataset.id) document.location =`#${button.dataset.id}`;
     }
 
     blockButtons(){
