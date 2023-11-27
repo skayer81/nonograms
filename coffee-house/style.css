@@ -667,10 +667,9 @@ h1, h2 {
   text-align: center;
 }
 .menu-page .menu-select input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: -1px;
+  position: fixed;
+  z-index: -100;
+  right: -100%;
 }
 .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert {
   display: inline-flex;
