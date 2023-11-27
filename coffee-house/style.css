@@ -401,7 +401,6 @@ input, label {
   width: 660px;
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;
 }
 .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
   scale: 1.1;
