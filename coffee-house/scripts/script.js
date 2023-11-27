@@ -7,6 +7,8 @@ const menuPage =  document.getElementById('menu-page');
 const homePage = document.getElementById('home-page');
 menuPage.querySelector('.container').append(menu.listItems);
 
+const menuButton = document.getElementById('menuButton');
+
 
 const buttons = document.querySelectorAll('[data-page]');
 //console.log(buttons);
@@ -16,7 +18,7 @@ let curentPage = 0;
 
 buttons.forEach(button => {
     button.addEventListener('click', buttonClick)
-    console.log(button)
+ //   console.log(button)
 
 })
 
@@ -34,7 +36,11 @@ function buttonClick(){
     if (this.dataset.id){
         document.location =`#${this.dataset.id}`;
     }
-    console.log(curentPage, this.dataset.page)
+    if (curentPage === 1){
+        menuButton.classList.add('disable');
+    }
+    else menuButton.classList.remove('disable');
+  //  console.log(curentPage, this.dataset.page)
 
 }
 
