@@ -30,7 +30,7 @@
             </menu>
         </div>
     </header>
-    <h1>the best Coffee Hoese of the world</h1>
+    <h1>the best Coffee House of the world</h1>
     <main class="main-page" id="home-page" data-id="index">
         <div class="container">
             <section class="video">
@@ -102,7 +102,7 @@
                     <p class="footer-description">Download the Resource app today and experience the comfort of
                         ordering your favorite coffee from wherever you are</p>
                     <div class="buttons-block">
-                        <a class="app-button__apple" href="" target="_blank">
+                        <a class="app-button__apple" href="https://www.apple.com/app-store/" target="_blank">
                             <!-- <span class="app-button__img"></span> -->
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@
     <main class="menu-page" id="menu-page" hidden data-id="menu">
         <div class="container">
             <p class="menu-title">Behind each of our cups hides an <span class="italic">amazing surprise</span></p>
-            <form class="menu-select">
+            <form class="menu-select" id="form">
                 <input type="radio" id="selectCoffee" name="select" value="coffee" checked>
                 <label class="select-coffee" for="selectCoffee"><span class="icon"></span> Coffee </label>
                 <input type="radio" id="selectTea" name="select" value="tea" >
@@ -211,6 +211,7 @@
         </div>
     </footer>
     <script type="module" src="./scripts/script.js"></script>
+    <script>document.getElementById('form').addEventListener('submit',()=> event.preventDefault())</script>
 </body>
 
 </html>
