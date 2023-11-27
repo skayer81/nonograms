@@ -1,15 +1,6 @@
 
 import {product} from './product.js';
-
-class CreateBaseComponent{
-    createBaseComponent(parent, tag, classes = [], innerHTML = '') {
-        let result = document.createElement(tag);
-        if (classes) result.classList.add(...classes);
-        if (parent) parent.append(result);
-        if (innerHTML) result.innerHTML = innerHTML;
-        return result;
-    }
-}
+import {CreateBaseComponent} from './createComponent.js'
 
 class MenuItem extends CreateBaseComponent{
     constructor(img, title, description, price){

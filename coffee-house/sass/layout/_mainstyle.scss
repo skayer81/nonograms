@@ -1,9 +1,11 @@
+@import './../components/animations';
 .container{
     @extend %container;
 }
 
 body{
     background-color: $backgroundBody;
+    color: $textDark;
 }
 
 .italic{
@@ -17,6 +19,7 @@ button{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    color: $textDark;
 }
 
 input, label{
@@ -30,5 +33,15 @@ h1, h2{
     white-space: nowrap;
     width: 1px;
     z-index: -1000;
-    -webkit-user-select: none;
+    // -webkit-user-select: none;
+}
+
+.hidden{
+    animation: hidden 1000ms ease;
+    animation-iteration-count: 1;
+   //opacity: 0;
+}
+.visible{
+    animation: visible 1000ms ease;
+    animation-iteration-count: 1;
 }
