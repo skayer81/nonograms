@@ -583,7 +583,7 @@ input, label {
 .coffee-item .img-container img {
   scale: 1.1;
 }
-.coffee-item .img-container:hover img {
+.coffee-item:hover img {
   scale: 1;
 }
 .coffee-item .text-content {

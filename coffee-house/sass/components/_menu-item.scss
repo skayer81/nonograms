@@ -1,47 +1,44 @@
 @import "../abstracts/_variables.scss";
 
-.coffee-item{
+.coffee-item {
     height: 506px;
     width: 310px;
     border: 1px solid $borderLight;
     border-radius: 40px;
     color: $textDark;
-    .img-container{
+    .img-container {
         height: 310px;
         width: 310px;
         border-radius: 40px;
         overflow: hidden;
-        img{
+        img {
             scale: 1.1;
             @extend %tr;
         }
-        &:hover{
-            img{
-                scale: 1;
-            }
+    }
+    &:hover {
+        img {
+            scale: 1;
         }
     }
-    .text-content{
+
+    .text-content {
         padding: 20px;
         height: 196px;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
     }
-    .title{
+    .title {
         @include textStyle(24px, 30px);
         margin-bottom: 12px;
     }
-    .description{
+    .description {
         @include textStyle(16px, 24px, 400);
         margin-bottom: auto;
-
     }
-    .price{
+    .price {
         // margin-top: auto;
         @include textStyle(24px, 30px);
-        
-
     }
-
 }
