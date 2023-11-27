@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -117,7 +117,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -171,6 +171,17 @@ input, label {
   height: 2px;
   left: 0;
 }
+.main-menu li .disable {
+  cursor: auto;
+}
+.main-menu li .disable::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #403F3D;
+  left: 0;
+}
 .main-menu li:has(.logo-button) {
   margin-right: auto;
   margin-left: 0;
@@ -192,7 +203,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-page .video .menu-button::after, .main-page .video .menu-button, .main-menu li .active::after {
   transition: 1s;
 }
 
@@ -266,7 +277,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .favorite .right-arrow path, .favorite .left-arrow path, .favorite .right-arrow, .favorite .left-arrow, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after {
   transition: 1s;
 }
 
@@ -365,7 +376,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path {
   transition: 1s;
 }
 
@@ -446,7 +457,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side button path, .main-page__footer .left-side button, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-page__footer .left-side a path, .main-page__footer .left-side a, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
   transition: 1s;
 }
 
@@ -477,7 +488,7 @@ input, label {
   margin-bottom: 40px;
   padding-right: 60px;
 }
-.main-page__footer .left-side button {
+.main-page__footer .left-side a {
   height: 64px;
   width: 200px;
   border: 1px solid #665F55;
@@ -490,17 +501,17 @@ input, label {
   align-items: center;
   padding-left: 20px;
 }
-.main-page__footer .left-side button svg {
+.main-page__footer .left-side a svg {
   margin-right: 8px;
 }
-.main-page__footer .left-side button:hover {
+.main-page__footer .left-side a:hover {
   color: #E1D4C9;
   background-color: #665F55;
 }
-.main-page__footer .left-side button:hover path {
+.main-page__footer .left-side a:hover path {
   fill: #E1D4C9;
 }
-.main-page__footer .left-side button .app-button__top {
+.main-page__footer .left-side a .app-button__top {
   font-family: "Inter", sans-serif;
   font-size: 10px;
   font-weight: 600;
@@ -508,7 +519,7 @@ input, label {
   display: block;
   text-align: left;
 }
-.main-page__footer .left-side button .app-button__down {
+.main-page__footer .left-side a .app-button__down {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -537,7 +548,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side a, .main-page__footer .left-side a path {
   transition: 1s;
 }
 
@@ -553,7 +564,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .coffee-item .img-container img, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side a, .main-page__footer .left-side a path {
   transition: 1s;
 }
 
@@ -698,7 +709,7 @@ input, label {
   margin: 0 auto;
 }
 
-.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side button, .main-page__footer .left-side button path, .coffee-item .img-container img, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon {
+.footer .right-side .contacts .tel::after, .footer .right-side .contacts .adres::after, .footer .left-side .soc li path, .footer .left-side .soc li, .main-menu li .active::after, .main-page .video .menu-button, .main-page .video .menu-button::after, .favorite .right-arrow, .favorite .left-arrow, .favorite .right-arrow path, .favorite .left-arrow path, .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img, .main-page__footer .left-side a, .main-page__footer .left-side a path, .coffee-item .img-container img, .menu-page .select-coffee, .menu-page .select-tea, .menu-page .select-dessert, .menu-page .select-coffee .icon, .menu-page .select-tea .icon, .menu-page .select-dessert .icon {
   transition: 1s;
 }
 
