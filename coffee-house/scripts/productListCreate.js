@@ -1,8 +1,8 @@
 
-import {product} from './product.js';
+//import {product} from './product.js';
 import {CreateBaseComponent} from './createComponent.js'
 
-class MenuItem extends CreateBaseComponent{
+class ProductItem extends CreateBaseComponent{
     constructor(img, title, description, price){
         super();
         this.img = img;
@@ -30,7 +30,7 @@ class MenuItem extends CreateBaseComponent{
     }
 }
 
-export class Menu extends CreateBaseComponent{
+export class ProductList extends CreateBaseComponent{
     constructor(product){
         super();
         this.coffee =  product.filter(item => item.category === 'coffee');
@@ -39,7 +39,7 @@ export class Menu extends CreateBaseComponent{
     createMenu(){
         const list = this.createBaseComponent(0, 'ul', ['menu-items'])
         for (let elem of this.coffee){
-            let item = new MenuItem(elem.img, elem.name, elem.description, elem.price).item;
+            let item = new ProductItem(elem.img, elem.name, elem.description, elem.price).item;
             list.append(item)
         }
         return list

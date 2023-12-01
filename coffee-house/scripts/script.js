@@ -1,15 +1,16 @@
-
 import {product} from './product.js';
-import {Menu} from './menuCreate.js';
-import {PagesAtributes} from './buttons.js';
-import {ButtonsList} from './buttons.js'
+import {ProductList} from './productListCreate.js';
+//import {PagesAtributes} from './buttonsBlock.js';
+import {ButtonsList} from './buttonsBlock.js'
+import {PagesInterface} from './pagesInterface.js'
 
-const menu = new Menu(product);
+const productList = new ProductList(product);
 const menuPage =  document.getElementById('menu-page');
-const homePage = document.getElementById('home-page');
-menuPage.querySelector('.container').append(menu.listItems);
+console.log(productList)
 
-const pages = new PagesAtributes(document.querySelectorAll('main'));
+menuPage.querySelector('.container').append(productList.listItems);
+
+const pages = new PagesInterface(document.querySelectorAll('main'));
 
 const buttons = new ButtonsList(document.querySelectorAll('[data-page]'), pages);
 
