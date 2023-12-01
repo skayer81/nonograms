@@ -1,6 +1,15 @@
 @import "../abstracts/_variables.scss";
 @import "../components/menu-item";
 
+%ActiveHover{
+    background-color: $borderDark;
+    border-color: $borderDark;
+    color: $textLight;
+    .icon{
+        background-color: $backgroundBody;
+    }
+}
+
 .menu-page{
     .menu-title{
         @include textStyle(60px, 75px);
@@ -17,9 +26,9 @@
         //     width: 1px;
         //     height: 1px;
         //     top: -1px;
-              position: fixed;
-              z-index: -100;
-              right: -100%;
+        position: fixed;
+        z-index: -100;
+        right: -100%;
         }
     }
     .select-coffee, .select-tea, .select-dessert{
@@ -48,12 +57,13 @@
             @extend %tr;
         }
         &:hover{
-            background-color: $borderDark;
-            background-color: $borderDark;
-            color: $textLight;
-            .icon{
-                background-color: $backgroundBody;
-            }
+            @extend %ActiveHover;
+            // background-color: $borderDark;
+            // border-color: $borderDark;
+            // color: $textLight;
+            // .icon{
+            //     background-color: $backgroundBody;
+            // }
         }
     }
     .select-coffee{
@@ -74,12 +84,13 @@
         }
     }
     input:checked + label{
-        background-color: $borderDark;
-        background-color: $borderDark;
-        color: $textLight;
-        .icon{
-            background-color: $backgroundBody;
-        }
+        @extend %ActiveHover;
+        // background-color: $borderDark;
+        // border-color: $borderDark;
+        // color: $textLight;
+        // .icon{
+        //     background-color: $backgroundBody;
+        // }
         cursor: default;
     }
     .menu-items{

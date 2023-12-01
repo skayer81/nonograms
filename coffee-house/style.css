@@ -197,16 +197,13 @@ h1, h2 {
   content: "";
   position: absolute;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background-color: #403F3D;
   bottom: -7px;
   left: 50%;
 }
 .main-menu li .active:hover::after {
-  content: "";
-  position: absolute;
   width: 100%;
-  height: 2px;
   left: 0;
 }
 .main-menu li .disable {
@@ -449,7 +446,6 @@ h1, h2 {
   scale: 1;
 }
 .gallery .img1 {
-  height: 590px;
   grid-area: 1/1/59/1;
 }
 .gallery .img1 img {
@@ -457,7 +453,6 @@ h1, h2 {
      object-position: 0px -32px;
 }
 .gallery .img2 {
-  height: 430px;
   grid-area: 63/1/106/1;
   margin-top: -3px;
 }
@@ -466,7 +461,6 @@ h1, h2 {
      object-position: 0px -104px;
 }
 .gallery .img3 {
-  height: 430px;
   grid-area: 1/2/43/2;
 }
 .gallery .img3 img {
@@ -474,7 +468,6 @@ h1, h2 {
      object-position: 0px -105px;
 }
 .gallery .img4 {
-  height: 590px;
   grid-area: 47/2/106/2;
 }
 .gallery .img4 img {
@@ -653,6 +646,15 @@ h1, h2 {
   line-height: 30px;
 }
 
+.menu-page input:checked + label, .menu-page .select-coffee:hover, .menu-page .select-tea:hover, .menu-page .select-dessert:hover {
+  background-color: #665F55;
+  border-color: #665F55;
+  color: #E1D4C9;
+}
+.menu-page input:checked + label .icon, .menu-page .select-coffee:hover .icon, .menu-page .select-tea:hover .icon, .menu-page .select-dessert:hover .icon {
+  background-color: #E1D4C9;
+}
+
 .menu-page .menu-title {
   font-family: "Inter", sans-serif;
   font-size: 60px;
@@ -695,14 +697,6 @@ h1, h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
-.menu-page .select-coffee:hover, .menu-page .select-tea:hover, .menu-page .select-dessert:hover {
-  background-color: #665F55;
-  background-color: #665F55;
-  color: #E1D4C9;
-}
-.menu-page .select-coffee:hover .icon, .menu-page .select-tea:hover .icon, .menu-page .select-dessert:hover .icon {
-  background-color: #E1D4C9;
-}
 .menu-page .select-coffee .icon {
   background-image: url("./assets/icons/menu-cofee.png");
 }
@@ -716,13 +710,7 @@ h1, h2 {
   background-image: url("./assets/icons/menu-dessert.png");
 }
 .menu-page input:checked + label {
-  background-color: #665F55;
-  background-color: #665F55;
-  color: #E1D4C9;
   cursor: default;
-}
-.menu-page input:checked + label .icon {
-  background-color: #E1D4C9;
 }
 .menu-page .menu-items {
   margin-bottom: 100px;

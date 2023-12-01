@@ -6,7 +6,6 @@
     margin-bottom: 100px;
     color: $textDark;
     .favorite-title{
-        
         @include textStyle(60px, 75px);
 
     }

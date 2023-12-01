@@ -1,3 +1,4 @@
+
 export class ButtonsList{
     constructor(buttons, pages){
         this.buttons = buttons;
@@ -17,6 +18,14 @@ export class ButtonsList{
             this.pages.indexOfcurentPage = indexPage;
             this.pages.toggleVisiblePage();
             this.blockButtons();
+        }
+    }
+
+    updateURL(str) {
+        if (history.pushState) {
+            const baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            const newUrl = baseUrl + `?page=${str}`;
+            history.pushState(null, null, newUrl);
         }
     }
 
@@ -52,53 +61,8 @@ export class ButtonsList{
             else button.classList.remove('disable');
         })
     }
-
-    updateURL(str) {
-        if (history.pushState) {
-            const baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-            const newUrl = baseUrl + `?page=${str}`;
-            history.pushState(null, null, newUrl);
-        }
-    }
 }
 
-export class PagesAtributes{
-    constructor(pages){
-        this.pages = pages;
-        this._indexOfcurentPage = 0;
-    }
-
-    get indexOfcurentPage(){
-        return this._indexOfcurentPage
-    }
-
-    set indexOfcurentPage(indexOfcurentPage){
-        this._indexOfcurentPage = indexOfcurentPage
-    }
-
-    get curentPage(){
-        return this.pages[this._indexOfcurentPage]
-    }
-
-    get idCurentPage(){
-        return this.pages[this._indexOfcurentPage].dataset.id;
-    }
-
-    indexPageByID(id){
-        let result;
-        this.pages.forEach((page, index) => {
-            if (page.dataset.id ===id)  result = index;
-        })
-        return result;
-    }
-
-    toggleVisiblePage(){
-        this.pages.forEach((page, index) => {
-            if (index == this._indexOfcurentPage) page.hidden = false
-            else page.hidden = true
-        })
-    }
-}
 
 
 
