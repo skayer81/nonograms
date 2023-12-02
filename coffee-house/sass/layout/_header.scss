@@ -42,7 +42,8 @@
         text-align: left;
         background-position: right top;
         height: 20px;
-        // padding-top: 7px;
+
+
         }
 
     li{
@@ -100,16 +101,29 @@
         margin-right: auto;
         margin-left: 0;
         // border: 1px solid green;
+        @media (max-width: 768px) {
+            margin-right: 0;
+            position: absolute;
+            left: 0;
+            top: 20px;
+        }
     }
     li:has(.menu-button){
         margin-left: auto;
         margin-right: 0;
-        // margin-top: -8px;
-        // border: 1px solid green;
+        @media (max-width: 768px) {
+            margin-left: 0;
+           
+        }
     }
     // button.active{
 
     // }
+    @media (max-width: 768px) {
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+    }
 }
 
 // .logo-button{

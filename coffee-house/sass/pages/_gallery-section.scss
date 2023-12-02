@@ -7,21 +7,28 @@
     }
     .gallery-container{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(106, 1fr);
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-rows: 430px  120px 430px;
+        //grid-template-columns: repeat(2, 1fr);
         height: 1060px;
-        width: 1360px;
+        //width: 1360px;
         margin: 0 auto;
-        column-gap: 40px;
+        gap: 40px;
+        //column-gap: 40px;
         // margin-bottom: 400px;
     }
     .img1, .img2, .img3, .img4{
-        width: 660px;
+       // width: 660px;
         border-radius: 20px;
         overflow: hidden;
+      //  border: 1px solid red;
         img{
             scale: 1.1;
             object-fit: cover;
+            width: 100%;
+            height: 100%;
+          //  width: auto;
+         //   height: 100%;
             @extend %tr;
             &:hover{
                 scale: 1;
@@ -38,9 +45,10 @@
 
       //  height: 590px;
 
-        grid-area: 1/1/59/1;
+        grid-area: 1/1/3/2;
         img{
-            object-position: 0px -32px;
+          //  object-position: 0px -32px;
+         //   height: 590px;
         }
 
     }
@@ -48,19 +56,31 @@
 
        // height: 430px;
 
-        grid-area: 63/1/106/1;
-        margin-top: -3px;
+      //  grid-area: 2/1/3/2;
+       // margin-top: -3px;
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 2;
         img{
-            object-position: 0px -104px;
+            //object-position: 0px -104px;
+          //  height: 430px;
         }
     }
     .img3{
 
        // height: 430px;
 
-        grid-area: 1/2/43/2;
+       // grid-area: 3/1/2/4;
+       grid-row-start: 1;
+       grid-column-start: 2;
+       grid-row-end: 2;
+       grid-column-end: 3;
+       
+       
         img{
-            object-position: 0px -105px;
+            //object-position: 0px -105px;
+          //  height: 430px;
         }
 
     }
@@ -68,9 +88,14 @@
 
        // height: 590px;
 
-        grid-area: 47/2/106/2;
+       // grid-area: 2/2/4/3;
+       grid-row-start: 2;
+       grid-column-start: 2;
+       grid-row-end: 4;
+       grid-column-end: 3;
         img{
-            object-position: 0px -32px;
+            //object-position: 0px -32px;
+          //  height: 590px;
         }
     }
 }

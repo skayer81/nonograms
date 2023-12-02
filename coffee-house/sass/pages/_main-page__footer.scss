@@ -1,10 +1,13 @@
 @import "../abstracts/_variables.scss";
 
 .main-page__footer {
-    height: 830px;
+    min-height: 830px;
     display: flex;
     justify-content: space-between;
     padding-top: 105px;
+    @media (max-width: 1350px) {
+        flex-direction: column;
+    }
     // border: 1px solid red;
     .left-side {
         width: 50%;
@@ -13,6 +16,9 @@
         // display: flex;
         // flex-direction: column;
         // justify-content: center;
+        @media (max-width: 1350px) {
+            width: 100%;
+        }
         .footer-title {
             @include textStyle(60px, 75px);
             margin-bottom: 40px;
@@ -88,9 +94,13 @@
     .right-side {
         background-image: url("./assets/images/mobile-screens.png");
         width: 50%;
-        height: 100%;
+        // min-height: 830px;
         background-repeat: no-repeat;
         background-position: right top;
         margin-top: -5px;
+      //  border: 1px solid green;
+        @media (max-width: 1350px) {
+            width: 100%;
+        }
     }
 }

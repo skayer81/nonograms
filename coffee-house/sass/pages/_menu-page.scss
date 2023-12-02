@@ -55,6 +55,7 @@
             background-repeat: no-repeat;
             background-position: center;
             @extend %tr;
+            // grid-template-columns: 2rem 20% 150px 1fr;
         }
         &:hover{
             @extend %ActiveHover;
@@ -99,6 +100,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         column-gap: 40px;
-     row-gap: 40px;
+    row-gap: 40px;
     }
+
 }
