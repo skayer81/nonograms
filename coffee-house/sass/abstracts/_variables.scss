@@ -41,7 +41,7 @@ $borderDark: #665F55;
 
 @mixin titleAdaptive(){
     @media (max-width: 750px) {
-        @include textStyle(46px, 60px);
+        @include textStyle(42px, 60px);
     }
     @media (max-width: 500px) {
         @include textStyle(32px, 40px);

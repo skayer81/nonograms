@@ -9,11 +9,14 @@
         background-position: center;
         background-size: cover;
         border-radius: 40px;
+        @media (max-width: 650px) {
+            height: 552px;
+        }
         .content-container{
             margin-right: auto;
             padding-top: 101px;
             padding-left: 100px;
-            width: 620px;
+            max-width: 620px;
             // padding: 100px;
             height: 100%;
             // display: flex;
@@ -23,10 +26,23 @@
             @media (max-width: 850px) {
                 padding-left: 60px;
             }
+            @media (max-width: 650px) {
+                padding-top: 60px;
+                padding-left: 16px;
+                padding-right: 10px;
+            }
+
+
+
         }
         .video-title{
             @include textStyle(72px, 75.6px);
             margin-bottom: 40px;
+           // @include titleAdaptive();
+            height: auto;
+            @media (max-width: 750px) {
+                @include textStyle(42px, 48.3px);
+            }
             // span{
                 // color: $textAccent;
             // }

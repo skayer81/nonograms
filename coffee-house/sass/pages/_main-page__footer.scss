@@ -24,6 +24,7 @@
             @include textStyle(60px, 75px);
             margin-bottom: 40px;
             padding-right: 60px;
+            @include titleAdaptive();
             @media (max-width: 1350px) {
                 padding-right: 0;
             }
@@ -95,7 +96,11 @@
             //         padding-left: 20px;
             //     }
             // }
-
+        }
+        .app-button__apple{
+            @media (max-width: 650px) {
+                margin-bottom: 20px;
+            }
         }
     }
     .right-side {
@@ -110,6 +115,13 @@
             width: 100%;
             background-position: center center;
             min-height: 835px;
+        }
+        @media (max-width: 650px) {
+            background-image: url("./assets/images/mobile-screens380.png");
+            min-height: 435px;
+            margin-bottom: 57px;
+            // position: relative;
+            // z-index: 1;
         }
     }
 }

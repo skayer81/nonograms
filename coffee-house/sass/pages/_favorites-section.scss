@@ -1,15 +1,15 @@
 @import "./../abstracts/variables";
 
-.favorite{
+.favorite {
     text-align: center;
     padding-top: 100px;
     margin-bottom: 100px;
     color: $textDark;
-    .favorite-title{
+    .favorite-title {
         @include textStyle(60px, 75px);
-
+        @include titleAdaptive();
     }
-    .main-slider__container{
+    .main-slider__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -17,65 +17,70 @@
         padding-top: 40px;
         margin-bottom: 39px;
     }
-    .right-arrow, .left-arrow{
-    //    background-image: url("./assets/icons/arrow-left.svg");
-       width: 60px;
-       height: 60px;
-       border: 1px solid $borderDark;
-       border-radius: 50%;
-       margin: 0 4px;
-       background-size: auto;
-       display: flex;
-    justify-content: center;
-    align-items: center;
-       @include tr;
-       
-        path{
+    .right-arrow,
+    .left-arrow {
+        //    background-image: url("./assets/icons/arrow-left.svg");
+        width: 60px;
+        height: 60px;
+        border: 1px solid $borderDark;
+        border-radius: 50%;
+        margin: 0 4px;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tr;
+
+        path {
             @include tr;
         }
-       
-       &:hover{
-        background-color: $backgroundContainer;
-        path{
-            stroke: $textLight;
+
+        &:hover {
+            background-color: $backgroundContainer;
+            path {
+                stroke: $textLight;
+            }
         }
-       }
+        @media (max-width: 650px) {
+            display: none;
+         }
     }
-    .right-arrow{
+    .right-arrow {
         transform: rotate(180deg);
     }
-    .slider-item{
+    .slider-item {
         width: 480px;
-    .slider-item__img{
-        margin-bottom: 20px;
+        margin: 0 auto;
+        .slider-item__img {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center
+        }
     }
-    }
-    .slider-item__title{
+    .slider-item__title {
         @include textStyle(24px, 30px);
         margin-bottom: 16px;
-
     }
-    .slider-item__description{
+    .slider-item__description {
         @include textStyle(16px, 24px, 400);
         margin-bottom: 17px;
-
     }
-    .slider-item__price{
+    .slider-item__price {
         @include textStyle(24px, 30px);
     }
-    .slider-indication{
+    .slider-indication {
         margin: 0 auto;
         height: 4px;
         width: 144px;
         display: flex;
         justify-content: space-between;
     }
-    .slider-indication__item{
+    .slider-indication__item {
         height: 4px;
         width: 40px;
         border-radius: 100px;
         background-color: $borderLight;
-        &.active{
+        &.active {
             background-color: $borderDark;
         }
     }

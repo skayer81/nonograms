@@ -4,6 +4,7 @@
     .title{
         @include textStyle(60px, 75px);
         margin-bottom: 40px;
+        @include titleAdaptive();
     }
     .gallery-container{
         display: grid;
@@ -32,13 +33,16 @@
             width: 100%;
             height: 100%;
             @include tr;
-            &:hover{
-                scale: 1;
-            }
+            // &:hover{
+            //     scale: 1;
+            // }
             @media (max-width: 768px) {
                 scale: 1.05;
              }
-    
+             @media (max-width: 500px) {
+                scale: 1.23;
+             }
+
         }
         // cursor: pointer;
 

@@ -57,7 +57,7 @@
 
                 <!-- </div> -->
             </section>
-            <section class="favorite" id="favorite" ]>
+            <section class="favorite" id="favorite">
                 <h2>product example</h2>
                 <!-- <div class=""> -->
                 <p class="favorite-title">Choose your <span class="italic">favorite</span> coffee</p>
@@ -69,7 +69,15 @@
                         </svg>
                     </button>
                     <article class="slider-item">
-                        <img class="slider-item__img" src="./assets/images/coffee-slider-1.png" alt="">
+                        <!-- <picture>
+
+
+                        </picture> -->
+                        <picture class="slider-item__img" >
+                            <source srcset="./assets/images/coffee-slider-1-380.png"  media="(max-width: 550px)" />
+                            <img src="./assets/images/coffee-slider-1.png" alt="" width="348px" height="348px">
+                        </picture>
+                        <!-- <img class="slider-item__img" src="./assets/images/coffee-slider-1.png" alt=""> -->
                         <h3 class="slider-item__title">S’mores Frappuccino</h3>
                         <p class="slider-item__description">This new drink takes an espresso and mixes it with brown
                             sugar and cinnamon before being topped with oat milk.</p>
@@ -93,7 +101,7 @@
 
                 <!-- </div> -->
             </section>
-            <section class="gallery" id="about">
+            <section class="gallery" id="about" >
                 <h2>photos</h2>
                 <p class="title">
                     Resource is <span class="italic">the perfect and cozy place</span> where you can enjoy a variety of
@@ -107,7 +115,7 @@
                     <li class="img4"><img src="./assets/images/about-4.jpg" alt=""></li>
                 </ul>
             </section>
-            <footer class="main-page__footer" id="app">
+            <footer class="main-page__footer" id="app" >
                 <div class="left-side">
                     <p class="footer-title"><span class="italic">Download</span> our apps to start ordering</p>
                     <p class="footer-description">Download the Resource app today and experience the comfort of
