@@ -26,6 +26,10 @@ $borderDark: #665F55;
     max-width: 1440px;
     padding: 0 40px;
     margin: 0 auto;
+    @media (max-width: 750px) {
+        padding:  0 16px;
+
+     }
 }
 
 %border{
@@ -33,4 +37,13 @@ $borderDark: #665F55;
 }
 @mixin tr($time:1s){
     transition: $time;
+}
+
+@mixin titleAdaptive(){
+    @media (max-width: 750px) {
+        @include textStyle(46px, 60px);
+    }
+    @media (max-width: 500px) {
+        @include textStyle(32px, 40px);
+}
 }

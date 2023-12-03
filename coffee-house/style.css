@@ -9,6 +9,11 @@
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -150,6 +155,11 @@ h1, h2 {
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 .main-header .container {
   height: 100px;
@@ -274,6 +284,11 @@ h1, h2 {
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 .main-page .video {
   height: 644px;
@@ -350,6 +365,11 @@ h1, h2 {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .favorite {
@@ -450,6 +470,11 @@ h1, h2 {
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 .gallery .title {
   font-family: "Inter", sans-serif;
@@ -535,6 +560,11 @@ h1, h2 {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .main-page__footer {
@@ -655,6 +685,11 @@ h1, h2 {
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 .main-header .main-menu {
   display: flex;
@@ -666,6 +701,11 @@ h1, h2 {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .coffee-item {
@@ -735,6 +775,22 @@ h1, h2 {
   max-width: 800px;
   margin: 0 auto 40px;
 }
+@media (max-width: 750px) {
+  .menu-page .menu-title {
+    font-family: "Inter", sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .menu-page .menu-title {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+}
 .menu-page .menu-select {
   margin: 0 auto 40px;
   text-align: center;
@@ -779,6 +835,11 @@ h1, h2 {
 .menu-page .select-tea .icon {
   background-image: url("./assets/icons/menu-tea.png");
 }
+@media (max-width: 500px) {
+  .menu-page .select-tea {
+    margin: 0 6px;
+  }
+}
 .menu-page .select-dessert .icon {
   background-image: url("./assets/icons/menu-dessert.png");
 }
@@ -819,6 +880,12 @@ h1, h2 {
     margin-bottom: 100px;
   }
 }
+@media (max-width: 650px) {
+  .menu-page .content-load {
+    display: block;
+    margin-top: -125px;
+  }
+}
 
 .main-header .main-menu {
   display: flex;
@@ -830,6 +897,11 @@ h1, h2 {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .footer {
@@ -850,6 +922,12 @@ h1, h2 {
     padding-bottom: 84px;
   }
 }
+@media (max-width: 600px) {
+  .footer .backgraund-wrapper {
+    flex-direction: column;
+    padding: 60px 15px 44px;
+  }
+}
 .footer .left-side {
   height: 100%;
   width: 50%;
@@ -868,6 +946,22 @@ h1, h2 {
   font-weight: 600;
   line-height: 75px;
   margin-bottom: 40px;
+}
+@media (max-width: 750px) {
+  .footer .left-side .footer-title {
+    font-family: "Inter", sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .footer .left-side .footer-title {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+  }
 }
 .footer .left-side .soc {
   display: flex;
@@ -908,6 +1002,11 @@ h1, h2 {
     width: 100%;
     padding-top: 100px;
     padding-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .footer .right-side {
+    padding-top: 40px;
   }
 }
 .footer .right-side .right-side__title {
