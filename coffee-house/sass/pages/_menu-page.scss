@@ -1,6 +1,14 @@
 @import "../abstracts/_variables.scss";
 @import "../components/menu-item";
 
+@mixin ActiveHover(){
+    background-color: $borderDark;
+    border-color: $borderDark;
+    color: $textLight;
+    .icon{
+        background-color: $backgroundBody;
+    }
+}
 %ActiveHover{
     background-color: $borderDark;
     border-color: $borderDark;
@@ -14,8 +22,18 @@
     .menu-title{
         @include textStyle(60px, 75px);
         text-align: center;
-        padding: 0 260px;
-        margin-bottom: 40px;
+       // padding: 0 260px;
+       max-width: 800px;
+       margin: 0 auto 40px;
+      //  margin-bottom: 40px;
+      @include titleAdaptive()
+    //   @media (max-width: 750px) {
+    //      @include textStyle(46px, 60px);
+    //   }
+    //   @media (max-width: 500px) {
+    //     @include textStyle(32px, 40px);
+
+    //  }
     }
     .menu-select{
         margin: 0 auto 40px;
@@ -44,7 +62,7 @@
         color: $textDark;
 
         @include textStyle(16px, 24px);
-        @extend %tr;
+        @include tr;
         .icon{
             display: inline-block;
             width: 30px;
@@ -54,10 +72,13 @@
             background-color: $borderLight;
             background-repeat: no-repeat;
             background-position: center;
-            @extend %tr;
+            @include tr;
+            // grid-template-columns: 2rem 20% 150px 1fr;
         }
+        @media (hover: hover) and (pointer: fine) {
         &:hover{
-            @extend %ActiveHover;
+            @include ActiveHover();
+            // @extend %ActiveHover;
             // background-color: $borderDark;
             // border-color: $borderDark;
             // color: $textLight;
@@ -65,6 +86,7 @@
             //     background-color: $backgroundBody;
             // }
         }
+    }
     }
     .select-coffee{
         .icon{
@@ -76,6 +98,10 @@
         .icon{
             background-image: url("./assets/icons/menu-tea.png");
         }
+        @media (max-width: 500px) {
+            margin: 0 6px;
+   
+         }
 
     }
     .select-dessert{
@@ -96,9 +122,47 @@
     .menu-items{
         margin-bottom: 100px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:  repeat( auto-fit, 310px);
+        justify-content: center;
+       // grid-template-rows: repeat(2, 1fr);
         column-gap: 40px;
-     row-gap: 40px;
+        row-gap: 40px;
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+            li:nth-child(n + 5){
+                visibility: hidden;
+                height: 1px;
+                opacity: 0;
+                // img{
+                //     visibility: hidden;
+
+                // }
+                
+               // border: 5px solid red;
+            }
+            // position: fixed;
+            // flex-direction: column;
+            // right: -100%;
+        }
     }
+    .content-load{
+        display: none;
+        width: 60px;
+        height: 60px;
+       // background-image: url();
+        border: 1px solid $borderDark;
+        border-radius: 50%;
+        padding-top: 5px;
+        margin: -42px auto 0;
+        @media (max-width: 768px) {
+            display: block;
+            margin-bottom: 100px;
+        }
+        @media (max-width: 650px) {
+            display: block;
+            margin-top: -125px;
+        }
+       
+    }
+
 }

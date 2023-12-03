@@ -1,30 +1,56 @@
 @import "./../abstracts/variables";
 
-.footer{
+.footer {
     // padding-left: 40px;
     // padding-right: 40px;
     padding-bottom: 20px;
-    .container{
+    // .container {
+
+    // }
+    .backgraund-wrapper {
+        // max-width: 1360;
         display: flex;
-        width: 1360px;
+        //  max-width: 1360px;
         background-color: $backgroundContainer;
         border-radius: 40px;
-        height: 450px;
-        padding-top: 100px;
-        padding-left: 100px;
+        min-height: 450px;
+        //  padding-top: 100px;
+        // padding-left: 100px;
+        padding: 100px;
         color: $textLight;
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            padding-left: 60px;
+            padding-bottom: 84px;
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            padding: 60px 15px 44px;
+            // padding-left: 15px;
+            // padding-top: 60px;
+            // padding-bottom: 84px;
+        }
+
+        //     padding-top: 60px;
+        // padding-left: 15px;
     }
-    .left-side{
+    .left-side {
         height: 100%;
         width: 50%;
-        padding-right: 30px;
-        .footer-title{
+        padding-right: 45px;
+        background-color: $backgroundContainer;
+        @media (max-width: 1000px) {
+            width: 100%;
+            padding-right: 0;
+        }
+        .footer-title {
             @include textStyle(60px, 75px);
             margin-bottom: 40px;
+            @include titleAdaptive();
         }
         .soc {
             display: flex;
-            li{
+            li {
                 margin-right: 12px;
                 width: 60px;
                 height: 60px;
@@ -32,15 +58,17 @@
                 border: 1px solid $textLight;
                 padding-top: 17px;
                 padding-left: 17px;
-                @extend %tr;
-                path{
-                    @extend %tr;
+                @include tr;
+                path {
+                    @include tr;
                 }
-                &:hover{
-                    cursor: pointer;
-                    background-color: $backgroundBody;
-                    path{
-                        stroke: $textDark;
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $backgroundBody;
+                        path {
+                            stroke: $textDark;
+                        }
                     }
                 }
             }
@@ -73,23 +101,33 @@
             //     // background-repeat: no-repeat;
             // }
         }
-        
-
-        
     }
-    .right-side{
+    .right-side {
         height: 100%;
         width: 50%;
         padding-top: 32px;
-        padding-left: 20px;
+        padding-left: 50px;
+
         @include textStyle(16px, 24px);
         color: $textLight;
-        .right-side__title{
+
+        @media (max-width: 1000px) {
+            width: 100%;
+            padding-top: 100px;
+            padding-left: 0;
+        }
+        @media (max-width: 600px) {
+            //  width: 100%;
+            padding-top: 40px;
+            //  padding-left: 0;
+        }
+        .right-side__title {
             @include textStyle(24px, 30px);
             margin-bottom: 40px;
         }
-        .contacts{
-            a, .time{
+        .contacts {
+            a,
+            .time {
                 display: block;
                 margin-bottom: 20px;
                 padding-left: 28px;
@@ -98,47 +136,45 @@
                 position: relative;
                 width: fit-content;
             }
-            span{
+            span {
                 margin-left: 4px;
             }
-            .adres{
+            .adres {
                 background-image: url("./assets/icons/pin-alt.svg");
             }
-            .tel{
+            .tel {
                 background-image: url("./assets/icons/phone.svg");
             }
-            .time{
+            .time {
                 background-image: url("./assets/icons/clock.svg");
             }
-            .tel, .adres{
-            &::after{
-                content: '';
-                position: absolute;
-                width: 0%;
-                height: 1px;
-                background-color: $textLight;
-                bottom: -7px;
-                left: 50%;
-                @extend %tr;
-            }
-            
-            &:hover{
-                &::after{
-                    content: '';
+            .tel,
+            .adres {
+                &::after {
+                    content: "";
                     position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    // background-color: aqua;
-                    // bottom: 0;
-                    left: 0;
+                    width: 0%;
+                    height: 1px;
+                    background-color: $textLight;
+                    bottom: -7px;
+                    left: 50%;
+                    @include tr;
                 }
-                // border-bottom: 1px solid red;
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            // background-color: aqua;
+                            // bottom: 0;
+                            left: 0;
+                        }
+                        // border-bottom: 1px solid red;
+                    }
+                }
             }
-        }
-  
-
-
         }
     }
-
 }
