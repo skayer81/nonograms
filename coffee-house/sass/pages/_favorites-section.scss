@@ -34,13 +34,13 @@
         path {
             @include tr;
         }
-
+        @media (hover: hover) and (pointer: fine) {
         &:hover {
             background-color: $backgroundContainer;
             path {
                 stroke: $textLight;
             }
-        }
+        }}
         @media (max-width: 650px) {
             display: none;
          }

@@ -60,13 +60,14 @@
             svg{
                 margin-right: 8px;
             }
+            @media (hover: hover) and (pointer: fine) {
             &:hover{
                 path{
                     fill: $textLight;
                 }
                 color: $textLight;
                 background-color: $backgroundContainer;
-            }
+            }}
             // display: flex;
             // flex-direction: column;
             // justify-content: center;

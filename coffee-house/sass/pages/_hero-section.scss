@@ -62,12 +62,13 @@
             color: $textDark;
             @include tr;
             position: relative;
+            @media (hover: hover) and (pointer: fine) {
             &:hover{
                 padding-right: 34px;
                 &::after{
                     opacity: 1;
                 }
-            }
+            }}
             &::after{
                 content: '';
                 top: 22px;

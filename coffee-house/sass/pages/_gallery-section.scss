@@ -33,9 +33,11 @@
             width: 100%;
             height: 100%;
             @include tr;
-            // &:hover{
-            //     scale: 1;
-            // }
+            @media (hover: hover) and (pointer: fine) {
+             &:hover{
+                 scale: 1;
+             }
+            }
             @media (max-width: 768px) {
                 scale: 1.05;
              }

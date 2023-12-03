@@ -1,6 +1,14 @@
 @import "../abstracts/_variables.scss";
 @import "../components/menu-item";
 
+@mixin ActiveHover(){
+    background-color: $borderDark;
+    border-color: $borderDark;
+    color: $textLight;
+    .icon{
+        background-color: $backgroundBody;
+    }
+}
 %ActiveHover{
     background-color: $borderDark;
     border-color: $borderDark;
@@ -67,8 +75,10 @@
             @include tr;
             // grid-template-columns: 2rem 20% 150px 1fr;
         }
+        @media (hover: hover) and (pointer: fine) {
         &:hover{
-            @extend %ActiveHover;
+            @include ActiveHover();
+            // @extend %ActiveHover;
             // background-color: $borderDark;
             // border-color: $borderDark;
             // color: $textLight;
@@ -76,6 +86,7 @@
             //     background-color: $backgroundBody;
             // }
         }
+    }
     }
     .select-coffee{
         .icon{

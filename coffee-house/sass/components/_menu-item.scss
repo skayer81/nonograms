@@ -15,12 +15,15 @@
         img {
             scale: 1.1;
             @include tr;
-           // @include tr;
+            // @include tr;
         }
     }
-    &:hover {
-        img {
-            scale: 1;
+   
+        &:hover {
+            @media (hover: hover) {
+            img {
+                scale: 1;
+            }
         }
     }
 

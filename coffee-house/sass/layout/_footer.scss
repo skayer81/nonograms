@@ -7,16 +7,16 @@
     // .container {
 
     // }
-    .backgraund-wrapper{
+    .backgraund-wrapper {
         // max-width: 1360;
         display: flex;
         //  max-width: 1360px;
         background-color: $backgroundContainer;
         border-radius: 40px;
         min-height: 450px;
-      //  padding-top: 100px;
-       // padding-left: 100px;
-       padding: 100px;
+        //  padding-top: 100px;
+        // padding-left: 100px;
+        padding: 100px;
         color: $textLight;
         @media (max-width: 1000px) {
             flex-direction: column;
@@ -31,8 +31,8 @@
             // padding-bottom: 84px;
         }
 
-    //     padding-top: 60px;
-    // padding-left: 15px;
+        //     padding-top: 60px;
+        // padding-left: 15px;
     }
     .left-side {
         height: 100%;
@@ -46,7 +46,7 @@
         .footer-title {
             @include textStyle(60px, 75px);
             margin-bottom: 40px;
-            @include titleAdaptive()
+            @include titleAdaptive();
         }
         .soc {
             display: flex;
@@ -62,11 +62,13 @@
                 path {
                     @include tr;
                 }
-                &:hover {
-                    cursor: pointer;
-                    background-color: $backgroundBody;
-                    path {
-                        stroke: $textDark;
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $backgroundBody;
+                        path {
+                            stroke: $textDark;
+                        }
                     }
                 }
             }
@@ -105,7 +107,7 @@
         width: 50%;
         padding-top: 32px;
         padding-left: 50px;
-        
+
         @include textStyle(16px, 24px);
         color: $textLight;
 
@@ -115,14 +117,13 @@
             padding-left: 0;
         }
         @media (max-width: 600px) {
-          //  width: 100%;
+            //  width: 100%;
             padding-top: 40px;
-          //  padding-left: 0;
+            //  padding-left: 0;
         }
         .right-side__title {
             @include textStyle(24px, 30px);
             margin-bottom: 40px;
-            
         }
         .contacts {
             a,
@@ -159,18 +160,19 @@
                     left: 50%;
                     @include tr;
                 }
-
-                &:hover {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        // background-color: aqua;
-                        // bottom: 0;
-                        left: 0;
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            // background-color: aqua;
+                            // bottom: 0;
+                            left: 0;
+                        }
+                        // border-bottom: 1px solid red;
                     }
-                    // border-bottom: 1px solid red;
                 }
             }
         }
