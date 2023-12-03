@@ -1,111 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniil Troyanov - Джедай-фронтенд РАЗРАБОТЧИК</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="wrapper-container">
-      <header>
-        <h1>CV</h1>
-        <h2>Vladyslava Nikitchenko</h2>
-        <h2>Junior Frontend Developer</h2>
-        <section class="section-about">         
-          <img src="./assets/images/photo.jpg" alt="my-photo" class="my-photo">
-          <div class="about-text">
-            <h3>About me</h3>
-            <p>I am new in programming, but i have a big passion for working and
-              promotion in this fild. In my free time I like to learning something
-              new. I want to note perseverance, diligence, the desire to bring the
-              work started to the end</p>
+    <div class="preloader">
+      <p>До загрузки самого лучшего резюме осталось <span>5</span> секунд</p>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#" id="main">
+              <svg
+                class="header__logo-img"
+                width="150"
+                height="25"
+                viewBox="0 0 150 25"
+                fill="#eee"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.44 20V0.559999H5.36C7.056 0.559999 8.376 0.775999 9.32 1.208C10.264 1.624 10.928 2.288 11.312 3.2C11.696 4.096 11.888 5.264 11.888 6.704V13.76C11.888 15.216 11.696 16.408 11.312 17.336C10.928 18.248 10.264 18.92 9.32 19.352C8.392 19.784 7.088 20 5.408 20H0.44ZM4.736 17.024H5.408C6.064 17.024 6.536 16.928 6.824 16.736C7.112 16.544 7.288 16.256 7.352 15.872C7.432 15.488 7.472 15.008 7.472 14.432V5.96C7.472 5.384 7.424 4.92 7.328 4.568C7.248 4.216 7.064 3.96 6.776 3.8C6.488 3.64 6.024 3.56 5.384 3.56H4.736V17.024ZM17.1425 20.24C16.4385 20.24 15.8465 20.072 15.3665 19.736C14.8865 19.4 14.5265 18.976 14.2865 18.464C14.0465 17.936 13.9265 17.4 13.9265 16.856C13.9265 15.992 14.0945 15.264 14.4305 14.672C14.7825 14.08 15.2385 13.584 15.7985 13.184C16.3585 12.784 16.9745 12.448 17.6465 12.176C18.3185 11.888 18.9825 11.632 19.6385 11.408V10.016C19.6385 9.776 19.6145 9.568 19.5665 9.392C19.5185 9.2 19.4385 9.056 19.3265 8.96C19.2145 8.848 19.0465 8.792 18.8225 8.792C18.5985 8.792 18.4225 8.84 18.2945 8.936C18.1825 9.032 18.1025 9.168 18.0545 9.344C18.0065 9.504 17.9745 9.688 17.9585 9.896L17.8625 10.904L14.2145 10.76C14.2945 9.096 14.7345 7.872 15.5345 7.088C16.3505 6.288 17.5665 5.888 19.1825 5.888C20.5905 5.888 21.6385 6.28 22.3265 7.064C23.0305 7.832 23.3825 8.832 23.3825 10.064V16.544C23.3825 17.12 23.3905 17.624 23.4065 18.056C23.4385 18.488 23.4705 18.864 23.5025 19.184C23.5505 19.504 23.5905 19.776 23.6225 20H20.1185C20.0705 19.632 20.0145 19.232 19.9505 18.8C19.8865 18.368 19.8385 18.112 19.8065 18.032C19.6465 18.608 19.3425 19.12 18.8945 19.568C18.4625 20.016 17.8785 20.24 17.1425 20.24ZM18.5345 17.6C18.6945 17.6 18.8385 17.568 18.9665 17.504C19.1105 17.44 19.2385 17.352 19.3505 17.24C19.4625 17.128 19.5585 17.016 19.6385 16.904V13.112C19.3185 13.304 19.0225 13.504 18.7505 13.712C18.4785 13.904 18.2465 14.12 18.0545 14.36C17.8625 14.6 17.7105 14.864 17.5985 15.152C17.5025 15.424 17.4545 15.736 17.4545 16.088C17.4545 16.552 17.5505 16.92 17.7425 17.192C17.9345 17.464 18.1985 17.6 18.5345 17.6ZM25.7006 20V6.128H29.6126V7.52C30.1246 7.008 30.6526 6.608 31.1966 6.32C31.7566 6.032 32.3406 5.888 32.9486 5.888C33.5246 5.888 33.9966 6.032 34.3646 6.32C34.7486 6.592 35.0366 6.976 35.2286 7.472C35.4206 7.952 35.5166 8.504 35.5166 9.128V20H31.6286V9.68C31.6286 9.344 31.5726 9.088 31.4606 8.912C31.3486 8.736 31.1406 8.648 30.8366 8.648C30.6766 8.648 30.4846 8.696 30.2606 8.792C30.0526 8.872 29.8366 8.992 29.6126 9.152V20H25.7006ZM37.8886 20V6.128H41.8006V20H37.8886ZM37.8646 3.776V1.064H41.8006V3.776H37.8646ZM44.2402 20V6.128H48.1522V20H44.2402ZM44.2162 3.776V1.064H48.1522V3.776H44.2162ZM50.7358 20V0.559999H54.6238V20H50.7358ZM65.2623 20V3.752H62.3343V0.559999H72.4863V3.752H69.5823V20H65.2623ZM74.0298 20V6.128H77.9418V8.432C78.3898 7.632 78.8378 7.024 79.2858 6.608C79.7338 6.176 80.2778 5.96 80.9178 5.96C81.0458 5.96 81.1578 5.968 81.2538 5.984C81.3498 5.984 81.4378 6 81.5178 6.032V9.92C81.3418 9.84 81.1418 9.776 80.9178 9.728C80.7098 9.664 80.4858 9.632 80.2458 9.632C79.7978 9.632 79.3818 9.752 78.9978 9.992C78.6138 10.232 78.2618 10.56 77.9418 10.976V20H74.0298ZM87.7293 20.24C86.7373 20.24 85.8733 20.072 85.1373 19.736C84.4173 19.4 83.8573 18.896 83.4573 18.224C83.0733 17.552 82.8813 16.712 82.8813 15.704V10.424C82.8813 9.416 83.0733 8.576 83.4573 7.904C83.8573 7.232 84.4173 6.728 85.1373 6.392C85.8733 6.056 86.7373 5.888 87.7293 5.888C88.7213 5.888 89.5773 6.056 90.2973 6.392C91.0333 6.728 91.6013 7.232 92.0013 7.904C92.4013 8.576 92.6013 9.416 92.6013 10.424V15.704C92.6013 16.712 92.4013 17.552 92.0013 18.224C91.6013 18.896 91.0333 19.4 90.2973 19.736C89.5773 20.072 88.7213 20.24 87.7293 20.24ZM87.7533 17.648C88.0093 17.648 88.2093 17.584 88.3533 17.456C88.4973 17.312 88.5933 17.12 88.6413 16.88C88.7053 16.624 88.7373 16.32 88.7373 15.968V10.16C88.7373 9.808 88.7053 9.512 88.6413 9.272C88.5933 9.016 88.4973 8.824 88.3533 8.696C88.2093 8.552 88.0093 8.48 87.7533 8.48C87.4973 8.48 87.2973 8.552 87.1533 8.696C87.0093 8.824 86.9053 9.016 86.8413 9.272C86.7773 9.512 86.7453 9.808 86.7453 10.16V15.968C86.7453 16.32 86.7773 16.624 86.8413 16.88C86.9053 17.12 87.0093 17.312 87.1533 17.456C87.2973 17.584 87.4973 17.648 87.7533 17.648ZM95.1549 24.032V21.32C95.6509 21.32 96.0589 21.288 96.3789 21.224C96.7149 21.16 96.9629 21.04 97.1229 20.864C97.2989 20.688 97.3869 20.448 97.3869 20.144C97.3869 19.872 97.3389 19.544 97.2429 19.16C97.1469 18.76 97.0269 18.312 96.8829 17.816L93.6189 6.128H97.2909L99.0429 14.144L100.363 6.128H104.059L100.867 20.336C100.659 21.296 100.331 22.04 99.8829 22.568C99.4349 23.112 98.8829 23.488 98.2269 23.696C97.5869 23.92 96.8589 24.032 96.0429 24.032H95.1549ZM108.385 20.24C107.681 20.24 107.089 20.072 106.609 19.736C106.129 19.4 105.769 18.976 105.529 18.464C105.289 17.936 105.169 17.4 105.169 16.856C105.169 15.992 105.337 15.264 105.673 14.672C106.025 14.08 106.481 13.584 107.041 13.184C107.601 12.784 108.217 12.448 108.889 12.176C109.561 11.888 110.225 11.632 110.881 11.408V10.016C110.881 9.776 110.857 9.568 110.809 9.392C110.761 9.2 110.681 9.056 110.569 8.96C110.457 8.848 110.289 8.792 110.065 8.792C109.841 8.792 109.665 8.84 109.537 8.936C109.425 9.032 109.345 9.168 109.297 9.344C109.249 9.504 109.217 9.688 109.201 9.896L109.105 10.904L105.457 10.76C105.537 9.096 105.977 7.872 106.777 7.088C107.593 6.288 108.809 5.888 110.425 5.888C111.833 5.888 112.881 6.28 113.569 7.064C114.273 7.832 114.625 8.832 114.625 10.064V16.544C114.625 17.12 114.633 17.624 114.649 18.056C114.681 18.488 114.713 18.864 114.745 19.184C114.793 19.504 114.833 19.776 114.865 20H111.361C111.313 19.632 111.257 19.232 111.193 18.8C111.129 18.368 111.081 18.112 111.049 18.032C110.889 18.608 110.585 19.12 110.137 19.568C109.705 20.016 109.121 20.24 108.385 20.24ZM109.777 17.6C109.937 17.6 110.081 17.568 110.209 17.504C110.353 17.44 110.481 17.352 110.593 17.24C110.705 17.128 110.801 17.016 110.881 16.904V13.112C110.561 13.304 110.265 13.504 109.993 13.712C109.721 13.904 109.489 14.12 109.297 14.36C109.105 14.6 108.953 14.864 108.841 15.152C108.745 15.424 108.697 15.736 108.697 16.088C108.697 16.552 108.793 16.92 108.985 17.192C109.177 17.464 109.441 17.6 109.777 17.6ZM116.943 20V6.128H120.855V7.52C121.367 7.008 121.895 6.608 122.439 6.32C122.999 6.032 123.583 5.888 124.191 5.888C124.767 5.888 125.239 6.032 125.607 6.32C125.991 6.592 126.279 6.976 126.471 7.472C126.663 7.952 126.759 8.504 126.759 9.128V20H122.871V9.68C122.871 9.344 122.815 9.088 122.703 8.912C122.591 8.736 122.383 8.648 122.079 8.648C121.919 8.648 121.727 8.696 121.503 8.792C121.295 8.872 121.079 8.992 120.855 9.152V20H116.943ZM133.667 20.24C132.675 20.24 131.811 20.072 131.075 19.736C130.355 19.4 129.795 18.896 129.395 18.224C129.011 17.552 128.819 16.712 128.819 15.704V10.424C128.819 9.416 129.011 8.576 129.395 7.904C129.795 7.232 130.355 6.728 131.075 6.392C131.811 6.056 132.675 5.888 133.667 5.888C134.659 5.888 135.515 6.056 136.235 6.392C136.971 6.728 137.539 7.232 137.939 7.904C138.339 8.576 138.539 9.416 138.539 10.424V15.704C138.539 16.712 138.339 17.552 137.939 18.224C137.539 18.896 136.971 19.4 136.235 19.736C135.515 20.072 134.659 20.24 133.667 20.24ZM133.691 17.648C133.947 17.648 134.147 17.584 134.291 17.456C134.435 17.312 134.531 17.12 134.579 16.88C134.643 16.624 134.675 16.32 134.675 15.968V10.16C134.675 9.808 134.643 9.512 134.579 9.272C134.531 9.016 134.435 8.824 134.291 8.696C134.147 8.552 133.947 8.48 133.691 8.48C133.435 8.48 133.235 8.552 133.091 8.696C132.947 8.824 132.843 9.016 132.779 9.272C132.715 9.512 132.683 9.808 132.683 10.16V15.968C132.683 16.32 132.715 16.624 132.779 16.88C132.843 17.12 132.947 17.312 133.091 17.456C133.235 17.584 133.435 17.648 133.691 17.648ZM142.508 20L139.724 6.128H143.468L144.62 14.984L145.676 6.128H149.42L146.564 20H142.508Z"
+                />
+              </svg>
+            </a>
           </div>
-        </section>
-      </header>
-      <main>
-        <div class="center-container">
-          <section class="section">
-            <h3>Skills</h3>
-            <nav>
-              <ul class="list">
-                <li class="list-element">JavaScript, ES6</li>
-                <li class="list-element">TS-beginner</li>
-                <li class="list-element">React-beginner</li>
-                <li class="list-element">API- beginner</li>
-                <li class="list-element">Git</li>
-                <li class="list-element">Figma</li>
-                <li class="list-element">HTML/HTML5</li>
-                <li class="list-element">CSS/CSS3</li>
-                <li class="list-element">SCSS</li>
-              </ul>
-            </nav>
-          </section>
-          <section class="code section">
-            <h3>Code examples</h3>
-            <div class="code-example-container">
-              <p class="title-code-example">This code converts the first character in a word to uppercase</p>
-              <code>const toUpperFirstLetter = (word) =&gt;`${word[0].toUpperCase()}${word.slice(1)}`;</code>
-              <code>toUpperFirstLetter("newton");</code>
-            </div>
-          </section>
-        </div>
-        <div class="center-container">
-          <section class="section">
-            <h3>Education</h3>
-            <h4>My courses</h4>
-            <nav>
-              <ul class="list">
-                <li class="list-element"><a href="https://rs.school/" target="_blank">RSSchool</a></li>
-                <li class="list-element"><a href="https://www.codecademy.com/" target="_blank">CodeAcadamy</a></li>
-                <li class="list-element"><a href="https://www.w3schools.com/" target="_blank">W3schools</a></li>
-                <li class="list-element"><a href="https://www.freecodecamp.org/" target="_blank">Freecodecamp</a></li>
-                <li class="list-element"><a href="https://www.shecodes.io/" target="_blank">SheCodes</a></li>
-                <li class="list-element"><a href="https://ru.code-basics.com/" target="_blank">Ru.code-basics</a></li>
-                <li class="list-element"><a href="#" target="_blank">Udemy</a></li>
-                <li class="list-element"><a href="#" target="_blank">App Mimo</a></li>
-              </ul>
-            </nav>
-          </section>
-          <section class="section">
-            <h3>English level</h3>
-            <nav>
-              <ul class="list">
-                <li class="list-element">Speaking: A2</li>
-                <li class="list-element">Writtening: B1-B2</li>
-                <li class="list-element">Listening: B1-B2</li>
-              </ul>
-            </nav>
-          </section>
-        </div>
-        <section class="project-section">
-          <h3>Project examples</h3>
-          <div class="projects-container">
-            <a href="https://rolling-scopes-school.github.io/vlaru-JSFE2022Q3/songbird/main.html"><img src="./assets/images/SongBird.png" alt="game-img" class="project-images"></a>
-            <a href="https://vlaru.github.io/Travel/"><img src="./assets/images/travel.png" alt="travel-img" class="project-images"></a>
-            <a href="https://vermillion-souffle-27bbf8.netlify.app/"><img src="./assets/images/weather-app.jpg" alt="weather-img" class="project-images"></a>
-          </div>
-        </section>
-        <section>
-          <h3>Contacts</h3>
-          <nav class="contact-list">
-            <ul>
-              <li><a href="mailto:dn210690nvs@gmail.com">E-mail: dn210690nvs@gmail.com</a></li>
-              <li><a href="tel:777-777-777">tel:777777777</a></li>
-              <li>Discord: vlaru.</li>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#main"> Главная </a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#me"> Кто я? </a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#contacts"> Контакты </a>
+              </li>
             </ul>
           </nav>
+          <div class="header__theme-switcher">
+            <svg
+              class="header__theme-icon"
+              fill="transparent"
+              height="50px"
+              width="100px"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 100 40"
+              xml:space="preserve"
+            >
+              <!-- Outer Background -->
+              <rect width="100%" height="100%" rx="20" ry="20" fill="#00ADB5" />
+
+              <!-- Circle Slider -->
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="about">
+          <h1 class="about__title">
+            <!-- Джедай-фронтенд -->
+          </h1>
+          <h2 class="about__title-decoration">
+            <!-- РАЗРАБОТЧИК -->
+          </h2>
+
+          <div class="about__link">
+            <a href="" class="about__link-find"> Найми меня </a>
+            <a class="about__link-cv" href="">
+              Download CV
+              <span class="about__link-decoration">
+                <svg
+                  class="about__link-img"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 15.5V19.5C21 20.0304 20.7893 20.5391 20.4142 20.9142C20.0391 21.2893 19.5304 21.5 19 21.5H5C4.46957 21.5 3.96086 21.2893 3.58579 20.9142C3.21071 20.5391 3 20.0304 3 19.5V15.5"
+                    stroke="#EEEEEE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 10.5L12 15.5L17 10.5"
+                    stroke="#EEEEEE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 15.5V3.5"
+                    stroke="#EEEEEE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="find__info">
+            <div class="find__info-text">
+              <p>
+                <span class="find__info-close"> &times </span>
+
+                Привет, потенциальные создатели веб-чудес! Я - ваш идеальный
+                кандидат на роль фронтенд разработчика, если ваш определитель
+                "идеальности" включает в себя отсутствие какого-либо опыта и
+                понимание в мире веб-технологий на уровне
+                <span class="find-decoration">
+                  "Интернет - это это то, что работает в компьютере, да?"
+                </span>
+                Почему меня стоит нанять:
+              </p>
+              <ol>
+                <li>
+                  <b>Вакуум чистого разума:</b> Нет предвзятости, нет
+                  стереотипов. Я начну с чистого листа и создам что-то такое,
+                  что вас удивит - в хорошем смысле.
+                </li>
+                <li>
+                  <b>Классика в новом свете:</b> Кто сказал, что неопытность это
+                  плохо? Я вижу это как свежий взгляд на традицию. Подготовьтесь
+                  к тому, чтобы ваше приложение стало "ретро-футуристичным" -
+                  таким стиль еще никто не пробовал!
+                </li>
+                <li>
+                  <b>Функциональность по определению:</b> Я тут нет только для
+                  того, чтобы делать красиво. Я также умею "нажимать кнопки",
+                  "вставлять ссылки" и даже "переключать вкладки". Вот такие у
+                  меня навыки - вау!
+                </li>
+                <li>
+                  <b>Борьба за неперфекцию:</b> Забудьте о совершенстве. Мы не
+                  ищем ошибки, мы ищем характер! Чем больше багов, тем
+                  интереснее путешествие.
+                </li>
+                <li>
+                  <b>Опыт и образование:</b> "Школа жизни" всегда была моим
+                  наставником, и я, кажется, великолепно освоил искусство ничего
+                  не уметь. Теперь в поиске работодателя, готового оценить
+                  высший уровень невежества с улыбкой!"
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="cv__info-text">
+            <span class="cv__info-close"> &times </span>
+
+            Почему у меня нет CV? Ну, когда ты такой уникальный индивид, что
+            даже твои навыки пугают стандартные резюме, создать CV становится
+            подвигом. Ведь почему просто написать "умею программировать", когда
+            можно создать мистическую ауру тайны вокруг своих навыков и дать
+            работодателю настоящий квест в поиске своего идеального кандидата?
+            Готов превратить обыденный отбор персонала в увлекательное
+            приключение!
+          </div>
+          <div class="about__info">
+            <a class="about__info--link jump" href="#down">
+              <img
+                class="about__info-img"
+                src="./img/arrow_down.svg"
+                alt="arrow down"
+              />
+            </a>
+          </div>
         </section>
-      </main>
-      <footer>
-        <p>Created by Vladyslava Nikitchenko in October 2023 for</p>
-        <a href="https://rs.school/" target="_blank">
-          <img src="./assets/icons/rs_school_js.svg" alt="logo-course" class="rs-icon">
-        </a>
-        <a href="https://github.com/vlaru" target="_blank">my GITHUB
-          <img src="./assets/icons/GitHub-Mark.png" alt="logo-github" class="git-icon">
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div class="container">
+        <section class="bio" id="down">
+          <h2 class="bio__title" id="me">Кто я?</h2>
+          <p class="bio__info">
+            Приветствую, земляне! Я Даниил Троянов, ваш дружелюбный амбициозный
+            Джедай-фронтендер. Мои навыки программирования острее, чем световой
+            меч, и я на миссии превращения кофеина в код. Говорят, что я владею
+            бинарным и саркастическим языками, и я считаю, что баги - это просто
+            не задокументированные фичи.
+          </p>
+        </section>
+      </div>
+      <section class="work">
+        <div class="container">
+          <h2 class="works__title">
+            Мои последние
+            <span class="works__title-decoration"> работы </span>
+          </h2>
+          <p class="works__disc">
+            Однажды я рассказал компилятору шутку, и он так сильно засмеялся,
+            что произошла ошибка выполнения. Вот почему у меня еще нет
+            официальной записи работы - я все еще отлаживаю вселенную. Пока она
+            не заработает стабильно, я тут для вас, рекрутеры, жму на кнопочки и
+            рассказываю компьютерам, какие они классные. Но обещаю, скоро и
+            настоящие крутые работы добавлю, а пока -
+            <span class="works__dics-decoration">пощелкайте кнопочки</span> и
+            посмотрите, что я уже могу на JavaScript. Кнопочки это весело, но
+            ждите, скоро увидите, как я буду танцевать с кодом!
+          </p>
+          <button class="work__btn active" type="button" data-work="ALL">
+            All
+          </button>
+          <button class="work__btn" type="button" data-work="UI">UI</button>
+          <button class="work__btn" type="button" data-work="UX">UX</button>
+          <button class="work__btn" type="button" data-work="WEB">Web</button>
+          <div class="works__container">
+            <!-- <div class="works__container-element" data-work="UI">
+              <h3 class="works__container-title">Какая-то UI технология</h3>
+              <img src="./img/work1.png" alt="work1" />
+              <a href="#" class="works__container-link">Подробнее</a>
+            </div>
+            <div class="works__container-element" data-work="UX">
+              <h3 class="works__container-title">Какая-то UX технология</h3>
+              <img src="./img/work1.png" alt="work1" />
+            </div>
+            <div class="works__container-element" data-work="WEB">
+              <h3 class="works__container-title">Какая-то WEB технология</h3>
+              <img src="./img/work1.png" alt="work1" />
+            </div> -->
+          </div>
+
+          <div class="dogs">
+            <video
+              id="myVideo"
+              width="640"
+              height="360"
+              controls
+              muted
+              autoplay
+            >
+              <source src="./video/dog.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="text">
+              <p>
+                Приветствую вас в мире моего кода, где каждый щелчок мыши — это
+                шанс встретить срущего французского бульдога (на самом деле я
+                решил не подвергать вас кодовому стрессу и выбрал смешное видео
+                с французским бульдогом, который вместо кода предпочитает
+                создавать искусство)! Почему именно бульдог, а не технологии? Да
+                потому что, как и в программировании, в жизни нужно добавлять
+                немного неожиданности и юмора.
+              </p>
+              <p>
+                Этот бульдог — мой неоценимый партнер в киберпространстве.
+                Вместо того чтобы скучно расписывать технологический стек, я
+                решил представить его в виде бульдога, потому что, как и с
+                кодом, с ним нужно заботиться, понимать, и иногда... чуть-чуть
+                удивляться.
+              </p>
+              <p>
+                Он считает, что программирование — это искусство, и какой же
+                артист не любит немного шалить? Поэтому, вместо обычных строк
+                кода, представьте себе его шедевры на клавиатуре.
+              </p>
+            </div>
+            <div class="close__btn-dog">x</div>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <div class="container">
+          <h2 class="skills__tiltle">Мои навыки</h2>
+          <h3 class="skilss__disc">HTML5, CSS3</h3>
+          <div class="skills__info">
+            <div class="skills__info-elm"></div>
+          </div>
+          <h3 class="skilss__disc">JavaScript (на уровне основ)</h3>
+          <div class="skills__info">
+            <div class="skills__info-elm"></div>
+          </div>
+          <h3 class="skilss__disc">Git, GitHub</h3>
+          <div class="skills__info">
+            <div class="skills__info-elm"></div>
+          </div>
+          <h3 class="skilss__disc">
+            Illustrator (когда нужно создать идеальный световой меч)
+          </h3>
+          <div class="skills__info">
+            <div class="skills__info-elm"></div>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="container">
+          <h2 class="price__tiltle">Сколько вы мне должны платить?</h2>
+          <div class="price__text">
+            <p class="price_disc">
+              Дорогие коллеги, вы, конечно, понимаете, что
+              высококвалифицированный специалист, как я, должен получать не
+              меньше, чем главный директор за то, что я умею делать. Ведь собака
+              себя сама не прокормит, пиво само не купится, сигареты сами не
+              купятся, а жена, как вы знаете, сама не наркомится.
+            </p>
+            <p class="price_disc">
+              И хотя я патриот своей страны, но, признайтесь, тенге не самая
+              стабильная валюта. Поэтому, ради экономической стабильности,
+              предлагаю зарплату начислять исключительно в долларах. Не зря же
+              говорят, что валюта могла бы быть стабильнее, чем моя жизнь.
+            </p>
+            <p class="price_disc">
+              Чтобы я, как ваш сотрудник, не страдал от стрессов, я подготовил
+              калькулятор, который покажет, сколько вы мне должны платить.
+              Надеюсь, он будет вас удовлетворять, как и меня. И помните, деньги
+              не приносят счастья, но с ними можно купить много вещей, которые
+              приближают наше счастье.
+            </p>
+          </div>
+
+          <div class="calculator">
+            <div class="calculator__block calculator__block--hours">
+              <label class="calculator__label" for="hours"
+                >Сколько часов я буду работать в месяц?</label
+              >
+              <input
+                type="range"
+                id="hours"
+                name="hours"
+                min="0"
+                max="100"
+                value="0"
+                class="calculator__slider"
+              />
+              <span class="calculator__hours">0 часов</span>
+            </div>
+
+            <div class="calculator__block calculator__block--payment">
+              <label class="calculator__label" for="payment"
+                >Сколько за это вы должны платить?</label
+              >
+              <span class="calculator__currency">$</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <h2 class="footer__title">Связаться со мной можно тут:</h2>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="tel:77055837474"
+              >Телефон: 8705583747</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="https://t.me/nillks_rss"
+              >Тelegram</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="daniil.troanov2@gmail.com"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/work.js"></script>
+    <script src="./js/writeText.js"></script>
+    <script src="./js/cv.js"></script>
+    <script src="./js/toogle.js"></script>
+    <script src="./js/down.js"></script>
+    <script src="./js/findMe.js"></script>
+    <script src="./js/video.js"></script>
+    <script src="./js/skills.js"></script>
+    <script src="./js/calculate.js"></script>
+    <script src="./js/preloader.js"></script>
   </body>
 </html>

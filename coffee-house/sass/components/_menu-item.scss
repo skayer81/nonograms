@@ -14,12 +14,16 @@
         overflow: hidden;
         img {
             scale: 1.1;
-            @extend %tr;
+            @include tr;
+            // @include tr;
         }
     }
-    &:hover {
-        img {
-            scale: 1;
+   
+        &:hover {
+            @media (hover: hover) {
+            img {
+                scale: 1;
+            }
         }
     }
 
