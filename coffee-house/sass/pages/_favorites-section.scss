@@ -28,10 +28,10 @@
        display: flex;
     justify-content: center;
     align-items: center;
-       @extend %tr;
+       @include tr;
        
         path{
-            @extend %tr;
+            @include tr;
         }
        
        &:hover{

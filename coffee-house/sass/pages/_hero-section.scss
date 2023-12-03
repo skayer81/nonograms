@@ -20,6 +20,9 @@
             // flex-direction: column;
             // align-items:start;
             // justify-content: center;
+            @media (max-width: 850px) {
+                padding-left: 60px;
+            }
         }
         .video-title{
             @include textStyle(72px, 75.6px);
@@ -41,7 +44,7 @@
             border-radius: 100px;
             background-color: $backgroundBody;
             color: $textDark;
-            @extend %tr;
+            @include tr;
             position: relative;
             &:hover{
                 padding-right: 34px;
@@ -59,7 +62,7 @@
                 height: 20px;
                 // border: 1px solid red;
                 opacity: 0;
-                @extend %tr;
+                @include tr;
             }
         }
     }

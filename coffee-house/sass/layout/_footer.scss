@@ -14,11 +14,14 @@
         background-color: $backgroundContainer;
         border-radius: 40px;
         min-height: 450px;
-        padding-top: 100px;
-        padding-left: 100px;
+      //  padding-top: 100px;
+       // padding-left: 100px;
+       padding: 100px;
         color: $textLight;
         @media (max-width: 1000px) {
             flex-direction: column;
+            padding-left: 60px;
+            padding-bottom: 84px;
         }
     }
     .left-side {
@@ -28,6 +31,7 @@
         background-color: $backgroundContainer;
         @media (max-width: 1000px) {
             width: 100%;
+            padding-right: 0;
         }
         .footer-title {
             @include textStyle(60px, 75px);
@@ -43,9 +47,9 @@
                 border: 1px solid $textLight;
                 padding-top: 17px;
                 padding-left: 17px;
-                @extend %tr;
+                @include tr;
                 path {
-                    @extend %tr;
+                    @include tr;
                 }
                 &:hover {
                     cursor: pointer;
@@ -89,13 +93,15 @@
         height: 100%;
         width: 50%;
         padding-top: 32px;
-        // padding-left: 20px;
+        padding-left: 50px;
         
         @include textStyle(16px, 24px);
         color: $textLight;
 
         @media (max-width: 1000px) {
             width: 100%;
+            padding-top: 100px;
+            padding-left: 0;
         }
         .right-side__title {
             @include textStyle(24px, 30px);
@@ -135,7 +141,7 @@
                     background-color: $textLight;
                     bottom: -7px;
                     left: 50%;
-                    @extend %tr;
+                    @include tr;
                 }
 
                 &:hover {

@@ -14,7 +14,8 @@
         overflow: hidden;
         img {
             scale: 1.1;
-            @extend %tr;
+            @include tr;
+           // @include tr;
         }
     }
     &:hover {

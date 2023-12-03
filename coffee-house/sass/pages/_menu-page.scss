@@ -44,7 +44,7 @@
         color: $textDark;
 
         @include textStyle(16px, 24px);
-        @extend %tr;
+        @include tr;
         .icon{
             display: inline-block;
             width: 30px;
@@ -54,7 +54,7 @@
             background-color: $borderLight;
             background-repeat: no-repeat;
             background-position: center;
-            @extend %tr;
+            @include tr;
             // grid-template-columns: 2rem 20% 150px 1fr;
         }
         &:hover{
@@ -97,8 +97,9 @@
     .menu-items{
         margin-bottom: 100px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:  repeat( auto-fit, 310px);
+        justify-content: center;
+       // grid-template-rows: repeat(2, 1fr);
         column-gap: 40px;
     row-gap: 40px;
     }

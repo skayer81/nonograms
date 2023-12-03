@@ -31,6 +31,6 @@ $borderDark: #665F55;
 %border{
     border: 1px solid red;
 }
-%tr{
-    transition: 1s;
+@mixin tr($time:1s){
+    transition: $time;
 }

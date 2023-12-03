@@ -18,16 +18,23 @@
         // justify-content: center;
         @media (max-width: 1350px) {
             width: 100%;
+            padding-top: 155px;
         }
         .footer-title {
             @include textStyle(60px, 75px);
             margin-bottom: 40px;
             padding-right: 60px;
+            @media (max-width: 1350px) {
+                padding-right: 0;
+            }
         }
         .footer-description {
             @include textStyle(16px, 24px, 400);
             margin-bottom: 40px;
             padding-right: 60px;
+            @media (max-width: 1350px) {
+                padding-right: 0;
+            }
         }
         // .buttons-block{
 
@@ -45,9 +52,9 @@
             justify-content: left;
             align-items: center;
             padding-left: 20px;
-            @extend %tr;
+            @include tr;
             path{
-                @extend %tr;
+                @include tr;
             }
             svg{
                 margin-right: 8px;
@@ -94,13 +101,15 @@
     .right-side {
         background-image: url("./assets/images/mobile-screens.png");
         width: 50%;
-        // min-height: 830px;
+         min-height: 630px;
         background-repeat: no-repeat;
         background-position: right top;
         margin-top: -5px;
       //  border: 1px solid green;
         @media (max-width: 1350px) {
             width: 100%;
+            background-position: center center;
+            min-height: 835px;
         }
     }
 }
