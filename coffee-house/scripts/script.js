@@ -7,10 +7,10 @@ import {ButtonsList} from './buttonsBlock.js'
 import {PagesInterface} from './pagesInterface.js'
 
 const productList = new ProductList(product);
-const menuPage =  document.getElementById('menu-page');
+//const menuPage =  document.getElementById('menu-page');
 //console.log(productList)
 
-menuPage.querySelector('.container').append(productList.listItems);
+document.getElementById('frame').append(productList.listItems);
 
 const pages = new PagesInterface(document.querySelectorAll('main'));
 
