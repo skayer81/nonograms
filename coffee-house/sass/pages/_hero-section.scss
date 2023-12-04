@@ -62,13 +62,7 @@
             color: $textDark;
             @include tr;
             position: relative;
-            @media (hover: hover) and (pointer: fine) {
-            &:hover{
-                padding-right: 34px;
-                &::after{
-                    opacity: 1;
-                }
-            }}
+
             &::after{
                 content: '';
                 top: 22px;
@@ -81,6 +75,19 @@
                 opacity: 0;
                 @include tr;
             }
+            @media (hover: hover) and (pointer: fine) {
+                &:hover{
+                    padding-right: 34px;
+                    &::after{
+                        opacity: 1;
+                    }
+                }}
+                @media (hover: none) and (max-width: 1430px){
+                    padding-right: 34px;
+                    &::after{
+                        opacity: 1;
+                    }
+                }
         }
     }
 }
