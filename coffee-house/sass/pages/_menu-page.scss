@@ -154,6 +154,10 @@
         border-radius: 50%;
         padding-top: 5px;
         margin: -42px auto 0;
+        svg path{
+            @include tr;
+        }
+        @include tr;
         @media (max-width: 768px) {
             display: block;
             margin-bottom: 100px;
@@ -161,6 +165,18 @@
         @media (max-width: 650px) {
             display: block;
             margin-top: -125px;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover{
+                background-color: $borderDark;
+                svg path{
+                    stroke:  $backgroundBody;
+                }
+                // span{
+                //     background-color: $backgroundBody;
+                // }
+            }
+        
         }
        
     }

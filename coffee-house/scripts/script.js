@@ -8,7 +8,7 @@ import {PagesInterface} from './pagesInterface.js'
 
 const productList = new ProductList(product);
 //const menuPage =  document.getElementById('menu-page');
-//console.log(productList)
+console.log(productList)
 
 document.getElementById('frame').append(productList.listItems);
 
@@ -16,28 +16,24 @@ const pages = new PagesInterface(document.querySelectorAll('main'));
 
 const buttons = new ButtonsList(document.querySelectorAll('[data-page]'), pages);
 
-let  productListTest;
+// let  productListTest;
 
-function getFile (fileName) {
+// function getFile (fileName) {
 
-    const request = new XMLHttpRequest();
-    request.open('get', fileName);
-    request.onloadend = function() {
-         parse(request.responseText);
-    }
-    
+//     const request = new XMLHttpRequest();
+//     request.open('get', fileName);
+//     request.onloadend = function() {
+//         parse(request.responseText);
+//     }
+//     request.send();
+// }
 
-    request.send();
-}
+// getFile('./scripts/test.json');
 
-getFile('./scripts/test.json'); //путь к файлу
-
-function parse(obj) {
-
-    productListTest = JSON.parse(obj);
-
-    console.log(productListTest);
-}
+// function parse(obj) {
+//     productListTest = JSON.parse(obj);
+//     console.log(productListTest);
+// }
 
 // const test = getElementById('test')
 // const svg =  test.getSVGDocument();
