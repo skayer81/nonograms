@@ -211,9 +211,11 @@ h1, h2 {
   left: 50%;
   transition: 1s;
 }
-.main-header li .active:hover::after {
-  width: 100%;
-  left: 0;
+@media (hover: hover) and (pointer: fine) {
+  .main-header li .active:hover::after {
+    width: 100%;
+    left: 0;
+  }
 }
 .main-header li .disable {
   cursor: auto;
@@ -266,11 +268,21 @@ h1, h2 {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
+  transition: 1s;
 }
 .main-header .mobile-menu .burger-button span {
   height: 2px;
   width: 18px;
   background-color: #665F55;
+  transition: 1s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .main-header .mobile-menu .burger-button:hover {
+    background-color: #665F55;
+  }
+  .main-header .mobile-menu .burger-button:hover span {
+    background-color: #E1D4C9;
+  }
 }
 
 .main-header .main-menu {
@@ -358,12 +370,6 @@ h1, h2 {
   transition: 1s;
   position: relative;
 }
-.main-page .video .menu-button:hover {
-  padding-right: 34px;
-}
-.main-page .video .menu-button:hover::after {
-  opacity: 1;
-}
 .main-page .video .menu-button::after {
   content: "";
   top: 22px;
@@ -374,6 +380,22 @@ h1, h2 {
   height: 20px;
   opacity: 0;
   transition: 1s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .main-page .video .menu-button:hover {
+    padding-right: 34px;
+  }
+  .main-page .video .menu-button:hover::after {
+    opacity: 1;
+  }
+}
+@media (hover: none) and (max-width: 1430px) {
+  .main-page .video .menu-button {
+    padding-right: 34px;
+  }
+  .main-page .video .menu-button::after {
+    opacity: 1;
+  }
 }
 
 .main-header .main-menu {
@@ -446,13 +468,15 @@ h1, h2 {
 .favorite .left-arrow path {
   transition: 1s;
 }
-.favorite .right-arrow:hover,
-.favorite .left-arrow:hover {
-  background-color: #665F55;
-}
-.favorite .right-arrow:hover path,
-.favorite .left-arrow:hover path {
-  stroke: #E1D4C9;
+@media (hover: hover) and (pointer: fine) {
+  .favorite .right-arrow:hover,
+  .favorite .left-arrow:hover {
+    background-color: #665F55;
+  }
+  .favorite .right-arrow:hover path,
+  .favorite .left-arrow:hover path {
+    stroke: #E1D4C9;
+  }
 }
 @media (max-width: 650px) {
   .favorite .right-arrow,
@@ -574,6 +598,11 @@ h1, h2 {
   width: 100%;
   height: 100%;
   transition: 1s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .gallery .img1 img:hover, .gallery .img2 img:hover, .gallery .img3 img:hover, .gallery .img4 img:hover {
+    scale: 1;
+  }
 }
 @media (max-width: 768px) {
   .gallery .img1 img, .gallery .img2 img, .gallery .img3 img, .gallery .img4 img {
@@ -719,12 +748,14 @@ h1, h2 {
 .main-page__footer .left-side a svg {
   margin-right: 8px;
 }
-.main-page__footer .left-side a:hover {
-  color: #E1D4C9;
-  background-color: #665F55;
-}
-.main-page__footer .left-side a:hover path {
-  fill: #E1D4C9;
+@media (hover: hover) and (pointer: fine) {
+  .main-page__footer .left-side a:hover {
+    color: #E1D4C9;
+    background-color: #665F55;
+  }
+  .main-page__footer .left-side a:hover path {
+    fill: #E1D4C9;
+  }
 }
 .main-page__footer .left-side a .app-button__top {
   font-family: "Inter", sans-serif;
@@ -822,8 +853,10 @@ h1, h2 {
   scale: 1.1;
   transition: 1s;
 }
-.coffee-item:hover img {
-  scale: 1;
+@media (hover: hover) {
+  .coffee-item:hover img {
+    scale: 1;
+  }
 }
 .coffee-item .text-content {
   padding: 20px;
@@ -979,6 +1012,10 @@ h1, h2 {
   border-radius: 50%;
   padding-top: 5px;
   margin: -42px auto 0;
+  transition: 1s;
+}
+.menu-page .content-load svg path {
+  transition: 1s;
 }
 @media (max-width: 768px) {
   .menu-page .content-load {
@@ -990,6 +1027,14 @@ h1, h2 {
   .menu-page .content-load {
     display: block;
     margin-top: -125px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu-page .content-load:hover {
+    background-color: #665F55;
+  }
+  .menu-page .content-load:hover svg path {
+    stroke: #E1D4C9;
   }
 }
 
@@ -1157,11 +1202,13 @@ h1, h2 {
   left: 50%;
   transition: 1s;
 }
-.footer .right-side .contacts .tel:hover::after,
-.footer .right-side .contacts .adres:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
+@media (hover: hover) and (pointer: fine) {
+  .footer .right-side .contacts .tel:hover::after,
+  .footer .right-side .contacts .adres:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

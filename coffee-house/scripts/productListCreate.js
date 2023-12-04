@@ -1,5 +1,4 @@
 
-//import {product} from './product.js';
 import {CreateBaseComponent} from './createComponent.js'
 
 class ProductItem extends CreateBaseComponent{
@@ -40,6 +39,10 @@ export class ProductList extends CreateBaseComponent{
         const list = this.createBaseComponent(0, 'ul', ['menu-items'])
         for (let elem of this.coffee){
             let item = new ProductItem(elem.img, elem.name, elem.description, elem.price).item;
+            // elem.card = item;
+            // item.addEventListener('click',  () => {
+            //     this.openCard = new CreateItemPopUp(elem).getCard();
+            // })
             list.append(item)
         }
         return list
@@ -49,3 +52,20 @@ export class ProductList extends CreateBaseComponent{
         return this.createMenu();
     }
 }
+
+
+class CreateItemPopUp extends CreateBaseComponent{
+    constructor(card){
+        super();
+        this.card = card
+
+    }
+
+    get getCard(){
+        console.log(this.card)
+    }
+
+
+}
+
+
