@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header" hidden>
         <div class="container">
             <menu class="main-menu">
                 <li> <button class="logo-button" data-page="0"></button></li>
@@ -187,7 +187,7 @@
             </button>
         </section>
     </main>
-    <footer class="footer" id="contact">
+    <footer class="footer" id="contact" hidden>
         <div class="container">
             <div class="backgraund-wrapper">
                 <div class="left-side">
@@ -239,8 +239,47 @@
             </div>
         </div>
     </footer>
+    <div id="portal">
+        <!-- <article class="items-popup">
+            <div class="left-side">
+                <img src="" alt="">
+            </div>
+            <div class="right-side">
+                <h2 class="title">Irish coffee</h2>
+                <p class="description"> Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                <form action=""  name="popUpForm">
+                    <fieldset>
+                      <legend>size</legend>
+                     <input type="radio" name="sizes" id="size1">
+                     <label for="size1">size1</label>
+                     <input type="radio"  name="sizes"  id="size2">
+                     <label for="size2">size2</label>
+                     <input type="radio"  name="sizes"  id="size3">
+                     <label for="size3">size3</label>
+                    </fieldset>
+                    <fieldset>
+                      <legend>add</legend>
+                    <input type="checkbox" name="add1" id="add1">
+                    <label for="add1">add1</label>
+                    <input type="checkbox" name="add2" id="add2">
+                    <label for="add2">add1</label>
+                    <input type="checkbox" name="add3" id="add3">
+                    <label for="add3">add1</label>
+                  </fieldset>
+                  </form>
+                  <div class="total-price"><span>Total:</span><span class="price">$7.00</span></div>
+                  <footer class="popup-footer"><p>The cost is not final. 
+                    Download our mobile app to see the final price and place your order.
+                     Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p></footer>
+                  <button class="popup-close"></button>
+                </div>
+
+        </article> -->
+    </div>
     <script type="module" src="./scripts/script.js"></script>
     <script>document.getElementById('form').addEventListener('submit', () => event.preventDefault())</script>
+
+
 </body>
 
 </html>

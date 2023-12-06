@@ -1,14 +1,13 @@
 import {product} from './product.js';
-//import test from './test.json';
-//const readFile = fs.readFileSync('jsonex.json', 'utf8');
 import {ProductList} from './productListCreate.js';
-//import {PagesAtributes} from './buttonsBlock.js';
-import {ButtonsList} from './buttonsBlock.js'
-import {PagesInterface} from './pagesInterface.js'
+import {ButtonsList} from './buttonsBlock.js';
+import {PagesInterface} from './pagesInterface.js';
+import {PopupInterface} from './productListCreate.js';
 
 const productList = new ProductList(product);
+//const popUp = new PopupInterface()
 //const menuPage =  document.getElementById('menu-page');
-console.log(productList)
+//console.log(productList)
 
 document.getElementById('frame').append(productList.listItems);
 
@@ -16,14 +15,13 @@ const pages = new PagesInterface(document.querySelectorAll('main'));
 
 const buttons = new ButtonsList(document.querySelectorAll('[data-page]'), pages);
 
-// let  productListTest;
+// let  productList;
 
 // function getFile (fileName) {
-
 //     const request = new XMLHttpRequest();
 //     request.open('get', fileName);
 //     request.onloadend = function() {
-//         parse(request.responseText);
+//         productListT = JSON.parse(request.responseText);
 //     }
 //     request.send();
 // }

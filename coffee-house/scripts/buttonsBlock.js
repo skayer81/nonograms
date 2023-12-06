@@ -42,6 +42,7 @@ export class ButtonsList{
         if (button.dataset.page && button.dataset.page != this.pages.indexOfcurentPage){
             this.pages.curentPage.classList.remove('visible');
             this.pages.curentPage.classList.add('hidden');
+           // this.pages.curentPage
                 setTimeout(() => {
                     this.pages.indexOfcurentPage = +button.dataset.page;
                     this.pages.toggleVisiblePage();
