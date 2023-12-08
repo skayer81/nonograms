@@ -1,9 +1,12 @@
-import {product} from './product.js';
-import {ProductList} from './productListCreate.js';
+//import {product} from './product.js';
+//import {ProductList} from './productListCreate.js';
 import {ButtonsList} from './buttonsBlock.js';
 import {PagesInterface} from './pagesInterface.js';
 import { ProductListChange } from './productListChange.js';
+import { Slider } from './slider/slider.js';
 //import {PopupInterface} from './productListCreate.js';
+
+
 
 const productListChange = new ProductListChange()
 

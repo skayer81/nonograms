@@ -80,24 +80,13 @@ class CreateForm extends CreateFormComponent{
         this.inputAdditive2.checked = false;
         this.inputAdditive3.checked = false;
         this.inputSize1.checked = true;
-     //   this.clearLabelTEST()
     }
-    // clearLabelTEST(){
-    //     [this.labelSize1.innerHTML, this.labelSize2.innerHTML, this.labelSize3.innerHTML] = ['','',''];
-    //     [this.labelAdditive1.innerHTML, this.labelAdditive2.innerHTML, this.labelAdditive3.innerHTML] = ['','','']
-    // }
 }
-
-
-// form = new CreateForm().getForm
-
 
 export class PopupInterface extends CreateForm{// класс для замены данных в попапе и создания попап
     constructor(){
         super()
         this.portal = document.getElementById('portal');
-      //  this.formInterface = new CreateForm();
-      //  this.form = this.getForm// formInterface.getForm;
         this.popUp = this.createPopup()
         console.log('f2', this.form);
         this.portal.append(this.popUp);
@@ -118,6 +107,7 @@ export class PopupInterface extends CreateForm{// класс для замены
             Download our mobile app to see the final price and place your order.
             Earn loyalty points and enjoy your favorite coffee with up to 20% discount.`;
         this._closeButton = this.createFormComponent(rs,'button', ['close-button'], {type: 'button'});
+        this._closeButton.innerHTML = '111'
         return popup;
     }
 
@@ -129,47 +119,14 @@ export class PopupInterface extends CreateForm{// класс для замены
         this._description.innerHTML = description;
     }
 
-    set totalPrice(totalPrice){
-        this._totalPrice.innerHTML = totalPrice;
-    }
-
     set img(src){
         this._img.setAttribute('src', `./assets/images/${src}`)
     }
 
     set price(price){
-        
-      //  addEventListener('click', () => {console.log(123)})
-   //   window.Intl
-
-// if (window.Intl && typeof window.Intl === "object"){  
-//     console.log("Internationalization API поддерживается");
-// } 
-// else {  
-//     console.log("Internationalization API не поддерживается");
-price =  new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Number(price)),
-
-
-// }
-// console.log(
-//     new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 2, minimumFractionDigits: 2 }).format(
-//       number,
-//     ),
-//   );
-       
+        price =  new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Number(price)),
         this._totalPrice.innerHTML =   `$${price}`
-
-      //  this._totalPrice.innerHTML = String(price).padEnd;
     }
-
-    // set radioLabel(labels){
-    //     console.log('label', labels)
-    //     [this.formInterface.labelSize1.innerHTML, this.formInterface.labelSize2.innerHTML, this.formInterface.labelSize3.innerHTML] = labels
-    // }
-
-    // set checkLabel(labels){
-    //     [this.formInterface.labelAdd1, this.formInterface.labelAdd2, this.formInterface.labelAdd2] = labels
-   // }
 }
 
 
@@ -177,162 +134,32 @@ price =  new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Num
 
 class ItemsPopUp {//extends CreateBaseComponent{ //
     constructor(){
-      //  super();
-     //   this.card = card
-        
-      //  console.log('portal', this.portal)
-        this.interface = new PopupInterface(); 
+        this.interface = new PopupInterface();
         this.form = this.interface.getForm;
         this.addChangeListener();
     }
 
-    // get getItemPopUp(){
-    //     console.log(this.card)
-    // }
-
     addChangeListener(){
-        // for (let i = 0; i <= this.form.elements.length - 1; i ++){
-        //     this.form.elements[i].addEventListener('change', (event) => {
-        //         console.log(event);
-        //     })
-        //    // console.log(i, this.form.elements[i])
-        // }
         this.form.addEventListener('change', (event) => {
-         //   this.interface.price = 
-             //   this._card.price + this.size[this.form.sizes.value].add-price
-           // console.log('форма поменялась');
-           let price = Number(this._card.price) 
-           + Number(this._card.sizes[this.form.sizes.value]['add-price'])
-           + (this.form.add1.checked && Number(this._card.additives[0]['add-price']))
-           + (this.form.add2.checked && Number(this._card.additives[1]['add-price']))
-           + (this.form.add3.checked && Number(this._card.additives[2]['add-price']))
-           console.log(price);
-           this.interface.price = price
-            // console.log('форма размер', this.form.sizes.value);
-            // console.log('форма добавка 1', this.form.add1.checked);
-            // console.log('форма добавка 2', this.form.add2.checked);
-            // console.log('форма добавка 3', this.form.add3.checked);
+        let price = Number(this._card.price)
+            + Number(this._card.sizes[this.form.sizes.value]['add-price'])
+            + (this.form.add1.checked && Number(this._card.additives[0]['add-price']))
+            + (this.form.add2.checked && Number(this._card.additives[1]['add-price']))
+            + (this.form.add3.checked && Number(this._card.additives[2]['add-price']))
+           //console.log(price);
+           this.interface.price = price;
         })
     }
 
-// ///////////////////////////////////////кофе
-
-
-// {
-//     "sizes": {
-//       "s": {
-//         "size": "200 ml",
-//         "add-price": "0.00"
-//       },
-//       "m": {
-//         "size": "300 ml",
-//         "add-price": "0.50"
-//       },
-//       "l": {
-//         "size": "400 ml",
-//         "add-price": "1.00"
-//       }
-//     },
-//     "additives": [
-//       {
-//         "name": "Sugar",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Cinnamon",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Syrup",
-//         "add-price": "0.50"
-//       }
-//     ]
-//   }
-// ////////////////////чай
-// {
-//     "sizes": {
-//       "s": {
-//         "size": "200 ml",
-//         "add-price": "0.00"
-//       },
-//       "m": {
-//         "size": "300 ml",
-//         "add-price": "0.50"
-//       },
-//       "l": {
-//         "size": "400 ml",
-//         "add-price": "1.00"
-//       }
-//     },
-//     "additives": [
-//       {
-//         "name": "Sugar",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Lemon",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Syrup",
-//         "add-price": "0.50"
-//       }
-//     ]
-//   },
-
-////////////////////////// десерт
-// {
-
-//     "sizes": {
-//       "s": {
-//         "size": "50 g",
-//         "add-price": "0.00"
-//       },
-//       "m": {
-//         "size": "100 g",
-//         "add-price": "0.50"
-//       },
-//       "l": {
-//         "size": "200 g",
-//         "add-price": "1.00"
-//       }
-//     },
-//     "additives": [
-//       {
-//         "name": "Berries",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Nuts",
-//         "add-price": "0.50"
-//       },
-//       {
-//         "name": "Jam",
-//         "add-price": "0.50"
-//       }
-//     ]
-//   },
-
-
-///////////////////////////////////
-
-
-
-
-
-
-    set card(card){
-    //   .. console.log(card)
-        this._card = card;
-        alert(this._card.name);
-    }
+    // set card(card){
+    // //   .. console.log(card)
+    //     this._card = card;
+    //     alert(this._card.name);
+    // }
 
     popupInit(card){
         this._card = card;
-        //this.basePrice = 
-       // alert(this._card.name);
         this.interface.clearForm()
-        
         this.interface.title = this._card.name;
         this.interface.description = this._card.description;
         this.interface.img = (`${this._card.category}/${this._card.img}`) ;

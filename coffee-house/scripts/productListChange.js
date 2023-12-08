@@ -21,11 +21,11 @@ export class ProductListChange{
 
     hiddenProductList(){
         this.frame.style.opacity = 0;
-        console.log('старт анимации')
+       // console.log('старт анимации')
     }
 
     showProductList(){
-        console.log('конец анимации')
+     //   console.log('конец анимации')
       //  console.log(this, 'this')
         this.frame.innerHTML = '';
         this.frame.append(this.productList.getListItems(this.form.select.value));
