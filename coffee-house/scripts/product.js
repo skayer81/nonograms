@@ -292,6 +292,7 @@ export const product = [
       "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
       "price": "4.50",
       "category": "tea",
+      "img": "tea-1.jpg",
       "sizes": {
         "s": {
           "size": "200 ml",
@@ -327,6 +328,7 @@ export const product = [
       "description": "Original black tea with fresh ginger, lemon and honey",
       "price": "5.00",
       "category": "tea",
+      "img": "tea-2.jpg",
       "sizes": {
         "s": {
           "size": "200 ml",
@@ -362,6 +364,7 @@ export const product = [
       "description": "Invigorating black tea with cranberry and honey",
       "price": "5.00",
       "category": "tea",
+      "img": "tea-3.jpg",
       "sizes": {
         "s": {
           "size": "200 ml",
@@ -397,6 +400,7 @@ export const product = [
       "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
       "price": "5.50",
       "category": "tea",
+      "img": "tea-4.jpg",
       "sizes": {
         "s": {
           "size": "200 ml",
@@ -432,6 +436,7 @@ export const product = [
       "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
       "price": "3.50",
       "category": "dessert",
+      "img": "dessert-1.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -467,6 +472,7 @@ export const product = [
       "description": "Layer cake with cream cheese frosting",
       "price": "4.00",
       "category": "dessert",
+      "img": "dessert-2.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -502,6 +508,7 @@ export const product = [
       "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
       "price": "4.50",
       "category": "dessert",
+      "img": "dessert-3.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -537,6 +544,7 @@ export const product = [
       "description": "Delicate creamy dessert in a caramel basket with wild berries",
       "price": "4.00",
       "category": "dessert",
+      "img": "dessert-4.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -572,6 +580,7 @@ export const product = [
       "description": "Tender pancakes with strawberry jam and fresh strawberries",
       "price": "4.50",
       "category": "dessert",
+      "img": "dessert-5.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -607,6 +616,7 @@ export const product = [
       "description": "Classic honey cake with delicate custard",
       "price": "4.50",
       "category": "dessert",
+      "img": "dessert-6.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -642,6 +652,7 @@ export const product = [
       "description": "Cake with hot chocolate filling and nuts with dried apricots",
       "price": "5.50",
       "category": "dessert",
+      "img": "dessert-7.jpg",
       "sizes": {
         "s": {
           "size": "50 g",
@@ -677,6 +688,7 @@ export const product = [
       "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
       "price": "6.50",
       "category": "dessert",
+      "img": "dessert-8.jpg",
       "sizes": {
         "s": {
           "size": "50 g",

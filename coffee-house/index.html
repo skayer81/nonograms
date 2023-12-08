@@ -73,9 +73,9 @@
 
 
                         </picture> -->
-                        <picture class="slider-item__img" >
-                            <source srcset="./assets/images/coffee-slider-1-380.png"  media="(max-width: 550px)" />
-                            <img src="./assets/images/coffee-slider-1.png" alt="" >
+                        <picture class="slider-item__img">
+                            <source srcset="./assets/images/coffee-slider-1-380.png" media="(max-width: 550px)" />
+                            <img src="./assets/images/coffee-slider-1.png" alt="">
                         </picture>
                         <!-- <img class="slider-item__img" src="./assets/images/coffee-slider-1.png" alt=""> -->
                         <h3 class="slider-item__title">S’mores Frappuccino</h3>
@@ -101,7 +101,7 @@
 
                 <!-- </div> -->
             </section>
-            <section class="gallery" id="about" >
+            <section class="gallery" id="about">
                 <h2>photos</h2>
                 <p class="title">
                     Resource is <span class="italic">the perfect and cozy place</span> where you can enjoy a variety of
@@ -115,7 +115,7 @@
                     <li class="img4"><img src="./assets/images/about-4.jpg" alt=""></li>
                 </ul>
             </section>
-            <footer class="main-page__footer" id="app" >
+            <footer class="main-page__footer" id="app">
                 <div class="left-side">
                     <p class="footer-title"><span class="italic">Download</span> our apps to start ordering</p>
                     <p class="footer-description">Download the Resource app today and experience the comfort of
@@ -170,7 +170,7 @@
         <section class="container">
             <h2>menu</h2>
             <p class="menu-title">Behind each of our cups hides an <span class="italic">amazing surprise</span></p>
-            <form class="menu-select" id="form">
+            <form class="menu-select" name="productListChange">
                 <input type="radio" id="selectCoffee" name="select" value="coffee" checked>
                 <label class="select-coffee" for="selectCoffee"><span class="icon"></span> Coffee </label>
                 <input type="radio" id="selectTea" name="select" value="tea">
@@ -181,9 +181,12 @@
             <div id="frame"></div>
             <button class="content-load">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <path
+                        d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+                        stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </button>
         </section>
     </main>
@@ -240,44 +243,46 @@
         </div>
     </footer>
     <div id="portal">
-        <!-- <article class="items-popup">
+         <!-- <article class="items-popup"> 
             <div class="left-side">
                 <img src="" alt="">
             </div>
             <div class="right-side">
                 <h2 class="title">Irish coffee</h2>
                 <p class="description"> Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                <form action=""  name="popUpForm">
+                <form action="" name="popUpForm">
                     <fieldset>
-                      <legend>size</legend>
-                     <input type="radio" name="sizes" id="size1">
-                     <label for="size1">size1</label>
-                     <input type="radio"  name="sizes"  id="size2">
-                     <label for="size2">size2</label>
-                     <input type="radio"  name="sizes"  id="size3">
-                     <label for="size3">size3</label>
+                        <legend>size</legend>
+                        <input type="radio" name="sizes" id="size1" value="size1">
+                        <label for="size1">size1</label>
+                        <input type="radio" name="sizes" id="size2" value="size2">
+                        <label for="size2">size2</label>
+                        <input type="radio" name="sizes" id="size3" value="size3">
+                        <label for="size3">size3</label>
                     </fieldset>
                     <fieldset>
-                      <legend>add</legend>
-                    <input type="checkbox" name="add1" id="add1">
-                    <label for="add1">add1</label>
-                    <input type="checkbox" name="add2" id="add2">
-                    <label for="add2">add1</label>
-                    <input type="checkbox" name="add3" id="add3">
-                    <label for="add3">add1</label>
-                  </fieldset>
-                  </form>
-                  <div class="total-price"><span>Total:</span><span class="price">$7.00</span></div>
-                  <footer class="popup-footer"><p>The cost is not final. 
-                    Download our mobile app to see the final price and place your order.
-                     Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p></footer>
-                  <button class="popup-close"></button>
-                </div>
+                        <legend>add</legend>
+                        <input type="checkbox" name="add1" id="add1">
+                        <label for="add1">add1</label>
+                        <input type="checkbox" name="add2" id="add2">
+                        <label for="add2">add1</label>
+                        <input type="checkbox" name="add3" id="add3">
+                        <label for="add3">add1</label>
+                    </fieldset>
+                </form>
+                <div class="total-price"><span>Total:</span><span class="price">$7.00</span></div>
+                <footer class="popup-footer">
+                    <p>The cost is not final.
+                        Download our mobile app to see the final price and place your order.
+                        Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+                </footer>
+                <button class="popup-close"></button>
+            </div>
 
         </article> -->
     </div>
     <script type="module" src="./scripts/script.js"></script>
-    <script>document.getElementById('form').addEventListener('submit', () => event.preventDefault())</script>
+    <!-- <script>document.getElementById('form').addEventListener('submit', () => event.preventDefault())</script> -->
 
 
 </body>

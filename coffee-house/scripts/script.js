@@ -2,14 +2,17 @@ import {product} from './product.js';
 import {ProductList} from './productListCreate.js';
 import {ButtonsList} from './buttonsBlock.js';
 import {PagesInterface} from './pagesInterface.js';
-import {PopupInterface} from './productListCreate.js';
+import { ProductListChange } from './productListChange.js';
+//import {PopupInterface} from './productListCreate.js';
 
-const productList = new ProductList(product);
+const productListChange = new ProductListChange()
+
+//const productList = new ProductList(product);
 //const popUp = new PopupInterface()
 //const menuPage =  document.getElementById('menu-page');
 //console.log(productList)
 
-document.getElementById('frame').append(productList.listItems);
+//document.getElementById('frame').append(productList.listItems);
 
 const pages = new PagesInterface(document.querySelectorAll('main'));
 

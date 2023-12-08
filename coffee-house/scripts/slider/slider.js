@@ -6,4 +6,7 @@ export class PaginationInterface extends CreateBaseComponent{
     }
 
 
+    
+
 }
+const form = document.forms.popUpForm
