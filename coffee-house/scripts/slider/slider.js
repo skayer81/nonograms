@@ -1,9 +1,9 @@
 export class Slider{
 
     constructor(slider){
-        console.log('slider', slider)
+        //console.log('slider', slider)
         this.sliderContainer = slider;
-        console.log('slider', this.sliderContainer)
+        //console.log('slider', this.sliderContainer)
         this._prevButton = this.sliderContainer.querySelector("#sliderLeftButton");
         this._nextButton = this.sliderContainer.querySelector("#sliderRightButton");
         this._prevButton.addEventListener('click', this.moveToLeft);
@@ -14,7 +14,33 @@ export class Slider{
         this.indicators = this.indicarorsInit()
         this.sliderContant.style.left = 0;
         this.startAnimations();
+        this.sliderWindow = document.querySelector('.slider-window');
+        this.moveStart = 0;
+        this.sliderWindow.addEventListener('pointerover', () => {
+            console.log('мышка пришла');
+          //  if (!this.moveStart) 
+               this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
+        })
+        this.sliderWindow.addEventListener('pointerout', () => {
+           // if (!this.moveStart) 
+              console.log('мышка ушла');
+               this.indicators[this.curentSlide].style['animation-play-state'] = 'running';
+        })
+        this.sliderWindow.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+        //     console.log('мышка пришла');
+        //   //  if (!this.moveStart) 
+        //        this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
+        })
+        this.sliderWindow.ontouchstart = this.touchstart.bind(this);
+        this.sliderWindow.ontouchend = this.ontouchend.bind(this);
+        
+
     }
+
+
+      //fullscreenImage.addEventListener("touchcancel",  () => console.log('отменили двигаем'));
+    //}
     indicarorsInit(){
        // const result = []
         let progress = document.querySelectorAll('.progress');
@@ -24,7 +50,7 @@ export class Slider{
 
     moveToRigth = () => {
         console.log('клик вправо')
-        this.indicators[this.curentSlide].onanimationend  = null
+        //this.indicators[this.curentSlide].onanimationend  = null
         this.indicators[this.curentSlide].style.animation = ''
        // this.indicators[this.curentSlide].value = 0;
         this.curentSlide += 1;
@@ -42,6 +68,21 @@ export class Slider{
         this.sliderContant.style.left = -this.curentSlide * this._offset + "px";
         this.startAnimations()
     }
+    ontouchend(event){
+        this.indicators[this.curentSlide].style['animation-play-state'] = 'running';
+        let moveEnd = event.changedTouches[0].screenX;
+        console.log('toucend',moveEnd)
+        
+        if (moveEnd - this.moveStart > 100) this.moveToLeft();
+        if (this.moveStart - moveEnd > 100) this.moveToRigth();
+        this.moveStart = 0;
+    } 
+    
+     touchstart(event){
+        this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
+       this.moveStart = event.changedTouches[0].screenX;
+       console.log('touchstart', this.moveStart)
+     };
 
 
     startAnimations(){
@@ -53,27 +94,7 @@ export class Slider{
         this.indicators[this.curentSlide].onanimationend = this.moveToRigth;
       //  this.indicators[this.curentSlide].ontransitionend = this.moveToRigth.bind(this)
     }
-    productListChange(){
-        this.hiddenProductList();
-        this.frame.ontransitionend = this.showProductList.bind(this)// addEventListener('transitionend', this.showAnimations) 
 
-      //  showAnimations()
-    }
-
-    hiddenProductList(){
-        this.frame.style.opacity = 0;
-       // console.log('старт анимации')
-    }
-
-    showProductList(){
-     //   console.log('конец анимации')
-      //  console.log(this, 'this')
-        this.frame.innerHTML = '';
-        this.frame.append(this.productList.getListItems(this.form.select.value));
-        this.frame.style.opacity = 1;
-         this.frame.ontransitionend = null;//('transitionend', this.showAnimations)
-
-    }
 
 
 
