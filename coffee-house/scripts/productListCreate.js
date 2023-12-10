@@ -146,10 +146,12 @@ class ItemsPopUp {//extends CreateBaseComponent{ //
             + (this.form.add1.checked && Number(this._card.additives[0]['add-price']))
             + (this.form.add2.checked && Number(this._card.additives[1]['add-price']))
             + (this.form.add3.checked && Number(this._card.additives[2]['add-price']))
-           //console.log(price);
            this.interface.price = price;
         })
     }
+    // const form = document.forms.popUpForm;
+    // form.sizes.value
+    // form.add1.checked
 
     // set card(card){
     // //   .. console.log(card)

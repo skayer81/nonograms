@@ -4,6 +4,8 @@ import {ButtonsList} from './buttonsBlock.js';
 import {PagesInterface} from './pagesInterface.js';
 import { ProductListChange } from './productListChange.js';
 import { Slider } from './slider/slider.js';
+import {initBurger} from './burger/burger.js'
+initBurger();
 //import {PopupInterface} from './productListCreate.js';
 
 

@@ -27,7 +27,10 @@
         background-image: url("./assets/icons/logo.svg");
     }
     .main-menu {
-        @extend %flex-element-center;
+        //@extend %flex-element-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include textStyle(16px, 14px);
         color: $textDark;
         width: 100%;
@@ -48,9 +51,40 @@
         @media (max-width: 768px) {
             position: fixed;
             flex-direction: column;
+            
             right: -100%;
-           // right: 0;
-            .logo-button{display: none;}
+            //right: 0;
+            z-index: 10;
+            background-color: $backgroundBody;
+           // border: 1px solid $borderDark;
+            border-bottom: none;
+            border-right: none;
+            top: 100px;
+            height: calc(100vh - 100px);
+            transition: 1s;
+            justify-content: space-around;
+            opacity: 0;
+
+            @include textStyle(32px, 40px);
+            li:has(.logo-button) {
+                display: none;
+            }
+            .menu-button {
+       //         background-image: url("./assets/icons/coffee-cup.svg");
+                // border: 1px solid red;
+                width: 140px;
+                text-align: left;
+                background-position: right top;
+                height: auto;
+            }
+            &.active{
+                
+                right: 0;
+                opacity: 1;
+                border-left: none;
+
+
+            }
         }
         li {
             margin: 0 14px;
