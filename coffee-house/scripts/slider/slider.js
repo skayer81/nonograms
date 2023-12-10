@@ -10,18 +10,21 @@ export class Slider{
         this._nextButton.addEventListener('click', this.moveToRigth);
         this.sliderContant = this.sliderContainer.querySelector('#sliderContant');
         this.curentSlide = 0;
-        this._offset = 480;
+        this._offset = 100;
         this.indicators = this.indicarorsInit()
         this.sliderContant.style.left = 0;
         this.startAnimations();
-        this.sliderWindow = document.querySelector('.slider-window');
         this.moveStart = 0;
-        this.sliderWindow.addEventListener('pointerover', () => {
+        this.sliderWindow = document.querySelector('.slider-window');
+        this.addEvents()
+    }
+    addEvents(){
+        this.sliderWindow.addEventListener('pointerenter', () => {
             console.log('мышка пришла');
           //  if (!this.moveStart) 
                this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
         })
-        this.sliderWindow.addEventListener('pointerout', () => {
+        this.sliderWindow.addEventListener('pointerleave', () => {
            // if (!this.moveStart) 
               console.log('мышка ушла');
                this.indicators[this.curentSlide].style['animation-play-state'] = 'running';
@@ -32,10 +35,53 @@ export class Slider{
         //   //  if (!this.moveStart) 
         //        this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
         })
-        this.sliderWindow.ontouchstart = this.touchstart.bind(this);
-        this.sliderWindow.ontouchend = this.ontouchend.bind(this);
-        
+ //       this.sliderWindow.ontouchstart = this.touchstart.bind(this);
+ //       this.sliderWindow.ontouchend = this.ontouchend.bind(this);
 
+
+        
+        this.sliderWindow.addEventListener('pointerdown', (event) => {
+            console.log('pointerdown', event);
+            this.moveStart = event.pageX;
+        })
+        this.sliderWindow.addEventListener('pointerup', (event) => {
+            console.log('pointerup', event);
+            let moveEnd = event.pageX;
+            console.log('toucend',moveEnd)
+            
+            if (moveEnd - this.moveStart > 25) this.moveToLeft();
+            if (this.moveStart - moveEnd > 25) this.moveToRigth();
+            this.moveStart = 0;
+        })
+        this.sliderWindow.addEventListener('pointermove', (event) => {
+            console.log('pointermove', event.pageX);
+        })
+
+        // pointerdown	mousedown
+        // pointerup	mouseup
+        // pointermove	mousemove
+        // pointerover	mouseover
+        // pointerout	mouseout
+        // pointerenter	mouseenter
+        // pointerleave	mouseleave
+        // pointercancel	-
+        // gotpointercapture	-
+        // lostpointercapture
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 
 
@@ -56,33 +102,33 @@ export class Slider{
         this.curentSlide += 1;
         if (this.curentSlide > 2) this.curentSlide = 0;
         this.indicators[this.curentSlide].value = 100;
-        this.sliderContant.style.left = -this.curentSlide * this._offset + "px";
+        this.sliderContant.style.left = -this.curentSlide * this._offset + "%";
         this.startAnimations()
     }
 
     moveToLeft = () => {
-        this.indicators[this.curentSlide].onanimationend  = null
+        //this.indicators[this.curentSlide].onanimationend  = null
         this.indicators[this.curentSlide].style.animation = ''
         this.curentSlide -= 1;
         if (this.curentSlide < 0) this.curentSlide = 2;
-        this.sliderContant.style.left = -this.curentSlide * this._offset + "px";
+        this.sliderContant.style.left = -this.curentSlide * this._offset + "%";
         this.startAnimations()
     }
-    ontouchend(event){
-        this.indicators[this.curentSlide].style['animation-play-state'] = 'running';
-        let moveEnd = event.changedTouches[0].screenX;
-        console.log('toucend',moveEnd)
+    // ontouchend(event){
+    //     this.indicators[this.curentSlide].style['animation-play-state'] = 'running';
+    //     let moveEnd = event.changedTouches[0].screenX;
+    //     console.log('toucend',moveEnd)
         
-        if (moveEnd - this.moveStart > 100) this.moveToLeft();
-        if (this.moveStart - moveEnd > 100) this.moveToRigth();
-        this.moveStart = 0;
-    } 
+    //     if (moveEnd - this.moveStart > 100) this.moveToLeft();
+    //     if (this.moveStart - moveEnd > 100) this.moveToRigth();
+    //     this.moveStart = 0;
+    // } 
     
-     touchstart(event){
-        this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
-       this.moveStart = event.changedTouches[0].screenX;
-       console.log('touchstart', this.moveStart)
-     };
+    //  touchstart(event){
+    //     this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
+    //    this.moveStart = event.changedTouches[0].screenX;
+    //    console.log('touchstart', this.moveStart)
+    //  };
 
 
     startAnimations(){
@@ -106,53 +152,53 @@ export class Slider{
 
 
 }
-console.log('test', document.getElementById('slider'))
+//console.log('test', document.getElementById('slider'))
 const slider = new Slider(document.getElementById('slider'))
 
 
 /////////////////////////////////// slider in About
-class Slider2 {
-    constructor(sliderContainer, widthOfImg) {
-        this._sliderContainer = sliderContainer;
-        this._offset = widthOfImg;
-        this._buttons = sliderContainer.querySelectorAll(".button");
-        this._prevButton = sliderContainer.querySelector(".prev");
-        this._nextButton = sliderContainer.querySelector(".next");
-        this._sliderWindow = sliderContainer.querySelector(".slider-window");
-        this._currentButton = 0;
-        this._quantityOfButtons = this._buttons.length;
-        this._sliderContainer.addEventListener('click', this._sliderClick);
-    };
+// class Slider2 {
+//     constructor(sliderContainer, widthOfImg) {
+//         this._sliderContainer = sliderContainer;
+//         this._offset = widthOfImg;
+//         this._buttons = sliderContainer.querySelectorAll(".button");
+//         this._prevButton = sliderContainer.querySelector(".prev");
+//         this._nextButton = sliderContainer.querySelector(".next");
+//         this._sliderWindow = sliderContainer.querySelector(".slider-window");
+//         this._currentButton = 0;
+//         this._quantityOfButtons = this._buttons.length;
+//         this._sliderContainer.addEventListener('click', this._sliderClick);
+//     };
 
-    _changeActivButton = (counter) => {
-        this._buttons[this._currentButton].classList.toggle("button_active")
-        this._currentButton = counter
-        this._buttons[this._currentButton].classList.toggle("button_active")
-    }
+//     _changeActivButton = (counter) => {
+//         this._buttons[this._currentButton].classList.toggle("button_active")
+//         this._currentButton = counter
+//         this._buttons[this._currentButton].classList.toggle("button_active")
+//     }
 
-    _changeActivArrow = () => {
-        this._prevButton.classList.remove('unActive');
-        this._nextButton.classList.remove('unActive');
-        switch (this._currentButton) {
-            case 0: this._prevButton.classList.add('unActive');
-                break;
-            case this._quantityOfButtons - 1: this._nextButton.classList.add('unActive');
-        }
-    }
+//     _changeActivArrow = () => {
+//         this._prevButton.classList.remove('unActive');
+//         this._nextButton.classList.remove('unActive');
+//         switch (this._currentButton) {
+//             case 0: this._prevButton.classList.add('unActive');
+//                 break;
+//             case this._quantityOfButtons - 1: this._nextButton.classList.add('unActive');
+//         }
+//     }
 
-    _sliderClick = (event) => {
-        if (event.target.classList.contains("button")) {
-            this._buttons.forEach((element, index) => {
-                if (element == event.target) {
-                    if (index == this._currentButton) return
-                    this._changeActivButton(index)
-                }
-            })
-        }
-        if ((event.target == this._prevButton) && (this._currentButton > 0)) this._changeActivButton(this._currentButton - 1)
-        if ((event.target == this._nextButton) && (this._currentButton < this._quantityOfButtons - 1)) this._changeActivButton(this._currentButton + 1)
-        this._sliderWindow.style.left = -this._currentButton * this._offset + "px";
-        this._changeActivArrow();
-    }
-}
-//let aboutSlider = new Slider(document.querySelector(".about-slider"), 475)
+//     _sliderClick = (event) => {
+//         if (event.target.classList.contains("button")) {
+//             this._buttons.forEach((element, index) => {
+//                 if (element == event.target) {
+//                     if (index == this._currentButton) return
+//                     this._changeActivButton(index)
+//                 }
+//             })
+//         }
+//         if ((event.target == this._prevButton) && (this._currentButton > 0)) this._changeActivButton(this._currentButton - 1)
+//         if ((event.target == this._nextButton) && (this._currentButton < this._quantityOfButtons - 1)) this._changeActivButton(this._currentButton + 1)
+//         this._sliderWindow.style.left = -this._currentButton * this._offset + "px";
+//         this._changeActivArrow();
+//     }
+// }
+// //let aboutSlider = new Slider(document.querySelector(".about-slider"), 475)

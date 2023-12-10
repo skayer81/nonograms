@@ -189,6 +189,9 @@ h1, h2 {
     flex-direction: column;
     right: -100%;
   }
+  .main-header .main-menu .logo-button {
+    display: none;
+  }
 }
 .main-header .main-menu li {
   margin: 0 14px;
@@ -1235,6 +1238,8 @@ h1, h2 {
 .favorite .slider-window {
   overflow-x: hidden;
   width: 480px;
+  touch-action: pan-y pinch-zoom;
+  margin: 0 auto;
 }
 .favorite .slider-content {
   display: flex;
@@ -1242,6 +1247,7 @@ h1, h2 {
   width: fit-content;
   position: relative;
   transition: 1s;
+  max-width: 300%;
 }
 
 progress {

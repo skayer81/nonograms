@@ -1,10 +1,10 @@
 export class CreateBaseComponent{
     /**
      * 
-     * @param {*} parent 
-     * @param {*} tag 
-     * @param {*} classes 
-     * @param {*} innerHTML 
+     * @param {*} parent - Родитель или 0
+     * @param {*} tag  - teg
+     * @param {*} classes - массив классов (необязательный)
+     * @param {*} innerHTML  - текст(необязательный)
      * @returns 
      */
     createBaseComponent(parent, tag, classes = [], innerHTML = '') {
@@ -29,12 +29,9 @@ export class CreateFormComponent extends CreateBaseComponent{
       * @param {*} atributes 
       * @returns 
       */
-    createFormComponent(parent, tag, classes, atributes){
-        const result = this.createBaseComponent(parent, tag, classes);
+    createFormComponent(parent, tag, classes, atributes, innerHTML){
+        const result = this.createBaseComponent(parent, tag, classes, innerHTML);
         for (let key in atributes){
-          //  console.log('atr');
-           // console.log(key);
-          //  console.log(atributes[key]);
             result.setAttribute(key, atributes[key]);
         }
         return result;

@@ -49,6 +49,8 @@
             position: fixed;
             flex-direction: column;
             right: -100%;
+           // right: 0;
+            .logo-button{display: none;}
         }
         li {
             margin: 0 14px;

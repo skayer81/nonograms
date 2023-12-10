@@ -6,7 +6,9 @@
         overflow-x: hidden;
         width: 480px;
      //   overflow: hidden;
-        
+    // border: 1px solid red;
+     touch-action: pan-y pinch-zoom;
+     margin: 0 auto;
     }
 
     .slider-content{
@@ -14,6 +16,7 @@
         width: fit-content;
         position: relative;
         transition: 1s;
+        max-width: 300%;
     }
 
     // .slider-indication{
