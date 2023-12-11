@@ -1,12 +1,15 @@
+import {BurgerMenu} from '../burger/burger.js'
 
 export class ButtonsList{
     constructor(buttons, pages){
         this.buttons = buttons;
         this.pages = pages;
         this.blockable = this.getBlockableButtons() ;
+        this._burgerMenu = new BurgerMenu();
         this.buttons.forEach(button => {
             button.addEventListener('click', this.buttonClick.bind(this))
         })
+        
         this.initStarPage()
     }
 
@@ -54,6 +57,7 @@ export class ButtonsList{
                 },800)
         }
         else if (button.dataset.id) document.location =`#${button.dataset.id}`;
+        this._burgerMenu.closeBurger();
     }
 
     blockButtons(){

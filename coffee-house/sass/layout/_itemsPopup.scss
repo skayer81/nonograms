@@ -1,6 +1,8 @@
 @import '../components/label';
 @import '../components/inputs';
 
+
+
 .items-popup{
     position: fixed;
     right: -100%;
@@ -167,7 +169,7 @@
         }
     }
 }
-.overlow{
+.overlay{
     height: 100vh;
     left: 0;
     top: 0;
@@ -181,7 +183,7 @@
 
 }
 
-.items-popup.active + .overlow{
+.items-popup.active + .overlay{
     // position: absolute;
     // z-index: 9;
     // height: 100%;

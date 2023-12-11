@@ -191,6 +191,7 @@
             align-items: center;
             padding: 10px;
             @include tr;
+
             
             span {
                 height: 2px;
@@ -204,7 +205,7 @@
                         animation-duration: 1s;
                     }
                     &.burger-button__span1{
-                     //   animation-duration: 1s;
+                        animation-duration: 1s;
                         animation-name: burgerCloseSpan1;
                         animation-fill-mode: forwards;
                         animation-timing-function: linear ;
