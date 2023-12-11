@@ -61,14 +61,14 @@ export class PopupInterface extends CreateForm{
 
     popUpOpen(){
         this._popUp.classList.add('active');
+        document.body.style.marginRight = `${window.innerWidth - document.body.clientWidth}px`;
         document.body.classList.add('scroll-hidden');
-        // document.body.style.overflow = 'hidden';
-        // document.body.style.marginRight = '17px';
     }
 
     closePopup(){
         this._popUp.classList.remove('active');
         document.body.classList.remove('scroll-hidden');
+        document.body.style.marginRight = '0'
     }
 
     _createPopup(){
