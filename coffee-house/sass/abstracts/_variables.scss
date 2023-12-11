@@ -26,10 +26,9 @@ $borderDark: #665F55;
     max-width: 1440px;
     padding: 0 40px;
     margin: 0 auto;
-    @media (max-width: 750px) {
+    @media (max-width: 760px) {
         padding:  0 16px;
-
-     }
+    }
 }
 
 %border{
