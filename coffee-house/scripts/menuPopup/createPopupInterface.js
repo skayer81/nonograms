@@ -25,9 +25,57 @@ export class PopupInterface extends CreateForm{
     }
 
     set price(price){
-        price =  new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Number(price)),
-        this._totalPrice.innerHTML =   `$${price}`
+        this._price = new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Number(price));
+        this._totalPrice.style.transition = '0.4s';
+        this._totalPrice.style.opacity = 0;
+        this._totalPrice.ontransitionend = this._showPrice.bind(this)
     }
+
+    _showPrice(){
+        //   console.log('конец анимации')
+         //  console.log(this, 'this')
+          // this.frame.innerHTML = '';
+          // this.frame.append(this.productList.getListItems(this.form.select.value));
+          this._totalPrice.innerHTML =   `$${this._price}`
+           this._totalPrice.style.opacity = 1;
+            this._totalPrice.ontransitionend = null;//('transitionend', this.showAnimations)
+   
+       }
+        //this._totalPrice.style.animation
+        // price =  new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2 }).format(Number(price)),
+        // this._totalPrice.innerHTML =   `$${price}`
+    
+        // productListChange(){
+        //     this.frame.style.transition = '0.5s'
+        //     this.hiddenPrice();
+        //     this.frame.ontransitionend = this.showProductList.bind(this)// addEventListener('transitionend', this.showAnimations) 
+    
+        //   //  showAnimations()
+        // }
+    
+        // hiddenProductList(){
+        //     this.frame.style.opacity = 0;
+        //    // console.log('старт анимации')
+        // }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     popUpOpen(){
         this._popUp.classList.add('active');

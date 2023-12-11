@@ -31,14 +31,7 @@ export class ProductListChange{
         this.frame.innerHTML = '';
         this.frame.append(this.productList.getListItems(this.form.select.value));
         this.frame.style.opacity = 1;
-         this.frame.ontransitionend = null;//('transitionend', this.showAnimations)
+        this.frame.ontransitionend = null;//('transitionend', this.showAnimations)
 
     }
-
-
-
-
-
-
-
 }
