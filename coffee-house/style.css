@@ -182,6 +182,10 @@ h1, h2 {
   animation-iteration-count: 1;
 }
 
+.scroll-hidden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   padding: 0 40px;
@@ -401,6 +405,7 @@ h1, h2 {
   animation-duration: 1s;
 }
 .main-header .mobile-menu .burger-button span.burger-button__span1 {
+  animation-duration: 1s;
   animation-name: burgerCloseSpan1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -445,10 +450,28 @@ h1, h2 {
   background-position: center;
   background-size: cover;
   border-radius: 40px;
+  overflow: hidden;
 }
 @media (max-width: 650px) {
   .main-page .video {
     height: 552px;
+  }
+}
+.main-page .video .video-src {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main-page .video .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 660px;
+}
+@media (max-width: 650px) {
+  .main-page .video .content {
+    bottom: 570px;
   }
 }
 .main-page .video .content-container {
@@ -1803,7 +1826,7 @@ input[type=radio]:checked + label {
   color: #403F3D;
 }
 
-.overlow {
+.overlay {
   height: 100vh;
   left: 0;
   top: 0;
@@ -1815,6 +1838,6 @@ input[type=radio]:checked + label {
   transition: 1s;
 }
 
-.items-popup.active + .overlow {
+.items-popup.active + .overlay {
   width: 100vw;
 }/*# sourceMappingURL=style.css.map */

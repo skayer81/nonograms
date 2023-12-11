@@ -10,6 +10,7 @@ export class PopupInterface extends CreateForm{
         super()
         this._popUp = this._createPopup();
         this._appendModal();
+       // this._body = document.body;
     }
 
     set title(title){
@@ -36,9 +37,9 @@ export class PopupInterface extends CreateForm{
          //  console.log(this, 'this')
           // this.frame.innerHTML = '';
           // this.frame.append(this.productList.getListItems(this.form.select.value));
-          this._totalPrice.innerHTML =   `$${this._price}`
-           this._totalPrice.style.opacity = 1;
-            this._totalPrice.ontransitionend = null;//('transitionend', this.showAnimations)
+        this._totalPrice.innerHTML =   `$${this._price}`
+        this._totalPrice.style.opacity = 1;
+        this._totalPrice.ontransitionend = null;//('transitionend', this.showAnimations)
    
        }
         //this._totalPrice.style.animation
@@ -57,32 +58,17 @@ export class PopupInterface extends CreateForm{
         //     this.frame.style.opacity = 0;
         //    // console.log('старт анимации')
         // }
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     popUpOpen(){
         this._popUp.classList.add('active');
+        document.body.style.marginRight = `${window.innerWidth - document.body.clientWidth}px`;
+        document.body.classList.add('scroll-hidden');
     }
 
     closePopup(){
         this._popUp.classList.remove('active');
+        document.body.classList.remove('scroll-hidden');
+        document.body.style.marginRight = '0'
     }
 
     _createPopup(){
@@ -106,7 +92,7 @@ export class PopupInterface extends CreateForm{
     _appendModal(){
         const portal = document.getElementById('portal');
         portal.append(this._popUp);
-        this.createBaseComponent(portal, 'div', ['overlow'])
+        this.overlay =  this.createBaseComponent(portal, 'div', ['overlay'])
     }
 
 }

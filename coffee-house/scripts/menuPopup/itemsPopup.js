@@ -4,7 +4,7 @@ class ItemsPopUp {//extends CreateBaseComponent{ //
     constructor(){
         this.interface = new PopupInterface();
         this.form = this.interface.getForm;
-        this.closeButton = this.interface.closeButton;
+        //this.closeButton = this.interface.closeButton;
         this.addChangeListener();
     }
 
@@ -20,8 +20,12 @@ class ItemsPopUp {//extends CreateBaseComponent{ //
             this.interface.price = price;
         })
 
-        this.closeButton.addEventListener('click', (event) => {
+        this.interface.closeButton.addEventListener('click', (event) => {
             this.interface.closePopup()})
+
+        this.interface.overlay.addEventListener('click', (event) => {
+            this.interface.closePopup()})
+
     }
 
 

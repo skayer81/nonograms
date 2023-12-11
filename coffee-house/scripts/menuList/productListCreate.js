@@ -3,6 +3,13 @@ import {CreateBaseComponent} from '../baseComponentCreate/createComponent.js';
 import {ProductItem} from './createItem.js';
 import {itemPopUp} from '../menuPopup/itemsPopup.js';
 
+
+//  const img = new Image();
+//  img.src
+// img.src = imgPath;
+// img.onload = () => {
+//     imgComponent.src = imgPath;
+
 export class ProductList extends CreateBaseComponent{
     HIDDEN_ITEM = 'hidden_Item';
     constructor(product){
