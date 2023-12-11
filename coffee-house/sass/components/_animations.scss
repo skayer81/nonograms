@@ -18,8 +18,8 @@
         100% {
         opacity: 0;
         }
-        }
-        @keyframes visible{
+    }
+    @keyframes visible{
             0% {
                 opacity: 0;
                 }
@@ -27,4 +27,47 @@
                 100% {
                 opacity: 1;
                 }
+    }
+
+#frame{
+        opacity: 1;
+      //  cursor: pointer;
+        transition: 1s ;
+      
+}
+
+@keyframes burgerOpenSpan1{
+    0% {}
+    50% {
+        transform: translateY(200%);
         }
+    100%{
+        transform: translateY(200%) rotate(45deg);
+    }
+}
+@keyframes burgerOpenSpan2{
+    0% { transform: translateY(0);}
+    50% {
+        transform: translateY(-200%);
+        }
+    100%{
+            transform: translateY(-200%) rotate(-45deg) ;
+        }
+}
+
+@keyframes burgerCloseSpan1{
+    0% {transform: translateY(200%) rotate(45deg);}
+    50% {
+        transform: translateY(200%);
+        }
+    100%{}
+}
+@keyframes burgerCloseSpan2{
+    0% { transform: translateY(-200%) rotate(-45deg);}
+    50% {
+        transform: translateY(-200%);
+        }
+    100%{
+        transform: translateY(0) rotate(0) 
+        }
+}

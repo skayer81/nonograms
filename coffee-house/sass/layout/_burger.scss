@@ -1,5 +1,4 @@
 @import "../abstracts/_variables.scss";
-@import "../components//animations";
 
 // .main-header{
 //     background-color: $backgroundBody;
@@ -18,37 +17,7 @@
 // }
 
 .main-header {
-    .container {
-        height: 100px;
-    }
-    .logo-button {
-        // border: 1px solid red;
-        width: 100px;
-        height: 60px;
-        background-image: url("./assets/icons/logo.svg");
-    }
     .main-menu {
-        //@extend %flex-element-center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include textStyle(16px, 14px);
-        color: $textDark;
-        width: 100%;
-        height: 100%;
-        // button{
-        // border: 1px solid red;
-        // }
-
-        // .logo-button{
-        //     // border: 1px solid red;
-        //     width: 100px;
-        //     height: 60px;
-        //     background-image: url("./assets/icons/logo.svg");
-        // li:has(&){
-        //     margin-right: auto;
-        //     border: 1px solid green;
-        // }
         @media (max-width: 768px) {
             @include textStyle(32px, 40px);
             position: fixed;
@@ -57,7 +26,7 @@
             right: -100%;
             top: 100px;
             z-index: 10;
-            background-color: $backgroundBody;
+            background-color: $backgroundBody;            
             height: calc(100vh - 100px);
             transition: 1s;
             opacity: 0;
@@ -70,7 +39,8 @@
                 background-position: right top;
                 height: auto;
             }
-            &.active {
+            &.active{
+                
                 right: 0;
                 opacity: 1;
             }
@@ -112,17 +82,17 @@
                 @include tr;
             }
             @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    &::after {
-                        // content: '';
-                        // position: absolute;
-                        width: 100%;
-                        // height: 2px;
-                        left: 0;
-                    }
-                    // border-bottom: 1px solid red;
+            &:hover {
+                &::after {
+                    // content: '';
+                    // position: absolute;
+                    width: 100%;
+                    // height: 2px;
+                    left: 0;
                 }
+                // border-bottom: 1px solid red;
             }
+        }
         }
         .disable {
             cursor: auto;
@@ -171,7 +141,7 @@
         display: none;
         width: 100%;
         height: 100%;
-        //   border: 1px solid green;
+     //   border: 1px solid green;
         @media (max-width: 768px) {
             display: flex;
             align-items: center;
@@ -179,8 +149,7 @@
             // flex-direction: column;
             // right: -100%;
         }
-        .burger-button {
-            position: relative;
+        .burger-button{
             width: 44px;
             height: 44px;
             border: 1px solid $textDark;
@@ -191,50 +160,28 @@
             align-items: center;
             padding: 10px;
             @include tr;
-            
-            span {
+            span{
+              //  display: block;
                 height: 2px;
                 width: 18px;
+                // border-radius: 2px;
                 background-color: $borderDark;
-                transform-origin: center;
                 @include tr;
-                animation-duration: 0;
-                // &.burger-close{
-                    &.animation{
-                        animation-duration: 1s;
-                    }
-                    &.burger-button__span1{
-                     //   animation-duration: 1s;
-                        animation-name: burgerCloseSpan1;
-                        animation-fill-mode: forwards;
-                        animation-timing-function: linear ;
-                        //animation: burgerCloseSpan1  linear forwards;
-                    }
-                    &.burger-button__span2{
-                        animation: burgerCloseSpan2 1s linear forwards;
-                    }
-            //}
             }
-            &.burger-open{
-                .burger-button__span1{
-                    animation: burgerOpenSpan1 1s linear forwards;
-                }
-                .burger-button__span2{
-                    animation: burgerOpenSpan2 1s linear forwards;
-                }
-            }
-
             @media (hover: hover) and (pointer: fine) {
-                &:hover {
+                &:hover{
                     background-color: $borderDark;
-                    span {
+                    span{
                         background-color: $backgroundBody;
                     }
                 }
+            
             }
+            
         }
     }
 }
+
 
 // .logo-button{
 //     border: 1px solid red;

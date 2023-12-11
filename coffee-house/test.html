@@ -16,24 +16,50 @@
       height: 100px;
       background-color: blue;
     }
-    button:hover{
+    /* button:hover{
       background-color: brown;
-    }
-    @media screen and (max-width: 1000px){
+    } */
+    /* @media screen and (max-width: 1000px){
       button:hover{
       background-color: green;
-    }
-  }
-    @media (hover: hover) and (pointer: fine){
+    } */
+  
+    @media (hover: hover) { 
       button:hover{
       background-color: black;
     }
 
+    
+
   }
+  /* and (pointer: fine) */
 
   </style>
 </head>
 <body>
+  
+  <form action=""  name="popUpForm">
+    <fieldset>
+      <legend>size</legend>
+     <input type="radio" name="sizes" id="size1">
+     <label for="size1">size1</label>
+     <input type="radio"  name="sizes"  id="size2">
+     <label for="size2">size2</label>
+     <input type="radio"  name="sizes"  id="size3">
+     <label for="size3">size3</label>
+    </fieldset>
+    <fieldset>
+      <legend>add</legend>
+    <input type="checkbox" name="add1" id="add1">
+    <label for="add1">add1</label>
+    <input type="checkbox" name="add2" id="add2">
+    <label for="add2">add1</label>
+    <input type="checkbox" name="add3" id="add3">
+    <label for="add3">add1</label>
+  </fieldset>
+  </form>
+
+
   <button>
     test
   </button>  
