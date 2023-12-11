@@ -182,6 +182,11 @@ h1, h2 {
   animation-iteration-count: 1;
 }
 
+.scroll-hidden {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
 .container {
   max-width: 1440px;
   padding: 0 40px;
@@ -1803,7 +1808,7 @@ input[type=radio]:checked + label {
   color: #403F3D;
 }
 
-.overlow {
+.overlay {
   height: 100vh;
   left: 0;
   top: 0;
@@ -1815,6 +1820,6 @@ input[type=radio]:checked + label {
   transition: 1s;
 }
 
-.items-popup.active + .overlow {
+.items-popup.active + .overlay {
   width: 100vw;
 }/*# sourceMappingURL=style.css.map */
