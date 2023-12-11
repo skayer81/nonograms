@@ -10,8 +10,6 @@ class ItemsPopUp {//extends CreateBaseComponent{ //
 
     addChangeListener(){
         this.form.addEventListener('change', (event) => {
-            console.log(this._card)
-            console.log(this.form.sizes.value)
             let price = Number(this._card.price)
                 + Number(this._card.sizes[this.form.sizes.value]['add-price'])
                 + (this.form.add1.checked && Number(this._card.additives[0]['add-price']))

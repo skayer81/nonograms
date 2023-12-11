@@ -39,19 +39,11 @@ class VigenereCipheringMachine {
         if (index < 0) result += curentChar;
         else{
             index += this.chars.indexOf(key[count]);
-            //console.log(index, index %  this.chars.length)
             index = index %  this.chars.length;
-         //   console.log(index, this.chars[index],  message.indexOf(key[count]))
             result += this.chars[index];
             count++
         }
-        // if (message[i].in)
-        // let char = chars[]
     }
-    //console.log('m:', message, 'key:',key, 'result:',result)
-    //throw new NotImplementedError('Not implemented');
-    //'AEIHQX SX DLLU!'
-    // remove line with error and write your code here
   }
  // decrypt method accepts 2 parameters: encryptedMessage (string to decode) and key (string-keyword).
   decrypt(encryptedMessage, key) {

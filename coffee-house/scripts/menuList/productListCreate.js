@@ -4,18 +4,13 @@ import {ProductItem} from './createItem.js';
 import {itemPopUp} from '../menuPopup/itemsPopup.js';
 
 
-//  const img = new Image();
-//  img.src
-// img.src = imgPath;
-// img.onload = () => {
-//     imgComponent.src = imgPath;
-
 export class ProductList extends CreateBaseComponent{
     HIDDEN_ITEM = 'hidden_Item';
     constructor(product){
         super();
         this._product = product;
         this._hiddenItemList = []
+        this._imgList = this._initImg();
     }
 
     getListItems(newCategory){
@@ -36,7 +31,10 @@ export class ProductList extends CreateBaseComponent{
         const ListOfCategory = this._initListOfCategory(newCategory);
         let count = 1;
         for (let elem of ListOfCategory){
+       //     console.log(this._imgList, elem.name, this._imgList[elem.name], elem )
+            
             let item = new ProductItem(elem.img, elem.name, elem.description, elem.price, newCategory).item;
+   //         let item = new ProductItem(this._imgList[elem.name].src, elem.name, elem.description, elem.price, newCategory).item;
             item.addEventListener('click',  () => {
                 itemPopUp.popupInit(elem);
             })
@@ -53,6 +51,21 @@ export class ProductList extends CreateBaseComponent{
     _initListOfCategory(newCategory){
         return this._product.filter(item => item.category === newCategory);
     }
+
+    _initImg(){
+        let result = {}
+        for (let elem of this._product){
+            const img = new Image();
+            img.src = `./assets/images/${elem.category}/${elem.img}`;
+            // img.onload = () => {
+            //     elem  = img
+            // }
+        }
+     //   console.log(result)
+        return result;
+    }
+
+
 }
 
 
