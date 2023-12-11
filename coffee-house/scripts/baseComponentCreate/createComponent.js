@@ -2,7 +2,7 @@ export class CreateBaseComponent{
     /**
      * 
      * @param {*} parent - Родитель или 0
-     * @param {*} tag  - teg
+     * @param {*} tag  - тег
      * @param {*} classes - массив классов (необязательный)
      * @param {*} innerHTML  - текст(необязательный)
      * @returns 
@@ -23,7 +23,7 @@ export class CreateFormComponent extends CreateBaseComponent{
      }
      /**
       * 
-      * @param {*} parent 
+      * @param {*} parent Родитель или 0
       * @param {*} tag 
       * @param {*} classes 
       * @param {*} atributes 

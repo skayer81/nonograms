@@ -13,6 +13,7 @@ export class ProductListChange{
     }
 
     productListChange(){
+        this.frame.style.transition = '0.5s'
         this.hiddenProductList();
         this.frame.ontransitionend = this.showProductList.bind(this)// addEventListener('transitionend', this.showAnimations) 
 

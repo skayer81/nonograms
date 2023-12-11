@@ -1,8 +1,8 @@
 //import {product} from './product.js';
 //import {ProductList} from './productListCreate.js';
-import {ButtonsList} from './buttonsBlock.js';
-import {PagesInterface} from './pagesInterface.js';
-import { ProductListChange } from './productListChange.js';
+import {ButtonsList} from './pagesSwitching/buttonsBlock.js';
+import {PagesInterface} from './pagesSwitching/pagesInterface.js';
+import { ProductListChange } from './menuList/productListChange.js';
 import { Slider } from './slider/slider.js';
 import {initBurger} from './burger/burger.js'
 initBurger();
