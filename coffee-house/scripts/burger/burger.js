@@ -15,7 +15,10 @@ export class BurgerMenu{
             // this._burgerButton.classList.toggle('burger-open')
         })
         window.addEventListener('resize', (event) =>{
-            if (window.innerWidth > 768) this.closeBurger()
+            if (window.innerWidth > 768 && this._burgerIsOpen) {
+                this.closeBurger();
+                this._burgerButton.classList.remove('burger-close');
+            }
         })
     }
 
