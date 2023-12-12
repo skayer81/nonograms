@@ -1,52 +1,36 @@
-// export function initBurger(){
-//     const burgerButton = document.getElementById('burgerButton');
-//     const burgerMenu= document.getElementById('burgerMenu');
-//    // document.querySelector('.burger-button__span1').classList.add('animation')
-//     burgerButton.addEventListener('click', ()=>{
-//         burgerMenu.classList.toggle('active');
-//         burgerButton.classList.toggle('burger-open')
-//     })
-//     burgerMenu.addEventListener('click', ()=>{
-//         burgerMenu.classList.toggle('active');
-//         burgerButton.classList.toggle('burger-open')
-//     })
-// }
-
 export class BurgerMenu{
     constructor(){
         this._burgerButton = document.getElementById('burgerButton');
         this._burgerMenu= document.getElementById('burgerMenu');
         this._listenerInit();
+        this._burgerIsOpen = false;
     }
 
     _listenerInit(){
         this._burgerButton.addEventListener('click', ()=>{
-            this._burgerMenu.classList.toggle('active');
-            this._burgerButton.classList.toggle('burger-open')
+            if (this._burgerIsOpen) this.closeBurger()
+            else this.openBurger();
+
+            // this._burgerMenu.classList.toggle('active');
+            // this._burgerButton.classList.toggle('burger-open')
         })
         window.addEventListener('resize', (event) =>{
-            if (window.innerWidth < 768) this.closeBurger()
-            // console.log('scrollWidth', document.body.scrollWidth, 
-            //     'clientWidth', document.body.clientWidth, 'offsetWidth', document.body.offsetWidth,
-            //     'innerHeight', 
-            //     window.innerWidth
-            //     );
-            console.log(    'clientWidth', document.body.clientWidth, 'offsetWidth', document.body.offsetWidth,
-                 'innerHeight', 
-                 window.innerWidth
-                 );
-        })//document.scrollHeight равен document.offsetHeight
-//         <sсript type="text/javascript">
-//   windоw.addEventListener('resize',(e) => {
-//     cоnst width= document.body.clientWidth;
-//     cоnst getInput = document.getElementById("text");
-//     gеtInput.value = width;  
-// });
+            if (window.innerWidth > 768) this.closeBurger()
+        })
+    }
+
+    openBurger(){
+        this._burgerMenu.classList.add('active');
+        this._burgerButton.classList.remove('burger-close')
+        this._burgerButton.classList.add('burger-open')
+        this._burgerIsOpen = !this._burgerIsOpen;
     }
 
     closeBurger(){
         this._burgerMenu.classList.remove('active');
         this._burgerButton.classList.remove('burger-open')
+        this._burgerButton.classList.add('burger-close')
+        this._burgerIsOpen = !this._burgerIsOpen;
     }
 
 

@@ -25,8 +25,11 @@ export class Slider{
         })
         this.sliderWindow.addEventListener('contextmenu', (event) => {
             event.preventDefault();
-        this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
+       // this.indicators[this.curentSlide].style['animation-play-state'] = 'paused';
         })
+        // this.sliderWindow.addEventListener('touchend', (event) => {
+        //     event.preventDefault();
+        // })
         this.sliderWindow.addEventListener('pointerdown', (event) => {
             this.moveStart = event.pageX;
         })
