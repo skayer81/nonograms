@@ -238,19 +238,19 @@
                 @include tr;
                 animation-duration: 0;
                 // &.burger-close{
-                &.animation {
-                    animation-duration: 1s;
-                }
-                &.burger-button__span1 {
-                    animation-duration: 1s;
-                    animation-name: burgerCloseSpan1;
-                    animation-fill-mode: forwards;
-                    animation-timing-function: linear;
-                    //animation: burgerCloseSpan1  linear forwards;
-                }
-                &.burger-button__span2 {
-                    animation: burgerCloseSpan2 1s linear forwards;
-                }
+                // &.animation {
+                //     animation-duration: 1s;
+                // }
+                // &.burger-button__span1 {
+                //     animation-duration: 1s;
+                //     animation-name: burgerCloseSpan1;
+                //     animation-fill-mode: forwards;
+                //     animation-timing-function: linear;
+                //     //animation: burgerCloseSpan1  linear forwards;
+                // }
+                // &.burger-button__span2 {
+                //     animation: burgerCloseSpan2 1s linear forwards;
+                // }
                 //}
             }
             &.burger-open {
@@ -261,6 +261,15 @@
                     animation: burgerOpenSpan2 1s linear forwards;
                 }
             }
+            &.burger-close {
+                .burger-button__span1 {
+                    animation: burgerCloseSpan1 1s linear forwards;
+                }
+                .burger-button__span2 {
+                    animation: burgerCloseSpan2 1s linear forwards;
+                }
+            }
+
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {

@@ -422,23 +422,17 @@ h1, h2 {
   transition: 1s;
   animation-duration: 0;
 }
-.main-header .mobile-menu .burger-button span.animation {
-  animation-duration: 1s;
-}
-.main-header .mobile-menu .burger-button span.burger-button__span1 {
-  animation-duration: 1s;
-  animation-name: burgerCloseSpan1;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-.main-header .mobile-menu .burger-button span.burger-button__span2 {
-  animation: burgerCloseSpan2 1s linear forwards;
-}
 .main-header .mobile-menu .burger-button.burger-open .burger-button__span1 {
   animation: burgerOpenSpan1 1s linear forwards;
 }
 .main-header .mobile-menu .burger-button.burger-open .burger-button__span2 {
   animation: burgerOpenSpan2 1s linear forwards;
+}
+.main-header .mobile-menu .burger-button.burger-close .burger-button__span1 {
+  animation: burgerCloseSpan1 1s linear forwards;
+}
+.main-header .mobile-menu .burger-button.burger-close .burger-button__span2 {
+  animation: burgerCloseSpan2 1s linear forwards;
 }
 @media (hover: hover) and (pointer: fine) {
   .main-header .mobile-menu .burger-button:hover {
