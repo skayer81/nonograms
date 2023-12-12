@@ -98,10 +98,12 @@
                 display: none;
             }
             .menu-button {
-                width: 140px;
+                width: 143px;
                 text-align: left;
                 background-position: right top;
                 height: auto;
+                padding: 0;
+                margin-left: -3px;
             }
             // &.active {
             //     right: 0;
