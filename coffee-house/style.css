@@ -313,10 +313,12 @@ h1, h2 {
     display: none;
   }
   .main-header .main-menu .menu-button {
-    width: 140px;
+    width: 143px;
     text-align: left;
     background-position: right top;
     height: auto;
+    padding: 0;
+    margin-left: -3px;
   }
   .main-header .main-menu li:last-child {
     margin-top: 40px;
