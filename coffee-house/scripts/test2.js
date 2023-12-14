@@ -58,7 +58,7 @@ class VigenereCipheringMachine {
         if (index < 0) result += curentChar;
         else{
             index = index - this.chars.indexOf(key[count]) + this.chars.length;
-            console.log(index, index %  this.chars.length)
+           // console.log(index, index %  this.chars.length)
             index = index %  this.chars.length;
          //   console.log(index, this.chars[index],  message.indexOf(key[count]))
             result += this.chars[index];
@@ -67,7 +67,7 @@ class VigenereCipheringMachine {
         // if (message[i].in)
         // let char = chars[]
     }
-    console.log(result)
+    //console.log(result)
    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
