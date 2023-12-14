@@ -1,9 +1,9 @@
 import {ButtonsList} from './pagesSwitching/buttonsBlock.js';
 import {PagesInterface} from './pagesSwitching/pagesInterface.js';
-import { ProductListChange } from './menuList/productListChange.js';
+//import { ProductListChange } from './menuList/productListChange.js';
 import { Slider } from './slider/slider.js';
 
-const productListChange = new ProductListChange()
+//const productListChange = new ProductListChange()
 const pages = new PagesInterface(document.querySelectorAll('main'));
 const buttons = new ButtonsList(document.querySelectorAll('[data-page]'), pages);
 
