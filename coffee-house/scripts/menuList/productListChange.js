@@ -17,7 +17,7 @@ export class ProductListChange{
     }
 
     productListChange(){
-      console.log('меняем категорию', this.form.select.value)
+      //console.log('меняем категорию', this.form.select.value)
         this.frame.style.transition = '0.5s'
         this.hiddenProductList();
         this.frame.ontransitionend = this.showProductList.bind(this)// addEventListener('transitionend', this.showAnimations) 
@@ -30,7 +30,7 @@ export class ProductListChange{
     showProductList(){
         this.frame.innerHTML = '';
         this.frame.append(this.productList.getListItems(this.form.select.value));
-        console.log('аппендим', this.productList.getListItems(this.form.select.value))
+       // console.log('аппендим', this.productList.getListItems(this.form.select.value))
         this.frame.style.opacity = 1;
         this.frame.ontransitionend = null;//('transitionend', this.showAnimations)
         if (this.productList.hiddenItemList.length > 0){
