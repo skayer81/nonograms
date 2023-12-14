@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body{
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    button{
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-    }
-    /* button:hover{
-      background-color: brown;
-    } */
-    /* @media screen and (max-width: 1000px){
-      button:hover{
-      background-color: green;
-    } */
-  
-    @media (hover: hover) { 
-      button:hover{
-      background-color: black;
-    }
 
-    
-
-  }
-  /* and (pointer: fine) */
-
-  </style>
-</head>
-<body>
-  
-  <form action=""  name="popUpForm">
-    <fieldset>
-      <legend>size</legend>
-     <input type="radio" name="sizes" id="size1">
-     <label for="size1">size1</label>
-     <input type="radio"  name="sizes"  id="size2">
-     <label for="size2">size2</label>
-     <input type="radio"  name="sizes"  id="size3">
-     <label for="size3">size3</label>
-    </fieldset>
-    <fieldset>
-      <legend>add</legend>
-    <input type="checkbox" name="add1" id="add1">
-    <label for="add1">add1</label>
-    <input type="checkbox" name="add2" id="add2">
-    <label for="add2">add1</label>
-    <input type="checkbox" name="add3" id="add3">
-    <label for="add3">add1</label>
-  </fieldset>
-  </form>
-
-
-  <button>
-    test
-  </button>  
+<body data-name="test">
+  <div id="div">start</div>
+  <ul>
+    <li><b>info1</b></li>
+    <li><b>info2</b></li>
+  </ul>
 </body>
+<script>
+  let elem = document.body
+// document.body.classList.replace
+// for (let i = 0; i < document.body.childNodes.length; i++) {
+//       console.log( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+//     }
+//     console.log(document.body.childNodes[document.body.childNodes.length-1], document.body.lastChild);
+//     console.log(document.body.childNodes[document.body.childNodes.length-1] === document.body.lastChild);
+//     console.log('test',document.body.parentNode === document.body.parentElement)
+  //let sVGElement = new SVGElement()
+  // console.log(elem) 
+  //  console.dir(elem)
+  document.body.myData = {
+  name: 'Caesar',
+  title: 'Imperator'
+};
+document.body.test = true;
+
+//document.body.style.margin = 10;
+
+//document.body.style.margin = '10';
+
+//document.body.style.margin = '10px';
+
+//document.body.style.margin = 10px;
+
+document.body.style.marginTop = '1rem';
+//alert(elem.dataset(name))
+//alert(elem.getData(name))
+//console.log(document.head.nextElementSibling)
+//alert(elem.attributes(name))
+
+// elem.dataset(name)
+
+// elem.getData(name)
+
+// elem.getAttribute(name)
+
+// elem.attributes(name)
+
+// alert(document.body.test)
+// alert(typeof document.body.test); 
+
+  // let hTMLInputElement = new HTMLInputElement()
+
+  // let a3 =  new XMLElement()
+
+  // let a4 =  new HTMLElement()
+
+  // let a5 =  new HTMLAnchorElement()
+
+  // let a6 =  new HTMLBodyElement()
+  // console.log(sVGElement, hTMLInputElement, a3 ,a4,a5,a6)
+
+</script>
+
 </html>

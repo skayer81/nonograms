@@ -4,6 +4,7 @@ import {product} from './product.js';
 export class ProductListChange{
 
     LOAD_BUTTON_HIDDEN = 'load_button-hidden';
+    DEFAULT_VALUE = 'coffee';
 
     constructor(){
         this.form = document.forms.productListChange;
@@ -16,6 +17,7 @@ export class ProductListChange{
     }
 
     productListChange(){
+      console.log('меняем категорию', this.form.select.value)
         this.frame.style.transition = '0.5s'
         this.hiddenProductList();
         this.frame.ontransitionend = this.showProductList.bind(this)// addEventListener('transitionend', this.showAnimations) 
@@ -28,6 +30,7 @@ export class ProductListChange{
     showProductList(){
         this.frame.innerHTML = '';
         this.frame.append(this.productList.getListItems(this.form.select.value));
+        console.log('аппендим', this.productList.getListItems(this.form.select.value))
         this.frame.style.opacity = 1;
         this.frame.ontransitionend = null;//('transitionend', this.showAnimations)
         if (this.productList.hiddenItemList.length > 0){
@@ -42,5 +45,11 @@ export class ProductListChange{
         item.classList.remove(this.productList.hiddenClass);
       }
       this._loadMoreButton.classList.add(this.LOAD_BUTTON_HIDDEN)
+    }
+
+    initDefaultValue(){
+      this.form.select.value = this.DEFAULT_VALUE;
+      console.log(this.form.select.value);
+      this.showProductList();
     }
 }
