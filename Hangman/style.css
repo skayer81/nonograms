@@ -1,3 +1,27 @@
+@keyframes letterIsOkSpan {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+@keyframes openCharStep1 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+@keyframes openCharStep2 {
+  from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
 .wordContainer {
   display: flex;
   justify-content: center;
@@ -11,6 +35,10 @@
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  background-color: bisque;
+}
+.wordContainer .charIsOpen {
+  background-color: aqua;
 }
 
 @keyframes letterIsOkSpan {
@@ -19,6 +47,22 @@
   }
   to {
     height: 55px;
+  }
+}
+@keyframes openCharStep1 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+@keyframes openCharStep2 {
+  from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
 .buttonsContainer {

@@ -5,16 +5,12 @@ export class EnteringLetters extends CreateBaseComponent{
 
     constructor(onKeyPress){
         super();
-        
         this.buttonList = [];
         this.container = this.createBaseComponent(document.body, 'div', ['buttonsContainer']);
         this.init(onKeyPress);
     }
 
     init(onKeyPress){
-       // console.log(lettersPush)
-        //console.log(this.ALPHABET.length)
-       // this.o = lettersPush;
         for(let i = 0; i < this.ALPHABET.length; i += 1){
             let button = this.createBaseComponent(this.container, 'button', ['button'], this.ALPHABET[i])
             this.buttonList.push(button);

@@ -1,3 +1,5 @@
+@import './animation';
+
 .wordContainer{
     display: flex;
     justify-content: center;
@@ -10,5 +12,17 @@
         font-size: 2rem;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
+        background-color: bisque;
+       // transition: 1s;
     }
-}
+//     .card:hover > .front{
+//         transform: perspective(600px) rotateY(-180deg);
+//     }
+//     .card:hover > .back{
+//         transform: perspective(600px) rotateY(0deg);
+//     }
+    .charIsOpen{
+        background-color: aqua;
+        // transform: rotateY(-90deg);
+    }
+ }
