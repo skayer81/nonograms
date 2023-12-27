@@ -5,7 +5,7 @@ import { WordOutput } from "../wordOutput/wordOutput.js";
 export class ApplicationManagement{
     constructor(){
         //добавить создание общего контейнера
-        this.enteringLetters = new EnteringLetters();
+        this.enteringLetters = new EnteringLetters(this.onKeyPress);
         this.imageOutput = new ImageOutput();
         this.wordOutput = new WordOutput();
 
@@ -23,19 +23,15 @@ export class ApplicationManagement{
 
     init(){
         this.wordOutput.init();
-        this.enteringLetters.init(this.lettersPush);
+  //      this.enteringLetters.init(this.lettersPush);
     }
-
-
-
-    
 
     startGame(){
         this.wordOutput.startGame(this.testWord.length);
        // this.wordOutput.outputChar('D', 4)
     }
 
-    lettersPush  = (letter) => {
+    onKeyPress  = (letter, button) => {
         let isLetterNotFind = true;
         for (let i = 0; i <= this.testWord.length; i += 1){
             let char = this.testWord[i];
@@ -43,15 +39,16 @@ export class ApplicationManagement{
                 this.wordOutput.outputChar(char, i);
                 isLetterNotFind = false;
                 this.countOutputsChar += 1;
+                this.enteringLetters.isLetterTrue(button);
             }
         }
-        if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
 
         if (isLetterNotFind) {
             this.imageOutput.outputPartOfImage(6 - this.countOfLife);
+            this.enteringLetters.isLetterFalse(button);
             this.countOfLife -= 1;
         };
-
+        if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
         if (!this.countOfLife) alert('вы проиграли')
 
         

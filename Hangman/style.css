@@ -1,0 +1,103 @@
+.wordContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.wordContainer .charContainer {
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@keyframes letterIsOkSpan {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.buttonsContainer .button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 1px solid dimgray;
+  border-radius: 10px;
+  transition: 1s;
+  background-color: deepskyblue;
+  color: dimgray;
+}
+.buttonsContainer .button:hover, .buttonsContainer .button:focus, .buttonsContainer .button.isLetterTrue, .buttonsContainer .button.isLetterFalse {
+  background-color: dimgray;
+  color: deepskyblue;
+}
+.buttonsContainer .button:hover, .buttonsContainer .button.isLetterTrue, .buttonsContainer .button.isLetterFalse {
+  border-color: deepskyblue;
+}
+.buttonsContainer .button.isLetterTrue {
+  position: relative;
+  pointer-events: none;
+}
+.buttonsContainer .button.isLetterTrue .span1, .buttonsContainer .button.isLetterTrue .span2 {
+  display: block;
+  position: absolute;
+  width: 4px;
+  border-radius: 10px;
+}
+.buttonsContainer .button.isLetterTrue .span1 {
+  top: -5px;
+  right: 35px;
+  transform-origin: top;
+  height: 0px;
+  background-color: #00ff00;
+  rotate: -20deg;
+}
+.buttonsContainer .button.isLetterTrue .span2 {
+  top: -70px;
+  right: -8px;
+  height: 60px;
+  transform-origin: bottom;
+  rotate: 205deg;
+}
+.buttonsContainer .button.isLetterTrue .spanInside {
+  display: block;
+  width: 100%;
+  background-color: #00ff00;
+}
+.buttonsContainer .button.isLetterFalse {
+  pointer-events: "none";
+  position: relative;
+}
+.buttonsContainer .button.isLetterFalse .span1, .buttonsContainer .button.isLetterFalse .span2 {
+  position: absolute;
+  display: block;
+  width: 4px;
+  border-radius: 10px;
+  transform-origin: top;
+  height: 0px;
+  background-color: #ff0000;
+}
+.buttonsContainer .button.isLetterFalse .span1 {
+  top: -3px;
+  right: 33px;
+  rotate: -40deg;
+}
+.buttonsContainer .button.isLetterFalse .span2 {
+  top: -3px;
+  right: 0px;
+  rotate: 40deg;
+}/*# sourceMappingURL=style.css.map */

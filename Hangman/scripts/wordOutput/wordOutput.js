@@ -1,4 +1,5 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
+// import  '../../css/wordOutput.css';
 
 export class WordOutput extends CreateBaseComponent{
     constructor(){
