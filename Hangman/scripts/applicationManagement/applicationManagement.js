@@ -5,9 +5,11 @@ import { WordOutput } from "../wordOutput/wordOutput.js";
 export class ApplicationManagement{
     constructor(){
         //добавить создание общего контейнера
-        this.enteringLetters = new EnteringLetters(this.onKeyPress);
         this.imageOutput = new ImageOutput();
         this.wordOutput = new WordOutput();
+        this.enteringLetters = new EnteringLetters(this.onKeyPress);
+      
+       
 
         this.testWord = 'ГОЛОЛЕД';
         //добавить загрузку из json вопросов и ответов
@@ -22,7 +24,7 @@ export class ApplicationManagement{
     }
 
     init(){
-        this.wordOutput.init();
+       // this.wordOutput.init();
   //      this.enteringLetters.init(this.lettersPush);
     }
 

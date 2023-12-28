@@ -26,6 +26,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 .wordContainer .charContainer {
   width: 40px;

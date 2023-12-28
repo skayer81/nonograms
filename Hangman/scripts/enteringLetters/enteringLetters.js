@@ -1,5 +1,6 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
+
 export class EnteringLetters extends CreateBaseComponent{
     ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
