@@ -2,11 +2,12 @@ import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
 
 export class EnteringLetters extends CreateBaseComponent{
-    ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+    //ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
-    constructor(onKeyPress){
+    constructor(onKeyPress, ALPHABET){
         super();
-        this.buttonList = [];
+        this.ALPHABET = ALPHABET;
+        this.buttonList = {};
         this.container = this.createBaseComponent(document.body, 'div', ['buttonsContainer']);
         this.init(onKeyPress);
     }
@@ -14,9 +15,10 @@ export class EnteringLetters extends CreateBaseComponent{
     init(onKeyPress){
         for(let i = 0; i < this.ALPHABET.length; i += 1){
             let button = this.createBaseComponent(this.container, 'button', ['button'], this.ALPHABET[i])
-            this.buttonList.push(button);
+            this.buttonList[this.ALPHABET[i]] = button// .push(button);
             button.addEventListener('click', () => {
-                onKeyPress(this.ALPHABET[i], button);
+                this.curentPushedLetter = button
+                onKeyPress(this.ALPHABET[i]);
             })
         }
     }
@@ -50,6 +52,10 @@ export class EnteringLetters extends CreateBaseComponent{
        // span.onanimationend = this.newSpan();
     }
     
+    changePushLetter(isLetterNotFind, letter){
+        if (isLetterNotFind) this.isLetterFalse(this.buttonList[letter])
+        else this.isLetterTrue(this.buttonList[letter])
+    }
 
     /**
      * 

@@ -22,7 +22,8 @@ export class ImageOutput extends CreateFormComponent{
               //let lineWidth = 10;
         //let lineColor = "black";
         this.start();
-        // this.draw0();
+     //    this.draw0();
+       //  this.lose()
         // this.draw1();
         // this.draw2();
         // this.draw3();
@@ -249,7 +250,29 @@ export class ImageOutput extends CreateFormComponent{
     }
 
     lose(){
-        
+        this._context.lineWidth = 5;
+      //  this._context.clearRect(330, 120, 70, 140)
+
+     this._context.fillStyle = "red";
+     this._context.clearRect(330, 120, 60, 65);
+     this._context.fillStyle = "blue";
+     this._context.clearRect(320, 145, 80, 30);
+     this._context.fillStyle = "green";
+     this._context.clearRect(340, 180, 40, 10);
+
+     this.drawLine(340, 125, 350, 135);
+     this.drawLine(340, 135, 350, 125);
+
+     this.drawLine(370, 125, 380, 135);
+     this.drawLine(370, 135, 380, 125);
+
+     this.drawCircle(360, 190, 35,  Math.PI+0.5,  Math.PI*2-0.5, false)
+     
+
+     console.log('удалили')
+      //  this.drawCircle(345, 130, 5, 0, Math.PI * 2); // Левый глаз
+        //       ctx.moveTo(95, 65);
+      //  this.drawCircle(375, 130, 5, 0, Math.PI * 2);
     }
 
 

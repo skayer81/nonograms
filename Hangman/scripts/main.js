@@ -282,3 +282,9 @@ const applicationManagement = new ApplicationManagement();
 // // }
 
 // //ball.draw();
+const area = document.getElementById('area')
+
+// document.body.addEventListener('keydown', (event) => {
+//     area.innerHTML += `key ${event.key}, code = ${event.code}\n`;
+//     console.log(`key ${event.key}, code = ${event.code}`)
+// })
