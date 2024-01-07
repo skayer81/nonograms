@@ -20,6 +20,18 @@ export class EnteringLetters extends CreateBaseComponent{
                 this.curentPushedLetter = button
                 onKeyPress(this.ALPHABET[i]);
             })
+
+            // button.addEventListener('click', () => {
+            //  //   alert('был клик')
+            // })
+
+            // button.addEventListener('click', () => {
+            //   //  alert('был клик')
+            // })
+
+
+
+
         }
     }
 
@@ -30,7 +42,6 @@ export class EnteringLetters extends CreateBaseComponent{
         let span2 = this.createBaseComponent(button, 'span', ['span2']);
         let spanInside = this.createBaseComponent(span2, 'span', ['spanInside']);
         spanInside.style.animation = 'letterIsOkSpan 0.5s normal linear forwards 0.5s'
-       // span.onanimationend = this.newSpan(button);
         button.setAttribute('tabindex', -1)
     }
 
@@ -47,7 +58,7 @@ export class EnteringLetters extends CreateBaseComponent{
     }
 
     newSpan(button){
-        alert('второй спан')
+     //   alert('второй спан')
         let span = this.createBaseComponent(button, 'span', ['span2']);
        // span.onanimationend = this.newSpan();
     }
@@ -75,3 +86,5 @@ export class EnteringLetters extends CreateBaseComponent{
     // }
 
 }
+
+//(111)

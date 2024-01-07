@@ -124,7 +124,7 @@
   background-color: #00ff00;
 }
 .buttonsContainer .button.isLetterFalse {
-  pointer-events: "none";
+  pointer-events: none;
   position: relative;
 }
 .buttonsContainer .button.isLetterFalse .span1, .buttonsContainer .button.isLetterFalse .span2 {
@@ -145,4 +145,37 @@
   top: -3px;
   right: 0px;
   rotate: 40deg;
+}
+
+.modalWindow {
+  width: 500px;
+  height: 300px;
+  border: 1px solid dimgray;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 30px 20px 30px;
+  position: fixed;
+  right: 100%;
+  top: 100px;
+  background-color: deepskyblue;
+  color: dimgray;
+}
+.modalWindow.active {
+  right: 0;
+}
+.modalWindow .title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.modalWindow .description {
+  margin-bottom: 20px;
+}
+.modalWindow .word {
+  margin-bottom: 20px;
+}
+.modalWindow .buttons {
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */

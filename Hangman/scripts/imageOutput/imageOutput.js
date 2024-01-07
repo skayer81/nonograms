@@ -21,7 +21,7 @@ export class ImageOutput extends CreateFormComponent{
         this._context.strokeStyle = 'black';
               //let lineWidth = 10;
         //let lineColor = "black";
-        this.start();
+        this.startNewGame();
      //    this.draw0();
        //  this.lose()
         // this.draw1();
@@ -84,8 +84,8 @@ export class ImageOutput extends CreateFormComponent{
     // var xPos = 20;
     // var yPos = 480;
     
-     start(){
-    
+     startNewGame(){
+        this._context.clearRect(0, 0, 500, 500);
     
         // let promise = new Promise((resolve, reject) => {
         //     drawLine(20, 480, 480, 480);
@@ -253,11 +253,11 @@ export class ImageOutput extends CreateFormComponent{
         this._context.lineWidth = 5;
       //  this._context.clearRect(330, 120, 70, 140)
 
-     this._context.fillStyle = "red";
+     //this._context.fillStyle = "red";
      this._context.clearRect(330, 120, 60, 65);
-     this._context.fillStyle = "blue";
+     //this._context.fillStyle = "blue";
      this._context.clearRect(320, 145, 80, 30);
-     this._context.fillStyle = "green";
+     //this._context.fillStyle = "green";
      this._context.clearRect(340, 180, 40, 10);
 
      this.drawLine(340, 125, 350, 135);

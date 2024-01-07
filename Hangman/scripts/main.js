@@ -3,6 +3,11 @@ import { ApplicationManagement } from './applicationManagement/applicationManage
 
 const applicationManagement = new ApplicationManagement();
 
+//модалка
+//проверка что игра закончена
+
+
+
 // // window.onload = function() 
 // // { 
 // //   //Получить элемент холста
@@ -282,7 +287,7 @@ const applicationManagement = new ApplicationManagement();
 // // }
 
 // //ball.draw();
-const area = document.getElementById('area')
+//const area = document.getElementById('area')
 
 // document.body.addEventListener('keydown', (event) => {
 //     area.innerHTML += `key ${event.key}, code = ${event.code}\n`;

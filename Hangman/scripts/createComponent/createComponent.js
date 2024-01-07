@@ -2,8 +2,8 @@ export class CreateBaseComponent{
     /**
      * 
      * @param {object} parent - Родитель или 0
-     * @param {string} tag  - тег
-     * @param {array} classes - массив классов (необязательный)
+     * @param {string} tag  - Тег: 'div'
+     * @param {array} classes - массив классов (необязательный) ['class1', 'class2']
      * @param {string} innerHTML  - текст(необязательный)
      * @returns 
      */

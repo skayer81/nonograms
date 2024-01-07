@@ -12,9 +12,11 @@ export class WordOutput extends CreateBaseComponent{
 
     init(){
         this.container = this.createBaseComponent(document.body, 'div', ['wordContainer']);
+      //  this.createBaseComponent(0,'div', [''], 'test')
     }
 
-    startGame(lengthOfWord){
+    startNewGame(lengthOfWord){
+        this.container.innerHTML = '';
         for(let i = 0; i < lengthOfWord; i += 1){
             this.charContainers.push(this.createBaseComponent(this.container, 'div', ['charContainer'], '?'));
         }

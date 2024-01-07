@@ -97,7 +97,7 @@
             }
         }
         &.isLetterFalse{
-            pointer-events: "none";
+            pointer-events: none;
             position: relative;
             .span1, .span2{
                 position: absolute;

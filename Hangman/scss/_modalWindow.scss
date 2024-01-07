@@ -1,0 +1,45 @@
+.modalWindow{
+    width: 500px;
+    height: 300px;
+    border: 1px solid dimgray;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 30px 20px 30px;
+    position: fixed;
+    right: 100%;
+    top: 100px;
+    background-color: deepskyblue;
+    color: dimgray;
+    &.active{
+        right: 0;
+    }
+
+    // cursor: pointer;
+    // width: 40px;
+    // height: 40px;
+
+    // border: 1px solid ;
+    // border-radius: 10px;
+    // transition: 1s;
+    // background-color: deepskyblue;
+    // color: dimgray;
+    .title{
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .description{
+        margin-bottom: 20px;
+    }
+    .word{
+        margin-bottom: 20px;
+    }
+    .buttons{
+        margin-top: auto;
+    }
+}
+
+
+
