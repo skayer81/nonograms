@@ -68,6 +68,8 @@ export class EnteringLetters extends CreateBaseComponent{
         else this.isLetterTrue(this.buttonList[letter])
     }
 
+    startNewGame(){}
+
     /**
      * 
      * @param {string} char - буква

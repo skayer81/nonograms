@@ -3,6 +3,7 @@ import { ImageOutput } from "../imageOutput/imageOutput.js";
 import { WordOutput } from "../wordOutput/wordOutput.js";
 import { KeyboardHandler } from "../keyboardHandler/keyboardHandler.js";
 import { ModalWindow } from "../modalWindow/modalWindow.js";
+import { QuestAnswer } from "../questAnswerModul/questAnswerModul.js";
 
 export class ApplicationManagement{
 
@@ -14,13 +15,15 @@ export class ApplicationManagement{
         this.wordOutput = new WordOutput();
         this.enteringLetters = new EnteringLetters(this.onKeyPress, this.ALPHABET);
         this.keyboardHandler = new KeyboardHandler(this.onKeyPress, this.ALPHABET);
+        this.questAnswer = new QuestAnswer();
         this.modalWindow = new ModalWindow(this.startNewGame);
         this.ListofPushedLetters = [];
-        console.log(this.keyboardHandler)
-      
+      //  console.log(this.keyboardHandler)
+        this.curentAnswer = '';
+        this.curetnQuesr = '';     
        
 
-        this.testWord = 'ГОЛОЛЕД';
+   //     this.testWord = 'ГОЛОЛЕД';
         //добавить загрузку из json вопросов и ответов
         this.countOfLife = 6;
         this.countOutputsChar = 0;
@@ -41,7 +44,10 @@ export class ApplicationManagement{
         this.countOfLife = 6;
         this.countOutputsChar = 0;
        // console.log(this.wordOutput);
-        this.wordOutput.startNewGame(this.testWord.length);
+        this.questAnswer.newQA();
+       this.curentAnswer = this.questAnswer.answer;
+       this.curetnQuest = this.questAnswer.quest;
+        this.wordOutput.startNewGame(this.curentAnswer.length);
         this.imageOutput.startNewGame();
         this.enteringLetters.startNewGame();
 
@@ -54,8 +60,10 @@ export class ApplicationManagement{
         if (this.ListofPushedLetters.includes(letter)) return;
         this.ListofPushedLetters.push(letter);
         let isLetterNotFind = true;
-        for (let i = 0; i <= this.testWord.length; i += 1){
-            let char = this.testWord[i];
+        console.log(letter, this.curentAnswer );
+        for (let i = 0; i <= this.curentAnswer.length - 1; i += 1){
+            let char = this.curentAnswer[i];
+            console.log(char, letter)
             if (char === letter) {
                 isLetterNotFind = false;
                 this.wordOutput.outputChar(char, i);
