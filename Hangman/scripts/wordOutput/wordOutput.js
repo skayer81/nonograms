@@ -4,7 +4,6 @@ import { CreateBaseComponent } from "../createComponent/createComponent.js";
 export class WordOutput extends CreateBaseComponent{
     constructor(){
         super();
-
         this.init();
         this._positions = [];
         this.charContainers = [];

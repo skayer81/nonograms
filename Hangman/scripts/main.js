@@ -1,12 +1,23 @@
-//import {CreateBaseComponent}  from './createComponent/createComponent.js'
 import { ApplicationManagement } from './applicationManagement/applicationManagement.js'
 
 const applicationManagement = new ApplicationManagement();
 
-//модалка
-//проверка что игра закончена
 
 
+
+
+// function getPath(){
+//     return './test.js'
+// }
+
+// import(getPath())
+//     .then(obj => {
+//         obj.test()})
+
+// клава.addEventListener('click', () => {обработчик(аргумент)})
+
+
+  //.catch(err => <ошибка загрузки, например если нет такого модуля>)
 
 // // window.onload = function() 
 // // { 
