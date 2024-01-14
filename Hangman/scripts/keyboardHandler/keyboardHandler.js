@@ -37,18 +37,18 @@ export class KeyboardHandler{
     }
 
     constructor(onKeyPress, ALPHABET){
-        console.log('condtructor(onKeyPress)')
+      //  console.log('condtructor(onKeyPress)')
         this.init(onKeyPress);
         this.ALPHABET = ALPHABET;
     }
 
     init(onKeyPress){
-        console.log('init(onKeyPress)')
+       // console.log('init(onKeyPress)')
         document.body.addEventListener('keydown', (event) => {
             let  letterOfKey = event.key.toUpperCase();
             if (this.ALPHABET.includes(letterOfKey)) onKeyPress(letterOfKey)
             else if (this.CODES[event.code]) onKeyPress(this.CODES[event.code]);
-            console.log(event.key);
+          //  console.log(event.key);
          //   onKeyPress(event.key);
         })
     }

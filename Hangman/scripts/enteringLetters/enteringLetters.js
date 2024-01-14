@@ -109,9 +109,10 @@ export class EnteringLetters extends CreateBaseComponent{
         for (let i = 0; i < this._spanList.length; i++){
             this._spanList[i].remove();
         }
-        for (let i = 0; i < this.buttonList.length; i++){
-            this.buttonList[i].classList.remove('isLetterFalse');
-            this.buttonList[i].classList.remove('isLetterTrue')
+        for (let button in this.buttonList){
+            console.log(button)
+            this.buttonList[button].classList.remove('isLetterFalse');
+            this.buttonList[button].classList.remove('isLetterTrue')
         }
     //     console.log(this.buttonList)
     //     for (let buttonChar in this.buttonList){

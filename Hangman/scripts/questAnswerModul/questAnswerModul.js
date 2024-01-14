@@ -18,7 +18,7 @@ export class QuestAnswer {
 
     get answer(){
       //  console.log(this._questAnswer,this._numberCurentQA )
-        console.log(this._questAnswer[this._numberCurentQA].answer);
+      //  console.log(this._questAnswer[this._numberCurentQA].answer);
         return this._questAnswer[this._numberCurentQA].answer.toUpperCase();
 
     }

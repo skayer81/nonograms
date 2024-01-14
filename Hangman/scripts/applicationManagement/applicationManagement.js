@@ -31,9 +31,9 @@ export class ApplicationManagement{
         this.startNewGame();
     }
 
-    buttonIsPush = (letter) => {
-        console.log(this, letter)
-    }
+    // buttonIsPush = (letter) => {
+    //     console.log(this, letter)
+    // }
 
     init(){
        // this.wordOutput.init();
@@ -48,7 +48,9 @@ export class ApplicationManagement{
        this.curentAnswer = this.questAnswer.answer;
        this.curetnQuest = this.questAnswer.quest;
         this.wordOutput.startNewGame(this.curentAnswer.length);
-        this.imageOutput.startNewGame();
+        if (this.imageOutput.isInit) this.imageOutput.startNewGame()
+        else this.imageOutput.isInit = true;
+       // this.imageOutput.startNewGame();
         this.enteringLetters.startNewGame();
 
 
@@ -60,10 +62,10 @@ export class ApplicationManagement{
         if (this.ListofPushedLetters.includes(letter)) return;
         this.ListofPushedLetters.push(letter);
         let isLetterNotFind = true;
-        console.log(letter, this.curentAnswer );
+      //  console.log(letter, this.curentAnswer );
         for (let i = 0; i <= this.curentAnswer.length - 1; i += 1){
             let char = this.curentAnswer[i];
-            console.log(char, letter)
+           // console.log(char, letter)
             if (char === letter) {
                 isLetterNotFind = false;
                 this.wordOutput.outputChar(char, i);
@@ -84,7 +86,7 @@ export class ApplicationManagement{
             this.imageOutput.lose();
             this.modalWindow.popUpOpen();
         }//  alert('вы проиграли')
-        if(!this.countOfLife || this.countOutputsChar === this.testWord.length) {
+        if(!this.countOfLife || this.countOutputsChar === this.curentAnswer.length) {
             this.modalWindow.popUpOpen();
         }
         

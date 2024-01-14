@@ -7,6 +7,7 @@ export class ImageOutput extends CreateFormComponent{
 
     constructor(){
         super();
+        this.isInit = false;
         this.init();
 
     }
@@ -21,7 +22,7 @@ export class ImageOutput extends CreateFormComponent{
         this._context.strokeStyle = 'black';
               //let lineWidth = 10;
         //let lineColor = "black";
-        this.startNewGame();
+        //this.startNewGame();
      //    this.draw0();
        //  this.lose()
         // this.draw1();
@@ -29,6 +30,24 @@ export class ImageOutput extends CreateFormComponent{
         // this.draw3();
         // this.draw4();
         // this.draw5();
+        this._context.clearRect(0, 0, 500, 500);
+    
+        // let promise = new Promise((resolve, reject) => {
+        //     drawLine(20, 480, 480, 480);
+        //   });
+           //this._context.lineWidth = 10;
+        
+           this.drawLine(20, 480, 480, 480); // будет ждать, пока промис не выполнится (*)
+
+           this.drawLine(80, 480, 80, 40)// drawLine(40, 480, 40, 40);
+    
+           this.drawLine(75, 40, 360, 40)
+           this.drawLine(360, 40, 360, 100)
+    
+           this.drawLine(80, 100, 140, 40)
+
+        //   this.isInit = true;
+           console.log('init')
     }
 
 
@@ -85,26 +104,31 @@ export class ImageOutput extends CreateFormComponent{
     // var yPos = 480;
     
      startNewGame(){
-        this._context.clearRect(0, 0, 500, 500);
+      //    this._context.clearRect(0, 0, 500, 500);
     
         // let promise = new Promise((resolve, reject) => {
         //     drawLine(20, 480, 480, 480);
         //   });
-        this._context.lineWidth = 10;
+        //  if (this.isInit){
+          console.log('новая игра')
+           this._context.lineWidth = 400;
+           this._context.strokeStyle = 'white';
         
-           this.drawLine(20, 480, 480, 480); // будет ждать, пока промис не выполнится (*)
-
-           this.drawLine(80, 480, 80, 40)// drawLine(40, 480, 40, 40);
+           this.drawLine(300, 460, 300, 95); // будет ждать, пока промис не выполнится (*)
+        //  }
+          //  this.drawLine(80, 480, 80, 40)// drawLine(40, 480, 40, 40);
     
-           this.drawLine(80, 40, 360, 40)
-           this.drawLine(360, 40, 360, 100)
+          //  this.drawLine(80, 40, 360, 40)
+          //  this.drawLine(360, 40, 360, 100)
     
-           this.drawLine(80, 100, 140, 40)
+          //  this.drawLine(80, 100, 140, 40)
 
     }
     
      
     outputPartOfImage(index){
+      this._context.lineWidth = 5;
+      this._context.strokeStyle = 'black';
         if (index === 0) this.draw0();
         if (index === 1) this.draw1();
         if (index === 2) this.draw2();
@@ -158,7 +182,7 @@ export class ImageOutput extends CreateFormComponent{
   
         // Запуск анимации
         draw0(){
-            this._context.lineWidth = 5;
+           // this._context.lineWidth = 5;
         this.drawCircle(360, 150, 50, 0,  2 * Math.PI+0.1);
         this.drawCircle(360, 150, 35, 0, Math.PI)
         this.drawCircle(345, 130, 5, 0, Math.PI * 2); // Левый глаз
@@ -207,7 +231,7 @@ export class ImageOutput extends CreateFormComponent{
        
 
         draw1(){
-            this._context.lineWidth = 5;
+          //  this._context.lineWidth = 5;
 
             this.drawEllipse(360, 280, 50, 75, 0, 0, 2 * Math.PI + 1)
 
@@ -224,19 +248,19 @@ export class ImageOutput extends CreateFormComponent{
             }
 
             draw2(){
-                this._context.lineWidth = 5;
+               // this._context.lineWidth = 5;
                 this.drawLine(400, 230, 450, 100);
             }
             draw3(){
-                this._context.lineWidth = 5;
+               // this._context.lineWidth = 5;
                 this.drawLine(320, 230, 270, 100);
             }
             draw4(){
-                this._context.lineWidth = 5;
+               // this._context.lineWidth = 5;
                 this.drawLine(400, 320, 450, 450);
             }
             draw5(){
-                this._context.lineWidth = 5;
+               // this._context.lineWidth = 5;
                  this.drawLine(320, 320, 270, 450);
             }
     
@@ -269,7 +293,7 @@ export class ImageOutput extends CreateFormComponent{
      this.drawCircle(360, 190, 35,  Math.PI+0.5,  Math.PI*2-0.5, false)
      
 
-     console.log('удалили')
+    // console.log('удалили')
       //  this.drawCircle(345, 130, 5, 0, Math.PI * 2); // Левый глаз
         //       ctx.moveTo(95, 65);
       //  this.drawCircle(375, 130, 5, 0, Math.PI * 2);
