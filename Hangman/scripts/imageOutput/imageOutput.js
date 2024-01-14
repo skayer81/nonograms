@@ -47,7 +47,7 @@ export class ImageOutput extends CreateFormComponent{
            this.drawLine(80, 100, 140, 40)
 
         //   this.isInit = true;
-           console.log('init')
+     //      console.log('init')
     }
 
 
@@ -110,7 +110,7 @@ export class ImageOutput extends CreateFormComponent{
         //     drawLine(20, 480, 480, 480);
         //   });
         //  if (this.isInit){
-          console.log('новая игра')
+         // console.log('новая игра')
            this._context.lineWidth = 400;
            this._context.strokeStyle = 'white';
         

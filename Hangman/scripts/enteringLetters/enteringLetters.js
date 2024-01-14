@@ -70,7 +70,7 @@ export class EnteringLetters extends CreateBaseComponent{
 
     isLetterTrue(button){
         
-
+        console.log('буква есть')
         button.classList.add('isLetterTrue');
         this._spanAnimations(button, true);
         // let span1 = this.createBaseComponent(button, 'span', ['span1']);
@@ -82,6 +82,7 @@ export class EnteringLetters extends CreateBaseComponent{
     }
 
     isLetterFalse(button){
+        console.log('буквы нет')
         button.classList.add('isLetterFalse');
         this._spanAnimations(button, false);
     //     let span1 = this.createBaseComponent(button, 'span', ['span1']);
@@ -110,9 +111,11 @@ export class EnteringLetters extends CreateBaseComponent{
             this._spanList[i].remove();
         }
         for (let button in this.buttonList){
-            console.log(button)
+          //  console.log(button)
             this.buttonList[button].classList.remove('isLetterFalse');
-            this.buttonList[button].classList.remove('isLetterTrue')
+            this.buttonList[button].classList.remove('isLetterTrue');
+            this.buttonList[button].removeAttribute('tabindex');
+
         }
     //     console.log(this.buttonList)
     //     for (let buttonChar in this.buttonList){

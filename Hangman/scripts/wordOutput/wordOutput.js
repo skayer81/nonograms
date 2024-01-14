@@ -15,6 +15,7 @@ export class WordOutput extends CreateBaseComponent{
     }
 
     startNewGame(lengthOfWord){
+        this.charContainers = [];
         this.container.innerHTML = '';
         for(let i = 0; i < lengthOfWord; i += 1){
             this.charContainers.push(this.createBaseComponent(this.container, 'div', ['charContainer'], '?'));

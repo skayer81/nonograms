@@ -4,6 +4,7 @@ import { WordOutput } from "../wordOutput/wordOutput.js";
 import { KeyboardHandler } from "../keyboardHandler/keyboardHandler.js";
 import { ModalWindow } from "../modalWindow/modalWindow.js";
 import { QuestAnswer } from "../questAnswerModul/questAnswerModul.js";
+import { CounterOutput } from "../counterOutput/counterOutput.js";
 
 export class ApplicationManagement{
 
@@ -16,6 +17,7 @@ export class ApplicationManagement{
         this.enteringLetters = new EnteringLetters(this.onKeyPress, this.ALPHABET);
         this.keyboardHandler = new KeyboardHandler(this.onKeyPress, this.ALPHABET);
         this.questAnswer = new QuestAnswer();
+        this.counterOutput = new CounterOutput()
         this.modalWindow = new ModalWindow(this.startNewGame);
         this.ListofPushedLetters = [];
       //  console.log(this.keyboardHandler)
@@ -48,6 +50,7 @@ export class ApplicationManagement{
        this.curentAnswer = this.questAnswer.answer;
        this.curetnQuest = this.questAnswer.quest;
         this.wordOutput.startNewGame(this.curentAnswer.length);
+        this.counterOutput.startNewGame(this.countOfLife);
         if (this.imageOutput.isInit) this.imageOutput.startNewGame()
         else this.imageOutput.isInit = true;
        // this.imageOutput.startNewGame();
@@ -78,8 +81,10 @@ export class ApplicationManagement{
 
         if (isLetterNotFind) {
             this.imageOutput.outputPartOfImage(6 - this.countOfLife);
+            
           //  this.enteringLetters.isLetterFalse(button);
             this.countOfLife -= 1;
+            this.counterOutput.counterOutput(this.countOfLife)
         };
       //  if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
         if (!this.countOfLife) {
