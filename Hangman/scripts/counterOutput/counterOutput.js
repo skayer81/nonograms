@@ -7,11 +7,11 @@ export class CounterOutput extends CreateBaseComponent{
     }
 
     init(){
-        this.container = this.createBaseComponent(document.body, 'div');
+        this.container = this.createBaseComponent(document.body, 'div', ['counters-container']);
         this.createBaseComponent(this.container , 'div', [], 'Ваши жизни');
-        this.curentCount = this.createBaseComponent(this.container , 'span');
-        this.createBaseComponent(this.container , 'span', [], '/');
-        this.totalCount = this.createBaseComponent(this.container , 'span');
+        this.curentCount = this.createBaseComponent(this.container , 'span', ['counter-curent', 'counter']);
+        this.createBaseComponent(this.container , 'span', ['delimiter'], '/');
+        this.totalCount = this.createBaseComponent(this.container , 'span', ['counter-total', 'counter']);
         // this.totalCount.innerText = 'totalCount';
         // this.curentCount.innerText = '1';
 

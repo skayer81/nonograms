@@ -23,7 +23,7 @@ export class QuestOutput extends CreateBaseComponent{
 
     startNewGame(quest){
         //this.totalCount.innerText =  totalCount;//String(totalCount);
-        this.curentQuest.innerText = `${quest}?`;
+        this.curentQuest.innerText = `вопрос: ${quest}`;
     }
 
 

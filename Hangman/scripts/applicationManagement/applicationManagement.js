@@ -21,7 +21,7 @@ export class ApplicationManagement{
         this.counterOutput = new CounterOutput()
         this.questOutput = new QuestOutput();
         this.modalWindow = new ModalWindow(this.startNewGame);
-        this.ListofPushedLetters = [];
+        this.listofPushedLetters = [];
       //  console.log(this.keyboardHandler)
         this.curentAnswer = '';
         this.curetnQuesr = '';     
@@ -47,6 +47,7 @@ export class ApplicationManagement{
     startNewGame = () => {
         this.countOfLife = 6;
         this.countOutputsChar = 0;
+        this.listofPushedLetters = [];
        // console.log(this.wordOutput);
         this.questAnswer.newQA();
        this.curentAnswer = this.questAnswer.answer;
@@ -64,9 +65,9 @@ export class ApplicationManagement{
     }
 
     onKeyPress  = (letter) => {
-       // console.log('onKeyPress');
-        if (this.ListofPushedLetters.includes(letter)) return;
-        this.ListofPushedLetters.push(letter);
+        console.log('onKeyPress');
+        if (this.listofPushedLetters.includes(letter)) return;
+        this.listofPushedLetters.push(letter);
         let isLetterNotFind = true;
       //  console.log(letter, this.curentAnswer );
         for (let i = 0; i <= this.curentAnswer.length - 1; i += 1){
