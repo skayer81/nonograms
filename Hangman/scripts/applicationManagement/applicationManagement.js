@@ -5,6 +5,7 @@ import { KeyboardHandler } from "../keyboardHandler/keyboardHandler.js";
 import { ModalWindow } from "../modalWindow/modalWindow.js";
 import { QuestAnswer } from "../questAnswerModul/questAnswerModul.js";
 import { CounterOutput } from "../counterOutput/counterOutput.js";
+import { QuestOutput } from "../questOutput/questOutput.js";
 
 export class ApplicationManagement{
 
@@ -18,6 +19,7 @@ export class ApplicationManagement{
         this.keyboardHandler = new KeyboardHandler(this.onKeyPress, this.ALPHABET);
         this.questAnswer = new QuestAnswer();
         this.counterOutput = new CounterOutput()
+        this.questOutput = new QuestOutput();
         this.modalWindow = new ModalWindow(this.startNewGame);
         this.ListofPushedLetters = [];
       //  console.log(this.keyboardHandler)
@@ -51,6 +53,7 @@ export class ApplicationManagement{
        this.curetnQuest = this.questAnswer.quest;
         this.wordOutput.startNewGame(this.curentAnswer.length);
         this.counterOutput.startNewGame(this.countOfLife);
+        this.questOutput.startNewGame(this.curetnQuest)
         if (this.imageOutput.isInit) this.imageOutput.startNewGame()
         else this.imageOutput.isInit = true;
        // this.imageOutput.startNewGame();
