@@ -1,5 +1,4 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
-// import  '../../css/wordOutput.css';
 
 export class WordOutput extends CreateBaseComponent{
     constructor(){
@@ -11,7 +10,6 @@ export class WordOutput extends CreateBaseComponent{
 
     init(){
         this.container = this.createBaseComponent(0, 'div', ['wordContainer']);
-      //  this.createBaseComponent(0,'div', [''], 'test')
     }
 
     startNewGame(lengthOfWord){
@@ -32,14 +30,9 @@ export class WordOutput extends CreateBaseComponent{
         this._positions.push(positions);
         this.charContainers[positions].style.animation = 'openCharStep1 0.5s normal linear forwards';
         this.charContainers[positions].onanimationend = this.outputCharStep2;
-       // this.charContainers[positions].classList.add('charIsOpen')
-      //  this.charContainers[positions].innerHTML = char
     }
 
     outputCharStep2 = () => {
-        //console.log('uj')
-       // alert('uj')
-      // alert(this.charContainers[this._positions])
         this._positions.forEach(pos => {
             this.charContainers[pos].onanimationend = null;
             this.charContainers[pos].classList.add('charIsOpen')
@@ -48,15 +41,5 @@ export class WordOutput extends CreateBaseComponent{
 
         })
         this._positions = [];
-
     }
-
-    win(){
-        
-    }
-
-    lose(){
-        
-    }
-
 }

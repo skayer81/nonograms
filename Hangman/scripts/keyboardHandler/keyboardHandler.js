@@ -1,8 +1,5 @@
 export class KeyboardHandler{
-    //ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
     CODES = {
-     //   'Backquote' : 'Ё',
-     //   'KeyQ' : 'Й',
         'KeyW' : 'Ц',
         'KeyE' : 'У',
         'KeyR' : 'К',
@@ -37,27 +34,15 @@ export class KeyboardHandler{
     }
 
     constructor(onKeyPress, ALPHABET){
-      //  console.log('condtructor(onKeyPress)')
         this.init(onKeyPress);
         this.ALPHABET = ALPHABET;
     }
 
     init(onKeyPress){
-       // console.log('init(onKeyPress)')
         document.body.addEventListener('keydown', (event) => {
             let  letterOfKey = event.key.toUpperCase();
             if (this.ALPHABET.includes(letterOfKey)) onKeyPress(letterOfKey)
             else if (this.CODES[event.code]) onKeyPress(this.CODES[event.code]);
-          //  console.log(event.key);
-         //   onKeyPress(event.key);
         })
     }
-
-   // document.body.addEventListener('keydown', (event) => {
-//     area.innerHTML += `key ${event.key}, code = ${event.code}\n`;
-//     console.log(`key ${event.key}, code = ${event.code}`)
-// })
-
-
-
 }
