@@ -26,20 +26,26 @@ export class WordOutput extends CreateBaseComponent{
      * @param {number} positions - позиция
      */
     outputChar(char, positions){
-        this._char = char;
-        this._positions.push(positions);
+     //   this._char = char;
+     //   this._positions.push(positions);
+     const animationend = () => {
+        console.log(this);
+        this.outputCharStep2(char, positions)}
         this.charContainers[positions].style.animation = 'openCharStep1 0.5s normal linear forwards';
-        this.charContainers[positions].onanimationend = this.outputCharStep2;
+        this.charContainers[positions].onanimationend = animationend;
+        // const animationend = () => {
+        //     console.log(this);
+        //     this.outputCharStep2(char, positions)}
     }
 
-    outputCharStep2 = () => {
-        this._positions.forEach(pos => {
-            this.charContainers[pos].onanimationend = null;
-            this.charContainers[pos].classList.add('charIsOpen')
-            this.charContainers[pos].innerHTML = this._char;
-            this.charContainers[pos].style.animation = 'openCharStep2 0.5s normal linear forwards';
+    outputCharStep2 = (char, positions) => {
+      //  this._positions.forEach(pos => {
+            this.charContainers[positions].onanimationend = null;
+            this.charContainers[positions].classList.add('charIsOpen')
+            this.charContainers[positions].innerHTML = char;
+            this.charContainers[positions].style.animation = 'openCharStep2 0.5s normal linear forwards';
 
-        })
-        this._positions = [];
+      //  })
+      //  this._positions = [];
     }
 }
