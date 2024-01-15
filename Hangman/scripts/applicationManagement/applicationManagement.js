@@ -45,7 +45,7 @@ export class ApplicationManagement extends CreateBaseComponent{
         if (this.imageOutput.isInit) this.imageOutput.startNewGame()
         else this.imageOutput.isInit = true;
         this.enteringLetters.startNewGame();
-        console.log(`${this.curentAnswer} это - ${this.curentAnswer}`);
+        console.log(`${this.curetnQuest} это - ${this.curentAnswer}`);
     }
 
     _viewBuilder(){
