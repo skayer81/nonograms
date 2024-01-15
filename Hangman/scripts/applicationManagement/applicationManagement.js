@@ -23,28 +23,12 @@ export class ApplicationManagement extends CreateBaseComponent{
         this.questOutput = new QuestOutput();
         this.modalWindow = new ModalWindow(this.startNewGame);
         this.listofPushedLetters = [];
-      //  console.log(this.keyboardHandler)
-        // this.curentAnswer = '';
-        // this.curetnQuest = '';     
-       
-
-   //     this.testWord = 'ГОЛОЛЕД';
-        //добавить загрузку из json вопросов и ответов
-      //  this.countOfLife = 6;
-     //   this.countOutputsChar = 0;
         this.init();
-       
     }
-
-    // buttonIsPush = (letter) => {
-    //     console.log(this, letter)
-    // }
 
     init(){
         this._viewBuilder();
         this.startNewGame();
-       // this.wordOutput.init();
-  //      this.enteringLetters.init(this.lettersPush);
     }
 
     startNewGame = () => {
@@ -52,20 +36,16 @@ export class ApplicationManagement extends CreateBaseComponent{
         this.countOutputsChar = 0;
         this.listofPushedLetters = [];
         this._isGameStart = true;
-       // console.log(this.wordOutput);
         this.questAnswer.newQA();
-       this.curentAnswer = this.questAnswer.answer;
-       this.curetnQuest = this.questAnswer.quest;
+        this.curentAnswer = this.questAnswer.answer;
+        this.curetnQuest = this.questAnswer.quest;
         this.wordOutput.startNewGame(this.curentAnswer.length);
         this.counterOutput.startNewGame(6);
         this.questOutput.startNewGame(this.curetnQuest)
         if (this.imageOutput.isInit) this.imageOutput.startNewGame()
         else this.imageOutput.isInit = true;
-       // this.imageOutput.startNewGame();
         this.enteringLetters.startNewGame();
-
-
-       // this.wordOutput.outputChar('D', 4)
+        console.log(`${this.curentAnswer} это - ${this.curentAnswer}`);
     }
 
     _viewBuilder(){
@@ -81,19 +61,15 @@ export class ApplicationManagement extends CreateBaseComponent{
     }
 
     onKeyPress  = (letter) => {
-        console.log('onKeyPress');
         if (this.listofPushedLetters.includes(letter) || !this._isGameStart) return;
         this.listofPushedLetters.push(letter);
         let isLetterNotFind = true;
-      //  console.log(letter, this.curentAnswer );
         for (let i = 0; i <= this.curentAnswer.length - 1; i += 1){
             let char = this.curentAnswer[i];
-           // console.log(char, letter)
             if (char === letter) {
                 isLetterNotFind = false;
                 this.wordOutput.outputChar(char, i);
                 this.countOutputsChar += 1;
-            //    this.enteringLetters.isLetterTrue(button);
             }
         }
 
@@ -104,21 +80,16 @@ export class ApplicationManagement extends CreateBaseComponent{
             this.countOfError += 1;
             this.counterOutput.counterOutput(this.countOfError)
         };
-      //  if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
+
         if (this.countOfError === 6) {
             this.imageOutput.lose();
             this.modalWindow.popUpOpen(this.curetnQuest, this.curentAnswer, false);
             this._isGameStart = false;
-        }//  alert('вы проиграли')
+        }
         if(this.countOutputsChar === this.curentAnswer.length) {
             this.imageOutput.win()
             this.modalWindow.popUpOpen(this.curetnQuest, this.curentAnswer, true);
             this._isGameStart = false;
         }
-        
-       // this.wordOutput.outputChar();
-        
-
     }
-
 }
