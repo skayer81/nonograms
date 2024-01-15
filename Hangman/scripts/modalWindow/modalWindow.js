@@ -42,11 +42,11 @@ export class ModalWindow extends CreateFormComponent{
         this._description = this.createBaseComponent(popup,'div', ['description']);
         this._word = this.createBaseComponent(popup,'div', ['word']);
         const buttonsContainer = this.createBaseComponent(popup,'div', ['buttons']);
-        this._closeButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_CLOSE_TEXT);
+     //   this._closeButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_CLOSE_TEXT);
         this._againButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_PLAY_TEXT);
         this._againButton.addEventListener('click', startNewGame);
         this._againButton.addEventListener('click', this.closePopup);
-        this._closeButton.addEventListener('click', this.closePopup);
+     //   this._closeButton.addEventListener('click', this.closePopup);
         return popup;
     }
 
