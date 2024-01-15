@@ -15,22 +15,24 @@ export class ImageOutput extends CreateFormComponent{
   }
 
   win(){
-    if (this._hasHead){
+    if (this._hasHead && this._isHeadComplite){
       this._context.strokeStyle = 'red';
       this.drawEllipse(360, 180, 10, 15, Math.PI, Math.PI, 2*Math.PI)
     }
   }
 
   lose(){
-    this._context.lineWidth = 5;
-    this._context.clearRect(330, 120, 60, 65);
-    this._context.clearRect(320, 145, 80, 30);
-    this._context.clearRect(340, 180, 40, 10);
-    this.drawLine(340, 125, 350, 135);
-    this.drawLine(340, 135, 350, 125);
-    this.drawLine(370, 125, 380, 135);
-    this.drawLine(370, 135, 380, 125);
-    this.drawCircle(360, 190, 35,  Math.PI+0.5,  Math.PI*2-0.5, false)
+    if (this._hasHead && this._isHeadComplite){
+      this._context.lineWidth = 5;
+      this._context.clearRect(330, 120, 60, 65);
+      this._context.clearRect(320, 145, 80, 30);
+      this._context.clearRect(340, 180, 40, 10);
+      this.drawLine(340, 125, 350, 135);
+      this.drawLine(340, 135, 350, 125);
+      this.drawLine(370, 125, 380, 135);
+      this.drawLine(370, 135, 380, 125);
+      this.drawCircle(360, 190, 35,  Math.PI+0.5,  Math.PI*2-0.5, false)
+    }
   }
 
   init(){
@@ -82,6 +84,7 @@ export class ImageOutput extends CreateFormComponent{
       if (currentAngle < endAngle) {
         requestAnimationFrame(draw);
       }
+      else this._isHeadComplite = true;
     }
     draw()
   }

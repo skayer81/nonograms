@@ -61,6 +61,7 @@ export class ApplicationManagement extends CreateBaseComponent{
     }
 
     onKeyPress  = (letter) => {
+        console.log(letter);
         if (this.listofPushedLetters.includes(letter) || !this._isGameStart) return;
         this.listofPushedLetters.push(letter);
         let isLetterNotFind = true;
@@ -68,6 +69,7 @@ export class ApplicationManagement extends CreateBaseComponent{
             let char = this.curentAnswer[i];
             if (char === letter) {
                 isLetterNotFind = false;
+                console.log(char, i)
                 this.wordOutput.outputChar(char, i);
                 this.countOutputsChar += 1;
             }

@@ -41,7 +41,7 @@
 }
 .wordContainer .charIsOpen {
   background-color: aqua;
-  border: 2px solid aqua;
+  border-bottom: 2px solid aqua;
 }
 @media screen and (max-width: 600px) {
   .wordContainer {
@@ -285,6 +285,7 @@
 
 .app-container {
   max-width: 1200px;
+  max-height: 100vh;
   margin: 0 auto;
 }
 .app-container .app-container__top {
