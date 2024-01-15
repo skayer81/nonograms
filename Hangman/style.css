@@ -23,6 +23,7 @@
   }
 }
 .wordContainer {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -40,6 +41,7 @@
 }
 .wordContainer .charIsOpen {
   background-color: aqua;
+  border: 2px solid aqua;
 }
 @media screen and (max-width: 600px) {
   .wordContainer {
@@ -177,7 +179,6 @@
   right: -100%;
   background-color: bisque;
   color: dimgray;
-  position: fixed;
   transition: 1s;
   z-index: 10;
 }

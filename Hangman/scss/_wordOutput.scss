@@ -1,6 +1,7 @@
 @import "./animation";
 
 .wordContainer {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -17,7 +18,7 @@
     }
     .charIsOpen {
         background-color: aqua;
-        border: 2px solid black;
+        border: 2px solid aqua;
     }
     @media screen and (max-width: 600px) {
         gap: 5px;
