@@ -1,6 +1,6 @@
 export class CreateBaseComponent{
     /**
-     * 
+     *
      * @param {object} parent - Родитель или 0
      * @param {string} tag  - Тег: 'div'
      * @param {array} classes - массив классов (необязательный) ['class1', 'class2']
@@ -17,11 +17,10 @@ export class CreateBaseComponent{
 }
 
 export class CreateFormComponent extends CreateBaseComponent{
-     constructor(){
+    constructor(){
         super()
-    //     super(parent, tag, classes)
-     }
-     /**
+    }
+    /**
       * 
       * @param {object} parent Родитель или 0
       * @param {string} tag 
@@ -36,6 +35,4 @@ export class CreateFormComponent extends CreateBaseComponent{
         }
         return result;
     }
-
-
 }

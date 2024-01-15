@@ -160,8 +160,12 @@
 }
 
 .modalWindow {
-  width: 500px;
-  height: 300px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 350px;
+  height: 250px;
   border: 1px solid dimgray;
   border-radius: 30px;
   text-align: center;
@@ -170,13 +174,17 @@
   font-weight: bold;
   padding: 30px 20px 30px;
   position: fixed;
-  right: 100%;
-  top: 100px;
-  background-color: deepskyblue;
+  right: -100%;
+  background-color: bisque;
   color: dimgray;
+  position: fixed;
+  transition: 1s;
+  z-index: 10;
 }
 .modalWindow.active {
-  right: 0;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
 .modalWindow .title {
   font-size: 2rem;
@@ -189,7 +197,38 @@
   margin-bottom: 20px;
 }
 .modalWindow .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.modalWindow .buttons .button {
+  background-color: aqua;
+  border: 1px solid dimgray;
+  border-radius: 10px;
   margin-top: auto;
+  cursor: pointer;
+  transition: 1s;
+  height: 30px;
+  width: 150px;
+}
+.modalWindow .buttons .button:hover {
+  background-color: deepskyblue;
+}
+
+.overlay {
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 9;
+  background-color: black;
+  opacity: 0.7;
+  width: 0;
+  transition: 1s;
+}
+
+.modalWindow.active + .overlay {
+  width: 100vw;
 }
 
 @keyframes letterIsOkSpan {

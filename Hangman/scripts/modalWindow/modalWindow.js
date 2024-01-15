@@ -4,7 +4,8 @@ export class ModalWindow extends CreateFormComponent{
 
    // DESCRIPTION_TEXT = 
    BUTTON_CLOSE_TEXT = 'закрыть окно';
-   BUTTON_PLAY_TEXT = 'сыграть еще';
+   BUTTON_PLAY_TEXT = 'сыгранем еще?';
+   WIN_LOSE = ['Ну как так то?(', 'Ты выиграл!']
 
     constructor(startNewGame){
         super();
@@ -24,8 +25,11 @@ export class ModalWindow extends CreateFormComponent{
     set word(word){
         this._word.innerText = word;
     }
-
-    popUpOpen(){
+    //(this.curetnQuest, this.curentAnswer, true);
+    popUpOpen(quest, answer, isWin){
+        this._title.innerText = this.WIN_LOSE[Number(isWin)];
+        this._description.innerText = `${quest} это - `;
+        this._word.innerText = answer;
         this._popUp.classList.add('active');
        // document.body.style.marginRight = `${window.innerWidth - document.body.clientWidth}px`;
       //  document.body.classList.add('scroll-hidden');

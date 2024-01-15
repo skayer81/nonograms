@@ -13,7 +13,6 @@ export class ApplicationManagement extends CreateBaseComponent{
     ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
     constructor(){
-        //добавить создание общего контейнера
         super();
         this.imageOutput = new ImageOutput();
         this.wordOutput = new WordOutput();
@@ -102,21 +101,18 @@ export class ApplicationManagement extends CreateBaseComponent{
 
         if (isLetterNotFind) {
             this.imageOutput.outputPartOfImage(this.countOfError);
-            
-          //  this.enteringLetters.isLetterFalse(button);
             this.countOfError += 1;
             this.counterOutput.counterOutput(this.countOfError)
         };
       //  if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
         if (this.countOfError === 6) {
             this.imageOutput.lose();
-            this.modalWindow.popUpOpen();
+            this.modalWindow.popUpOpen(this.curetnQuest, this.curentAnswer, false);
             this._isGameStart = false;
         }//  alert('вы проиграли')
         if(this.countOutputsChar === this.curentAnswer.length) {
-            
             this.imageOutput.win()
-            this.modalWindow.popUpOpen();
+            this.modalWindow.popUpOpen(this.curetnQuest, this.curentAnswer, true);
             this._isGameStart = false;
         }
         
