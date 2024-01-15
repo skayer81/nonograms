@@ -1,0 +1,153 @@
+@import "./animation";
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .button {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        border: 1px solid dimgray;
+        border-radius: 10px;
+        transition: 1s;
+        background-color: deepskyblue;
+        color: dimgray;
+        // &:focus{
+        //     border-color: red;
+        // }
+        &:hover,
+        &:focus,
+        &.isLetterTrue,
+        &.isLetterFalse {
+            background-color: dimgray;
+            color: deepskyblue;
+        }
+        &:hover,
+        &.isLetterTrue,
+        &.isLetterFalse {
+            border-color: deepskyblue;
+        }
+        // &:active{
+        //     background-color: red;
+        //     color: deepskyblue;
+        //     border-color: deepskyblue;
+        // }
+        &.isLetterTrue {
+            position: relative;
+            pointer-events: none;
+            // &::after{
+            //     content: '';
+            //     position: absolute;
+            //     width: 2px;
+            //     height: 50px;
+            //     background-color: red;
+            // }
+            .span1,
+            .span2 {
+                display: block;
+                position: absolute;
+
+                width: 4px;
+                border-radius: 10px;
+            }
+            .span1 {
+                top: -5px;
+                right: 35px;
+                transform-origin: top;
+
+                height: 0px;
+
+                background-color: #00ff00;
+                rotate: -20deg;
+                // animation: letterIsOkSpan infinite alternate-reverse ease-in 1s;
+                // animation-name: letterIsOkSpan;
+                // animation-duration: 0.5s;
+                // animation-iteration-count:1;
+                // animation-direction: normal;
+                // animation-timing-function: linear;
+                // // animation-delay: 1s;
+                // animation-fill-mode:forwards
+                // animation: letterIsOkSpan 0.5s normal linear forwards;
+            }
+            .span2 {
+                top: -70px;
+                right: -8px;
+                height: 60px;
+                transform-origin: bottom;
+
+                // background-color: #00ff00;
+                rotate: 205deg;
+                // animation: letterIsOkSpan 0.5s normal linear forwards;
+                // animation-name: letterIsOkSpan;
+                // animation-duration: 0.5s;
+                // animation-iteration-count:1;
+                // animation-direction: normal;
+                // animation-timing-function: linear;
+                // // animation-delay: 1s;
+                // animation-fill-mode:forwards
+            }
+            .spanInside {
+                display: block;
+                width: 100%;
+                background-color: #00ff00;
+            }
+        }
+        &.isLetterFalse {
+            pointer-events: none;
+            position: relative;
+            .span1,
+            .span2 {
+                position: absolute;
+                display: block;
+                width: 4px;
+                border-radius: 10px;
+                transform-origin: top;
+
+                height: 0px;
+
+                background-color: #ff0000;
+            }
+            .span1 {
+                top: -3px;
+                right: 33px;
+
+                rotate: -40deg;
+                // animation: letterIsOkSpan infinite alternate-reverse ease-in 1s;
+                // animation-name: letterIsOkSpan;
+                // animation-duration: 0.5s;
+                // animation-iteration-count:1;
+                // animation-direction: normal;
+                // animation-timing-function: linear;
+                // // animation-delay: 1s;
+                // animation-fill-mode:forwards
+                // animation: letterIsOkSpan 0.5s normal linear forwards;
+            }
+            .span2 {
+                top: -3px;
+                right: 0px;
+                // height: 60px;
+                // transform-origin: bottom;
+
+                // background-color: #00ff00;
+                rotate: 40deg;
+                // animation: letterIsOkSpan 0.5s normal linear forwards;
+                // animation-name: letterIsOkSpan;
+                // animation-duration: 0.5s;
+                // animation-iteration-count:1;
+                // animation-direction: normal;
+                // animation-timing-function: linear;
+                // // animation-delay: 1s;
+                // animation-fill-mode:forwards
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        gap: 10px;
+    }
+}
