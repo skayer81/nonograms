@@ -6,13 +6,15 @@ import { ModalWindow } from "../modalWindow/modalWindow.js";
 import { QuestAnswer } from "../questAnswerModul/questAnswerModul.js";
 import { CounterOutput } from "../counterOutput/counterOutput.js";
 import { QuestOutput } from "../questOutput/questOutput.js";
+import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
-export class ApplicationManagement{
+export class ApplicationManagement extends CreateBaseComponent{
 
     ALPHABET = 'АБВГДЕЗЖИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
     constructor(){
         //добавить создание общего контейнера
+        super();
         this.imageOutput = new ImageOutput();
         this.wordOutput = new WordOutput();
         this.enteringLetters = new EnteringLetters(this.onKeyPress, this.ALPHABET);
@@ -23,16 +25,16 @@ export class ApplicationManagement{
         this.modalWindow = new ModalWindow(this.startNewGame);
         this.listofPushedLetters = [];
       //  console.log(this.keyboardHandler)
-        this.curentAnswer = '';
-        this.curetnQuesr = '';     
+        // this.curentAnswer = '';
+        // this.curetnQuest = '';     
        
 
    //     this.testWord = 'ГОЛОЛЕД';
         //добавить загрузку из json вопросов и ответов
-        this.countOfLife = 6;
-        this.countOutputsChar = 0;
+      //  this.countOfLife = 6;
+     //   this.countOutputsChar = 0;
         this.init();
-        this.startNewGame();
+       
     }
 
     // buttonIsPush = (letter) => {
@@ -40,20 +42,23 @@ export class ApplicationManagement{
     // }
 
     init(){
+        this._viewBuilder();
+        this.startNewGame();
        // this.wordOutput.init();
   //      this.enteringLetters.init(this.lettersPush);
     }
 
     startNewGame = () => {
-        this.countOfLife = 6;
+        this.countOfError = 0;
         this.countOutputsChar = 0;
         this.listofPushedLetters = [];
+        this._isGameStart = true;
        // console.log(this.wordOutput);
         this.questAnswer.newQA();
        this.curentAnswer = this.questAnswer.answer;
        this.curetnQuest = this.questAnswer.quest;
         this.wordOutput.startNewGame(this.curentAnswer.length);
-        this.counterOutput.startNewGame(this.countOfLife);
+        this.counterOutput.startNewGame(6);
         this.questOutput.startNewGame(this.curetnQuest)
         if (this.imageOutput.isInit) this.imageOutput.startNewGame()
         else this.imageOutput.isInit = true;
@@ -64,9 +69,21 @@ export class ApplicationManagement{
        // this.wordOutput.outputChar('D', 4)
     }
 
+    _viewBuilder(){
+        const appContainer = this.createBaseComponent(document.body, 'div', ['app-container']);
+        const appContainerTop = this.createBaseComponent(appContainer, 'div', ['app-container__top']);
+        const appContainerDown = this.createBaseComponent(appContainer, 'div', ['app-container__down']);
+        appContainerTop.append(this.imageOutput.container);
+        const appContainerTopRight = this.createBaseComponent(appContainerTop, 'div', ['app-container__top-rigth']);
+        appContainerTopRight.append(this.questOutput.container);
+        appContainerTopRight.append(this.counterOutput.container);
+        appContainerDown.append(this.wordOutput.container);
+        appContainerDown.append(this.enteringLetters.container);
+    }
+
     onKeyPress  = (letter) => {
         console.log('onKeyPress');
-        if (this.listofPushedLetters.includes(letter)) return;
+        if (this.listofPushedLetters.includes(letter) || !this._isGameStart) return;
         this.listofPushedLetters.push(letter);
         let isLetterNotFind = true;
       //  console.log(letter, this.curentAnswer );
@@ -84,19 +101,23 @@ export class ApplicationManagement{
         this.enteringLetters.changePushLetter(isLetterNotFind, letter)
 
         if (isLetterNotFind) {
-            this.imageOutput.outputPartOfImage(6 - this.countOfLife);
+            this.imageOutput.outputPartOfImage(this.countOfError);
             
           //  this.enteringLetters.isLetterFalse(button);
-            this.countOfLife -= 1;
-            this.counterOutput.counterOutput(this.countOfLife)
+            this.countOfError += 1;
+            this.counterOutput.counterOutput(this.countOfError)
         };
       //  if ( this.countOutputsChar === this.testWord.length) alert('вы выиграли')
-        if (!this.countOfLife) {
+        if (this.countOfError === 6) {
             this.imageOutput.lose();
             this.modalWindow.popUpOpen();
+            this._isGameStart = false;
         }//  alert('вы проиграли')
-        if(!this.countOfLife || this.countOutputsChar === this.curentAnswer.length) {
+        if(this.countOutputsChar === this.curentAnswer.length) {
+            
+            this.imageOutput.win()
             this.modalWindow.popUpOpen();
+            this._isGameStart = false;
         }
         
        // this.wordOutput.outputChar();

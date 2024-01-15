@@ -1,11 +1,11 @@
-@import './animation';
+@import "./animation";
 
-.buttonsContainer{
+.buttonsContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    .button{
+    .button {
         cursor: pointer;
         width: 40px;
         height: 40px;
@@ -21,12 +21,16 @@
         // &:focus{
         //     border-color: red;
         // }
-        &:hover, &:focus, &.isLetterTrue,  &.isLetterFalse{
+        &:hover,
+        &:focus,
+        &.isLetterTrue,
+        &.isLetterFalse {
             background-color: dimgray;
             color: deepskyblue;
-
         }
-        &:hover, &.isLetterTrue, &.isLetterFalse{
+        &:hover,
+        &.isLetterTrue,
+        &.isLetterFalse {
             border-color: deepskyblue;
         }
         // &:active{
@@ -34,7 +38,7 @@
         //     color: deepskyblue;
         //     border-color: deepskyblue;
         // }
-        &.isLetterTrue{
+        &.isLetterTrue {
             position: relative;
             pointer-events: none;
             // &::after{
@@ -44,16 +48,15 @@
             //     height: 50px;
             //     background-color: red;
             // }
-            .span1, .span2{
+            .span1,
+            .span2 {
                 display: block;
                 position: absolute;
-                
+
                 width: 4px;
                 border-radius: 10px;
-
             }
-            .span1{
-
+            .span1 {
                 top: -5px;
                 right: 35px;
                 transform-origin: top;
@@ -72,14 +75,13 @@
                 // animation-fill-mode:forwards
                 // animation: letterIsOkSpan 0.5s normal linear forwards;
             }
-            .span2{
+            .span2 {
                 top: -70px;
                 right: -8px;
                 height: 60px;
                 transform-origin: bottom;
 
-
-               // background-color: #00ff00;
+                // background-color: #00ff00;
                 rotate: 205deg;
                 // animation: letterIsOkSpan 0.5s normal linear forwards;
                 // animation-name: letterIsOkSpan;
@@ -90,16 +92,17 @@
                 // // animation-delay: 1s;
                 // animation-fill-mode:forwards
             }
-            .spanInside{
+            .spanInside {
                 display: block;
                 width: 100%;
                 background-color: #00ff00;
             }
         }
-        &.isLetterFalse{
+        &.isLetterFalse {
             pointer-events: none;
             position: relative;
-            .span1, .span2{
+            .span1,
+            .span2 {
                 position: absolute;
                 display: block;
                 width: 4px;
@@ -109,10 +112,8 @@
                 height: 0px;
 
                 background-color: #ff0000;
-
             }
-            .span1{
-
+            .span1 {
                 top: -3px;
                 right: 33px;
 
@@ -127,14 +128,13 @@
                 // animation-fill-mode:forwards
                 // animation: letterIsOkSpan 0.5s normal linear forwards;
             }
-            .span2{
+            .span2 {
                 top: -3px;
                 right: 0px;
-               // height: 60px;
-               // transform-origin: bottom;
+                // height: 60px;
+                // transform-origin: bottom;
 
-
-               // background-color: #00ff00;
+                // background-color: #00ff00;
                 rotate: 40deg;
                 // animation: letterIsOkSpan 0.5s normal linear forwards;
                 // animation-name: letterIsOkSpan;
@@ -145,9 +145,9 @@
                 // // animation-delay: 1s;
                 // animation-fill-mode:forwards
             }
-
         }
-        
-
     }
+    @media screen and (max-width: 600px) {
+        gap: 10px;
     }
+}

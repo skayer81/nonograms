@@ -9,7 +9,7 @@ export class EnteringLetters extends CreateBaseComponent{
         this.ALPHABET = ALPHABET;
         this.buttonList = {};
         this._spanList = []
-        this.container = this.createBaseComponent(document.body, 'div', ['buttonsContainer']);
+        this.container = this.createBaseComponent(0, 'div', ['buttonsContainer']);
         this.init(onKeyPress);
     }
 

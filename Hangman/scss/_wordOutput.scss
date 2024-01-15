@@ -26,4 +26,7 @@
         background-color: aqua;
         // transform: rotateY(-90deg);
     }
+    @media screen and (max-width: 600px) {
+gap: 5px;
+     }
  }

@@ -7,7 +7,7 @@ export class QuestOutput extends CreateBaseComponent{
     }
 
     init(){
-        this.container = this.createBaseComponent(document.body, 'div');
+        this.container = this.createBaseComponent(0, 'div', ['quest-output']);
        // this.createBaseComponent(this.container , 'div', [], 'Ваши жизни');
         this.curentQuest = this.createBaseComponent(this.container , 'span');
         // this.createBaseComponent(this.container , 'span', [], '/');

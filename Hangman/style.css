@@ -41,6 +41,11 @@
 .wordContainer .charIsOpen {
   background-color: aqua;
 }
+@media screen and (max-width: 600px) {
+  .wordContainer {
+    gap: 5px;
+  }
+}
 
 @keyframes letterIsOkSpan {
   from {
@@ -97,7 +102,8 @@
   position: relative;
   pointer-events: none;
 }
-.buttonsContainer .button.isLetterTrue .span1, .buttonsContainer .button.isLetterTrue .span2 {
+.buttonsContainer .button.isLetterTrue .span1,
+.buttonsContainer .button.isLetterTrue .span2 {
   display: block;
   position: absolute;
   width: 4px;
@@ -127,7 +133,8 @@
   pointer-events: none;
   position: relative;
 }
-.buttonsContainer .button.isLetterFalse .span1, .buttonsContainer .button.isLetterFalse .span2 {
+.buttonsContainer .button.isLetterFalse .span1,
+.buttonsContainer .button.isLetterFalse .span2 {
   position: absolute;
   display: block;
   width: 4px;
@@ -145,6 +152,11 @@
   top: -3px;
   right: 0px;
   rotate: 40deg;
+}
+@media screen and (max-width: 600px) {
+  .buttonsContainer {
+    gap: 10px;
+  }
 }
 
 .modalWindow {
@@ -180,6 +192,30 @@
   margin-top: auto;
 }
 
+@keyframes letterIsOkSpan {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 55px;
+  }
+}
+@keyframes openCharStep1 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+@keyframes openCharStep2 {
+  from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
 .counters-container {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -187,6 +223,7 @@
   font-size: 16px;
 }
 .counters-container .counter {
+  display: inline-block;
   width: 30px;
   height: 30px;
   background-color: bisque;
@@ -196,4 +233,38 @@
   width: 30px;
   height: 30px;
   font-size: 24px;
+}
+
+.quest-output {
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.app-container .app-container__top {
+  display: flex;
+}
+.app-container .app-container__top-rigth {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .app-container .app-container__top {
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.picture-container {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

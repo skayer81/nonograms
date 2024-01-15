@@ -10,7 +10,7 @@ export class WordOutput extends CreateBaseComponent{
     }
 
     init(){
-        this.container = this.createBaseComponent(document.body, 'div', ['wordContainer']);
+        this.container = this.createBaseComponent(0, 'div', ['wordContainer']);
       //  this.createBaseComponent(0,'div', [''], 'test')
     }
 

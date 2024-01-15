@@ -5,7 +5,7 @@ export class CreateBaseComponent{
      * @param {string} tag  - Тег: 'div'
      * @param {array} classes - массив классов (необязательный) ['class1', 'class2']
      * @param {string} innerHTML  - текст(необязательный)
-     * @returns 
+     * @returns
      */
     createBaseComponent(parent, tag, classes = [], innerHTML = '') {
         let result = document.createElement(tag);

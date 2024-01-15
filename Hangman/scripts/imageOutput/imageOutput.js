@@ -3,7 +3,7 @@ import { CreateFormComponent } from "../createComponent/createComponent.js";
 
 export class ImageOutput extends CreateFormComponent{
 
-    test = ['голова','туловище','левая рука','правая рука','правая нога','левая нога']
+   // test = ['голова','туловище','левая рука','правая рука','правая нога','левая нога']
 
     constructor(){
         super();
@@ -13,17 +13,18 @@ export class ImageOutput extends CreateFormComponent{
     }
 
     init(){
-        this._canvas = this.createFormComponent(document.body, 'canvas', ['pictureContainer'],{'width':'500','height':'500' });
+        this.container = this.createFormComponent(0, 'canvas', ['picture-container'],{'width':'500','height':'500' });
     //    this._canvas.style.width = "500px";
      //   this._canvas.style.height = "500px";
        // var canvas = document.getElementById("canvas");
-        this._context = this._canvas.getContext("2d");
+        this._context = this.container.getContext("2d");
         this._context.lineWidth = 10;
         this._context.strokeStyle = 'black';
               //let lineWidth = 10;
         //let lineColor = "black";
         //this.startNewGame();
-     //    this.draw0();
+      //   this.draw0();
+        // this.win();
        //  this.lose()
         // this.draw1();
         // this.draw2();
@@ -104,17 +105,11 @@ export class ImageOutput extends CreateFormComponent{
     // var yPos = 480;
     
      startNewGame(){
-      //    this._context.clearRect(0, 0, 500, 500);
-    
-        // let promise = new Promise((resolve, reject) => {
-        //     drawLine(20, 480, 480, 480);
-        //   });
-        //  if (this.isInit){
-         // console.log('новая игра')
-           this._context.lineWidth = 400;
+      this._context.lineWidth = 400;
            this._context.strokeStyle = 'white';
         
-           this.drawLine(300, 460, 300, 95); // будет ждать, пока промис не выполнится (*)
+           this.drawLine(300, 460, 300, 95);
+           this._hasHead = false;
         //  }
           //  this.drawLine(80, 480, 80, 40)// drawLine(40, 480, 40, 40);
     
@@ -142,48 +137,32 @@ export class ImageOutput extends CreateFormComponent{
     }
 
     drawCircle(xPosition, yPosition, radius,startAngle, endAngle){
-        //let startAngle = 0;
-        //const endAngle = 2 * Math.PI + 10;
-//         var canvas = document.getElementById("canvas");
-// var context = canvas.getContext("2d");
-// ctx.fillStyle = "rgba(255, 255, 255, 0)";
+//      this._context.strokeStyle = color;
+      let currentAngle = startAngle;
+      const animationDuration = 1000;
+      const framesPerSecond = 60;
+      const frameDuration = 1000 / framesPerSecond;
+      const frameIncrement = ((endAngle - startAngle) / animationDuration) * frameDuration;
 
-// var canvas = document.getElementById("myCanvas");
-// var ctx = canvas.getContext("2d");
-// var xPos = 20;
-// var yPos = 480;
-// var lineWidth = 10;
-// var lineColor = "black";
-        let currentAngle = startAngle;
-        const animationDuration = 1000; // Длительность анимации в миллисекундах
-        const framesPerSecond = 60;
-        const frameDuration = 1000 / framesPerSecond;
-        const frameIncrement = ((endAngle - startAngle) / animationDuration) * frameDuration;
-  
-        // Функция рисования круга
-        const draw = () => {
-       //   context.clearRect(0, 0, canvas.width, canvas.height);
-  
-       this._context.beginPath();
-       this._context.arc(xPosition, yPosition, radius, startAngle, currentAngle);
-       
-       //this._context.strokeStyle = 'black';
-       this._context.stroke();
-  
-          currentAngle += frameIncrement;
-  
-          if (currentAngle < endAngle) {
-            requestAnimationFrame(draw);
-          }
-         
+      const draw = () => {
+        this._context.beginPath();
+        this._context.arc(xPosition, yPosition, radius, startAngle, currentAngle);
+        this._context.stroke();
+        currentAngle += frameIncrement;
+        if (currentAngle < endAngle) {
+          requestAnimationFrame(draw);
         }
-        draw() 
       }
+ 
+      draw()
+    }
   
         // Запуск анимации
         draw0(){
+          this._hasHead = true;
            // this._context.lineWidth = 5;
         this.drawCircle(360, 150, 50, 0,  2 * Math.PI+0.1);
+       // this._context.strokeStyle = 'blue';
         this.drawCircle(360, 150, 35, 0, Math.PI)
         this.drawCircle(345, 130, 5, 0, Math.PI * 2); // Левый глаз
         //       ctx.moveTo(95, 65);
@@ -212,7 +191,8 @@ export class ImageOutput extends CreateFormComponent{
        
             this._context.beginPath();
              //  context.arc(xPosition, yPosition, radius, startAngle, currentAngle);
-             this._context.ellipse(x, y, r1, r2, 0, startAngle, currentAngle);
+             this._context.ellipse(x, y, r1, r2, rotation, startAngle, currentAngle);
+            // 360, 280, 50, 75, 0, 0, 2 * Math.PI + 1
            //  this._context.lineWidth = 5;
             // this._context.strokeStyle = 'black';
              this._context.stroke();
@@ -270,7 +250,11 @@ export class ImageOutput extends CreateFormComponent{
 
 
     win(){
-        
+      if (this._hasHead){
+      this._context.strokeStyle = 'red';
+      this.drawEllipse(360, 180, 10, 15, Math.PI, Math.PI, 2*Math.PI)
+    //    this._context.ellipse(x, y, r1, r2, 0, startAngle, currentAngle);
+  }
     }
 
     lose(){
