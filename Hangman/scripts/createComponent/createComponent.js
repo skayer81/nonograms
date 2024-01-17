@@ -23,10 +23,10 @@ export class CreateFormComponent extends CreateBaseComponent{
     /**
       * 
       * @param {object} parent Родитель или 0
-      * @param {string} tag 
-      * @param {array} classes 
+      * @param {string} tag
+      * @param {array} classes
       * @param {object} atributes обьект пар ключ:значение
-      * @returns 
+      * @returns
       */
     createFormComponent(parent, tag, classes, atributes, innerHTML){
         const result = this.createBaseComponent(parent, tag, classes, innerHTML);

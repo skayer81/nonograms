@@ -13,27 +13,19 @@ export class ModalWindow extends CreateFormComponent{
         this._appendModal();
     }
     
-    // set title(title){
-    //     this._title.innerHTML = title;
-    // }
-
-    // set description(description){
-    //     this._description.innerHTML = description;
-    // }
-
-    // set word(word){
-    //     this._word.innerText = word;
-    // }
-
     popUpOpen(quest, answer, isWin){
         this._title.innerText = this.WIN_LOSE[Number(isWin)];
         this._description.innerText = `${quest} это - `;
         this._word.innerText = answer;
         this._popUp.classList.add('active');
+        this._againButton.setAttribute('tabindex', 1);
+        this._againButton.disabled = false;
     }
 
     closePopup = () => {
+        this._againButton.setAttribute('tabindex', -1);
         this._popUp.classList.remove('active');
+        this._againButton.disabled = true;
     }
 
     _createPopup(startNewGame){
@@ -43,10 +35,10 @@ export class ModalWindow extends CreateFormComponent{
         this._word = this.createBaseComponent(popup,'div', ['word']);
         const buttonsContainer = this.createBaseComponent(popup,'div', ['buttons']);
      //   this._closeButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_CLOSE_TEXT);
-        this._againButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_PLAY_TEXT);
+        this._againButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button', disable: 'true'}, this.BUTTON_PLAY_TEXT);
+      //  this._againButton.setAttribute('disable');
         this._againButton.addEventListener('click', startNewGame);
         this._againButton.addEventListener('click', this.closePopup);
-     //   this._closeButton.addEventListener('click', this.closePopup);
         return popup;
     }
 
