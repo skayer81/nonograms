@@ -1,0 +1,15 @@
+.top-hints{
+    display: flex;
+  //  justify-content: right;
+    .column-hints{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        .top-hint{
+            text-align: center;
+            width: 20px;
+            height: 20px;
+
+        }
+    }
+}

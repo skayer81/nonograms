@@ -1,0 +1,72 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.field .field__row {
+  display: flex;
+}
+.field .cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+.field .cell.shaded {
+  background-color: black;
+}
+.field .cell.cross {
+  position: relative;
+}
+.field .cell.cross::after {
+  position: absolute;
+  content: "";
+  width: 130%;
+  height: 2px;
+  top: 0px;
+  left: 1px;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  background-color: red;
+}
+
+.left-hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.left-hints .row-hints {
+  display: flex;
+}
+.left-hints .row-hints .left-hint {
+  text-align: right;
+  padding-right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+}
+
+.top-hints {
+  display: flex;
+}
+.top-hints .column-hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.top-hints .column-hints .top-hint {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+.field-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.field-container .field__bottom {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

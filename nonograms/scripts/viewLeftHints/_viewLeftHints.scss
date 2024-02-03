@@ -1,0 +1,18 @@
+.left-hints{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    .row-hints{
+        display: flex;
+        .left-hint{
+            text-align: right;
+            padding-right: 5px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid red;
+        }
+    }
+
+
+}
