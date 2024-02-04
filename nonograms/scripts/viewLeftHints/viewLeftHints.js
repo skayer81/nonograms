@@ -7,6 +7,7 @@ export class ViewLeftHints extends CreateBaseComponent{
     }
 
     createHints(hints){
+        this.container.innerHTML = '';
         const arrayOfHints = hints.split('  ').map(element => element.split(' '))
        // console.log(arrayOfHints);
         arrayOfHints.forEach(element => {

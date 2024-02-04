@@ -9,6 +9,7 @@ export class ViewField extends CreateBaseComponent{
     }
 
     createField (fieldHeigth, fieldWidth){
+        this.container.innerHTML = '';
         this.matrix = [];
         for(let i = 0; i < fieldHeigth; i++){
             let widthContainer = this.createBaseComponent('div', ['field__row'], this.container);
@@ -43,6 +44,17 @@ export class ViewField extends CreateBaseComponent{
         }
        // if(isTrue){}
     }
+
+
+    showLoadMatrix(i, j, hasCross, hasShaded){
+        if (hasCross){
+            this.matrix[i][j].classList.add('cross')
+        }
+        if (hasShaded){
+            this.matrix[i][j].classList.add('shaded')
+        }
+    }
+
 
     cellClick(cell){
         cell.classList.remove('cross');

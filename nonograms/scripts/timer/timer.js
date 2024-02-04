@@ -37,6 +37,12 @@ export class Timer extends CreateBaseComponent{
         return this.currentTime;
     }
 
+    reStartTime(time){
+        this.stop();
+        this.start();
+        this.currentTime = Number(time);
+    }
+
     timeOutput(){
         const min =  String(Math.trunc(this.currentTime / 60)).padStart(2, '0');
         const sec = String(this.currentTime % 60).padStart(2, '0');

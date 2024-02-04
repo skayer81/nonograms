@@ -22,18 +22,21 @@ export class Application extends CreateBaseComponent{
         this.viewField = new ViewField(this.onCellPress);
         this.viewLeftHints = new ViewLeftHints();
         this.viewTopHints = new ViewTopHints();
-        this.buttonBlock = new ViewButtons(this.showSolution);
+        this.buttonBlock = new ViewButtons(this.showSolution, this.getData, this.setData, this.restartGame);
         this.timer = new Timer();
         
         this._viewBuilder();
         console.log('start');
-        this.newNonogram();
+        this.newNonogramInit();
     }
     
+    newNonogramInit(){
+        this.currentNonogram = this.nonograms.getRandomEasy();
+        this.newNonogram();
+    }
 
     newNonogram(){
-
-        this.currentNonogram = this.nonograms.getRandomEasy();
+       // this.currentNonogram = this.nonograms.getRandomEasy();
         this.viewField.createField(this.currentNonogram.heigth, this.currentNonogram.width);
         this.viewLeftHints.createHints(this.currentNonogram.left);
         this.viewTopHints.createHints(this.currentNonogram.top);
@@ -90,6 +93,49 @@ export class Application extends CreateBaseComponent{
             }
         }
     }
+
+    getData = () => {
+        return {
+            matrix: this.currentNonogramMatrix,
+            nonorgam: this.currentNonogram,
+            // with: this.currentNonogram.width,
+            // heigth: this.currentNonogram.heigth,
+            falseCellCount: this.falseCellCount,
+            trueCellCount: this.trueCellCount,
+            time: this.timer.getTime()
+        }
+    }
+
+    setData = (data) => {
+        this.currentNonogram = data.nonorgam;
+        this.newNonogram();
+        this.currentNonogramMatrix = data.matrix;
+        this.falseCellCount = data.falseCellCount;
+        this.trueCellCount = data.trueCellCount;
+        this.timer.start();
+        this.timer.reStartTime(data.time);
+        this.showLoadMatrix();
+    }
+
+    showLoadMatrix(){
+        for (let i = 0; i < this.currentNonogramMatrix.length; i++){
+            for (let j = 0; j < this.currentNonogramMatrix[i].length; j ++){
+                this.viewField.showLoadMatrix(i, j, this.currentNonogramMatrix[i][j].hasCross, this.currentNonogramMatrix[i][j].hasShaded);
+            }
+        }
+    }
+
+    restartGame = () => {
+        this.newNonogram()
+    }
+
+    // clearMatrix(){
+    //     for (let i = 0; i < this.currentNonogramMatrix.length; i++){
+    //         for (let j = 0; j < this.currentNonogramMatrix[i].length; j ++){
+    //             this.viewField.clearMatrix(i, j)//, this.currentNonogramMatrix[i][j].hasCross, this.currentNonogramMatrix[i][j].hasShaded);
+    //         }
+    //     }
+    // }
 
     _viewBuilder(){
         const appFieldContainer = this.createBaseComponent('div', ['field-container'], document.body)

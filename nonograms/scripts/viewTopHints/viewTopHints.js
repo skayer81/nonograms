@@ -7,6 +7,7 @@ export class ViewTopHints extends CreateBaseComponent{
     }
 
     createHints(hints){
+        this.container.innerHTML = '';
         const arrayOfHints = hints.split('  ').map(element => element.split(' '))
         arrayOfHints.forEach(element => {
             let columnOfHints = this.createBaseComponent('div', ['column-hints'], this.container)
