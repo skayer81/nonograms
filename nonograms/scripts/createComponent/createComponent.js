@@ -16,7 +16,7 @@ export class CreateBaseComponent{
     }
 }
 
-export class CreateFormComponent extends CreateBaseComponent{
+export class CreateButton extends CreateBaseComponent{
     constructor(){
         super()
     }
@@ -28,11 +28,12 @@ export class CreateFormComponent extends CreateBaseComponent{
       * @param {object} atributes обьект пар ключ:значение
       * @returns 
       */
-    createFormComponent(tag, classes, atributes, innerHTML, parent){
-        const result = this.createBaseComponent(tag, classes, parent, innerHTML);
+    createButton(classes = [], atributes, innerHTML, callback, parent){
+        const result = this.createBaseComponent('button', classes, parent, innerHTML);
         for (let key in atributes){
             result.setAttribute(key, atributes[key]);
         }
+        result.addEventListener('click', callback);
         return result;
     }
 }

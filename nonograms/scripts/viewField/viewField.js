@@ -1,26 +1,24 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
 export class ViewField extends CreateBaseComponent{
-    constructor(fieldWidth, fieldHeigth, callback){
+    constructor(callback){
         super();
         this.callback = callback;
-        this.fieldWidth = fieldWidth;
-        this.fieldHeigth = fieldHeigth;
         this.container = this.createBaseComponent('div', ['field'])
+        this.matrix = [];
     }
 
     createField (fieldHeigth, fieldWidth){
-      //  alert(`поле ${fieldHeigth}-${fieldWidth}`)
+        this.matrix = [];
         for(let i = 0; i < fieldHeigth; i++){
-     //       alert(i)
-            let widthContainer = this.createBaseComponent('div', ['field__row'], this.container)
+            let widthContainer = this.createBaseComponent('div', ['field__row'], this.container);
+            this.matrix.push([])
             for(let j = 0; j < fieldWidth; j++){
-                const cell = this.createBaseComponent('div', ['cell'], widthContainer)
-                //cell.innerText = `${j}`
+                const cell = this.createBaseComponent('div', ['cell'], widthContainer);
+                this.matrix[i].push(cell);
                  cell.addEventListener('click', () => {
                      this.cellClick(cell);
                      this.callback(i, j, true);
-                //     this.callback(i, j);
                  })   
                  cell.addEventListener('contextmenu', (event) => {
                      event.preventDefault();
@@ -28,7 +26,21 @@ export class ViewField extends CreateBaseComponent{
                      this.cellRigthClick(cell);
                  })
             }
+        }        
+    }
+
+    showSolution(i, j, isTrue){
+      //  console.log('матрица', this.matrix)
+        const cell = this.matrix[i][j];
+      //  console.log(cell)
+        cell.classList.remove('cross');
+        if (isTrue){
+            cell.classList.add('shaded');
         }
+        else{
+            cell.classList.remove('shaded');
+        }
+       // if(isTrue){}
     }
 
     cellClick(cell){
