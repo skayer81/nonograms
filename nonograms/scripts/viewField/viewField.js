@@ -22,8 +22,9 @@ export class ViewField extends CreateBaseComponent{
                  })   
                  cell.addEventListener('contextmenu', (event) => {
                      event.preventDefault();
-                     this.callback(i, j, false);
                      this.cellRigthClick(cell);
+                     this.callback(i, j, false);
+                     
                  })
             }
         }        

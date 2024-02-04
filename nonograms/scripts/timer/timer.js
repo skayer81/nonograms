@@ -8,6 +8,7 @@ export class Timer extends CreateBaseComponent{
         super();
         this.container = this.createBaseComponent('div', ['timer-container'], document.body);//////////1
         this.init();
+        this.isTimerStart = false;
     }
 
     init(){
@@ -17,15 +18,19 @@ export class Timer extends CreateBaseComponent{
     }
 
     start(){
-        this.currentTime = 0; /////////////// 4
-        this.timer = setInterval(() => { ////////////   5
-            this.timeOutput();
-            this.currentTime++;
-        }, 1000);
+        if (!this.isTimerStart){
+            this.currentTime = 0; /////////////// 4
+            this.isTimerStart = true;
+            this.timer = setInterval(() => { ////////////   5
+                this.timeOutput();
+                this.currentTime++;
+            }, 1000);
+        }
     }
 
     stop(){
-        clearInterval(this.timer);        
+        clearInterval(this.timer);   
+        this.isTimerStart = false;     
     }
 
     getTime(){
@@ -35,7 +40,7 @@ export class Timer extends CreateBaseComponent{
     timeOutput(){
         const min =  String(Math.trunc(this.currentTime / 60)).padStart(2, '0');
         const sec = String(this.currentTime % 60).padStart(2, '0');
-        console.log(min, sec)
+     //   console.log(min, sec)
         this.min.innerText = min;
         this.sec.innerText = sec;
     }

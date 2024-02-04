@@ -11,7 +11,9 @@ export class Nonograms{
     }
 
     getRandomEasy(){
-        const easyNonograms = this.nonograms.filter
+        const easyNonograms = this.nonograms.filter(elem => elem.heigth === 5);
+
+        return easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))]; 
 
     }
 

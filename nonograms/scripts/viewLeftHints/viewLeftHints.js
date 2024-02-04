@@ -8,7 +8,7 @@ export class ViewLeftHints extends CreateBaseComponent{
 
     createHints(hints){
         const arrayOfHints = hints.split('  ').map(element => element.split(' '))
-        console.log(arrayOfHints);
+       // console.log(arrayOfHints);
         arrayOfHints.forEach(element => {
             let columnOfHints = this.createBaseComponent('div', ['row-hints'], this.container)
             element.forEach(item => {

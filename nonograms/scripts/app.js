@@ -4,6 +4,7 @@ import { ViewLeftHints } from "./viewLeftHints/viewLeftHints.js";
 import { ViewTopHints } from "./viewTopHints/viewTopHints.js";
 import { ViewButtons } from "./viewButtonsBlock/viewButtonsBlock.js";
 import { Timer } from "./timer/timer.js";
+import { Nonograms } from "./nonograms/nonograms.js";
 
 export class Application extends CreateBaseComponent{
 
@@ -17,15 +18,13 @@ export class Application extends CreateBaseComponent{
 
     constructor(){
         super();
+        this.nonograms = new Nonograms();
         this.viewField = new ViewField(this.onCellPress);
         this.viewLeftHints = new ViewLeftHints();
         this.viewTopHints = new ViewTopHints();
         this.buttonBlock = new ViewButtons(this.showSolution);
         this.timer = new Timer();
         
-        this.viewField.createField(5,5);
-        this.viewLeftHints.createHints(this.left);
-        this.viewTopHints.createHints(this.top);
         this._viewBuilder();
         console.log('start');
         this.newNonogram();
@@ -33,41 +32,61 @@ export class Application extends CreateBaseComponent{
     
 
     newNonogram(){
-        this.trueCellCount = this.test1.split('').reduce((acc, item) => item == 1 ? acc+1 : acc ,0);
+
+        this.currentNonogram = this.nonograms.getRandomEasy();
+        this.viewField.createField(this.currentNonogram.heigth, this.currentNonogram.width);
+        this.viewLeftHints.createHints(this.currentNonogram.left);
+        this.viewTopHints.createHints(this.currentNonogram.top);
+
+        this.trueCellCount = this.currentNonogram.solution.split('').reduce((acc, item) => item == 1 ? acc+1 : acc ,0);
         this.falseCellCount = 0;
-        this.nonogram = this.test1.split(' ').map(item =>  item = item.split('').map(item2 => item2 = {isTrue: Boolean(Number(item2)), hasCross: false, hasShaded : false}))// map(element => element))
+        this.currentNonogramMatrix = this.currentNonogram.solution.split(' ').map(item =>  item = item.split('').map(item2 => item2 = {isTrue: Boolean(Number(item2)), hasCross: false, hasShaded : false}))// map(element => element))
        // console.log('matrix', this.nonogram);
 
     }
 
     onCellPress = (i, j, left) => {
-        console.log('nonogram', i, j, left);
-        console.log(this.trueCellCount, this.falseCellCount)
+  //      console.log('nonogram', i, j, left);
+        console.log('до', this.trueCellCount, this.falseCellCount);
+        this.timer.start();
         if (!left){
-            this.nonogram[i][j].hasCross = !this.nonogram[i][j].hasCross; 
-            this.timer.start();
+            if (this.currentNonogramMatrix[i][j].isTrue && this.currentNonogramMatrix[i][j].hasShaded) {this.trueCellCount += 1}
+            if (!this.currentNonogramMatrix[i][j].isTrue && this.currentNonogramMatrix[i][j].hasShaded) {this.falseCellCount -= 1}
+
+            this.currentNonogramMatrix[i][j].hasCross = !this.currentNonogramMatrix[i][j].hasCross; 
+            this.currentNonogramMatrix[i][j].hasShaded = false;
+            //  this.timer.start();
             return;
         }
-        this.timer.stop();
-        this.nonogram[i][j].hasShaded = !this.nonogram[i][j].hasShaded;
-        if (this.nonogram[i][j].isTrue) {
-            if (this.nonogram[i][j].hasShaded) this.trueCellCount -= 1;
-            else this.trueCellCount += 1;
+        
+      //  this.timer.stop();
+        this.currentNonogramMatrix[i][j].hasCross = false
+        this.currentNonogramMatrix[i][j].hasShaded = !this.currentNonogramMatrix[i][j].hasShaded;
+        if (this.currentNonogramMatrix[i][j].isTrue) {
+            if (this.currentNonogramMatrix[i][j].hasShaded) {this.trueCellCount -= 1} 
+            else {this.trueCellCount += 1};
         }
         else{
-            if (this.nonogram[i][j].hasShaded) this.falseCellCount += 1;
-            else this.falseCellCount -= 1;
+            if (this.currentNonogramMatrix[i][j].hasShaded) {this.falseCellCount += 1}
+            else {this.falseCellCount -= 1};
         }
-        console.log(this.trueCellCount, this.falseCellCount)
-        if (this.trueCellCount === 0 && this.falseCellCount === 0) alert('победа');
-
+     //   console.log(this.trueCellCount, this.falseCellCount)
+        if (this.trueCellCount === 0 && this.falseCellCount === 0) {
+            
+            this.timer.stop();
+            setTimeout(() => {
+                alert(`победа за ${this.timer.getTime()} сек`);
+            }, 0)
+            
+        }
+        console.log('после', this.trueCellCount, this.falseCellCount)
        // this.nonogram()
     }
 
     showSolution = () => {
-        for (let i = 0; i < this.nonogram.length; i++){
-            for (let j = 0; j < this.nonogram[i].length; j ++){
-                this.viewField.showSolution(i, j, this.nonogram[i][j].isTrue);
+        for (let i = 0; i < this.currentNonogramMatrix.length; i++){
+            for (let j = 0; j < this.currentNonogramMatrix[i].length; j ++){
+                this.viewField.showSolution(i, j, this.currentNonogramMatrix[i][j].isTrue);
             }
         }
     }
