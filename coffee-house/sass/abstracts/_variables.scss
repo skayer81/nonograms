@@ -1,0 +1,48 @@
+$textDark: #403F3D;
+$textLight: #E1D4C9;
+$textAccent: #B0907A;
+
+$backgroundBody: #E1D4C9;
+$backgroundContainer: #665F55;
+$backgroundBackdrop: #403F3DCC;
+
+$borderLight: #C1B6AD;
+$borderDark: #665F55;
+
+@mixin textStyle($size, $height, $weight: 600){
+    font-family: 'Inter', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+%flex-element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%container{
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+    @media (max-width: 760px) {
+        padding:  0 16px;
+    }
+}
+
+%border{
+    border: 1px solid red;
+}
+@mixin tr($time:1s){
+    transition: $time;
+}
+
+@mixin titleAdaptive(){
+    @media (max-width: 750px) {
+        @include textStyle(42px, 60px);
+    }
+    @media (max-width: 500px) {
+        @include textStyle(32px, 40px);
+}
+}
