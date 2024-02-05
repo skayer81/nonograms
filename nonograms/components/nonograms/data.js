@@ -9,6 +9,24 @@ export const nonograms = [
         left: '2  2 1  4  1 1  1 1' 
     },
     {
+        id: '100',
+        name:'test',       
+        width:5,
+        heigth: 5,
+        solution: '10000 00000 00000 00000 00000',
+        top: '4  2  3  3  1',
+        left: '2  2 1  4  1 1  1 1' 
+    },
+    {
+        id: '101',
+        name:'test2',       
+        width:5,
+        heigth: 5,
+        solution: '10000 00000 00000 00000 00000',
+        top: '4  2  3  3  1',
+        left: '2  2 1  4  1 1  1 1' 
+    },
+    {
         id: '2',
         name:'коляска',
         width:5,
@@ -28,12 +46,12 @@ export const nonograms = [
     },
     {
         id: '4',
-        name:'динозавр',
+        name:'Часы',
         width:5,
         heigth: 5,
-        solution: '00011 00010 01110 01110 11010',
-        top: '1  3  2  5  1',
-        left: '2  1  3  3  2 1' 
+        solution: '01110 10101 10111 10001 01110',
+        top: '3  1 1  3 1  1 1 1  3',
+        left: '3  1 1 1  1 3  1 1  3' 
     },
     {
         id: '5',

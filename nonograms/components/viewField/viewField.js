@@ -15,9 +15,15 @@ export class ViewField extends CreateBaseComponent{
         this.matrix = [];
         for(let i = 0; i < fieldHeigth; i++){
             let widthContainer = this.createBaseComponent('div', ['field__row'], this.container);
+            if (i % 5 === 0){
+                widthContainer.classList.add('border__row')
+            }
             this.matrix.push([])
             for(let j = 0; j < fieldWidth; j++){
                 const cell = this.createBaseComponent('div', ['cell'], widthContainer);
+                if ( j % 5 === 0){
+                    cell.classList.add('border__column')
+                }
                 this.matrix[i].push(cell);
                  cell.addEventListener('click', () => {
                      this.cellClick(cell);

@@ -1,4 +1,5 @@
-@import './scripts/viewField/viewField.scss';
-@import './scripts/viewLeftHints/viewLeftHints';
-@import './scripts/viewTopHints/viewTopHints';
-@import './scripts/viewGameField/viewGameField';
+@import './components/_mainstyle';
+@import './components/viewField/viewField.scss';
+@import './components/viewLeftHints/viewLeftHints';
+@import './components/viewTopHints/viewTopHints';
+@import './components/viewGameField/viewGameField';

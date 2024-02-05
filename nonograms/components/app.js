@@ -6,6 +6,8 @@ import { ViewButtons } from "./viewButtonsBlock/viewButtonsBlock.js";
 import { Timer } from "./timer/timer.js";
 import { Nonograms } from "./nonograms/nonograms.js";
 import { SelectLevel } from "./selectLevel/selectLevel.js";
+import { ModalWindows } from "./modalWindows/modalWindows.js";
+import { Records } from "./records/records.js";
 
 export class Application extends CreateBaseComponent{
 
@@ -29,23 +31,30 @@ export class Application extends CreateBaseComponent{
         this.viewField = new ViewField(this.onCellPress);
         this.viewLeftHints = new ViewLeftHints();
         this.viewTopHints = new ViewTopHints();
-        this.selectLevel = new SelectLevel(this.nonograms.getList(), this.newNonogramInit);
-        this.buttonBlock = new ViewButtons(this.showSolution, this.getData, this.setData, this.restartGame);
+        this.selectLevel = new SelectLevel(this.nonograms.getList(), this.selectLevel);
+        this.buttonBlock = new ViewButtons(this.showSolution, this.getData, this.setData, this.restartGame, this.randomGame, this.showRecords);
+        this.modalWindow = new ModalWindows();
+        this.records = new Records()
         this.timer = new Timer();
         
         this._viewBuilder();
-        console.log('start');
-        this.newNonogramInit();
+       // console.log('start');
+        this.startNonogramInit();
     }
     
-    newNonogramInit = (id = null) => {
-        if (id) {
-            this.currentNonogram = this.nonograms.getNonogramsById(id)
-        }
-        else {
+    startNonogramInit = () => {
+        // if (id) {
+        //     this.currentNonogram = this.nonograms.getNonogramsById(id)
+        // }
+        // else {
             this.currentNonogram = this.nonograms.getRandomEasy();
-        }
-        console.log(this.currentNonogram)
+   //     }
+   //     console.log(this.currentNonogram)
+        this.newNonogram();
+    }
+
+    selectLevel = (id) => {
+        this.currentNonogram = this.nonograms.getNonogramsById(id);
         this.newNonogram();
     }
 
@@ -64,7 +73,9 @@ export class Application extends CreateBaseComponent{
     }
 
     playSound(cell, left){
+       // this.SOUNDS.lclick.play()
         if (left && !cell.hasShaded){
+          //  this.SOUNDS.lclick.volume = 100;
             this.SOUNDS.lclick.play()
             return
         }
@@ -80,7 +91,7 @@ export class Application extends CreateBaseComponent{
   //      console.log('nonogram', i, j, left);
   let curentCell = this.currentNonogramMatrix[i][j];
 
-        console.log('до', this.trueCellCount, this.falseCellCount, curentCell);
+      //  console.log('до', this.trueCellCount, this.falseCellCount, curentCell);
         
       //  let curentCell = this.currentNonogramMatrix[i][j];
         this.playSound(curentCell, left);
@@ -110,12 +121,17 @@ export class Application extends CreateBaseComponent{
         if (this.trueCellCount === 0 && this.falseCellCount === 0) {
             
             this.timer.stop();
-            setTimeout(() => {
-                alert(`победа за ${this.timer.getTime()} сек`);
-            }, 0)
+        //    setTimeout(() => {
+                this.modalWindow.showWinWindow(this.timer.getTime());
+                this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
+
+                this.SOUNDS.win.play();
+
+                //alert(`победа за ${this.timer.getTime()} сек`);
+          //  }, 0)
             
         }
-        console.log('после', this.trueCellCount, this.falseCellCount, curentCell)
+      //  console.log('после', this.trueCellCount, this.falseCellCount, curentCell)
        // this.nonogram()
     }
 
@@ -162,6 +178,14 @@ export class Application extends CreateBaseComponent{
         this.newNonogram()
     }
 
+    randomGame = () => {
+        this.currentNonogram = this.nonograms.getRandom();
+        this.newNonogram();
+    }
+
+    showRecords = () => {
+        this.modalWindow.showRecordsWindow(this.records.getRecords())
+    }
     // clearMatrix(){
     //     for (let i = 0; i < this.currentNonogramMatrix.length; i++){
     //         for (let j = 0; j < this.currentNonogramMatrix[i].length; j ++){
