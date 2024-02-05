@@ -1,9 +1,10 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
 export class ViewField extends CreateBaseComponent{
-    constructor(callback){
+    constructor(callback, isGameEnd){
         super();
         this.callback = callback;
+        this.isGameEnd = isGameEnd;
         this.container = this.createBaseComponent('div', ['field'])
         this.matrix = [];
     }
@@ -64,12 +65,18 @@ export class ViewField extends CreateBaseComponent{
     }
 
 
-    cellClick(cell){
+    cellClick = (cell) =>{
+        if (this.isGameEnd()){
+            return
+        }
         cell.classList.remove('cross');
         cell.classList.toggle('shaded');
     }
 
-    cellRigthClick(cell){
+    cellRigthClick = (cell) => {
+        if (this.isGameEnd()){
+            return
+        }
         cell.classList.remove('shaded');
         cell.classList.toggle('cross')
     }

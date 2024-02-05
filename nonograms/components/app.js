@@ -28,7 +28,7 @@ export class Application extends CreateBaseComponent{
     constructor(){
         super();
         this.nonograms = new Nonograms();
-        this.viewField = new ViewField(this.onCellPress);
+        this.viewField = new ViewField(this.onCellPress, this.getGameStatus);
         this.viewLeftHints = new ViewLeftHints();
         this.viewTopHints = new ViewTopHints();
         this.selectLevel = new SelectLevel(this.nonograms.getList(), this.selectLevel);
@@ -36,6 +36,9 @@ export class Application extends CreateBaseComponent{
         this.modalWindow = new ModalWindows();
         this.records = new Records()
         this.timer = new Timer();
+
+        this.isGameStart = false;
+        this.isGameEnd   = false;
         
         this._viewBuilder();
        // console.log('start');
@@ -69,7 +72,9 @@ export class Application extends CreateBaseComponent{
         this.falseCellCount = 0;
         this.currentNonogramMatrix = this.currentNonogram.solution.split(' ').map(item =>  item = item.split('').map(item2 => item2 = {isTrue: Boolean(Number(item2)), hasCross: false, hasShaded : false}))// map(element => element))
        // console.log('matrix', this.nonogram);
-
+        this.isGameEnd = false;
+        this.isGameStart = false;
+        this.timer.setTime();
     }
 
     playSound(cell, left){
@@ -88,14 +93,25 @@ export class Application extends CreateBaseComponent{
     }
 
     onCellPress = (i, j, left) => {
+        if (this.isGameEnd) {
+            return;
+        }
+        console.log(this.isGameEnd);
+
+        if (!this.isGameStart){
+            this.isGameStart = true;
+            this.timer.start();
+        }
+
+
   //      console.log('nonogram', i, j, left);
-  let curentCell = this.currentNonogramMatrix[i][j];
+       let curentCell = this.currentNonogramMatrix[i][j];
 
       //  console.log('до', this.trueCellCount, this.falseCellCount, curentCell);
         
       //  let curentCell = this.currentNonogramMatrix[i][j];
         this.playSound(curentCell, left);
-        this.timer.start();
+
         if (!left){
             if (curentCell.isTrue && curentCell.hasShaded) {this.trueCellCount += 1}
             if (!curentCell.isTrue && curentCell.hasShaded) {this.falseCellCount -= 1}
@@ -126,6 +142,7 @@ export class Application extends CreateBaseComponent{
                 this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
 
                 this.SOUNDS.win.play();
+                this.isGameEnd = true;
 
                 //alert(`победа за ${this.timer.getTime()} сек`);
           //  }, 0)
@@ -141,6 +158,8 @@ export class Application extends CreateBaseComponent{
                 this.viewField.showSolution(i, j, this.currentNonogramMatrix[i][j].isTrue);
             }
         }
+        this.isGameEnd = true;
+        this.timer.stop();
     }
 
     getData = () => {
@@ -161,8 +180,10 @@ export class Application extends CreateBaseComponent{
         this.currentNonogramMatrix = data.matrix;
         this.falseCellCount = data.falseCellCount;
         this.trueCellCount = data.trueCellCount;
+      //  this.timer.  start();
+        this.timer.setTime(data.time);
         this.timer.start();
-        this.timer.reStartTime(data.time);
+        this.isGameStart = true;
         this.showLoadMatrix();
     }
 
@@ -193,6 +214,10 @@ export class Application extends CreateBaseComponent{
     //         }
     //     }
     // }
+
+    getGameStatus =() =>{
+        return this.isGameEnd;
+    }
 
     _viewBuilder(){
         const appFieldContainer = this.createBaseComponent('div', ['field-container'], document.body)

@@ -18,14 +18,15 @@ export class Timer extends CreateBaseComponent{
     }
 
     start(){
-        if (!this.isTimerStart){
-            this.currentTime = 0; /////////////// 4
-            this.isTimerStart = true;
+      //  if (!this.isTimerStart){
+        //    this.currentTime = 0; /////////////// 4
+          //  this.isTimerStart = true;
             this.timer = setInterval(() => { ////////////   5
-                this.timeOutput();
+                
                 this.currentTime++;
+                this.timeOutput();
             }, 1000);
-        }
+        //}
     }
 
     stop(){
@@ -37,10 +38,12 @@ export class Timer extends CreateBaseComponent{
         return this.currentTime;
     }
 
-    reStartTime(time){
+    setTime(time = 0){
         this.stop();
-        this.start();
         this.currentTime = Number(time);
+        this.timeOutput();
+      //  this.start();
+        
     }
 
     timeOutput(){
