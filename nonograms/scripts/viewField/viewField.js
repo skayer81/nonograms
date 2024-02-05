@@ -8,6 +8,8 @@ export class ViewField extends CreateBaseComponent{
         this.matrix = [];
     }
 
+
+
     createField (fieldHeigth, fieldWidth){
         this.container.innerHTML = '';
         this.matrix = [];
