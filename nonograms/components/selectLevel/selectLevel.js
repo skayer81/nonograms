@@ -6,6 +6,7 @@ export class SelectLevel extends CreateBaseComponent{
         this.levels = levels;
         this.callback = callback;
         this.container = this.createBaseComponent('div', ['levels'], document.body)
+        this.titles = []
         this.createView();
     }
 
@@ -18,12 +19,17 @@ export class SelectLevel extends CreateBaseComponent{
             select.setAttribute('name', level);
            // select.disabled = true// setAttribute('name', level);
 
-            select.addEventListener('change', () => {
+            select.addEventListener('change', (event) => {
                 //console.log(select.value)
+                // for (let i = 0; i < this.titles.length; i++){
+                //     this.titles[i].select = true;
+                // }
                 this.callback(select.value);
 
             })
-            this.createBaseComponent('option', ['levels__option'], select, level);
+            let firstElem =  this.createBaseComponent('option', ['levels__option'], select, level);
+            this.titles.push(firstElem);
+            firstElem.disabled = true;
             for (let j = 0; j < this.levels[level].length; j++){
                 let options = this.createBaseComponent('option', ['levels__option'], select, this.levels[level][j].name);
                 options.setAttribute('value', this.levels[level][j].id)

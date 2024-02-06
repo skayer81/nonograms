@@ -1,4 +1,4 @@
-@import  './../mainstyle';
+@import  './../variables';
 
 .field{
     display: flex;
@@ -8,20 +8,20 @@
     .field__row{
         display: flex;
         &.border__row{
-            border-top: 1px solid $cellBorder;
+            border-top: 1px solid $border;
         }
     }
     .cell{
         width: 20px;
         height: 20px;
-        border-bottom: 1px solid $cellBorder;
-        border-right: 1px solid $cellBorder;        
+        border-bottom: 1px solid $border;
+        border-right: 1px solid $border;        
 
         &.border__column{
-            border-left: 1px solid $cellBorder;
+            border-left: 1px solid $border;
         }
         &.shaded{
-            background-color: $cellColor;
+            background-color: $main;
         }
         &.cross{
             position: relative;
@@ -34,7 +34,7 @@
                 left: 1px;
                 transform-origin: 0 0;
                 transform: rotate(45deg);
-                background-color: $cellColor;
+                background-color: $main;
             }
         }
     }

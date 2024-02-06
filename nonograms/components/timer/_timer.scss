@@ -1,0 +1,8 @@
+@import  './../variables';
+
+.timer-container{
+    display: flex;
+    justify-content: center;
+    color: $main;
+    font-size: 32px;
+}

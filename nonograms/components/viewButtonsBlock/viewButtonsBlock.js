@@ -9,12 +9,14 @@ export class ViewButtons extends CreateButton{
         this.setData = setData;
         this.getData = getData;
         this.container = this.createBaseComponent('div', ['buttons-container'], document.body);
+
+        this.randomGame = this.createButton(['button'], {type: 'button'}, 'Случайная игра', randomGame, this.container);
+        this.restartBtn = this.createButton(['button'], {type: 'button'}, 'Перезапустить игру', restart, this.container);       
         this.showsolutionBtn = this.createButton(['button'], {type: 'button'}, 'Показать решение', showSolution, this.container);
         this.saveGameBtn = this.createButton(['button'], {type: 'button'}, 'Сохранить игру', this.saveGame, this.container);
         this.loadGameBtn = this.createButton(['button'], {type: 'button'}, 'Загрузить игру', this.loadGame, this.container);
-        this.restartBtn = this.createButton(['button'], {type: 'button'}, 'Перезапустить игру', restart, this.container);
         this.showRecordsBtn = this.createButton(['button'], {type: 'button'}, 'Показать рекорды', showRecords, this.container);
-        this.randomGame = this.createButton(['button'], {type: 'button'}, 'Случайная игра', randomGame, this.container);
+    
     }
 
     saveGame = () =>{

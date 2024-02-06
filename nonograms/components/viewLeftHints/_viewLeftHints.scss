@@ -1,4 +1,4 @@
-@import  './../mainstyle';
+@import  './../variables';
 
 .left-hints{
     display: flex;
@@ -7,17 +7,17 @@
     align-items: flex-end;
     .row-hints{
         display: flex;
-        border-top: 1px solid $cellBorder;
+        border-top: 1px solid $border;
         &.left-hint__border{
-            border-bottom: 1px solid $cellBorder;
+            border-bottom: 1px solid $border;
         }
         .left-hint{
             text-align: center;
             //padding-right: 5px;
             width: 20px;
             height: 20px;
-            border-right: 1px solid $cellBorder;
-            background-color: $cellNumberBackgraund;
+            border-right: 1px solid $border;
+            background-color: $background;
         }
     }
 

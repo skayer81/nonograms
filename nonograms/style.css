@@ -2,8 +2,17 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  box-sizing: border-box;
+.button {
+  margin: 0;
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  height: 30px;
+  width: 150px;
+}
+.button:hover {
+  background-color: #dadada;
 }
 
 .field {
@@ -45,10 +54,6 @@ body {
   background-color: #000000;
 }
 
-body {
-  box-sizing: border-box;
-}
-
 .left-hints {
   display: flex;
   flex-direction: column;
@@ -68,10 +73,6 @@ body {
   height: 20px;
   border-right: 1px solid #8f8f8f;
   background-color: #dadada;
-}
-
-body {
-  box-sizing: border-box;
 }
 
 .top-hints {
@@ -98,6 +99,19 @@ body {
   box-sizing: border-box;
 }
 
+.button {
+  margin: 0;
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  height: 30px;
+  width: 150px;
+}
+.button:hover {
+  background-color: #dadada;
+}
+
 .field-container {
   display: flex;
   flex-direction: column;
@@ -105,14 +119,10 @@ body {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
-  border: 2px solid #000000;
+  border: 2px solid #8f8f8f;
 }
 .field-container .field__bottom {
   display: flex;
-}
-
-body {
-  box-sizing: border-box;
 }
 
 .modalWindow {
@@ -139,12 +149,6 @@ body {
   top: 50%;
   transform: translate(50%, -50%);
 }
-.modalWindow .button {
-  border: 1px solid #8f8f8f;
-  border-radius: 10px;
-  margin-top: auto;
-  margin-top: 30px;
-}
 
 .overlay {
   height: 100vh;
@@ -160,4 +164,33 @@ body {
 
 .modalWindow.active + .overlay {
   width: 100vw;
+}
+
+.levels .levels__select {
+  width: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.levels .levels__select:last-child {
+  margin-right: 0;
+}
+.levels .levels__options:hover {
+  background-color: black;
+}
+
+.buttons-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

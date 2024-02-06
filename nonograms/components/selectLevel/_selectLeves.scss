@@ -1,0 +1,21 @@
+.levels{
+    .levels__select{
+        width: 150px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+
+    }
+    .levels__options{
+        &:hover{
+            
+            background-color: black;
+        }
+    }
+
+
+
+
+}
