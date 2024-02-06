@@ -2,6 +2,10 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -12,19 +16,19 @@ body {
   display: flex;
 }
 .field .field__row.border__row {
-  border-top: 1px solid black;
+  border-top: 1px solid #8f8f8f;
 }
 .field .cell {
   width: 20px;
   height: 20px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid #8f8f8f;
+  border-right: 1px solid #8f8f8f;
 }
 .field .cell.border__column {
-  border-left: 1px solid black;
+  border-left: 1px solid #8f8f8f;
 }
 .field .cell.shaded {
-  background-color: black;
+  background-color: #000000;
 }
 .field .cell.cross {
   position: relative;
@@ -38,7 +42,11 @@ body {
   left: 1px;
   transform-origin: 0 0;
   transform: rotate(45deg);
-  background-color: red;
+  background-color: #000000;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .left-hints {
@@ -49,13 +57,21 @@ body {
 }
 .left-hints .row-hints {
   display: flex;
+  border-top: 1px solid #8f8f8f;
+}
+.left-hints .row-hints.left-hint__border {
+  border-bottom: 1px solid #8f8f8f;
 }
 .left-hints .row-hints .left-hint {
-  text-align: right;
-  padding-right: 5px;
+  text-align: center;
   width: 20px;
   height: 20px;
-  border: 1px solid red;
+  border-right: 1px solid #8f8f8f;
+  background-color: #dadada;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .top-hints {
@@ -65,18 +81,31 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  border-left: 1px solid #8f8f8f;
+}
+.top-hints .column-hints.top-hint__border {
+  border-right: 1px solid #8f8f8f;
 }
 .top-hints .column-hints .top-hint {
   text-align: center;
   width: 20px;
   height: 20px;
+  border-bottom: 1px solid #8f8f8f;
+  background-color: #dadada;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .field-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #000000;
 }
 .field-container .field__bottom {
   display: flex;

@@ -1,13 +1,18 @@
+@import  './../mainstyle';
+
 .field-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    width: fit-content;
+    border: 2px solid $cellColor;
     // .field__top{
 
     // }
     .field__bottom{
-        display: flex
+        display: flex;
+
     }
 }
         // const topField = this.createBaseComponent('div', ['field__top'], appFieldContainer);

@@ -9,8 +9,15 @@ export class ViewTopHints extends CreateBaseComponent{
     createHints(hints){
         this.container.innerHTML = '';
         const arrayOfHints = hints.split('  ').map(element => element.split(' '))
-        arrayOfHints.forEach(element => {
-            let columnOfHints = this.createBaseComponent('div', ['column-hints'], this.container)
+        const maxLength = arrayOfHints.reduce((acc, elem) =>  elem.length > acc ? elem.length : acc ,0);
+        arrayOfHints.forEach((element, index) => {
+            let columnOfHints = this.createBaseComponent('div', ['column-hints'], this.container);
+            if ((index + 1) % 5 === 0) {
+                columnOfHints.classList.add('top-hint__border');
+            }
+            for (let i = element.length; i < maxLength; i++){
+                this.createBaseComponent('div', ['top-hint'], columnOfHints);
+            }
             element.forEach(item => {
                 this.createBaseComponent('div', ['top-hint'], columnOfHints, item);
             })

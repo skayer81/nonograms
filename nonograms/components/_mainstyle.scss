@@ -1,3 +1,9 @@
 body {
     box-sizing: border-box;
 }
+
+:root{
+    $cellBorder: #8f8f8f !global;
+    $cellColor: #000000 !global;
+    $cellNumberBackgraund: #dadada !global;
+}

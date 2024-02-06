@@ -1,3 +1,5 @@
+@import  './../mainstyle';
+
 .field{
     display: flex;
     flex-direction: column;
@@ -6,20 +8,20 @@
     .field__row{
         display: flex;
         &.border__row{
-            border-top: 1px solid black;
+            border-top: 1px solid $cellBorder;
         }
     }
     .cell{
         width: 20px;
         height: 20px;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;        
+        border-bottom: 1px solid $cellBorder;
+        border-right: 1px solid $cellBorder;        
 
         &.border__column{
-            border-left: 1px solid black;
+            border-left: 1px solid $cellBorder;
         }
         &.shaded{
-            background-color: black;
+            background-color: $cellColor;
         }
         &.cross{
             position: relative;
@@ -32,7 +34,7 @@
                 left: 1px;
                 transform-origin: 0 0;
                 transform: rotate(45deg);
-                background-color: red;
+                background-color: $cellColor;
             }
         }
     }
