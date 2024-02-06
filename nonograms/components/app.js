@@ -138,7 +138,7 @@ export class Application extends CreateBaseComponent{
             
             this.timer.stop();
         //    setTimeout(() => {
-                this.modalWindow.showWinWindow(this.timer.getTime());
+                this.modalWindow.showWinWindow(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime());
                 this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
 
                 this.SOUNDS.win.play();

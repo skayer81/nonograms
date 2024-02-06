@@ -7,12 +7,12 @@ export class ViewModalWindow extends CreateButton{
         this._appendModal();
     }
 
-    addConntent(node){
+    addContent(nodes){
        // this.contentContainer.remove()
-        this.contentContainer.append(node)
+        this.contentContainer.append(...nodes)
     }
 
-    removeConntent(){
+    removeContent(){
         this.contentContainer.innerHTML = '';// remove()// append(node)
     }
     
@@ -29,12 +29,16 @@ export class ViewModalWindow extends CreateButton{
     //    this._description = this.createBaseComponent(popup,'div', ['description']);
     //    this._word = this.createBaseComponent(popup,'div', ['word']);
     //    const buttonsContainer = this.createBaseComponent(popup,'div', ['buttons']);
-        this.createButton(['close-button'], {type: 'button'}, 'Ok', this.closeModalWindow, modalWindow);
+        this.createButton(['button'], {type: 'button'}, 'Ok', this.closeModalWindow, modalWindow);
         // this._againButton = this.createFormComponent(buttonsContainer, 'button', ['button'], {type: 'button'}, this.BUTTON_PLAY_TEXT);
         // this._againButton.addEventListener('click', startNewGame);
         // this._againButton.addEventListener('click', this.closePopup);
         // this._closeButton.addEventListener('click', this.closePopup);
          return modalWindow;
+    }
+
+    open(){
+        this.modalWindow.classList.add('active')
     }
 
 

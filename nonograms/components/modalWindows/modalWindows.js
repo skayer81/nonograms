@@ -6,17 +6,20 @@ export class ModalWindows extends CreateBaseComponent{
         super();        
         this.modalWindows = new ViewModalWindow;
     }
-
-    showWinWindow = (time) =>{
-        console.log('выводим победу');
-        const content = this.createBaseComponent('div', [], null, `вы выиграли за ${time} сек.`)
-        this.modalWindows.removeConntent();
-        this.modalWindows.addConntent(content)
+//this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime()
+    showWinWindow = (name, time) =>{
+      //  console.log('выводим победу');
+        const title = this.createBaseComponent('h2', [], null, `Поздравляем!`)
+        const content = this.createBaseComponent('div', [], null, `Нонограмму: '${name}' `) 
+        const content2 = this.createBaseComponent('div', [], null, `вы открыли за ${time} сек.`)
+        this.modalWindows.removeContent();
+        this.modalWindows.addContent([title, content, content2]);
+        this.modalWindows.open();
 
     }
 
     showRecordsWindow(records){
-        this.modalWindows.removeConntent();
+        this.modalWindows.removeContent();
         const title = this.createBaseComponent('h2', ['modal-title'], null, `Таблица рекордов`)
         //console.log(records)
         const table = this.createBaseComponent('table', ['records-table'])
@@ -39,8 +42,9 @@ export class ModalWindows extends CreateBaseComponent{
  //           time.innerHTML = `${recordsOfLevel[i].time} сек.` 
         }
 
-        this.modalWindows.addConntent(title);
-        this.modalWindows.addConntent(table);
+        this.modalWindows.addContent([title, table]);
+      //  this.modalWindows.addContent(table);
+        this.modalWindows.open();
 
         // function createTable(recordsOfLevel){
         //     let result = createBaseComponent(0, 'table', ['table']);

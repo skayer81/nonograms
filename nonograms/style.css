@@ -109,4 +109,55 @@ body {
 }
 .field-container .field__bottom {
   display: flex;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.modalWindow {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border: 1px solid #8f8f8f;
+  background-color: #dadada;
+  border-radius: 20px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  position: fixed;
+  right: -100%;
+  transition: 1s;
+  z-index: 10;
+}
+.modalWindow.active {
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.modalWindow .button {
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-top: 30px;
+}
+
+.overlay {
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 9;
+  background-color: black;
+  opacity: 0.7;
+  width: 0;
+  transition: 1s;
+}
+
+.modalWindow.active + .overlay {
+  width: 100vw;
 }/*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@ export const nonograms = [
     },
     {
         id: '101',
-        name:'test2',       
+        name:'fdnjvj,bkm gj; lthtdjv ntcn',       
         width:5,
         heigth: 5,
         solution: '10000 00000 00000 00000 00000',
