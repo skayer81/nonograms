@@ -26,6 +26,9 @@ export class Sounds extends CreateBaseComponent{
     }
     play(event){
         if (!this.checkbox.checked) return;
+        // for(let sounds in this.SOUNDS){
+        //     this.SOUNDS[sounds].stop();
+        // }
         this.SOUNDS[event].play();
     }
 }

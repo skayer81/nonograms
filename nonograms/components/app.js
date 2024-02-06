@@ -98,7 +98,7 @@ export class Application extends CreateBaseComponent{
           //  this.SOUNDS.rclick.play();
             return
         }
-       // this.sounds.play('clear')
+        this.sounds.play('clear')
       //  this.SOUNDS.clear.play();
 
     }
@@ -130,20 +130,22 @@ export class Application extends CreateBaseComponent{
             curentCell.hasCross = !curentCell.hasCross; 
             curentCell.hasShaded = false;
             //  this.timer.start();
-            return;
-        }
-        
-      //  this.timer.stop();
-        curentCell.hasCross = false
-        curentCell.hasShaded = !curentCell.hasShaded;
-        if (curentCell.isTrue) {
-            if (curentCell.hasShaded) {this.trueCellCount -= 1} 
-            else {this.trueCellCount += 1};
+           // return;
         }
         else{
-            if (curentCell.hasShaded) {this.falseCellCount += 1}
-            else {this.falseCellCount -= 1};
-        }
+        
+ 
+            curentCell.hasCross = false
+            curentCell.hasShaded = !curentCell.hasShaded;
+            if (curentCell.isTrue) {
+                if (curentCell.hasShaded) {this.trueCellCount -= 1} 
+                else {this.trueCellCount += 1};
+            }
+            else{
+                if (curentCell.hasShaded) {this.falseCellCount += 1}
+                else {this.falseCellCount -= 1};
+            }
+        }    
      //   console.log(this.trueCellCount, this.falseCellCount)
         if (this.trueCellCount === 0 && this.falseCellCount === 0) {
             
