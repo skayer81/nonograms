@@ -75,6 +75,7 @@ export class Application extends CreateBaseComponent{
         this.isGameEnd = false;
         this.isGameStart = false;
         this.timer.setTime();
+        this.nonogramTitle.innerText = this.currentNonogram.name
     }
 
     playSound(cell, left){
@@ -220,11 +221,21 @@ export class Application extends CreateBaseComponent{
     }
 
     _viewBuilder(){
+        const container = this.createBaseComponent('div', ['container'], document.body)
+        this.createBaseComponent('h1', ['title'], container, 'НОНОГРАММЫ');
+        container.append(this.selectLevel.container);
+        container.append(this.timer.container);
+        this.nonogramTitle = this.createBaseComponent('h2', ['title'], container);
+        
         const appFieldContainer = this.createBaseComponent('div', ['field-container'], document.body)
         const topField = this.createBaseComponent('div', ['field__top'], appFieldContainer);
         const bottomField = this.createBaseComponent('div', ['field__bottom'], appFieldContainer);
         topField.append(this.viewTopHints.container);
         bottomField.append(this.viewLeftHints.container, this.viewField.container)
+
+        const mainContainer = this.createBaseComponent('div', ['main-container'], container)
+        mainContainer.append(appFieldContainer, this.buttonBlock.container)
+
     }
 }
 

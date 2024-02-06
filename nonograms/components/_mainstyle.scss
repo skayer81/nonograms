@@ -19,5 +19,15 @@ body {
       &:hover{
           background-color: $background;
       }
- 
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
 }

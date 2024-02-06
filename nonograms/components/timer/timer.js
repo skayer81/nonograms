@@ -6,7 +6,7 @@ export class Timer extends CreateBaseComponent{
 
     constructor(){
         super();
-        this.container = this.createBaseComponent('div', ['timer-container'], document.body);//////////1
+        this.container = this.createBaseComponent('div', ['timer-container']);//////////1
         this.init();
         this.isTimerStart = false;
     }

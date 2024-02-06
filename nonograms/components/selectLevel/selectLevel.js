@@ -5,7 +5,7 @@ export class SelectLevel extends CreateBaseComponent{
         super();
         this.levels = levels;
         this.callback = callback;
-        this.container = this.createBaseComponent('div', ['levels'], document.body)
+        this.container = this.createBaseComponent('div', ['levels'])
         this.titles = []
         this.createView();
     }

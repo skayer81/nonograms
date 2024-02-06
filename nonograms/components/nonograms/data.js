@@ -8,24 +8,24 @@ export const nonograms = [
         top: '4  2  3  3  1',
         left: '2  2 1  4  1 1  1 1' 
     },
-    {
-        id: '100',
-        name:'test',       
-        width:5,
-        heigth: 5,
-        solution: '10000 00000 00000 00000 00000',
-        top: '4  2  3  3  1',
-        left: '2  2 1  4  1 1  1 1' 
-    },
-    {
-        id: '101',
-        name:'fdnjvj,bkm gj; lthtdjv ntcn',       
-        width:5,
-        heigth: 5,
-        solution: '10000 00000 00000 00000 00000',
-        top: '4  2  3  3  1',
-        left: '2  2 1  4  1 1  1 1' 
-    },
+    // {
+    //     id: '100',
+    //     name:'test',       
+    //     width:5,
+    //     heigth: 5,
+    //     solution: '10000 00000 00000 00000 00000',
+    //     top: '4  2  3  3  1',
+    //     left: '2  2 1  4  1 1  1 1' 
+    // },
+    // {
+    //     id: '101',
+    //     name:'fdnjvj,bkm gj; lthtdjv ntcn',       
+    //     width:5,
+    //     heigth: 5,
+    //     solution: '10000 00000 00000 00000 00000',
+    //     top: '4  2  3  3  1',
+    //     left: '2  2 1  4  1 1  1 1' 
+    // },
     {
         id: '2',
         name:'коляска',
