@@ -172,7 +172,33 @@ h1, h2 {
   width: 20px;
   height: 20px;
   border-right: 1px solid var(--main-border);
+  cursor: pointer;
   background-color: var(--main-background);
+}
+.left-hints .row-hints .left-hint.cross {
+  position: relative;
+}
+.left-hints .row-hints .left-hint.cross::after {
+  position: absolute;
+  content: "";
+  width: 130%;
+  height: 1px;
+  top: 0px;
+  left: 1px;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  background-color: var(--main-color);
+}
+.left-hints .row-hints .left-hint.cross::before {
+  position: absolute;
+  content: "";
+  width: 130%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  background-color: var(--main-color);
 }
 
 :root {
@@ -211,6 +237,32 @@ h1, h2 {
   height: 20px;
   border-bottom: 1px solid var(--main-border);
   background-color: var(--main-background);
+  cursor: pointer;
+}
+.top-hints .column-hints .top-hint.cross {
+  position: relative;
+}
+.top-hints .column-hints .top-hint.cross::after {
+  position: absolute;
+  content: "";
+  width: 130%;
+  height: 1px;
+  top: 0px;
+  left: 1px;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  background-color: var(--main-color);
+}
+.top-hints .column-hints .top-hint.cross::before {
+  position: absolute;
+  content: "";
+  width: 130%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  background-color: var(--main-color);
 }
 
 :root {

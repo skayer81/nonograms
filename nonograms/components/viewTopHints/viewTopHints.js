@@ -19,7 +19,9 @@ export class ViewTopHints extends CreateBaseComponent{
                 this.createBaseComponent('div', ['top-hint'], columnOfHints);
             }
             element.forEach(item => {
-                this.createBaseComponent('div', ['top-hint'], columnOfHints, item);
+                
+                const cell = this.createBaseComponent('div', ['top-hint'], columnOfHints, item);
+                cell.addEventListener('click', () => { cell.classList.toggle('cross')})
             })
         }); 
     }

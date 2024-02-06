@@ -17,6 +17,32 @@
             height: 20px;
              border-bottom: 1px solid var(--main-border);
             background-color: var(--main-background);
+            cursor: pointer;
+            &.cross{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 130%;
+                    height: 1px;
+                    top: 0px;
+                    left: 1px;
+                    transform-origin: 0 0;
+                    transform: rotate(45deg);
+                    background-color: var(--main-color);
+                }
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 130%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    transform-origin: 0 0;
+                    transform: rotate(-45deg);
+                    background-color: var(--main-color);
+                }
+            }
         }
     }
 }

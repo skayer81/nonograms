@@ -21,7 +21,8 @@ export class ViewLeftHints extends CreateBaseComponent{
                 this.createBaseComponent('div', ['left-hint'], columnOfHints);
             }
             element.forEach(item => {
-                this.createBaseComponent('div', ['left-hint'], columnOfHints, item);
+                const cell = this.createBaseComponent('div', ['left-hint'], columnOfHints, item);
+                cell.addEventListener('click', () => { cell.classList.toggle('cross')})
             })
         }); 
     }
