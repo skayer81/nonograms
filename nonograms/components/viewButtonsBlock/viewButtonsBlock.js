@@ -22,13 +22,10 @@ export class ViewButtons extends CreateButton{
     saveGame = () =>{
         const data = this.getData();
         this.loadSave.saveGame(data);
-      //  console.log(data);
-
     }
 
     loadGame = () =>{
         const data = this.loadSave.loadGame()
-       // const data = this.loadGameCallback();
         this.setData(data)
     }
 

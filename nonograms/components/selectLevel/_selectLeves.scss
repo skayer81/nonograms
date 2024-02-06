@@ -1,9 +1,18 @@
+@import '../variables';
+
 .levels{
     .levels__select{
         width: 200px;
         margin-right: 20px;
         margin-bottom: 20px;
-        border-radius: 5px;
+        border-radius: 10px;
+        padding: 5px;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color:  var( --button-color);
+        color: var(--text-color);
+        cursor: pointer;
+        
         &:last-child{
             margin-right: 0;
         }
@@ -12,11 +21,16 @@
         }
 
     }
-    .levels__options{
-        &:hover{
+    .levels__option{
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 10px;
+ 
+        
+        // &:hover{
             
-            background-color: black;
-        }
+        //     background-color: black;
+        // }
     }
 
 }

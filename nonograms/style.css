@@ -358,11 +358,36 @@ h1, h2 {
   width: 100vw;
 }
 
+:root {
+  --main-color: #000000;
+  --main-border: #8f8f8f;
+  --main-background: #dadada;
+  --bodyBackground: #fefef6;
+  --text-color: #1E1E1E;
+  --button-color: #aadada;
+}
+
+.darkTheme {
+  --main-color: #fefef6;
+  --main-border: #fefef6;
+  --main-background: #0d0d0d;
+  --bodyBackground: #1E1E1E;
+  --text-color: #E2C08D;
+  --button-color: #333333;
+}
+
 .levels .levels__select {
   width: 200px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  cursor: pointer;
 }
 .levels .levels__select:last-child {
   margin-right: 0;
@@ -372,8 +397,11 @@ h1, h2 {
     width: 125px;
   }
 }
-.levels .levels__options:hover {
-  background-color: black;
+.levels .levels__option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 10px;
 }
 
 .buttons-container {

@@ -9,7 +9,7 @@ import { SelectLevel } from "./selectLevel/selectLevel.js";
 import { ModalWindows } from "./modalWindows/modalWindows.js";
 import { Records } from "./records/records.js";
 import { Sounds } from "./sounds/sounds.js";
-import { ChangeTemes } from "./changeTemes/changeTemes.js";
+import { ChangeThemes } from "./changeThemes/changeThemes.js";
 
 export class Application extends CreateBaseComponent{
 
@@ -39,7 +39,7 @@ export class Application extends CreateBaseComponent{
         this.records = new Records()
         this.timer = new Timer();
         this.sounds = new Sounds();
-        this.changeTemes = new ChangeTemes();
+        this.changeThemes = new ChangeThemes();
 
         this.isGameStart = false;
         this.isGameEnd   = false;
@@ -237,7 +237,7 @@ export class Application extends CreateBaseComponent{
         container.append(this.selectLevel.container);
 
         const settingsContainer = this.createBaseComponent('div', ['settings-container'], container)
-        settingsContainer.append(this.changeTemes.container, this.timer.container, this.sounds.container);
+        settingsContainer.append(this.changeThemes.container, this.timer.container, this.sounds.container);
   
         
  
