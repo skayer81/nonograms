@@ -225,16 +225,23 @@ export class Application extends CreateBaseComponent{
         this.createBaseComponent('h1', ['title'], container, 'НОНОГРАММЫ');
         container.append(this.selectLevel.container);
         container.append(this.timer.container);
-        this.nonogramTitle = this.createBaseComponent('h2', ['title'], container);
+  
         
-        const appFieldContainer = this.createBaseComponent('div', ['field-container'], document.body)
+ 
+        
+        const appFieldContainer = this.createBaseComponent('div', ['field-container'])
         const topField = this.createBaseComponent('div', ['field__top'], appFieldContainer);
         const bottomField = this.createBaseComponent('div', ['field__bottom'], appFieldContainer);
         topField.append(this.viewTopHints.container);
-        bottomField.append(this.viewLeftHints.container, this.viewField.container)
+        bottomField.append(this.viewLeftHints.container, this.viewField.container);
+
+        const fieldAndNameContainer = this.createBaseComponent('div', ['outer-container'], document.body);
+        const leftSide = this.createBaseComponent('div', ['left-side'], fieldAndNameContainer);
+        this.nonogramTitle = this.createBaseComponent('h2', ['title']);
+        leftSide.append(this.nonogramTitle, appFieldContainer)
 
         const mainContainer = this.createBaseComponent('div', ['main-container'], container)
-        mainContainer.append(appFieldContainer, this.buttonBlock.container)
+        mainContainer.append(leftSide, this.buttonBlock.container)
 
     }
 }
