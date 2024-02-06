@@ -79,7 +79,8 @@ export class Application extends CreateBaseComponent{
     }
 
     playSound(cell, left){
-       // this.SOUNDS.lclick.play()
+        // this.SOUNDS.lclick.play()
+        // console.log(`звук`, this.SOUNDS.lclick.volume)
         if (left && !cell.hasShaded){
           //  this.SOUNDS.lclick.volume = 100;
             this.SOUNDS.lclick.play()

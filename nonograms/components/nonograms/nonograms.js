@@ -12,6 +12,7 @@ export class Nonograms{
 
     getRandomEasy(){
         const easyNonograms = this.nonograms.filter(elem => elem.heigth === 5);
+      //  console.log( Math.floor(Math.random() * (easyNonograms.length + 1)), easyNonograms, easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))])
         return easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))]; 
     }
 

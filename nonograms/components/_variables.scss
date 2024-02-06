@@ -1,5 +1,11 @@
 
    
-    $main: #000000 !global;
-    $border: #8f8f8f !global;
-    $background: #dadada !global;
+    $main: #000000;
+    $border: #8f8f8f ;
+    $background: #dadada ;
+    $bodyBackground: #fefef6;
+
+    .darkTheme{
+        $main: red ;
+        $border: green ;
+    }
