@@ -71,7 +71,7 @@ export class ViewField extends CreateBaseComponent{
         }
         cell.classList.remove('cross');
         cell.classList.toggle('shaded');
-        document.body.classList.toggle('darkTheme')
+      //  document.body.classList.toggle('darkTheme')
     }
 
     cellRigthClick = (cell) => {

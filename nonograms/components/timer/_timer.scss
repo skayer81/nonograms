@@ -3,6 +3,6 @@
 .timer-container{
     display: flex;
     justify-content: center;
-    color: $main;
+    color: var(--main-color);
     font-size: 32px;
 }

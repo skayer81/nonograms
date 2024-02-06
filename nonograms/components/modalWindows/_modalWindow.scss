@@ -5,8 +5,8 @@
     position: fixed;
     top: 50%;
     transform: translate(50%, -50%);
-    border: 1px solid $border;
-    background-color: $background;
+    border: 1px solid var(--main-border);
+    background-color: var(--bodyBackground);
     border-radius: 20px;
     text-align: center;
 
@@ -36,7 +36,7 @@
     // padding: 16px;
     // border: 1px solid red;
     // display: flex;
-    // background-color: $backgroundBody;
+    // background-color: var(--main-background)Body;
     // @include tr;
 
 

@@ -7,16 +7,16 @@
         display: flex;
         flex-direction: column;
         justify-content:flex-end;
-        border-left: 1px solid $border;
+        border-left: 1px solid var(--main-border);
         &.top-hint__border{
-            border-right: 1px solid $border;
+            border-right: 1px solid var(--main-border);
         }
         .top-hint{
             text-align: center;
             width: 20px;
             height: 20px;
-             border-bottom: 1px solid $border;
-            background-color: $background;
+             border-bottom: 1px solid var(--main-border);
+            background-color: var(--main-background);
         }
     }
 }

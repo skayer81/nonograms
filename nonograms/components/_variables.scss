@@ -1,11 +1,26 @@
 
-   
+:root{
+    --main-color : #000000;
+    --main-border: #8f8f8f;
+    --main-background: #dadada; 
+    --bodyBackground: #fefef6;
+    --text-color: #1E1E1E;
+    --button-color: #aadada;
+
+}
     $main: #000000;
     $border: #8f8f8f ;
     $background: #dadada ;
     $bodyBackground: #fefef6;
 
     .darkTheme{
-        $main: red ;
-        $border: green ;
+        --main-color: #fefef6;
+        --main-border: #fefef6;
+        --main-background: #0d0d0d; 
+        --bodyBackground: #1E1E1E;
+        --text-color: #E2C08D;
+        --button-color: #333333;
+       // $border: green ;
     }
+
+    // var(--main);

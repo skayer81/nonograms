@@ -3,14 +3,19 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    background-color: $bodyBackground;
+    background-color: var(--bodyBackground);
+    color: var(--text-color);
+    transition: 1s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button{
     // back
      //ground-color: aqua;
      margin: 0;
-     border: 1px solid $border;
+     border: 1px solid var(--main-border);
+     background-color: var(--button-color);
+     color: var(--text-color);
      border-radius: 10px;
     //  margin-top: auto;
     //  margin-top: 30px;
@@ -19,7 +24,7 @@ body {
       height: 30px;
       width: 150px;
       &:hover{
-          background-color: $background;
+          background-color: var(--main-background);
       }
 }
 
@@ -40,4 +45,9 @@ body {
 
 h1, h2{
     margin: 10px auto;
+}
+
+.settings-container{
+    display: flex;
+    justify-content: space-around;
 }

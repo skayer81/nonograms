@@ -14,7 +14,7 @@ export class Records extends CreateBaseComponent{
     // }решенная головоломка (либо название, либо картинка, либо и то, и другое); сложность; результат секундомера.
 
     addRecord = (name, width, time) => {
-        console.log('добавляем рекорд')
+      //  console.log('добавляем рекорд')
         let level;
         if (width <= 5) {
             level = 'easy';
@@ -35,7 +35,7 @@ export class Records extends CreateBaseComponent{
         if (records.length > 5) {
             records.shift();
         }
-        console.log(records)
+        //.log(records)
         // records[level].push({name:playerName, time: time });
         // records[level].sort((a, b) => a.time -b.time); 
         // records[level] = records[level].slice(0, 10);

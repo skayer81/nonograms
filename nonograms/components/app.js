@@ -8,6 +8,8 @@ import { Nonograms } from "./nonograms/nonograms.js";
 import { SelectLevel } from "./selectLevel/selectLevel.js";
 import { ModalWindows } from "./modalWindows/modalWindows.js";
 import { Records } from "./records/records.js";
+import { Sounds } from "./sounds/sounds.js";
+import { ChangeTemes } from "./changeTemes/changeTemes.js";
 
 export class Application extends CreateBaseComponent{
 
@@ -17,12 +19,12 @@ export class Application extends CreateBaseComponent{
     // test1 = '01100 11001 11110 01100 10010'
     // top = '2 1  4  1 2  1 1  1'
     // left = '2  2 1  4  2  1 1'
-    SOUNDS = {
-        lclick: new Audio('./assets/sounds/lclick.mp3'),
-        rclick: new Audio('./assets/sounds/rclick.mp3'),
-        clear: new Audio('./assets/sounds/clear.mp3'),
-        win: new Audio('./assets/sounds/win.mp3')
-      }
+    // SOUNDS = {
+    //     lclick: new Audio('./assets/sounds/lclick.mp3'),
+    //     rclick: new Audio('./assets/sounds/rclick.mp3'),
+    //     clear: new Audio('./assets/sounds/clear.mp3'),
+    //     win: new Audio('./assets/sounds/win.mp3')
+    //   }
 
 
     constructor(){
@@ -36,6 +38,8 @@ export class Application extends CreateBaseComponent{
         this.modalWindow = new ModalWindows();
         this.records = new Records()
         this.timer = new Timer();
+        this.sounds = new Sounds();
+        this.changeTemes = new ChangeTemes();
 
         this.isGameStart = false;
         this.isGameEnd   = false;
@@ -50,7 +54,9 @@ export class Application extends CreateBaseComponent{
         //     this.currentNonogram = this.nonograms.getNonogramsById(id)
         // }
         // else {
-            this.currentNonogram = this.nonograms.getRandomEasy();
+            const test  = this.nonograms.getRandomEasy();
+            this.currentNonogram = test//this.nonograms.getRandomEasy();
+            //console.log(test)
    //     }
    //     console.log(this.currentNonogram)
         this.newNonogram();
@@ -63,7 +69,7 @@ export class Application extends CreateBaseComponent{
 
     newNonogram(){
        // this.currentNonogram = this.nonograms.getRandomEasy();
-     //  console.log(this.currentNonogram);
+       // console.log(this.currentNonogram);
         this.viewField.createField(this.currentNonogram.heigth, this.currentNonogram.width);
         this.viewLeftHints.createHints(this.currentNonogram.left);
         this.viewTopHints.createHints(this.currentNonogram.top);
@@ -83,14 +89,17 @@ export class Application extends CreateBaseComponent{
         // console.log(`звук`, this.SOUNDS.lclick.volume)
         if (left && !cell.hasShaded){
           //  this.SOUNDS.lclick.volume = 100;
-            this.SOUNDS.lclick.play()
+           this.sounds.play('lclick')
+           // this.SOUNDS.lclick.play()
             return
         }
         if (!left && !cell.hasCross){
-            this.SOUNDS.rclick.play();
+            this.sounds.play('rclick')
+          //  this.SOUNDS.rclick.play();
             return
         }
-        this.SOUNDS.clear.play();
+       // this.sounds.play('clear')
+      //  this.SOUNDS.clear.play();
 
     }
 
@@ -98,7 +107,7 @@ export class Application extends CreateBaseComponent{
         if (this.isGameEnd) {
             return;
         }
-        console.log(this.isGameEnd);
+      //  console.log(this.isGameEnd);
 
         if (!this.isGameStart){
             this.isGameStart = true;
@@ -143,7 +152,8 @@ export class Application extends CreateBaseComponent{
                 this.modalWindow.showWinWindow(this.currentNonogram.name, this.timer.getTime());
                 this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
 
-                this.SOUNDS.win.play();
+                this.sounds.play('win');
+             //   this.SOUNDS.win.play();
                 this.isGameEnd = true;
 
                 //alert(`победа за ${this.timer.getTime()} сек`);
@@ -225,7 +235,9 @@ export class Application extends CreateBaseComponent{
         const container = this.createBaseComponent('div', ['container'], document.body)
         this.createBaseComponent('h1', ['title'], container, 'НОНОГРАММЫ');
         container.append(this.selectLevel.container);
-        container.append(this.timer.container);
+
+        const settingsContainer = this.createBaseComponent('div', ['settings-container'], container)
+        settingsContainer.append(this.changeTemes.container, this.timer.container, this.sounds.container);
   
         
  

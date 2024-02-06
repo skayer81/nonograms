@@ -7,17 +7,17 @@
     align-items: flex-end;
     .row-hints{
         display: flex;
-        border-top: 1px solid $border;
+        border-top: 1px solid var(--main-border);
         &.left-hint__border{
-            border-bottom: 1px solid $border;
+            border-bottom: 1px solid var(--main-border);
         }
         .left-hint{
             text-align: center;
             //padding-right: 5px;
             width: 20px;
             height: 20px;
-            border-right: 1px solid $border;
-            background-color: $background;
+            border-right: 1px solid var(--main-border);
+            background-color: var(--main-background);
         }
     }
 
