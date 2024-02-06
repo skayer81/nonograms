@@ -1,0 +1,24 @@
+.app-container {
+    max-width: 1200px;
+    max-height: 100vh;
+    margin: 0 auto;
+    .app-container__top {
+        display: flex;
+        
+    }
+    .app-container__top-rigth {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 600px) {
+        .app-container__top {
+            flex-direction: column;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
