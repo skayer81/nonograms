@@ -2,6 +2,8 @@ import { ViewModalWindow } from './viewModalWindow.js'
 import { CreateBaseComponent } from '../createComponent/createComponent.js';
 
 export class ModalWindows extends CreateBaseComponent{
+    EMPTY_RECORDS = 'Пока рекордов нет';
+
     constructor(){
         super();        
         this.modalWindows = new ViewModalWindow;
@@ -20,11 +22,18 @@ export class ModalWindows extends CreateBaseComponent{
 
     showRecordsWindow(records){
         this.modalWindows.removeContent();
-        const title = this.createBaseComponent('h2', ['modal-title'], null, `Таблица рекордов`)
+        const title = this.createBaseComponent('h2', ['modal-title'], null, `Таблица рекордов`);
+        let content;
+       // console.log(records)
+        if (!records){
+         
+            content = this.createBaseComponent('h3', ['records-table'], null, this.EMPTY_RECORDS)
+        }
+        else{
         //console.log(records)
-        const table = this.createBaseComponent('table', ['records-table'])
+          content = this.createBaseComponent('table', ['records-table'])
 
-         let trOfHead = this.createBaseComponent('tr', [], table);
+         let trOfHead = this.createBaseComponent('tr', [], content);
        // let title1 = 
          this.createBaseComponent('th', [],  trOfHead, 'Название');
          this.createBaseComponent('th', [],  trOfHead, 'Сложность');
@@ -32,7 +41,7 @@ export class ModalWindows extends CreateBaseComponent{
 
       //  let title2 =  createBaseComponent(trOfHead, 'th');
         for (let i = 0; i < records.length; i++){
-            let tr = this.createBaseComponent('tr', [], table);
+            let tr = this.createBaseComponent('tr', [], content);
             this.createBaseComponent('td', [],  tr, records[i].name);
             this.createBaseComponent('td', [],  tr, records[i].level);
             this.createBaseComponent('td', [],  tr, records[i].time);
@@ -41,8 +50,9 @@ export class ModalWindows extends CreateBaseComponent{
             // let time = createBaseComponent(tr, 'td');
  //           time.innerHTML = `${recordsOfLevel[i].time} сек.` 
         }
+    }
 
-        this.modalWindows.addContent([title, table]);
+        this.modalWindows.addContent([title, content]);
       //  this.modalWindows.addContent(table);
         this.modalWindows.open();
 

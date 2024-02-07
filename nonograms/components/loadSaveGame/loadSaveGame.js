@@ -12,6 +12,12 @@ export class LoadSaveGame{
     }
 
     hasSave(){
-        //return
+        console.log(localStorage.getItem(this.FIELD_NAME) )
+        if (localStorage.getItem(this.FIELD_NAME) !== null) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

@@ -24,7 +24,11 @@ body {
       height: 30px;
       width: 150px;
       &:hover{
-          background-color: var(--main-background);
+          background-color: var(--button-hover) //#aadad0//var(--main-background);
+      }
+      &:disabled{
+        background-color: var(--main-background);
+        pointer-events: none;
       }
 }
 

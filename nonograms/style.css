@@ -5,6 +5,7 @@
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -14,6 +15,7 @@
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 body {
@@ -37,7 +39,11 @@ body {
   width: 150px;
 }
 .button:hover {
+  background-color: var(--button-hover);
+}
+.button:disabled {
   background-color: var(--main-background);
+  pointer-events: none;
 }
 
 .container {
@@ -74,6 +80,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -83,6 +90,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .field {
@@ -143,6 +151,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -152,6 +161,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .left-hints {
@@ -211,6 +221,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -220,6 +231,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .top-hints {
@@ -278,6 +290,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -287,6 +300,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 body {
@@ -310,7 +324,11 @@ body {
   width: 150px;
 }
 .button:hover {
+  background-color: var(--button-hover);
+}
+.button:disabled {
   background-color: var(--main-background);
+  pointer-events: none;
 }
 
 .container {
@@ -361,6 +379,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -370,6 +389,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .modalWindow {
@@ -423,6 +443,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -432,6 +453,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .levels .levels__select {
@@ -493,6 +515,7 @@ h1, h2 {
   --bodyBackground: #fefef6;
   --text-color: #1E1E1E;
   --button-color: #aadada;
+  --button-hover: #aaf3da;
 }
 
 .darkTheme {
@@ -502,6 +525,7 @@ h1, h2 {
   --bodyBackground: #1E1E1E;
   --text-color: #E2C08D;
   --button-color: #333333;
+  --button-hover: #555533;
 }
 
 .timer-container {

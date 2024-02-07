@@ -28,20 +28,58 @@ export class ViewField extends CreateBaseComponent{
                     cell.classList.add('border__column')
                 }
                 this.matrix[i].push(cell);
-                 cell.addEventListener('click', () => {
-                     this.cellClick(cell);
-                     this.callback(i, j, true);
-                 })   
+
+                 cell.addEventListener('pointerdown', (event) => {
+                    if (event.button === 0){
+                    //console.log(event)
+                        
+                       this.cellClick(cell);
+                       this.callback(i, j, true);
+                       this.isLBtnDown = true
+                    }
+                    if (event.button === 2){
+                        //console.log(event)
+                        this.cellRigthClick(cell);
+                        this.callback(i, j, false);  
+                        this.isRBtnDown = true;
+                        }
+                 })  
+
+                 cell.addEventListener('pointerup', (event) =>{
+                    if (event.button === 0){
+                        this.isLBtnDown = false;
+                        //console.log(event)
+                            
+                        //    this.cellClick(cell);
+                        //    this.callback(i, j, true);
+                        }
+                        if (event.button === 2){
+                            //console.log(event)
+                            this.isRBtnDown = false;
+                            // this.cellRigthClick(cell);
+                            // this.callback(i, j, false);  
+                            }
+                     })  
+                 //})
                  cell.addEventListener('contextmenu', (event) => {
+                    console.log(event)
                      event.preventDefault();
-                     this.cellRigthClick(cell);
-                     this.callback(i, j, false);                     
+                    //  this.cellRigthClick(cell);
+                    //  this.callback(i, j, false);                     
                  })
-                 cell.addEventListener('mouseover', () => {
+                 cell.addEventListener('pointerenter', () => {
                     this.eventEmitter.emit('mouseOverRow', [i]);
                     this.eventEmitter.emit('mouseOverColumn', [j]);
+                    if(this.isLBtnDown){
+                        this.cellClick(cell);
+                        this.callback(i, j, true);
+                    }
+                    if(this.isRBtnDown){
+                        this.cellRigthClick(cell);
+                        this.callback(i, j, false);  
+                    }
                  })
-                 cell.addEventListener('mouseout', () => {
+                 cell.addEventListener('pointerleave', () => {
                     this.eventEmitter.emit('mouseOutRow', [i]);
                     this.eventEmitter.emit('mouseOutColumn', [j]);
                  } )

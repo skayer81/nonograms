@@ -16,17 +16,31 @@ export class ViewButtons extends CreateButton{
         this.saveGameBtn = this.createButton(['button'], {type: 'button'}, 'Сохранить игру', this.saveGame, this.container);
         this.loadGameBtn = this.createButton(['button'], {type: 'button'}, 'Загрузить игру', this.loadGame, this.container);
         this.showRecordsBtn = this.createButton(['button'], {type: 'button'}, 'Показать рекорды', showRecords, this.container);
-    
+        if (!this.loadSave.hasSave()){
+            this.loadGameBtn.disabled = true;
+        }
+     //   this.disableSaveGame();
     }
 
     saveGame = () =>{
         const data = this.getData();
         this.loadSave.saveGame(data);
+        this.loadGameBtn.disabled = false;
     }
 
     loadGame = () =>{
         const data = this.loadSave.loadGame()
         this.setData(data)
     }
+
+    disableSaveGame = (disable) => {
+       // console.log(this.saveGameBtn)
+        this.saveGameBtn.disabled = disable;
+    }
+
+    disableShowsolutionBtn = (disable) => {
+        // console.log(this.saveGameBtn)
+         this.showsolutionBtn.disabled = disable;
+     }
 
 }

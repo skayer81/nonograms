@@ -50,7 +50,7 @@ export class Records extends CreateBaseComponent{
         records.forEach(element => {
             element.time = `${String(Math.trunc(element.time / 60)).padStart(2, '0')}:${String(element.time % 60).padStart(2, '0')}`
         });
-        return records;
+        return records.length > 0 ? records : null;
         
 
      //   const min =  String(Math.trunc(this.currentTime / 60)).padStart(2, '0');

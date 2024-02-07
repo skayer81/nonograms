@@ -5,7 +5,7 @@ import { ViewTopHints } from "./viewTopHints/viewTopHints.js";
 import { ViewButtons } from "./viewButtonsBlock/viewButtonsBlock.js";
 import { Timer } from "./timer/timer.js";
 import { Nonograms } from "./nonograms/nonograms.js";
-import { SelectLevel } from "./selectLevel/selectLevel.js";
+import { LevelSelector } from "./selectLevel/selectLevel.js";
 import { ModalWindows } from "./modalWindows/modalWindows.js";
 import { Records } from "./records/records.js";
 import { Sounds } from "./sounds/sounds.js";
@@ -13,27 +13,13 @@ import { ChangeThemes } from "./changeThemes/changeThemes.js";
 
 export class Application extends CreateBaseComponent{
 
-  // test1 = [[01100], [11001], [11110], [01100], [10010]]
-    // width = 5;
-    // heigth = 5;
-    // test1 = '01100 11001 11110 01100 10010'
-    // top = '2 1  4  1 2  1 1  1'
-    // left = '2  2 1  4  2  1 1'
-    // SOUNDS = {
-    //     lclick: new Audio('./assets/sounds/lclick.mp3'),
-    //     rclick: new Audio('./assets/sounds/rclick.mp3'),
-    //     clear: new Audio('./assets/sounds/clear.mp3'),
-    //     win: new Audio('./assets/sounds/win.mp3')
-    //   }
-
-
     constructor(){
         super();
         this.nonograms = new Nonograms();
         this.viewField = new ViewField(this.onCellPress, this.getGameStatus);
         this.viewLeftHints = new ViewLeftHints();
         this.viewTopHints = new ViewTopHints();
-        this.selectLevel = new SelectLevel(this.nonograms.getList(), this.selectLevel);
+        this.levelSelector = new LevelSelector(this.nonograms.getList(), this.selectLevel);
         this.buttonBlock = new ViewButtons(this.showSolution, this.getData, this.setData, this.restartGame, this.randomGame, this.showRecords);
         this.modalWindow = new ModalWindows();
         this.records = new Records()
@@ -45,9 +31,9 @@ export class Application extends CreateBaseComponent{
         this.isGameEnd   = false;
         
         this._viewBuilder();
-       // console.log('start');
         this.startNonogramInit();
     }
+            //this.selectLevel = 
     
     startNonogramInit = () => {
         // if (id) {
@@ -81,6 +67,8 @@ export class Application extends CreateBaseComponent{
         this.isGameEnd = false;
         this.isGameStart = false;
         this.timer.setTime();
+        this.buttonBlock.disableSaveGame(false);
+        this.buttonBlock.disableShowsolutionBtn(false);
         this.nonogramTitle.innerText = this.currentNonogram.name
     }
 
@@ -157,6 +145,7 @@ export class Application extends CreateBaseComponent{
                 this.sounds.play('win');
              //   this.SOUNDS.win.play();
                 this.isGameEnd = true;
+                this.buttonBlock.disableSaveGame(true);
 
                 //alert(`победа за ${this.timer.getTime()} сек`);
           //  }, 0)
@@ -174,6 +163,8 @@ export class Application extends CreateBaseComponent{
         }
         this.isGameEnd = true;
         this.timer.stop();
+        this.buttonBlock.disableSaveGame(true);
+        this.buttonBlock.disableShowsolutionBtn(true);
     }
 
     getData = () => {
@@ -221,13 +212,6 @@ export class Application extends CreateBaseComponent{
     showRecords = () => {
         this.modalWindow.showRecordsWindow(this.records.getRecords())
     }
-    // clearMatrix(){
-    //     for (let i = 0; i < this.currentNonogramMatrix.length; i++){
-    //         for (let j = 0; j < this.currentNonogramMatrix[i].length; j ++){
-    //             this.viewField.clearMatrix(i, j)//, this.currentNonogramMatrix[i][j].hasCross, this.currentNonogramMatrix[i][j].hasShaded);
-    //         }
-    //     }
-    // }
 
     getGameStatus =() =>{
         return this.isGameEnd;
@@ -236,14 +220,9 @@ export class Application extends CreateBaseComponent{
     _viewBuilder(){
         const container = this.createBaseComponent('div', ['container'], document.body)
         this.createBaseComponent('h1', ['title'], container, 'НОНОГРАММЫ');
-        container.append(this.selectLevel.container);
-
+        container.append(this.levelSelector.container);
         const settingsContainer = this.createBaseComponent('div', ['settings-container'], container)
         settingsContainer.append(this.changeThemes.container, this.timer.container, this.sounds.container);
-  
-        
- 
-        
         const appFieldContainer = this.createBaseComponent('div', ['field-container'])
         const topField = this.createBaseComponent('div', ['field__top'], appFieldContainer);
         const bottomField = this.createBaseComponent('div', ['field__bottom'], appFieldContainer);

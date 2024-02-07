@@ -1,6 +1,6 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
 
-export class SelectLevel extends CreateBaseComponent{
+export class LevelSelector extends CreateBaseComponent{
     constructor(levels, callback){
         super();
         this.levels = levels;
