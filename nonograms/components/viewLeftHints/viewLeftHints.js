@@ -1,12 +1,18 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
+import { EventEmitter } from "../viewField/eventEmmiter.js";
 
 export class ViewLeftHints extends CreateBaseComponent{
     constructor(){
         super()
         this.container = this.createBaseComponent('div', ['left-hints'])
+        this.eventEmitter = new EventEmitter();
+        this.eventEmitter.on('mouseOverRow', this.mouseOnRow);
+        this.eventEmitter.on('mouseOutRow', this.mouseOutRow);
+      //  this.rows = [];
     }
 
     createHints(hints){
+        this.rows = [];
         this.container.innerHTML = '';
         const arrayOfHints = hints.split('  ').map(element => element.split(' '))
         const maxLength = arrayOfHints.reduce((acc, elem) =>  elem.length > acc ? elem.length : acc ,0);
@@ -14,6 +20,7 @@ export class ViewLeftHints extends CreateBaseComponent{
        // console.log(arrayOfHints, maxLength);
         arrayOfHints.forEach((element,index) => {
             let columnOfHints = this.createBaseComponent('div', ['row-hints'], this.container);
+            this.rows.push(columnOfHints)
             if ((index + 1) % 5 === 0) {
                 columnOfHints.classList.add('left-hint__border');
             }
@@ -26,4 +33,15 @@ export class ViewLeftHints extends CreateBaseComponent{
             })
         }); 
     }
+
+    mouseOnRow = (index) =>{
+       // this.rows.forEach(elem => {
+            this.rows[index].classList.add('mouse-over');
+        //})
+    }
+    mouseOutRow = (index) =>{
+        // this.rows.forEach(elem => {
+             this.rows[index].classList.remove('mouse-over');
+         //})
+     }
 }

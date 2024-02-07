@@ -44,5 +44,10 @@
                 }
             }
         }
+        &.mouse-over{
+            .top-hint{
+                background-color: var(--button-color);
+            }
+        }
     }
 }

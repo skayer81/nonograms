@@ -200,6 +200,9 @@ h1, h2 {
   transform: rotate(-45deg);
   background-color: var(--main-color);
 }
+.left-hints .row-hints.mouse-over .left-hint {
+  background-color: var(--button-color);
+}
 
 :root {
   --main-color: #000000;
@@ -263,6 +266,9 @@ h1, h2 {
   transform-origin: 0 0;
   transform: rotate(-45deg);
   background-color: var(--main-color);
+}
+.top-hints .column-hints.mouse-over .top-hint {
+  background-color: var(--button-color);
 }
 
 :root {

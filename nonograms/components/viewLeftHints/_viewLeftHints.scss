@@ -45,6 +45,11 @@
                 }
             }
         }
+        &.mouse-over{
+            .left-hint{
+                background-color: var(--button-color);
+            }
+        }
     }
 
 

@@ -1,12 +1,14 @@
 import { CreateBaseComponent } from "../createComponent/createComponent.js";
+import { EventEmitter } from "./eventEmmiter.js";
 
 export class ViewField extends CreateBaseComponent{
-    constructor(callback, isGameEnd){
+    constructor(callback, isGameEnd, mouseOverCallback, mouseOutCallback){
         super();
         this.callback = callback;
         this.isGameEnd = isGameEnd;
         this.container = this.createBaseComponent('div', ['field'])
         this.matrix = [];
+        this.eventEmitter = new EventEmitter()
     }
 
 
@@ -33,9 +35,16 @@ export class ViewField extends CreateBaseComponent{
                  cell.addEventListener('contextmenu', (event) => {
                      event.preventDefault();
                      this.cellRigthClick(cell);
-                     this.callback(i, j, false);
-                     
+                     this.callback(i, j, false);                     
                  })
+                 cell.addEventListener('mouseover', () => {
+                    this.eventEmitter.emit('mouseOverRow', [i]);
+                    this.eventEmitter.emit('mouseOverColumn', [j]);
+                 })
+                 cell.addEventListener('mouseout', () => {
+                    this.eventEmitter.emit('mouseOutRow', [i]);
+                    this.eventEmitter.emit('mouseOutColumn', [j]);
+                 } )
             }
         }        
     }
