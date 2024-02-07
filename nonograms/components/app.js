@@ -137,6 +137,7 @@ export class Application extends CreateBaseComponent{
      //   console.log(this.trueCellCount, this.falseCellCount)
         if (this.trueCellCount === 0 && this.falseCellCount === 0) {
             
+            this.showSolution();
             this.timer.stop();
         //    setTimeout(() => {
                 this.modalWindow.showWinWindow(this.currentNonogram.name, this.timer.getTime());
@@ -145,7 +146,7 @@ export class Application extends CreateBaseComponent{
                 this.sounds.play('win');
              //   this.SOUNDS.win.play();
                 this.isGameEnd = true;
-                this.buttonBlock.disableSaveGame(true);
+              //  this.buttonBlock.disableSaveGame(true);
 
                 //alert(`победа за ${this.timer.getTime()} сек`);
           //  }, 0)
