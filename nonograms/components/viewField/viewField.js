@@ -8,7 +8,11 @@ export class ViewField extends CreateBaseComponent{
         this.isGameEnd = isGameEnd;
         this.container = this.createBaseComponent('div', ['field'])
         this.matrix = [];
-        this.eventEmitter = new EventEmitter()
+        this.eventEmitter = new EventEmitter();
+        this.container.addEventListener('pointerleave', () =>{
+            this.isLBtnDown = false;
+            this.isRBtnDown = false;
+        })
     }
 
 
@@ -28,6 +32,9 @@ export class ViewField extends CreateBaseComponent{
                     cell.classList.add('border__column')
                 }
                 this.matrix[i].push(cell);
+                 cell.addEventListener('dragstart', (event) => {
+                    event.preventDefault();
+                 })
 
                  cell.addEventListener('pointerdown', (event) => {
                     if (event.button === 0){
