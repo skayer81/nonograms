@@ -19,16 +19,10 @@ export class Sounds extends CreateBaseComponent{
         const label = this.createBaseComponent('label', ['label'], this.container, 'включить звуки');
         this.checkbox = this.createBaseComponent('input', ['checkbox'], label);
         this.checkbox.setAttribute('type', 'checkbox');
-        // input.addEventListener('change', () => {
-
-        // })
-       // const label = this.createBaseComponent('label', ['label'], this.container);
     }
+
     play(event){
         if (!this.checkbox.checked) return;
-        // for(let sounds in this.SOUNDS){
-        //      this.SOUNDS[sounds].duration = 0;
-        //  }
         this.SOUNDS[event].play();
     }
 }

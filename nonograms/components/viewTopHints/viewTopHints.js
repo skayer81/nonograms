@@ -8,7 +8,6 @@ export class ViewTopHints extends CreateBaseComponent{
         this.eventEmitter = new EventEmitter();
         this.eventEmitter.on('mouseOverColumn', this.mouseOverColumn);
         this.eventEmitter.on('mouseOutColumn', this.mouseOutColumn);
-      //  this.column = [];
     }
 
     createHints(hints){
@@ -35,7 +34,6 @@ export class ViewTopHints extends CreateBaseComponent{
 
     mouseOverColumn = (index) =>{
              this.column[index].classList.add('mouse-over');
-         //    console.log(index ,this.column[index])
      }
      mouseOutColumn = (...index) =>{
               this.column[index].classList.remove('mouse-over');

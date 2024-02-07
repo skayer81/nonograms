@@ -15,8 +15,6 @@ export class ViewField extends CreateBaseComponent{
         })
     }
 
-
-
     createField (fieldHeigth, fieldWidth){
         this.container.innerHTML = '';
         this.matrix = [];
@@ -38,14 +36,11 @@ export class ViewField extends CreateBaseComponent{
 
                  cell.addEventListener('pointerdown', (event) => {
                     if (event.button === 0){
-                    //console.log(event)
-                        
                        this.cellClick(cell);
                        this.callback(i, j, true);
                        this.isLBtnDown = true
                     }
                     if (event.button === 2){
-                        //console.log(event)
                         this.cellRigthClick(cell);
                         this.callback(i, j, false);  
                         this.isRBtnDown = true;
@@ -55,24 +50,13 @@ export class ViewField extends CreateBaseComponent{
                  cell.addEventListener('pointerup', (event) =>{
                     if (event.button === 0){
                         this.isLBtnDown = false;
-                        //console.log(event)
-                            
-                        //    this.cellClick(cell);
-                        //    this.callback(i, j, true);
                         }
                         if (event.button === 2){
-                            //console.log(event)
                             this.isRBtnDown = false;
-                            // this.cellRigthClick(cell);
-                            // this.callback(i, j, false);  
                             }
                      })  
-                 //})
                  cell.addEventListener('contextmenu', (event) => {
-                    console.log(event)
                      event.preventDefault();
-                    //  this.cellRigthClick(cell);
-                    //  this.callback(i, j, false);                     
                  })
                  cell.addEventListener('pointerenter', () => {
                     this.eventEmitter.emit('mouseOverRow', [i]);
@@ -95,9 +79,7 @@ export class ViewField extends CreateBaseComponent{
     }
 
     showSolution(i, j, isTrue){
-      //  console.log('матрица', this.matrix)
         const cell = this.matrix[i][j];
-      //  console.log(cell)
         cell.classList.remove('cross');
         if (isTrue){
             cell.classList.add('shaded');
@@ -105,7 +87,6 @@ export class ViewField extends CreateBaseComponent{
         else{
             cell.classList.remove('shaded');
         }
-       // if(isTrue){}
     }
 
 
@@ -125,7 +106,6 @@ export class ViewField extends CreateBaseComponent{
         }
         cell.classList.remove('cross');
         cell.classList.toggle('shaded');
-      //  document.body.classList.toggle('darkTheme')
     }
 
     cellRigthClick = (cell) => {
@@ -136,7 +116,4 @@ export class ViewField extends CreateBaseComponent{
         cell.classList.toggle('cross')
     }
 
-    // createContainer(){
-    //     return this.createBaseComponent('section', ['field'])
-    // }
 }

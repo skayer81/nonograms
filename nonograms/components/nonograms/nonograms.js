@@ -3,7 +3,6 @@ import { nonograms } from "./data.js";
 export class Nonograms{
     constructor(){
         this.nonograms = nonograms;
-        //глобальные переменные
     }
 
     getRandom(){
@@ -13,11 +12,8 @@ export class Nonograms{
     getRandomEasy(){
         const easyNonograms = this.nonograms.filter(elem => elem.heigth === 5);
         const index =  Math.floor(Math.random() * (easyNonograms.length));
-      //  console.log( Math.floor(Math.random() * (easyNonograms.length + 1)), easyNonograms, easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))])
-      // const result = easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))];
-      const result = easyNonograms[index]
-     //  console.log('test', result, easyNonograms, index)
-        return result //easyNonograms[ Math.floor(Math.random() * (easyNonograms.length + 1))]; 
+        const result = easyNonograms[index]
+        return result 
     }
 
     getList(){

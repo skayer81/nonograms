@@ -34,7 +34,7 @@ body {
   color: var(--text-color);
   border-radius: 10px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
   height: 30px;
   width: 150px;
 }
@@ -319,7 +319,7 @@ body {
   color: var(--text-color);
   border-radius: 10px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
   height: 30px;
   width: 150px;
 }
@@ -467,6 +467,7 @@ h1, h2 {
        appearance: none;
   background-color: var(--button-color);
   color: var(--text-color);
+  transition: 0.5s;
   cursor: pointer;
 }
 .levels .levels__select:last-child {
@@ -476,6 +477,9 @@ h1, h2 {
   .levels .levels__select {
     width: 125px;
   }
+}
+.levels .levels__select:hover {
+  background-color: var(--button-hover);
 }
 .levels .levels__option {
   -webkit-appearance: none;

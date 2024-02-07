@@ -19,7 +19,6 @@ export class ViewButtons extends CreateButton{
         if (!this.loadSave.hasSave()){
             this.loadGameBtn.disabled = true;
         }
-     //   this.disableSaveGame();
     }
 
     saveGame = () =>{
@@ -34,12 +33,10 @@ export class ViewButtons extends CreateButton{
     }
 
     disableSaveGame = (disable) => {
-       // console.log(this.saveGameBtn)
         this.saveGameBtn.disabled = disable;
     }
 
     disableShowsolutionBtn = (disable) => {
-        // console.log(this.saveGameBtn)
          this.showsolutionBtn.disabled = disable;
      }
 

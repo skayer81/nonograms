@@ -12,57 +12,19 @@ export class EventEmitter{
             this.listeners[event] = [];
         }
         this.listeners[event].push(listener);
-       // return listener;
-      }
+    }
 
-      off(event, listener) {
+    off(event, listener) {
         if (this.listeners[event]) {
-          this.listeners[event] = this.listeners[event].filter((l) => l !== listener);
+        this.listeners[event] = this.listeners[event].filter((l) => l !== listener);
         }
-      }
+    }
 
-      emit(event, args) {
+    emit(event, args) {
         if (this.listeners[event]) {
-          this.listeners[event].forEach((listener) => {
+        this.listeners[event].forEach((listener) => {
             listener(...args);
-          });
+        });
         }
-      }
+    }
 }
-
-
-// static ;
-
-// on(event, listener) {
-//   if (!EventEmitter.#listeners[event]) {
-//     EventEmitter.#listeners[event] = [];
-//   }
-//   EventEmitter.#listeners[event].push(listener);
-//   return listener;
-// }
-
-// off(event, listener) {
-//   if (EventEmitter.#listeners[event]) {
-//     EventEmitter.#listeners[event] = EventEmitter.#listeners[event].filter((l) => l !== listener);
-//   }
-// }
-
-// emit(event, ...args) {
-//   if (EventEmitter.#listeners[event]) {
-//     EventEmitter.#listeners[event].forEach((listener) => {
-//       listener(...args);
-//     });
-//   }
-// }
-// }
-
-// Explain
-// class WebSocketService {
-//   constructor() {
-//     if (WebSocketService._instance) {
-//       return WebSocketService._instance;
-//     }
-
-//     WebSocketService._instance = this;
-//   }
-// }

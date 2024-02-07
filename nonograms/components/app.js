@@ -33,18 +33,10 @@ export class Application extends CreateBaseComponent{
         this._viewBuilder();
         this.startNonogramInit();
     }
-            //this.selectLevel = 
     
     startNonogramInit = () => {
-        // if (id) {
-        //     this.currentNonogram = this.nonograms.getNonogramsById(id)
-        // }
-        // else {
-            const test  = this.nonograms.getRandomEasy();
-            this.currentNonogram = test//this.nonograms.getRandomEasy();
-            //console.log(test)
-   //     }
-   //     console.log(this.currentNonogram)
+        const test  = this.nonograms.getRandomEasy();
+        this.currentNonogram = test;
         this.newNonogram();
     }
 
@@ -54,16 +46,16 @@ export class Application extends CreateBaseComponent{
     }
 
     newNonogram(){
-       // this.currentNonogram = this.nonograms.getRandomEasy();
-       // console.log(this.currentNonogram);
         this.viewField.createField(this.currentNonogram.heigth, this.currentNonogram.width);
         this.viewLeftHints.createHints(this.currentNonogram.left);
         this.viewTopHints.createHints(this.currentNonogram.top);
 
         this.trueCellCount = this.currentNonogram.solution.split('').reduce((acc, item) => item == 1 ? acc+1 : acc ,0);
         this.falseCellCount = 0;
-        this.currentNonogramMatrix = this.currentNonogram.solution.split(' ').map(item =>  item = item.split('').map(item2 => item2 = {isTrue: Boolean(Number(item2)), hasCross: false, hasShaded : false}))// map(element => element))
-       // console.log('matrix', this.nonogram);
+        this.currentNonogramMatrix = 
+            this.currentNonogram.solution
+                .split(' ').map(item =>  item = item
+                    .split('').map(item2 => item2 = {isTrue: Boolean(Number(item2)), hasCross: false, hasShaded : false}))
         this.isGameEnd = false;
         this.isGameStart = false;
         this.timer.setTime();
@@ -73,42 +65,27 @@ export class Application extends CreateBaseComponent{
     }
 
     playSound(cell, left){
-        // this.SOUNDS.lclick.play()
-        // console.log(`звук`, this.SOUNDS.lclick.volume)
         if (left && !cell.hasShaded){
-          //  this.SOUNDS.lclick.volume = 100;
            this.sounds.play('lclick')
-           // this.SOUNDS.lclick.play()
             return
         }
         if (!left && !cell.hasCross){
             this.sounds.play('rclick')
-          //  this.SOUNDS.rclick.play();
             return
         }
         this.sounds.play('clear')
-      //  this.SOUNDS.clear.play();
-
     }
 
     onCellPress = (i, j, left) => {
         if (this.isGameEnd) {
             return;
         }
-      //  console.log(this.isGameEnd);
-
         if (!this.isGameStart){
             this.isGameStart = true;
             this.timer.start();
         }
 
-
-  //      console.log('nonogram', i, j, left);
-       let curentCell = this.currentNonogramMatrix[i][j];
-
-      //  console.log('до', this.trueCellCount, this.falseCellCount, curentCell);
-        
-      //  let curentCell = this.currentNonogramMatrix[i][j];
+        let curentCell = this.currentNonogramMatrix[i][j];
         this.playSound(curentCell, left);
 
         if (!left){
@@ -117,12 +94,8 @@ export class Application extends CreateBaseComponent{
 
             curentCell.hasCross = !curentCell.hasCross; 
             curentCell.hasShaded = false;
-            //  this.timer.start();
-           // return;
         }
         else{
-        
- 
             curentCell.hasCross = false
             curentCell.hasShaded = !curentCell.hasShaded;
             if (curentCell.isTrue) {
@@ -134,26 +107,15 @@ export class Application extends CreateBaseComponent{
                 else {this.falseCellCount -= 1};
             }
         }    
-     //   console.log(this.trueCellCount, this.falseCellCount)
         if (this.trueCellCount === 0 && this.falseCellCount === 0) {
             
             this.showSolution();
             this.timer.stop();
-        //    setTimeout(() => {
-                this.modalWindow.showWinWindow(this.currentNonogram.name, this.timer.getTime());
-                this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
-
-                this.sounds.play('win');
-             //   this.SOUNDS.win.play();
-                this.isGameEnd = true;
-              //  this.buttonBlock.disableSaveGame(true);
-
-                //alert(`победа за ${this.timer.getTime()} сек`);
-          //  }, 0)
-            
+            this.modalWindow.showWinWindow(this.currentNonogram.name, this.timer.getTime());
+            this.records.addRecord(this.currentNonogram.name, this.currentNonogram.width, this.timer.getTime())
+            this.sounds.play('win');
+            this.isGameEnd = true;
         }
-      //  console.log('после', this.trueCellCount, this.falseCellCount, curentCell)
-       // this.nonogram()
     }
 
     showSolution = () => {
@@ -172,8 +134,6 @@ export class Application extends CreateBaseComponent{
         return {
             matrix: this.currentNonogramMatrix,
             nonorgam: this.currentNonogram,
-            // with: this.currentNonogram.width,
-            // heigth: this.currentNonogram.heigth,
             falseCellCount: this.falseCellCount,
             trueCellCount: this.trueCellCount,
             time: this.timer.getTime()
@@ -186,7 +146,6 @@ export class Application extends CreateBaseComponent{
         this.currentNonogramMatrix = data.matrix;
         this.falseCellCount = data.falseCellCount;
         this.trueCellCount = data.trueCellCount;
-      //  this.timer.  start();
         this.timer.setTime(data.time);
         this.timer.start();
         this.isGameStart = true;
@@ -229,12 +188,10 @@ export class Application extends CreateBaseComponent{
         const bottomField = this.createBaseComponent('div', ['field__bottom'], appFieldContainer);
         topField.append(this.viewTopHints.container);
         bottomField.append(this.viewLeftHints.container, this.viewField.container);
-
         const fieldAndNameContainer = this.createBaseComponent('div', ['outer-container'], document.body);
         const leftSide = this.createBaseComponent('div', ['left-side'], fieldAndNameContainer);
         this.nonogramTitle = this.createBaseComponent('h2', ['title']);
         leftSide.append(this.nonogramTitle, appFieldContainer)
-
         const mainContainer = this.createBaseComponent('div', ['main-container'], container)
         mainContainer.append(leftSide, this.buttonBlock.container)
 
