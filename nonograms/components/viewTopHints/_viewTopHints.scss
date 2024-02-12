@@ -1,28 +1,28 @@
-@import  './../variables';
+@use "./../variables";
 
-.top-hints{
+.top-hints {
     display: flex;
-  //  justify-content: right;
-    .column-hints{
+    //  justify-content: right;
+    .column-hints {
         display: flex;
         flex-direction: column;
-        justify-content:flex-end;
+        justify-content: flex-end;
         border-left: 1px solid var(--main-border);
-        &.top-hint__border{
+        &.top-hint__border {
             border-right: 1px solid var(--main-border);
         }
-        .top-hint{
+        .top-hint {
             text-align: center;
             width: 20px;
             height: 20px;
-             border-bottom: 1px solid var(--main-border);
+            border-bottom: 1px solid var(--main-border);
             background-color: var(--main-background);
             cursor: pointer;
-            &.cross{
+            &.cross {
                 position: relative;
-                &::after{
+                &::after {
                     position: absolute;
-                    content: '';
+                    content: "";
                     width: 130%;
                     height: 1px;
                     top: 0px;
@@ -31,9 +31,9 @@
                     transform: rotate(45deg);
                     background-color: var(--main-color);
                 }
-                &::before{
+                &::before {
                     position: absolute;
-                    content: '';
+                    content: "";
                     width: 130%;
                     height: 1px;
                     bottom: 0;
@@ -44,8 +44,8 @@
                 }
             }
         }
-        &.mouse-over{
-            .top-hint{
+        &.mouse-over {
+            .top-hint {
                 background-color: var(--button-color);
             }
         }

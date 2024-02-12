@@ -1,6 +1,6 @@
-@import  './../variables';
+@use "./../variables";
 
-.timer-container{
+.timer-container {
     display: flex;
     justify-content: center;
     color: var(--main-color);

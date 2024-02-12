@@ -1,17 +1,17 @@
-@import  './../variables';
+@use "./../variables";
 
-.left-hints{
+.left-hints {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    .row-hints{
+    .row-hints {
         display: flex;
         border-top: 1px solid var(--main-border);
-        &.left-hint__border{
+        &.left-hint__border {
             border-bottom: 1px solid var(--main-border);
         }
-        .left-hint{
+        .left-hint {
             text-align: center;
             //padding-right: 5px;
             width: 20px;
@@ -19,11 +19,11 @@
             border-right: 1px solid var(--main-border);
             cursor: pointer;
             background-color: var(--main-background);
-            &.cross{
+            &.cross {
                 position: relative;
-                &::after{
+                &::after {
                     position: absolute;
-                    content: '';
+                    content: "";
                     width: 130%;
                     height: 1px;
                     top: 0px;
@@ -32,9 +32,9 @@
                     transform: rotate(45deg);
                     background-color: var(--main-color);
                 }
-                &::before{
+                &::before {
                     position: absolute;
-                    content: '';
+                    content: "";
                     width: 130%;
                     height: 1px;
                     bottom: 0;
@@ -45,12 +45,10 @@
                 }
             }
         }
-        &.mouse-over{
-            .left-hint{
+        &.mouse-over {
+            .left-hint {
                 background-color: var(--button-color);
             }
         }
     }
-
-
 }

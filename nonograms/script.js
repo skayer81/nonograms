@@ -1,3 +1,2 @@
-import { Application } from "./components/app.js";
-const app = new Application();
-
+import { Application } from './components/app.js';
+new Application();

@@ -1,39 +1,51 @@
-import { CreateButton } from "../createComponent/createComponent.js";
+import { CreateButton } from '../createComponent/createComponent.js';
 
-export class ViewModalWindow extends CreateButton{
-    constructor(){
-        super();
-        this.modalWindow = this.createModalWindow()
-        this._appendModal();
-    }
+export class ViewModalWindow extends CreateButton {
+  #modalWindow;
+  #contentContainer;
 
-    addContent(nodes){
-        this.contentContainer.append(...nodes)
-    }
+  constructor() {
+    super();
+    this.#modalWindow = this.#createModalWindow();
+    this.#appendModal();
+  }
 
-    removeContent(){
-        this.contentContainer.innerHTML = '';
-    }
-    
+  addContent(nodes) {
+    this.#contentContainer.append(...nodes);
+  }
 
-    closeModalWindow = () => {
-        this.modalWindow.classList.remove('active');
-    }
+  removeContent() {
+    this.#contentContainer.innerHTML = '';
+  }
 
-    createModalWindow(){
-        const modalWindow = this.createBaseComponent('article', ['modalWindow']);
-        this.contentContainer = this.createBaseComponent('div', ['container'], modalWindow);
-        this.createButton(['button'], {type: 'button'}, 'Ok', this.closeModalWindow, modalWindow);
-         return modalWindow;
-    }
+  #closeModalWindow = () => {
+    this.#modalWindow.classList.remove('active');
+  };
 
-    open(){
-        this.modalWindow.classList.add('active')
-    }
-    
-    _appendModal(){
-        const portal = this.createBaseComponent('div', [], document.body)
-        portal.append(this.modalWindow);
-        this.overlay =  this.createBaseComponent('div', ['overlay'], portal )
-    }
+  #createModalWindow() {
+    const modalWindow = this.createBaseComponent('article', ['modalWindow']);
+    this.#contentContainer = this.createBaseComponent(
+      'div',
+      ['container'],
+      modalWindow,
+    );
+    this.createButton(
+      ['button'],
+      { type: 'button' },
+      'Ok',
+      this.#closeModalWindow,
+      modalWindow,
+    );
+    return modalWindow;
+  }
+
+  open() {
+    this.#modalWindow.classList.add('active');
+  }
+
+  #appendModal() {
+    const portal = this.createBaseComponent('div', [], document.body);
+    portal.append(this.#modalWindow);
+    this.overlay = this.createBaseComponent('div', ['overlay'], portal);
+  }
 }

@@ -1,4 +1,4 @@
-@import './variables';
+@use "./variables";
 
 body {
     box-sizing: border-box;
@@ -9,36 +9,36 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.button{
+.button {
     // back
-     //ground-color: aqua;
-     margin: 0;
-     border: 1px solid var(--main-border);
-     background-color: var(--button-color);
-     color: var(--text-color);
-     border-radius: 10px;
+    //ground-color: aqua;
+    margin: 0;
+    border: 1px solid var(--main-border);
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border-radius: 10px;
     //  margin-top: auto;
     //  margin-top: 30px;
-     cursor: pointer;
-      transition: 0.5s;
-      height: 30px;
-      width: 150px;
-      &:hover{
-          background-color: var(--button-hover) //#aadad0//var(--main-background);
-      }
-      &:disabled{
+    cursor: pointer;
+    transition: 0.5s;
+    height: 30px;
+    width: 150px;
+    &:hover {
+        background-color: var(--button-hover); //#aadad0//var(--main-background);
+    }
+    &:disabled {
         background-color: var(--main-background);
         pointer-events: none;
-      }
+    }
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
     @media screen and (max-width: 700px) {
@@ -47,11 +47,12 @@ body {
     }
 }
 
-h1, h2{
+h1,
+h2 {
     margin: 10px auto;
 }
 
-.settings-container{
+.settings-container {
     display: flex;
     justify-content: space-around;
 }

@@ -1,22 +1,20 @@
-export class LoadSaveGame{
+export class LoadSaveGame {
+  #FIELD_NAME = 'skayer81Nonogram';
 
-    FIELD_NAME = 'skayer81Nonogram';
+  saveGame(data) {
+    localStorage.setItem(this.#FIELD_NAME, JSON.stringify(data));
+  }
 
-    saveGame(data){
-        localStorage.setItem(this.FIELD_NAME, JSON.stringify(data));
+  loadGame() {
+    let data = JSON.parse(localStorage.getItem(this.#FIELD_NAME));
+    return data;
+  }
+
+  hasSave() {
+    if (localStorage.getItem(this.#FIELD_NAME) !== null) {
+      return true;
+    } else {
+      return false;
     }
-
-    loadGame(){
-        let data =  JSON.parse(localStorage.getItem(this.FIELD_NAME));
-        return data;
-    }
-
-    hasSave(){
-        if (localStorage.getItem(this.FIELD_NAME) !== null) {
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+  }
 }

@@ -105,3 +105,4 @@ dist
 
 nonograms/test.js
 
+.prettierrc
